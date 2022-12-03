@@ -1,0 +1,4042 @@
+﻿[
+  {
+    "devName": "DEV_HUSIGIDANE",
+    "id": 1
+  },
+  {
+    "devName": "DEV_HUSIGISOU",
+    "id": 2
+  },
+  {
+    "devName": "DEV_HUSIGIBANA",
+    "id": 3
+  },
+  {
+    "devName": "DEV_HITOKAGE",
+    "id": 4
+  },
+  {
+    "devName": "DEV_RIZAADO",
+    "id": 5
+  },
+  {
+    "devName": "DEV_RIZAADON",
+    "id": 6
+  },
+  {
+    "devName": "DEV_ZENIGAME",
+    "id": 7
+  },
+  {
+    "devName": "DEV_KAMEERU",
+    "id": 8
+  },
+  {
+    "devName": "DEV_KAMEKKUSU",
+    "id": 9
+  },
+  {
+    "devName": "DEV_KYATAPII",
+    "id": 10
+  },
+  {
+    "devName": "DEV_TORANSERU",
+    "id": 11
+  },
+  {
+    "devName": "DEV_BATAHURII",
+    "id": 12
+  },
+  {
+    "devName": "DEV_BIIDORU",
+    "id": 13
+  },
+  {
+    "devName": "DEV_KOKUUN",
+    "id": 14
+  },
+  {
+    "devName": "DEV_SUPIAA",
+    "id": 15
+  },
+  {
+    "devName": "DEV_POPPO",
+    "id": 16
+  },
+  {
+    "devName": "DEV_PIZYON",
+    "id": 17
+  },
+  {
+    "devName": "DEV_PIZYOTTO",
+    "id": 18
+  },
+  {
+    "devName": "DEV_KORATTA",
+    "id": 19
+  },
+  {
+    "devName": "DEV_RATTA",
+    "id": 20
+  },
+  {
+    "devName": "DEV_ONISUZUME",
+    "id": 21
+  },
+  {
+    "devName": "DEV_ONIDORIRU",
+    "id": 22
+  },
+  {
+    "devName": "DEV_AABO",
+    "id": 23
+  },
+  {
+    "devName": "DEV_AABOKKU",
+    "id": 24
+  },
+  {
+    "devName": "DEV_PIKATYUU",
+    "id": 25
+  },
+  {
+    "devName": "DEV_RAITYUU",
+    "id": 26
+  },
+  {
+    "devName": "DEV_SANDO",
+    "id": 27
+  },
+  {
+    "devName": "DEV_SANDOPAN",
+    "id": 28
+  },
+  {
+    "devName": "DEV_NIDORAN_F",
+    "id": 29
+  },
+  {
+    "devName": "DEV_NIDORIINA",
+    "id": 30
+  },
+  {
+    "devName": "DEV_NIDOKUIN",
+    "id": 31
+  },
+  {
+    "devName": "DEV_NIDORAN_M",
+    "id": 32
+  },
+  {
+    "devName": "DEV_NIDORIINO",
+    "id": 33
+  },
+  {
+    "devName": "DEV_NIDOKINGU",
+    "id": 34
+  },
+  {
+    "devName": "DEV_PIPPI",
+    "id": 35
+  },
+  {
+    "devName": "DEV_PIKUSII",
+    "id": 36
+  },
+  {
+    "devName": "DEV_ROKON",
+    "id": 37
+  },
+  {
+    "devName": "DEV_KYUUKON",
+    "id": 38
+  },
+  {
+    "devName": "DEV_PURIN",
+    "id": 39
+  },
+  {
+    "devName": "DEV_PUKURIN",
+    "id": 40
+  },
+  {
+    "devName": "DEV_ZUBATTO",
+    "id": 41
+  },
+  {
+    "devName": "DEV_GORUBATTO",
+    "id": 42
+  },
+  {
+    "devName": "DEV_NAZONOKUSA",
+    "id": 43
+  },
+  {
+    "devName": "DEV_KUSAIHANA",
+    "id": 44
+  },
+  {
+    "devName": "DEV_RAHURESIA",
+    "id": 45
+  },
+  {
+    "devName": "DEV_PARASU",
+    "id": 46
+  },
+  {
+    "devName": "DEV_PARASEKUTO",
+    "id": 47
+  },
+  {
+    "devName": "DEV_KONPAN",
+    "id": 48
+  },
+  {
+    "devName": "DEV_MORUFON",
+    "id": 49
+  },
+  {
+    "devName": "DEV_DHIGUDA",
+    "id": 50
+  },
+  {
+    "devName": "DEV_DAGUTORIO",
+    "id": 51
+  },
+  {
+    "devName": "DEV_NYAASU",
+    "id": 52
+  },
+  {
+    "devName": "DEV_PERUSIAN",
+    "id": 53
+  },
+  {
+    "devName": "DEV_KODAKKU",
+    "id": 54
+  },
+  {
+    "devName": "DEV_GORUDAKKU",
+    "id": 55
+  },
+  {
+    "devName": "DEV_MANKII",
+    "id": 56
+  },
+  {
+    "devName": "DEV_OKORIZARU",
+    "id": 57
+  },
+  {
+    "devName": "DEV_GAADHI",
+    "id": 58
+  },
+  {
+    "devName": "DEV_UINDHI",
+    "id": 59
+  },
+  {
+    "devName": "DEV_NYOROMO",
+    "id": 60
+  },
+  {
+    "devName": "DEV_NYOROZO",
+    "id": 61
+  },
+  {
+    "devName": "DEV_NYOROBON",
+    "id": 62
+  },
+  {
+    "devName": "DEV_KEESHI",
+    "id": 63
+  },
+  {
+    "devName": "DEV_YUNGERAA",
+    "id": 64
+  },
+  {
+    "devName": "DEV_HUUDHIN",
+    "id": 65
+  },
+  {
+    "devName": "DEV_WANRIKII",
+    "id": 66
+  },
+  {
+    "devName": "DEV_GOORIKII",
+    "id": 67
+  },
+  {
+    "devName": "DEV_KAIRIKII",
+    "id": 68
+  },
+  {
+    "devName": "DEV_MADATUBOMI",
+    "id": 69
+  },
+  {
+    "devName": "DEV_UTUDON",
+    "id": 70
+  },
+  {
+    "devName": "DEV_UTUBOTTO",
+    "id": 71
+  },
+  {
+    "devName": "DEV_MENOKURAGE",
+    "id": 72
+  },
+  {
+    "devName": "DEV_DOKUKURAGE",
+    "id": 73
+  },
+  {
+    "devName": "DEV_ISITUBUTE",
+    "id": 74
+  },
+  {
+    "devName": "DEV_GOROON",
+    "id": 75
+  },
+  {
+    "devName": "DEV_GOROONYA",
+    "id": 76
+  },
+  {
+    "devName": "DEV_PONIITA",
+    "id": 77
+  },
+  {
+    "devName": "DEV_GYAROPPU",
+    "id": 78
+  },
+  {
+    "devName": "DEV_YADON",
+    "id": 79
+  },
+  {
+    "devName": "DEV_YADORAN",
+    "id": 80
+  },
+  {
+    "devName": "DEV_KOIRU",
+    "id": 81
+  },
+  {
+    "devName": "DEV_REAKOIRU",
+    "id": 82
+  },
+  {
+    "devName": "DEV_KAMONEGI",
+    "id": 83
+  },
+  {
+    "devName": "DEV_DOODOO",
+    "id": 84
+  },
+  {
+    "devName": "DEV_DOODORIO",
+    "id": 85
+  },
+  {
+    "devName": "DEV_PAUWAU",
+    "id": 86
+  },
+  {
+    "devName": "DEV_ZYUGON",
+    "id": 87
+  },
+  {
+    "devName": "DEV_BETOBETAA",
+    "id": 88
+  },
+  {
+    "devName": "DEV_BETOBETON",
+    "id": 89
+  },
+  {
+    "devName": "DEV_SHERUDAA",
+    "id": 90
+  },
+  {
+    "devName": "DEV_PARUSHEN",
+    "id": 91
+  },
+  {
+    "devName": "DEV_GOOSU",
+    "id": 92
+  },
+  {
+    "devName": "DEV_GOOSUTO",
+    "id": 93
+  },
+  {
+    "devName": "DEV_GENGAA",
+    "id": 94
+  },
+  {
+    "devName": "DEV_IWAAKU",
+    "id": 95
+  },
+  {
+    "devName": "DEV_SURIIPU",
+    "id": 96
+  },
+  {
+    "devName": "DEV_SURIIPAA",
+    "id": 97
+  },
+  {
+    "devName": "DEV_KURABU",
+    "id": 98
+  },
+  {
+    "devName": "DEV_KINGURAA",
+    "id": 99
+  },
+  {
+    "devName": "DEV_BIRIRIDAMA",
+    "id": 100
+  },
+  {
+    "devName": "DEV_MARUMAIN",
+    "id": 101
+  },
+  {
+    "devName": "DEV_TAMATAMA",
+    "id": 102
+  },
+  {
+    "devName": "DEV_NASSII",
+    "id": 103
+  },
+  {
+    "devName": "DEV_KARAKARA",
+    "id": 104
+  },
+  {
+    "devName": "DEV_GARAGARA",
+    "id": 105
+  },
+  {
+    "devName": "DEV_SAWAMURAA",
+    "id": 106
+  },
+  {
+    "devName": "DEV_EBIWARAA",
+    "id": 107
+  },
+  {
+    "devName": "DEV_BERORINGA",
+    "id": 108
+  },
+  {
+    "devName": "DEV_DOGAASU",
+    "id": 109
+  },
+  {
+    "devName": "DEV_MATADOGASU",
+    "id": 110
+  },
+  {
+    "devName": "DEV_SAIHOON",
+    "id": 111
+  },
+  {
+    "devName": "DEV_SAIDON",
+    "id": 112
+  },
+  {
+    "devName": "DEV_RAKKII",
+    "id": 113
+  },
+  {
+    "devName": "DEV_MONZYARA",
+    "id": 114
+  },
+  {
+    "devName": "DEV_GARUURA",
+    "id": 115
+  },
+  {
+    "devName": "DEV_TATTUU",
+    "id": 116
+  },
+  {
+    "devName": "DEV_SIIDORA",
+    "id": 117
+  },
+  {
+    "devName": "DEV_TOSAKINTO",
+    "id": 118
+  },
+  {
+    "devName": "DEV_AZUMAOU",
+    "id": 119
+  },
+  {
+    "devName": "DEV_HITODEMAN",
+    "id": 120
+  },
+  {
+    "devName": "DEV_SUTAAMII",
+    "id": 121
+  },
+  {
+    "devName": "DEV_BARIYAADO",
+    "id": 122
+  },
+  {
+    "devName": "DEV_SUTORAIKU",
+    "id": 123
+  },
+  {
+    "devName": "DEV_RUUZYURA",
+    "id": 124
+  },
+  {
+    "devName": "DEV_EREBUU",
+    "id": 125
+  },
+  {
+    "devName": "DEV_BUUBAA",
+    "id": 126
+  },
+  {
+    "devName": "DEV_KAIROSU",
+    "id": 127
+  },
+  {
+    "devName": "DEV_KENTAROSU",
+    "id": 128
+  },
+  {
+    "devName": "DEV_KOIKINGU",
+    "id": 129
+  },
+  {
+    "devName": "DEV_GYARADOSU",
+    "id": 130
+  },
+  {
+    "devName": "DEV_RAPURASU",
+    "id": 131
+  },
+  {
+    "devName": "DEV_METAMON",
+    "id": 132
+  },
+  {
+    "devName": "DEV_IIBUI",
+    "id": 133
+  },
+  {
+    "devName": "DEV_SYAWAAZU",
+    "id": 134
+  },
+  {
+    "devName": "DEV_SANDAASU",
+    "id": 135
+  },
+  {
+    "devName": "DEV_BUUSUTAA",
+    "id": 136
+  },
+  {
+    "devName": "DEV_PORIGON",
+    "id": 137
+  },
+  {
+    "devName": "DEV_OMUNAITO",
+    "id": 138
+  },
+  {
+    "devName": "DEV_OMUSUTAA",
+    "id": 139
+  },
+  {
+    "devName": "DEV_KABUTO",
+    "id": 140
+  },
+  {
+    "devName": "DEV_KABUTOPUSU",
+    "id": 141
+  },
+  {
+    "devName": "DEV_PUTERA",
+    "id": 142
+  },
+  {
+    "devName": "DEV_KABIGON",
+    "id": 143
+  },
+  {
+    "devName": "DEV_HURIIZAA",
+    "id": 144
+  },
+  {
+    "devName": "DEV_SANDAA",
+    "id": 145
+  },
+  {
+    "devName": "DEV_FAIYAA",
+    "id": 146
+  },
+  {
+    "devName": "DEV_MINIRYUU",
+    "id": 147
+  },
+  {
+    "devName": "DEV_HAKURYUU",
+    "id": 148
+  },
+  {
+    "devName": "DEV_KAIRYUU",
+    "id": 149
+  },
+  {
+    "devName": "DEV_MYUUTUU",
+    "id": 150
+  },
+  {
+    "devName": "DEV_MYUU",
+    "id": 151
+  },
+  {
+    "devName": "DEV_TIKORIITA",
+    "id": 152
+  },
+  {
+    "devName": "DEV_BEIRIIHU",
+    "id": 153
+  },
+  {
+    "devName": "DEV_MEGANIUMU",
+    "id": 154
+  },
+  {
+    "devName": "DEV_HINOARASI",
+    "id": 155
+  },
+  {
+    "devName": "DEV_MAGUMARASI",
+    "id": 156
+  },
+  {
+    "devName": "DEV_BAKUHUUN",
+    "id": 157
+  },
+  {
+    "devName": "DEV_WANINOKO",
+    "id": 158
+  },
+  {
+    "devName": "DEV_ARIGEITU",
+    "id": 159
+  },
+  {
+    "devName": "DEV_OODAIRU",
+    "id": 160
+  },
+  {
+    "devName": "DEV_OTATI",
+    "id": 161
+  },
+  {
+    "devName": "DEV_OOTATI",
+    "id": 162
+  },
+  {
+    "devName": "DEV_HOOHOO",
+    "id": 163
+  },
+  {
+    "devName": "DEV_YORUNOZUKU",
+    "id": 164
+  },
+  {
+    "devName": "DEV_REDHIBA",
+    "id": 165
+  },
+  {
+    "devName": "DEV_REDHIAN",
+    "id": 166
+  },
+  {
+    "devName": "DEV_ITOMARU",
+    "id": 167
+  },
+  {
+    "devName": "DEV_ARIADOSU",
+    "id": 168
+  },
+  {
+    "devName": "DEV_KUROBATTO",
+    "id": 169
+  },
+  {
+    "devName": "DEV_TYONTII",
+    "id": 170
+  },
+  {
+    "devName": "DEV_RANTAAN",
+    "id": 171
+  },
+  {
+    "devName": "DEV_PITYUU",
+    "id": 172
+  },
+  {
+    "devName": "DEV_PHI",
+    "id": 173
+  },
+  {
+    "devName": "DEV_PUPURIN",
+    "id": 174
+  },
+  {
+    "devName": "DEV_TOGEPII",
+    "id": 175
+  },
+  {
+    "devName": "DEV_TOGETIKKU",
+    "id": 176
+  },
+  {
+    "devName": "DEV_NEITHI",
+    "id": 177
+  },
+  {
+    "devName": "DEV_NEITHIO",
+    "id": 178
+  },
+  {
+    "devName": "DEV_MERIIPU",
+    "id": 179
+  },
+  {
+    "devName": "DEV_MOKOKO",
+    "id": 180
+  },
+  {
+    "devName": "DEV_DENRYUU",
+    "id": 181
+  },
+  {
+    "devName": "DEV_KIREIHANA",
+    "id": 182
+  },
+  {
+    "devName": "DEV_MARIRU",
+    "id": 183
+  },
+  {
+    "devName": "DEV_MARIRURI",
+    "id": 184
+  },
+  {
+    "devName": "DEV_USOKKII",
+    "id": 185
+  },
+  {
+    "devName": "DEV_NYOROTONO",
+    "id": 186
+  },
+  {
+    "devName": "DEV_HANEKKO",
+    "id": 187
+  },
+  {
+    "devName": "DEV_POPOKKO",
+    "id": 188
+  },
+  {
+    "devName": "DEV_WATAKKO",
+    "id": 189
+  },
+  {
+    "devName": "DEV_EIPAMU",
+    "id": 190
+  },
+  {
+    "devName": "DEV_HIMANATTU",
+    "id": 191
+  },
+  {
+    "devName": "DEV_KIMAWARI",
+    "id": 192
+  },
+  {
+    "devName": "DEV_YANYANMA",
+    "id": 193
+  },
+  {
+    "devName": "DEV_UPAA",
+    "id": 194
+  },
+  {
+    "devName": "DEV_NUOO",
+    "id": 195
+  },
+  {
+    "devName": "DEV_EEFI",
+    "id": 196
+  },
+  {
+    "devName": "DEV_BURAKKII",
+    "id": 197
+  },
+  {
+    "devName": "DEV_YAMIKARASU",
+    "id": 198
+  },
+  {
+    "devName": "DEV_YADOKINGU",
+    "id": 199
+  },
+  {
+    "devName": "DEV_MUUMA",
+    "id": 200
+  },
+  {
+    "devName": "DEV_ANNOON",
+    "id": 201
+  },
+  {
+    "devName": "DEV_SOONANSU",
+    "id": 202
+  },
+  {
+    "devName": "DEV_KIRINRIKI",
+    "id": 203
+  },
+  {
+    "devName": "DEV_KUNUGIDAMA",
+    "id": 204
+  },
+  {
+    "devName": "DEV_FORETOSU",
+    "id": 205
+  },
+  {
+    "devName": "DEV_NOKOTTI",
+    "id": 206
+  },
+  {
+    "devName": "DEV_GURAIGAA",
+    "id": 207
+  },
+  {
+    "devName": "DEV_HAGANEERU",
+    "id": 208
+  },
+  {
+    "devName": "DEV_BURUU",
+    "id": 209
+  },
+  {
+    "devName": "DEV_GURANBURU",
+    "id": 210
+  },
+  {
+    "devName": "DEV_HARIISEN",
+    "id": 211
+  },
+  {
+    "devName": "DEV_HASSAMU",
+    "id": 212
+  },
+  {
+    "devName": "DEV_TUBOTUBO",
+    "id": 213
+  },
+  {
+    "devName": "DEV_HERAKUROSU",
+    "id": 214
+  },
+  {
+    "devName": "DEV_NYUURA",
+    "id": 215
+  },
+  {
+    "devName": "DEV_HIMEGUMA",
+    "id": 216
+  },
+  {
+    "devName": "DEV_RINGUMA",
+    "id": 217
+  },
+  {
+    "devName": "DEV_MAGUMAGGU",
+    "id": 218
+  },
+  {
+    "devName": "DEV_MAGUKARUGO",
+    "id": 219
+  },
+  {
+    "devName": "DEV_URIMUU",
+    "id": 220
+  },
+  {
+    "devName": "DEV_INOMUU",
+    "id": 221
+  },
+  {
+    "devName": "DEV_SANIIGO",
+    "id": 222
+  },
+  {
+    "devName": "DEV_TEPPOUO",
+    "id": 223
+  },
+  {
+    "devName": "DEV_OKUTAN",
+    "id": 224
+  },
+  {
+    "devName": "DEV_DERIBAADO",
+    "id": 225
+  },
+  {
+    "devName": "DEV_MANTAIN",
+    "id": 226
+  },
+  {
+    "devName": "DEV_EAAMUDO",
+    "id": 227
+  },
+  {
+    "devName": "DEV_DERUBIRU",
+    "id": 228
+  },
+  {
+    "devName": "DEV_HERUGAA",
+    "id": 229
+  },
+  {
+    "devName": "DEV_KINGUDORA",
+    "id": 230
+  },
+  {
+    "devName": "DEV_GOMAZOU",
+    "id": 231
+  },
+  {
+    "devName": "DEV_DONFAN",
+    "id": 232
+  },
+  {
+    "devName": "DEV_PORIGON2",
+    "id": 233
+  },
+  {
+    "devName": "DEV_ODOSISI",
+    "id": 234
+  },
+  {
+    "devName": "DEV_DOOBURU",
+    "id": 235
+  },
+  {
+    "devName": "DEV_BARUKII",
+    "id": 236
+  },
+  {
+    "devName": "DEV_KAPOERAA",
+    "id": 237
+  },
+  {
+    "devName": "DEV_MUTYUURU",
+    "id": 238
+  },
+  {
+    "devName": "DEV_EREKIDDO",
+    "id": 239
+  },
+  {
+    "devName": "DEV_BUBHI",
+    "id": 240
+  },
+  {
+    "devName": "DEV_MIRUTANKU",
+    "id": 241
+  },
+  {
+    "devName": "DEV_HAPINASU",
+    "id": 242
+  },
+  {
+    "devName": "DEV_RAIKOU",
+    "id": 243
+  },
+  {
+    "devName": "DEV_ENTEI",
+    "id": 244
+  },
+  {
+    "devName": "DEV_SUIKUN",
+    "id": 245
+  },
+  {
+    "devName": "DEV_YOOGIRASU",
+    "id": 246
+  },
+  {
+    "devName": "DEV_SANAGIRASU",
+    "id": 247
+  },
+  {
+    "devName": "DEV_BANGIRASU",
+    "id": 248
+  },
+  {
+    "devName": "DEV_RUGIA",
+    "id": 249
+  },
+  {
+    "devName": "DEV_HOUOU",
+    "id": 250
+  },
+  {
+    "devName": "DEV_SEREBHI",
+    "id": 251
+  },
+  {
+    "devName": "DEV_KIMORI",
+    "id": 252
+  },
+  {
+    "devName": "DEV_ZYUPUTORU",
+    "id": 253
+  },
+  {
+    "devName": "DEV_ZYUKAIN",
+    "id": 254
+  },
+  {
+    "devName": "DEV_ATYAMO",
+    "id": 255
+  },
+  {
+    "devName": "DEV_WAKASYAMO",
+    "id": 256
+  },
+  {
+    "devName": "DEV_BASYAAMO",
+    "id": 257
+  },
+  {
+    "devName": "DEV_MIZUGOROU",
+    "id": 258
+  },
+  {
+    "devName": "DEV_NUMAKUROO",
+    "id": 259
+  },
+  {
+    "devName": "DEV_RAGURAAZI",
+    "id": 260
+  },
+  {
+    "devName": "DEV_POTIENA",
+    "id": 261
+  },
+  {
+    "devName": "DEV_GURAENA",
+    "id": 262
+  },
+  {
+    "devName": "DEV_ZIGUZAGUMA",
+    "id": 263
+  },
+  {
+    "devName": "DEV_MASSUGUMA",
+    "id": 264
+  },
+  {
+    "devName": "DEV_KEMUSSO",
+    "id": 265
+  },
+  {
+    "devName": "DEV_KARASARISU",
+    "id": 266
+  },
+  {
+    "devName": "DEV_AGEHANTO",
+    "id": 267
+  },
+  {
+    "devName": "DEV_MAYURUDO",
+    "id": 268
+  },
+  {
+    "devName": "DEV_DOKUKEIRU",
+    "id": 269
+  },
+  {
+    "devName": "DEV_HASUBOO",
+    "id": 270
+  },
+  {
+    "devName": "DEV_HASUBURERO",
+    "id": 271
+  },
+  {
+    "devName": "DEV_RUNPAPPA",
+    "id": 272
+  },
+  {
+    "devName": "DEV_TANEBOO",
+    "id": 273
+  },
+  {
+    "devName": "DEV_KONOHANA",
+    "id": 274
+  },
+  {
+    "devName": "DEV_DAATENGU",
+    "id": 275
+  },
+  {
+    "devName": "DEV_SUBAME",
+    "id": 276
+  },
+  {
+    "devName": "DEV_OOSUBAME",
+    "id": 277
+  },
+  {
+    "devName": "DEV_KYAMOME",
+    "id": 278
+  },
+  {
+    "devName": "DEV_PERIPPAA",
+    "id": 279
+  },
+  {
+    "devName": "DEV_RARUTOSU",
+    "id": 280
+  },
+  {
+    "devName": "DEV_KIRURIA",
+    "id": 281
+  },
+  {
+    "devName": "DEV_SAANAITO",
+    "id": 282
+  },
+  {
+    "devName": "DEV_AMETAMA",
+    "id": 283
+  },
+  {
+    "devName": "DEV_AMEMOOSU",
+    "id": 284
+  },
+  {
+    "devName": "DEV_KINOKOKO",
+    "id": 285
+  },
+  {
+    "devName": "DEV_KINOGASSA",
+    "id": 286
+  },
+  {
+    "devName": "DEV_NAMAKERO",
+    "id": 287
+  },
+  {
+    "devName": "DEV_YARUKIMONO",
+    "id": 288
+  },
+  {
+    "devName": "DEV_KEKKINGU",
+    "id": 289
+  },
+  {
+    "devName": "DEV_TUTININ",
+    "id": 290
+  },
+  {
+    "devName": "DEV_TEKKANIN",
+    "id": 291
+  },
+  {
+    "devName": "DEV_NUKENIN",
+    "id": 292
+  },
+  {
+    "devName": "DEV_GONYONYO",
+    "id": 293
+  },
+  {
+    "devName": "DEV_DOGOOMU",
+    "id": 294
+  },
+  {
+    "devName": "DEV_BAKUONGU",
+    "id": 295
+  },
+  {
+    "devName": "DEV_MAKUNOSITA",
+    "id": 296
+  },
+  {
+    "devName": "DEV_HARITEYAMA",
+    "id": 297
+  },
+  {
+    "devName": "DEV_RURIRI",
+    "id": 298
+  },
+  {
+    "devName": "DEV_NOZUPASU",
+    "id": 299
+  },
+  {
+    "devName": "DEV_ENEKO",
+    "id": 300
+  },
+  {
+    "devName": "DEV_ENEKORORO",
+    "id": 301
+  },
+  {
+    "devName": "DEV_YAMIRAMI",
+    "id": 302
+  },
+  {
+    "devName": "DEV_KUTIITO",
+    "id": 303
+  },
+  {
+    "devName": "DEV_KOKODORA",
+    "id": 304
+  },
+  {
+    "devName": "DEV_KODORA",
+    "id": 305
+  },
+  {
+    "devName": "DEV_BOSUGODORA",
+    "id": 306
+  },
+  {
+    "devName": "DEV_ASANAN",
+    "id": 307
+  },
+  {
+    "devName": "DEV_TYAAREMU",
+    "id": 308
+  },
+  {
+    "devName": "DEV_RAKURAI",
+    "id": 309
+  },
+  {
+    "devName": "DEV_RAIBORUTO",
+    "id": 310
+  },
+  {
+    "devName": "DEV_PURASURU",
+    "id": 311
+  },
+  {
+    "devName": "DEV_MAINAN",
+    "id": 312
+  },
+  {
+    "devName": "DEV_BARUBIITO",
+    "id": 313
+  },
+  {
+    "devName": "DEV_IRUMIIZE",
+    "id": 314
+  },
+  {
+    "devName": "DEV_ROZERIA",
+    "id": 315
+  },
+  {
+    "devName": "DEV_GOKURIN",
+    "id": 316
+  },
+  {
+    "devName": "DEV_MARUNOOMU",
+    "id": 317
+  },
+  {
+    "devName": "DEV_KIBANIA",
+    "id": 318
+  },
+  {
+    "devName": "DEV_SAMEHADAA",
+    "id": 319
+  },
+  {
+    "devName": "DEV_HOERUKO",
+    "id": 320
+  },
+  {
+    "devName": "DEV_HOERUOO",
+    "id": 321
+  },
+  {
+    "devName": "DEV_DONMERU",
+    "id": 322
+  },
+  {
+    "devName": "DEV_BAKUUDA",
+    "id": 323
+  },
+  {
+    "devName": "DEV_KOOTASU",
+    "id": 324
+  },
+  {
+    "devName": "DEV_BANEBUU",
+    "id": 325
+  },
+  {
+    "devName": "DEV_BUUPIGGU",
+    "id": 326
+  },
+  {
+    "devName": "DEV_PATTIIRU",
+    "id": 327
+  },
+  {
+    "devName": "DEV_NAKKURAA",
+    "id": 328
+  },
+  {
+    "devName": "DEV_BIBURAABA",
+    "id": 329
+  },
+  {
+    "devName": "DEV_HURAIGON",
+    "id": 330
+  },
+  {
+    "devName": "DEV_SABONEA",
+    "id": 331
+  },
+  {
+    "devName": "DEV_NOKUTASU",
+    "id": 332
+  },
+  {
+    "devName": "DEV_TIRUTTO",
+    "id": 333
+  },
+  {
+    "devName": "DEV_TIRUTARISU",
+    "id": 334
+  },
+  {
+    "devName": "DEV_ZANGUUSU",
+    "id": 335
+  },
+  {
+    "devName": "DEV_HABUNEEKU",
+    "id": 336
+  },
+  {
+    "devName": "DEV_RUNATOON",
+    "id": 337
+  },
+  {
+    "devName": "DEV_SORUROKKU",
+    "id": 338
+  },
+  {
+    "devName": "DEV_DOZYOTTI",
+    "id": 339
+  },
+  {
+    "devName": "DEV_NAMAZUN",
+    "id": 340
+  },
+  {
+    "devName": "DEV_HEIGANI",
+    "id": 341
+  },
+  {
+    "devName": "DEV_SIZARIGAA",
+    "id": 342
+  },
+  {
+    "devName": "DEV_YAZIRON",
+    "id": 343
+  },
+  {
+    "devName": "DEV_NENDOORU",
+    "id": 344
+  },
+  {
+    "devName": "DEV_RIRIIRA",
+    "id": 345
+  },
+  {
+    "devName": "DEV_YUREIDORU",
+    "id": 346
+  },
+  {
+    "devName": "DEV_ANOPUSU",
+    "id": 347
+  },
+  {
+    "devName": "DEV_AAMARUDO",
+    "id": 348
+  },
+  {
+    "devName": "DEV_HINBASU",
+    "id": 349
+  },
+  {
+    "devName": "DEV_MIROKAROSU",
+    "id": 350
+  },
+  {
+    "devName": "DEV_POWARUN",
+    "id": 351
+  },
+  {
+    "devName": "DEV_KAKUREON",
+    "id": 352
+  },
+  {
+    "devName": "DEV_KAGEBOUZU",
+    "id": 353
+  },
+  {
+    "devName": "DEV_ZYUPETTA",
+    "id": 354
+  },
+  {
+    "devName": "DEV_YOMAWARU",
+    "id": 355
+  },
+  {
+    "devName": "DEV_SAMAYOORU",
+    "id": 356
+  },
+  {
+    "devName": "DEV_TOROPIUSU",
+    "id": 357
+  },
+  {
+    "devName": "DEV_TIRIIN",
+    "id": 358
+  },
+  {
+    "devName": "DEV_ABUSORU",
+    "id": 359
+  },
+  {
+    "devName": "DEV_SOONANO",
+    "id": 360
+  },
+  {
+    "devName": "DEV_YUKIWARASI",
+    "id": 361
+  },
+  {
+    "devName": "DEV_ONIGOORI",
+    "id": 362
+  },
+  {
+    "devName": "DEV_TAMAZARASI",
+    "id": 363
+  },
+  {
+    "devName": "DEV_TODOGURAA",
+    "id": 364
+  },
+  {
+    "devName": "DEV_TODOZERUGA",
+    "id": 365
+  },
+  {
+    "devName": "DEV_PAARURU",
+    "id": 366
+  },
+  {
+    "devName": "DEV_HANTEERU",
+    "id": 367
+  },
+  {
+    "devName": "DEV_SAKURABISU",
+    "id": 368
+  },
+  {
+    "devName": "DEV_ZIIRANSU",
+    "id": 369
+  },
+  {
+    "devName": "DEV_RABUKASU",
+    "id": 370
+  },
+  {
+    "devName": "DEV_TATUBEI",
+    "id": 371
+  },
+  {
+    "devName": "DEV_KOMORUU",
+    "id": 372
+  },
+  {
+    "devName": "DEV_BOOMANDA",
+    "id": 373
+  },
+  {
+    "devName": "DEV_DANBARU",
+    "id": 374
+  },
+  {
+    "devName": "DEV_METANGU",
+    "id": 375
+  },
+  {
+    "devName": "DEV_METAGUROSU",
+    "id": 376
+  },
+  {
+    "devName": "DEV_REZIROKKU",
+    "id": 377
+  },
+  {
+    "devName": "DEV_REZIAISU",
+    "id": 378
+  },
+  {
+    "devName": "DEV_REZISUTIRU",
+    "id": 379
+  },
+  {
+    "devName": "DEV_RATHIASU",
+    "id": 380
+  },
+  {
+    "devName": "DEV_RATHIOSU",
+    "id": 381
+  },
+  {
+    "devName": "DEV_KAIOOGA",
+    "id": 382
+  },
+  {
+    "devName": "DEV_GURAADON",
+    "id": 383
+  },
+  {
+    "devName": "DEV_REKKUUZA",
+    "id": 384
+  },
+  {
+    "devName": "DEV_ZIRAATI",
+    "id": 385
+  },
+  {
+    "devName": "DEV_DEOKISISU",
+    "id": 386
+  },
+  {
+    "devName": "DEV_NAETORU",
+    "id": 387
+  },
+  {
+    "devName": "DEV_HAYASIGAME",
+    "id": 388
+  },
+  {
+    "devName": "DEV_DODAITOSU",
+    "id": 389
+  },
+  {
+    "devName": "DEV_HIKOZARU",
+    "id": 390
+  },
+  {
+    "devName": "DEV_MOUKAZARU",
+    "id": 391
+  },
+  {
+    "devName": "DEV_GOUKAZARU",
+    "id": 392
+  },
+  {
+    "devName": "DEV_POTTYAMA",
+    "id": 393
+  },
+  {
+    "devName": "DEV_POTTAISI",
+    "id": 394
+  },
+  {
+    "devName": "DEV_ENPERUTO",
+    "id": 395
+  },
+  {
+    "devName": "DEV_MUKKURU",
+    "id": 396
+  },
+  {
+    "devName": "DEV_MUKUBAADO",
+    "id": 397
+  },
+  {
+    "devName": "DEV_MUKUHOOKU",
+    "id": 398
+  },
+  {
+    "devName": "DEV_BIPPA",
+    "id": 399
+  },
+  {
+    "devName": "DEV_BIIDARU",
+    "id": 400
+  },
+  {
+    "devName": "DEV_KOROBOOSI",
+    "id": 401
+  },
+  {
+    "devName": "DEV_KOROTOKKU",
+    "id": 402
+  },
+  {
+    "devName": "DEV_KORINKU",
+    "id": 403
+  },
+  {
+    "devName": "DEV_RUKUSIO",
+    "id": 404
+  },
+  {
+    "devName": "DEV_RENTORAA",
+    "id": 405
+  },
+  {
+    "devName": "DEV_SUBOMII",
+    "id": 406
+  },
+  {
+    "devName": "DEV_ROZUREIDO",
+    "id": 407
+  },
+  {
+    "devName": "DEV_ZUGAIDOSU",
+    "id": 408
+  },
+  {
+    "devName": "DEV_RAMUPARUDO",
+    "id": 409
+  },
+  {
+    "devName": "DEV_TATETOPUSU",
+    "id": 410
+  },
+  {
+    "devName": "DEV_TORIDEPUSU",
+    "id": 411
+  },
+  {
+    "devName": "DEV_MINOMUTTI",
+    "id": 412
+  },
+  {
+    "devName": "DEV_MINOMADAMU",
+    "id": 413
+  },
+  {
+    "devName": "DEV_GAAMEIRU",
+    "id": 414
+  },
+  {
+    "devName": "DEV_MITUHANII",
+    "id": 415
+  },
+  {
+    "devName": "DEV_BIIKUIN",
+    "id": 416
+  },
+  {
+    "devName": "DEV_PATIRISU",
+    "id": 417
+  },
+  {
+    "devName": "DEV_BUIZERU",
+    "id": 418
+  },
+  {
+    "devName": "DEV_HUROOZERU",
+    "id": 419
+  },
+  {
+    "devName": "DEV_THERINBO",
+    "id": 420
+  },
+  {
+    "devName": "DEV_THERIMU",
+    "id": 421
+  },
+  {
+    "devName": "DEV_KARANAKUSI",
+    "id": 422
+  },
+  {
+    "devName": "DEV_TORITODON",
+    "id": 423
+  },
+  {
+    "devName": "DEV_ETEBOOSU",
+    "id": 424
+  },
+  {
+    "devName": "DEV_HUWANTE",
+    "id": 425
+  },
+  {
+    "devName": "DEV_HUWARAIDO",
+    "id": 426
+  },
+  {
+    "devName": "DEV_MIMIRORU",
+    "id": 427
+  },
+  {
+    "devName": "DEV_MIMIROPPU",
+    "id": 428
+  },
+  {
+    "devName": "DEV_MUUMAAZI",
+    "id": 429
+  },
+  {
+    "devName": "DEV_DONKARASU",
+    "id": 430
+  },
+  {
+    "devName": "DEV_NYARUMAA",
+    "id": 431
+  },
+  {
+    "devName": "DEV_BUNYATTO",
+    "id": 432
+  },
+  {
+    "devName": "DEV_RIISYAN",
+    "id": 433
+  },
+  {
+    "devName": "DEV_SUKANPUU",
+    "id": 434
+  },
+  {
+    "devName": "DEV_SUKATANKU",
+    "id": 435
+  },
+  {
+    "devName": "DEV_DOOMIRAA",
+    "id": 436
+  },
+  {
+    "devName": "DEV_DOOTAKUN",
+    "id": 437
+  },
+  {
+    "devName": "DEV_USOHATI",
+    "id": 438
+  },
+  {
+    "devName": "DEV_MANENE",
+    "id": 439
+  },
+  {
+    "devName": "DEV_PINPUKU",
+    "id": 440
+  },
+  {
+    "devName": "DEV_PERAPPU",
+    "id": 441
+  },
+  {
+    "devName": "DEV_MIKARUGE",
+    "id": 442
+  },
+  {
+    "devName": "DEV_HUKAMARU",
+    "id": 443
+  },
+  {
+    "devName": "DEV_GABAITO",
+    "id": 444
+  },
+  {
+    "devName": "DEV_GABURIASU",
+    "id": 445
+  },
+  {
+    "devName": "DEV_GONBE",
+    "id": 446
+  },
+  {
+    "devName": "DEV_RIORU",
+    "id": 447
+  },
+  {
+    "devName": "DEV_RUKARIO",
+    "id": 448
+  },
+  {
+    "devName": "DEV_HIPOPOTASU",
+    "id": 449
+  },
+  {
+    "devName": "DEV_KABARUDON",
+    "id": 450
+  },
+  {
+    "devName": "DEV_SUKORUPI",
+    "id": 451
+  },
+  {
+    "devName": "DEV_DORAPION",
+    "id": 452
+  },
+  {
+    "devName": "DEV_GUREGGURU",
+    "id": 453
+  },
+  {
+    "devName": "DEV_DOKUROGGU",
+    "id": 454
+  },
+  {
+    "devName": "DEV_MASUKIPPA",
+    "id": 455
+  },
+  {
+    "devName": "DEV_KEIKOUO",
+    "id": 456
+  },
+  {
+    "devName": "DEV_NEORANTO",
+    "id": 457
+  },
+  {
+    "devName": "DEV_TAMANTA",
+    "id": 458
+  },
+  {
+    "devName": "DEV_YUKIKABURI",
+    "id": 459
+  },
+  {
+    "devName": "DEV_YUKINOOO",
+    "id": 460
+  },
+  {
+    "devName": "DEV_MANYUURA",
+    "id": 461
+  },
+  {
+    "devName": "DEV_ZIBAKOIRU",
+    "id": 462
+  },
+  {
+    "devName": "DEV_BEROBERUTO",
+    "id": 463
+  },
+  {
+    "devName": "DEV_DOSAIDON",
+    "id": 464
+  },
+  {
+    "devName": "DEV_MOZYANBO",
+    "id": 465
+  },
+  {
+    "devName": "DEV_EREKIBURU",
+    "id": 466
+  },
+  {
+    "devName": "DEV_BUUBAAN",
+    "id": 467
+  },
+  {
+    "devName": "DEV_TOGEKISSU",
+    "id": 468
+  },
+  {
+    "devName": "DEV_MEGAYANMA",
+    "id": 469
+  },
+  {
+    "devName": "DEV_RIIFIA",
+    "id": 470
+  },
+  {
+    "devName": "DEV_GUREISIA",
+    "id": 471
+  },
+  {
+    "devName": "DEV_GURAION",
+    "id": 472
+  },
+  {
+    "devName": "DEV_MANMUU",
+    "id": 473
+  },
+  {
+    "devName": "DEV_PORIGONz",
+    "id": 474
+  },
+  {
+    "devName": "DEV_ERUREIDO",
+    "id": 475
+  },
+  {
+    "devName": "DEV_DAINOOZU",
+    "id": 476
+  },
+  {
+    "devName": "DEV_YONOWAARU",
+    "id": 477
+  },
+  {
+    "devName": "DEV_YUKIMENOKO",
+    "id": 478
+  },
+  {
+    "devName": "DEV_ROTOMU",
+    "id": 479
+  },
+  {
+    "devName": "DEV_YUKUSII",
+    "id": 480
+  },
+  {
+    "devName": "DEV_EMURITTO",
+    "id": 481
+  },
+  {
+    "devName": "DEV_AGUNOMU",
+    "id": 482
+  },
+  {
+    "devName": "DEV_DHIARUGA",
+    "id": 483
+  },
+  {
+    "devName": "DEV_PARUKIA",
+    "id": 484
+  },
+  {
+    "devName": "DEV_HIIDORAN",
+    "id": 485
+  },
+  {
+    "devName": "DEV_REZIGIGASU",
+    "id": 486
+  },
+  {
+    "devName": "DEV_GIRATHINA",
+    "id": 487
+  },
+  {
+    "devName": "DEV_KURESERIA",
+    "id": 488
+  },
+  {
+    "devName": "DEV_FIONE",
+    "id": 489
+  },
+  {
+    "devName": "DEV_MANAFI",
+    "id": 490
+  },
+  {
+    "devName": "DEV_DAAKURAI",
+    "id": 491
+  },
+  {
+    "devName": "DEV_SHEIMI",
+    "id": 492
+  },
+  {
+    "devName": "DEV_ARUSEUSU",
+    "id": 493
+  },
+  {
+    "devName": "DEV_BIKUTHINI",
+    "id": 494
+  },
+  {
+    "devName": "DEV_TUTAAZYA",
+    "id": 495
+  },
+  {
+    "devName": "DEV_ZYANOBII",
+    "id": 496
+  },
+  {
+    "devName": "DEV_ZYAROODA",
+    "id": 497
+  },
+  {
+    "devName": "DEV_POKABU",
+    "id": 498
+  },
+  {
+    "devName": "DEV_TYAOBUU",
+    "id": 499
+  },
+  {
+    "devName": "DEV_ENBUOO",
+    "id": 500
+  },
+  {
+    "devName": "DEV_MIZYUMARU",
+    "id": 501
+  },
+  {
+    "devName": "DEV_HUTATIMARU",
+    "id": 502
+  },
+  {
+    "devName": "DEV_DAIKENKI",
+    "id": 503
+  },
+  {
+    "devName": "DEV_MINEZUMI",
+    "id": 504
+  },
+  {
+    "devName": "DEV_MIRUHOGGU",
+    "id": 505
+  },
+  {
+    "devName": "DEV_YOOTERII",
+    "id": 506
+  },
+  {
+    "devName": "DEV_HAADERIA",
+    "id": 507
+  },
+  {
+    "devName": "DEV_MUURANDO",
+    "id": 508
+  },
+  {
+    "devName": "DEV_TYORONEKO",
+    "id": 509
+  },
+  {
+    "devName": "DEV_REPARUDASU",
+    "id": 510
+  },
+  {
+    "devName": "DEV_YANAPPU",
+    "id": 511
+  },
+  {
+    "devName": "DEV_YANAKKII",
+    "id": 512
+  },
+  {
+    "devName": "DEV_BAOPPU",
+    "id": 513
+  },
+  {
+    "devName": "DEV_BAOKKII",
+    "id": 514
+  },
+  {
+    "devName": "DEV_HIYAPPU",
+    "id": 515
+  },
+  {
+    "devName": "DEV_HIYAKKII",
+    "id": 516
+  },
+  {
+    "devName": "DEV_MUNNA",
+    "id": 517
+  },
+  {
+    "devName": "DEV_MUSYAANA",
+    "id": 518
+  },
+  {
+    "devName": "DEV_MAMEPATO",
+    "id": 519
+  },
+  {
+    "devName": "DEV_HATOOBOO",
+    "id": 520
+  },
+  {
+    "devName": "DEV_KENHOROU",
+    "id": 521
+  },
+  {
+    "devName": "DEV_SIMAMA",
+    "id": 522
+  },
+  {
+    "devName": "DEV_ZEBURAIKA",
+    "id": 523
+  },
+  {
+    "devName": "DEV_DANGORO",
+    "id": 524
+  },
+  {
+    "devName": "DEV_GANTORU",
+    "id": 525
+  },
+  {
+    "devName": "DEV_GIGAIASU",
+    "id": 526
+  },
+  {
+    "devName": "DEV_KOROMORI",
+    "id": 527
+  },
+  {
+    "devName": "DEV_KOKOROMORI",
+    "id": 528
+  },
+  {
+    "devName": "DEV_MOGURYUU",
+    "id": 529
+  },
+  {
+    "devName": "DEV_DORYUUZU",
+    "id": 530
+  },
+  {
+    "devName": "DEV_TABUNNE",
+    "id": 531
+  },
+  {
+    "devName": "DEV_DOKKORAA",
+    "id": 532
+  },
+  {
+    "devName": "DEV_DOTEKKOTU",
+    "id": 533
+  },
+  {
+    "devName": "DEV_ROOBUSIN",
+    "id": 534
+  },
+  {
+    "devName": "DEV_OTAMARO",
+    "id": 535
+  },
+  {
+    "devName": "DEV_GAMAGARU",
+    "id": 536
+  },
+  {
+    "devName": "DEV_GAMAGEROGE",
+    "id": 537
+  },
+  {
+    "devName": "DEV_NAGEKI",
+    "id": 538
+  },
+  {
+    "devName": "DEV_DAGEKI",
+    "id": 539
+  },
+  {
+    "devName": "DEV_KURUMIRU",
+    "id": 540
+  },
+  {
+    "devName": "DEV_KURUMAYU",
+    "id": 541
+  },
+  {
+    "devName": "DEV_HAHAKOMORI",
+    "id": 542
+  },
+  {
+    "devName": "DEV_HUSIDE",
+    "id": 543
+  },
+  {
+    "devName": "DEV_HOIIGA",
+    "id": 544
+  },
+  {
+    "devName": "DEV_PENDORAA",
+    "id": 545
+  },
+  {
+    "devName": "DEV_MONMEN",
+    "id": 546
+  },
+  {
+    "devName": "DEV_ERUHUUN",
+    "id": 547
+  },
+  {
+    "devName": "DEV_TYURINE",
+    "id": 548
+  },
+  {
+    "devName": "DEV_DOREDHIA",
+    "id": 549
+  },
+  {
+    "devName": "DEV_BASURAO",
+    "id": 550
+  },
+  {
+    "devName": "DEV_MEGUROKO",
+    "id": 551
+  },
+  {
+    "devName": "DEV_WARUBIRU",
+    "id": 552
+  },
+  {
+    "devName": "DEV_WARUBIARU",
+    "id": 553
+  },
+  {
+    "devName": "DEV_DARUMAKKA",
+    "id": 554
+  },
+  {
+    "devName": "DEV_HIHIDARUMA",
+    "id": 555
+  },
+  {
+    "devName": "DEV_MARAKATTI",
+    "id": 556
+  },
+  {
+    "devName": "DEV_ISIZUMAI",
+    "id": 557
+  },
+  {
+    "devName": "DEV_IWAPARESU",
+    "id": 558
+  },
+  {
+    "devName": "DEV_ZURUGGU",
+    "id": 559
+  },
+  {
+    "devName": "DEV_ZURUZUKIN",
+    "id": 560
+  },
+  {
+    "devName": "DEV_SINBORAA",
+    "id": 561
+  },
+  {
+    "devName": "DEV_DESUMASU",
+    "id": 562
+  },
+  {
+    "devName": "DEV_DESUKAAN",
+    "id": 563
+  },
+  {
+    "devName": "DEV_PUROTOOGA",
+    "id": 564
+  },
+  {
+    "devName": "DEV_ABAGOORA",
+    "id": 565
+  },
+  {
+    "devName": "DEV_AAKEN",
+    "id": 566
+  },
+  {
+    "devName": "DEV_AAKEOSU",
+    "id": 567
+  },
+  {
+    "devName": "DEV_YABUKURON",
+    "id": 568
+  },
+  {
+    "devName": "DEV_DASUTODASU",
+    "id": 569
+  },
+  {
+    "devName": "DEV_ZOROA",
+    "id": 570
+  },
+  {
+    "devName": "DEV_ZOROAAKU",
+    "id": 571
+  },
+  {
+    "devName": "DEV_TIRAAMHI",
+    "id": 572
+  },
+  {
+    "devName": "DEV_TIRATIINO",
+    "id": 573
+  },
+  {
+    "devName": "DEV_GOTIMU",
+    "id": 574
+  },
+  {
+    "devName": "DEV_GOTIMIRU",
+    "id": 575
+  },
+  {
+    "devName": "DEV_GOTIRUZERU",
+    "id": 576
+  },
+  {
+    "devName": "DEV_YUNIRAN",
+    "id": 577
+  },
+  {
+    "devName": "DEV_DABURAN",
+    "id": 578
+  },
+  {
+    "devName": "DEV_RANKURUSU",
+    "id": 579
+  },
+  {
+    "devName": "DEV_KOARUHII",
+    "id": 580
+  },
+  {
+    "devName": "DEV_SUWANNA",
+    "id": 581
+  },
+  {
+    "devName": "DEV_BANIPUTTI",
+    "id": 582
+  },
+  {
+    "devName": "DEV_BANIRITTI",
+    "id": 583
+  },
+  {
+    "devName": "DEV_BAIBANIRA",
+    "id": 584
+  },
+  {
+    "devName": "DEV_SIKIZIKA",
+    "id": 585
+  },
+  {
+    "devName": "DEV_MEBUKIZIKA",
+    "id": 586
+  },
+  {
+    "devName": "DEV_EMONGA",
+    "id": 587
+  },
+  {
+    "devName": "DEV_KABURUMO",
+    "id": 588
+  },
+  {
+    "devName": "DEV_SYUBARUGO",
+    "id": 589
+  },
+  {
+    "devName": "DEV_TAMAGETAKE",
+    "id": 590
+  },
+  {
+    "devName": "DEV_MOROBARERU",
+    "id": 591
+  },
+  {
+    "devName": "DEV_PURURIRU",
+    "id": 592
+  },
+  {
+    "devName": "DEV_BURUNGERU",
+    "id": 593
+  },
+  {
+    "devName": "DEV_MAMANBOU",
+    "id": 594
+  },
+  {
+    "devName": "DEV_BATYURU",
+    "id": 595
+  },
+  {
+    "devName": "DEV_DENTYURA",
+    "id": 596
+  },
+  {
+    "devName": "DEV_TESSIIDO",
+    "id": 597
+  },
+  {
+    "devName": "DEV_NATTOREI",
+    "id": 598
+  },
+  {
+    "devName": "DEV_GIARU",
+    "id": 599
+  },
+  {
+    "devName": "DEV_GIGIARU",
+    "id": 600
+  },
+  {
+    "devName": "DEV_GIGIGIARU",
+    "id": 601
+  },
+  {
+    "devName": "DEV_SIBISIRASU",
+    "id": 602
+  },
+  {
+    "devName": "DEV_SIBIBIIRU",
+    "id": 603
+  },
+  {
+    "devName": "DEV_SIBIRUDON",
+    "id": 604
+  },
+  {
+    "devName": "DEV_RIGUREE",
+    "id": 605
+  },
+  {
+    "devName": "DEV_OOBEMU",
+    "id": 606
+  },
+  {
+    "devName": "DEV_HITOMOSI",
+    "id": 607
+  },
+  {
+    "devName": "DEV_RANPURAA",
+    "id": 608
+  },
+  {
+    "devName": "DEV_SYANDERA",
+    "id": 609
+  },
+  {
+    "devName": "DEV_KIBAGO",
+    "id": 610
+  },
+  {
+    "devName": "DEV_ONONDO",
+    "id": 611
+  },
+  {
+    "devName": "DEV_ONONOKUSU",
+    "id": 612
+  },
+  {
+    "devName": "DEV_KUMASYUN",
+    "id": 613
+  },
+  {
+    "devName": "DEV_TUNBEAA",
+    "id": 614
+  },
+  {
+    "devName": "DEV_HURIIZIO",
+    "id": 615
+  },
+  {
+    "devName": "DEV_TYOBOMAKI",
+    "id": 616
+  },
+  {
+    "devName": "DEV_AGIRUDAA",
+    "id": 617
+  },
+  {
+    "devName": "DEV_MAGGYO",
+    "id": 618
+  },
+  {
+    "devName": "DEV_KOZYOHUU",
+    "id": 619
+  },
+  {
+    "devName": "DEV_KOZYONDO",
+    "id": 620
+  },
+  {
+    "devName": "DEV_KURIMUGAN",
+    "id": 621
+  },
+  {
+    "devName": "DEV_GOBITTO",
+    "id": 622
+  },
+  {
+    "devName": "DEV_GORUUGU",
+    "id": 623
+  },
+  {
+    "devName": "DEV_KOMATANA",
+    "id": 624
+  },
+  {
+    "devName": "DEV_KIRIKIZAN",
+    "id": 625
+  },
+  {
+    "devName": "DEV_BAHHURON",
+    "id": 626
+  },
+  {
+    "devName": "DEV_WASIBON",
+    "id": 627
+  },
+  {
+    "devName": "DEV_WHOOGURU",
+    "id": 628
+  },
+  {
+    "devName": "DEV_BARUTYAI",
+    "id": 629
+  },
+  {
+    "devName": "DEV_BARUZIINA",
+    "id": 630
+  },
+  {
+    "devName": "DEV_KUITARAN",
+    "id": 631
+  },
+  {
+    "devName": "DEV_AIANTO",
+    "id": 632
+  },
+  {
+    "devName": "DEV_MONOZU",
+    "id": 633
+  },
+  {
+    "devName": "DEV_ZIHEDDO",
+    "id": 634
+  },
+  {
+    "devName": "DEV_SAZANDORA",
+    "id": 635
+  },
+  {
+    "devName": "DEV_MERARUBA",
+    "id": 636
+  },
+  {
+    "devName": "DEV_URUGAMOSU",
+    "id": 637
+  },
+  {
+    "devName": "DEV_KOBARUON",
+    "id": 638
+  },
+  {
+    "devName": "DEV_TERAKION",
+    "id": 639
+  },
+  {
+    "devName": "DEV_BIRIZION",
+    "id": 640
+  },
+  {
+    "devName": "DEV_TORUNEROSU",
+    "id": 641
+  },
+  {
+    "devName": "DEV_BORUTOROSU",
+    "id": 642
+  },
+  {
+    "devName": "DEV_RESIRAMU",
+    "id": 643
+  },
+  {
+    "devName": "DEV_ZEKUROMU",
+    "id": 644
+  },
+  {
+    "devName": "DEV_RANDOROSU",
+    "id": 645
+  },
+  {
+    "devName": "DEV_KYUREMU",
+    "id": 646
+  },
+  {
+    "devName": "DEV_KERUDHIO",
+    "id": 647
+  },
+  {
+    "devName": "DEV_MEROETTA",
+    "id": 648
+  },
+  {
+    "devName": "DEV_GENOSEKUTO",
+    "id": 649
+  },
+  {
+    "devName": "DEV_HARIMARON",
+    "id": 650
+  },
+  {
+    "devName": "DEV_HARIBOOGU",
+    "id": 651
+  },
+  {
+    "devName": "DEV_BURIGARON",
+    "id": 652
+  },
+  {
+    "devName": "DEV_FOKKO",
+    "id": 653
+  },
+  {
+    "devName": "DEV_TEERUNAA",
+    "id": 654
+  },
+  {
+    "devName": "DEV_MAFOKUSII",
+    "id": 655
+  },
+  {
+    "devName": "DEV_KEROMATU",
+    "id": 656
+  },
+  {
+    "devName": "DEV_GEKOGASIRA",
+    "id": 657
+  },
+  {
+    "devName": "DEV_GEKKOUGA",
+    "id": 658
+  },
+  {
+    "devName": "DEV_HORUBII",
+    "id": 659
+  },
+  {
+    "devName": "DEV_HORUUDO",
+    "id": 660
+  },
+  {
+    "devName": "DEV_YAYAKOMA",
+    "id": 661
+  },
+  {
+    "devName": "DEV_HINOYAKOMA",
+    "id": 662
+  },
+  {
+    "devName": "DEV_FAIAROO",
+    "id": 663
+  },
+  {
+    "devName": "DEV_KOHUKIMUSI",
+    "id": 664
+  },
+  {
+    "devName": "DEV_KOHUURAI",
+    "id": 665
+  },
+  {
+    "devName": "DEV_BIBIYON",
+    "id": 666
+  },
+  {
+    "devName": "DEV_SISIKO",
+    "id": 667
+  },
+  {
+    "devName": "DEV_KAENZISI",
+    "id": 668
+  },
+  {
+    "devName": "DEV_HURABEBE",
+    "id": 669
+  },
+  {
+    "devName": "DEV_HURAETTE",
+    "id": 670
+  },
+  {
+    "devName": "DEV_HURAAJESU",
+    "id": 671
+  },
+  {
+    "devName": "DEV_MHEEKURU",
+    "id": 672
+  },
+  {
+    "devName": "DEV_GOOGOOTO",
+    "id": 673
+  },
+  {
+    "devName": "DEV_YANTYAMU",
+    "id": 674
+  },
+  {
+    "devName": "DEV_GORONDA",
+    "id": 675
+  },
+  {
+    "devName": "DEV_TORIMIAN",
+    "id": 676
+  },
+  {
+    "devName": "DEV_NYASUPAA",
+    "id": 677
+  },
+  {
+    "devName": "DEV_NYAONIKUSU",
+    "id": 678
+  },
+  {
+    "devName": "DEV_HITOTUKI",
+    "id": 679
+  },
+  {
+    "devName": "DEV_NIDANGIRU",
+    "id": 680
+  },
+  {
+    "devName": "DEV_GIRUGARUDO",
+    "id": 681
+  },
+  {
+    "devName": "DEV_SYUSYUPU",
+    "id": 682
+  },
+  {
+    "devName": "DEV_HUREHUWAN",
+    "id": 683
+  },
+  {
+    "devName": "DEV_PEROPPAHU",
+    "id": 684
+  },
+  {
+    "devName": "DEV_PERORIIMU",
+    "id": 685
+  },
+  {
+    "devName": "DEV_MAAIIKA",
+    "id": 686
+  },
+  {
+    "devName": "DEV_KARAMANERO",
+    "id": 687
+  },
+  {
+    "devName": "DEV_KAMETETE",
+    "id": 688
+  },
+  {
+    "devName": "DEV_GAMENODESU",
+    "id": 689
+  },
+  {
+    "devName": "DEV_KUZUMOO",
+    "id": 690
+  },
+  {
+    "devName": "DEV_DORAMIDORO",
+    "id": 691
+  },
+  {
+    "devName": "DEV_UDEPPOU",
+    "id": 692
+  },
+  {
+    "devName": "DEV_BUROSUTAA",
+    "id": 693
+  },
+  {
+    "devName": "DEV_ERIKITERU",
+    "id": 694
+  },
+  {
+    "devName": "DEV_EREZAADO",
+    "id": 695
+  },
+  {
+    "devName": "DEV_TIGORASU",
+    "id": 696
+  },
+  {
+    "devName": "DEV_GATIGORASU",
+    "id": 697
+  },
+  {
+    "devName": "DEV_AMARUSU",
+    "id": 698
+  },
+  {
+    "devName": "DEV_AMARURUGA",
+    "id": 699
+  },
+  {
+    "devName": "DEV_NINFIA",
+    "id": 700
+  },
+  {
+    "devName": "DEV_RUTYABURU",
+    "id": 701
+  },
+  {
+    "devName": "DEV_DEDENNE",
+    "id": 702
+  },
+  {
+    "devName": "DEV_MERESII",
+    "id": 703
+  },
+  {
+    "devName": "DEV_NUMERA",
+    "id": 704
+  },
+  {
+    "devName": "DEV_NUMEIRU",
+    "id": 705
+  },
+  {
+    "devName": "DEV_NUMERUGON",
+    "id": 706
+  },
+  {
+    "devName": "DEV_KUREHFI",
+    "id": 707
+  },
+  {
+    "devName": "DEV_BOKUREE",
+    "id": 708
+  },
+  {
+    "devName": "DEV_OOROTTO",
+    "id": 709
+  },
+  {
+    "devName": "DEV_BAKETTYA",
+    "id": 710
+  },
+  {
+    "devName": "DEV_PANPUZIN",
+    "id": 711
+  },
+  {
+    "devName": "DEV_KATIKOORU",
+    "id": 712
+  },
+  {
+    "devName": "DEV_KUREBEESU",
+    "id": 713
+  },
+  {
+    "devName": "DEV_ONBATTO",
+    "id": 714
+  },
+  {
+    "devName": "DEV_ONBAAN",
+    "id": 715
+  },
+  {
+    "devName": "DEV_ZERUNEASU",
+    "id": 716
+  },
+  {
+    "devName": "DEV_IBERUTARU",
+    "id": 717
+  },
+  {
+    "devName": "DEV_ZIGARUDE",
+    "id": 718
+  },
+  {
+    "devName": "DEV_DHIANSII",
+    "id": 719
+  },
+  {
+    "devName": "DEV_HUUPA",
+    "id": 720
+  },
+  {
+    "devName": "DEV_BORUKENION",
+    "id": 721
+  },
+  {
+    "devName": "DEV_MOKUROO",
+    "id": 722
+  },
+  {
+    "devName": "DEV_HUKUSUROO",
+    "id": 723
+  },
+  {
+    "devName": "DEV_ZYUNAIPAA",
+    "id": 724
+  },
+  {
+    "devName": "DEV_NYABII",
+    "id": 725
+  },
+  {
+    "devName": "DEV_NYAHIITO",
+    "id": 726
+  },
+  {
+    "devName": "DEV_GAOGAEN",
+    "id": 727
+  },
+  {
+    "devName": "DEV_ASIMARI",
+    "id": 728
+  },
+  {
+    "devName": "DEV_OSYAMARI",
+    "id": 729
+  },
+  {
+    "devName": "DEV_ASIREENU",
+    "id": 730
+  },
+  {
+    "devName": "DEV_TUTUKERA",
+    "id": 731
+  },
+  {
+    "devName": "DEV_KERARAPPA",
+    "id": 732
+  },
+  {
+    "devName": "DEV_DODEKABASI",
+    "id": 733
+  },
+  {
+    "devName": "DEV_YANGUUSU",
+    "id": 734
+  },
+  {
+    "devName": "DEV_DEKAGUUSU",
+    "id": 735
+  },
+  {
+    "devName": "DEV_AGOZIMUSI",
+    "id": 736
+  },
+  {
+    "devName": "DEV_DENDIMUSI",
+    "id": 737
+  },
+  {
+    "devName": "DEV_KUWAGANON",
+    "id": 738
+  },
+  {
+    "devName": "DEV_MAKENKANI",
+    "id": 739
+  },
+  {
+    "devName": "DEV_KEKENKANI",
+    "id": 740
+  },
+  {
+    "devName": "DEV_ODORIDORI",
+    "id": 741
+  },
+  {
+    "devName": "DEV_ABURII",
+    "id": 742
+  },
+  {
+    "devName": "DEV_ABURIBON",
+    "id": 743
+  },
+  {
+    "devName": "DEV_IWANKO",
+    "id": 744
+  },
+  {
+    "devName": "DEV_RUGARUGAN",
+    "id": 745
+  },
+  {
+    "devName": "DEV_YOWASI",
+    "id": 746
+  },
+  {
+    "devName": "DEV_HIDOIDE",
+    "id": 747
+  },
+  {
+    "devName": "DEV_DOHIDOIDE",
+    "id": 748
+  },
+  {
+    "devName": "DEV_DOROBANKO",
+    "id": 749
+  },
+  {
+    "devName": "DEV_BANBADORO",
+    "id": 750
+  },
+  {
+    "devName": "DEV_SIZUKUMO",
+    "id": 751
+  },
+  {
+    "devName": "DEV_ONISIZUKUMO",
+    "id": 752
+  },
+  {
+    "devName": "DEV_KARIKIRI",
+    "id": 753
+  },
+  {
+    "devName": "DEV_RARANTESU",
+    "id": 754
+  },
+  {
+    "devName": "DEV_NEMASYU",
+    "id": 755
+  },
+  {
+    "devName": "DEV_MASHEEDO",
+    "id": 756
+  },
+  {
+    "devName": "DEV_YATOUMORI",
+    "id": 757
+  },
+  {
+    "devName": "DEV_ENNYUUTO",
+    "id": 758
+  },
+  {
+    "devName": "DEV_NUIKOGUMA",
+    "id": 759
+  },
+  {
+    "devName": "DEV_KITERUGUMA",
+    "id": 760
+  },
+  {
+    "devName": "DEV_AMAKAZI",
+    "id": 761
+  },
+  {
+    "devName": "DEV_AMAMAIKO",
+    "id": 762
+  },
+  {
+    "devName": "DEV_AMAAZYO",
+    "id": 763
+  },
+  {
+    "devName": "DEV_KYUWAWAA",
+    "id": 764
+  },
+  {
+    "devName": "DEV_YAREYUUTAN",
+    "id": 765
+  },
+  {
+    "devName": "DEV_NAGETUKESARU",
+    "id": 766
+  },
+  {
+    "devName": "DEV_KOSOKUMUSI",
+    "id": 767
+  },
+  {
+    "devName": "DEV_GUSOKUMUSYA",
+    "id": 768
+  },
+  {
+    "devName": "DEV_SUNABHA",
+    "id": 769
+  },
+  {
+    "devName": "DEV_SIRODESUNA",
+    "id": 770
+  },
+  {
+    "devName": "DEV_NAMAKOBUSI",
+    "id": 771
+  },
+  {
+    "devName": "DEV_TAIPUNURU",
+    "id": 772
+  },
+  {
+    "devName": "DEV_SIRUVHADHI",
+    "id": 773
+  },
+  {
+    "devName": "DEV_METENO",
+    "id": 774
+  },
+  {
+    "devName": "DEV_NEKKOARA",
+    "id": 775
+  },
+  {
+    "devName": "DEV_BAKUGAMESU",
+    "id": 776
+  },
+  {
+    "devName": "DEV_TOGEDEMARU",
+    "id": 777
+  },
+  {
+    "devName": "DEV_MIMIKKYU",
+    "id": 778
+  },
+  {
+    "devName": "DEV_HAGIGISIRI",
+    "id": 779
+  },
+  {
+    "devName": "DEV_ZIZIIRON",
+    "id": 780
+  },
+  {
+    "devName": "DEV_DADARIN",
+    "id": 781
+  },
+  {
+    "devName": "DEV_ZYARAKO",
+    "id": 782
+  },
+  {
+    "devName": "DEV_ZYARANGO",
+    "id": 783
+  },
+  {
+    "devName": "DEV_ZYARARANGA",
+    "id": 784
+  },
+  {
+    "devName": "DEV_KAPUKOKEKO",
+    "id": 785
+  },
+  {
+    "devName": "DEV_KAPUTETEHU",
+    "id": 786
+  },
+  {
+    "devName": "DEV_KAPUBURURU",
+    "id": 787
+  },
+  {
+    "devName": "DEV_KAPUREHIRE",
+    "id": 788
+  },
+  {
+    "devName": "DEV_KOSUMOGGU",
+    "id": 789
+  },
+  {
+    "devName": "DEV_KOSUMOUMU",
+    "id": 790
+  },
+  {
+    "devName": "DEV_SORUGAREO",
+    "id": 791
+  },
+  {
+    "devName": "DEV_RUNAAARA",
+    "id": 792
+  },
+  {
+    "devName": "DEV_UTUROIDO",
+    "id": 793
+  },
+  {
+    "devName": "DEV_MASSIBUUN",
+    "id": 794
+  },
+  {
+    "devName": "DEV_FEROOTHE",
+    "id": 795
+  },
+  {
+    "devName": "DEV_DENZYUMOKU",
+    "id": 796
+  },
+  {
+    "devName": "DEV_TEKKAGUYA",
+    "id": 797
+  },
+  {
+    "devName": "DEV_KAMITURUGI",
+    "id": 798
+  },
+  {
+    "devName": "DEV_AKUZIKINGU",
+    "id": 799
+  },
+  {
+    "devName": "DEV_NEKUROZUMA",
+    "id": 800
+  },
+  {
+    "devName": "DEV_MAGIANA",
+    "id": 801
+  },
+  {
+    "devName": "DEV_MAASYADOO",
+    "id": 802
+  },
+  {
+    "devName": "DEV_BEBENOMU",
+    "id": 803
+  },
+  {
+    "devName": "DEV_AAGOYON",
+    "id": 804
+  },
+  {
+    "devName": "DEV_TUNDETUNDE",
+    "id": 805
+  },
+  {
+    "devName": "DEV_ZUGADOON",
+    "id": 806
+  },
+  {
+    "devName": "DEV_ZERAORA",
+    "id": 807
+  },
+  {
+    "devName": "DEV_MERUTAN",
+    "id": 808
+  },
+  {
+    "devName": "DEV_MERUMETARU",
+    "id": 809
+  },
+  {
+    "devName": "DEV_SARUNORI",
+    "id": 810
+  },
+  {
+    "devName": "DEV_BATINKII",
+    "id": 811
+  },
+  {
+    "devName": "DEV_GORIRANDAA",
+    "id": 812
+  },
+  {
+    "devName": "DEV_HIBANII",
+    "id": 813
+  },
+  {
+    "devName": "DEV_RABIHUTTO",
+    "id": 814
+  },
+  {
+    "devName": "DEV_EESUBAAN",
+    "id": 815
+  },
+  {
+    "devName": "DEV_MESSON",
+    "id": 816
+  },
+  {
+    "devName": "DEV_ZIMEREON",
+    "id": 817
+  },
+  {
+    "devName": "DEV_INTEREON",
+    "id": 818
+  },
+  {
+    "devName": "DEV_HOSIGARISU",
+    "id": 819
+  },
+  {
+    "devName": "DEV_YOKUBARISU",
+    "id": 820
+  },
+  {
+    "devName": "DEV_KOKOGARA",
+    "id": 821
+  },
+  {
+    "devName": "DEV_AOGARASU",
+    "id": 822
+  },
+  {
+    "devName": "DEV_AAMAAGAA",
+    "id": 823
+  },
+  {
+    "devName": "DEV_SATTIMUSI",
+    "id": 824
+  },
+  {
+    "devName": "DEV_REDOOMUSI",
+    "id": 825
+  },
+  {
+    "devName": "DEV_IORUBU",
+    "id": 826
+  },
+  {
+    "devName": "DEV_KUSUNE",
+    "id": 827
+  },
+  {
+    "devName": "DEV_FOKUSURAI",
+    "id": 828
+  },
+  {
+    "devName": "DEV_HIMENKA",
+    "id": 829
+  },
+  {
+    "devName": "DEV_WATASIRAGA",
+    "id": 830
+  },
+  {
+    "devName": "DEV_UURUU",
+    "id": 831
+  },
+  {
+    "devName": "DEV_BAIUURUU",
+    "id": 832
+  },
+  {
+    "devName": "DEV_KAMUKAME",
+    "id": 833
+  },
+  {
+    "devName": "DEV_KAZIRIGAME",
+    "id": 834
+  },
+  {
+    "devName": "DEV_WANPATI",
+    "id": 835
+  },
+  {
+    "devName": "DEV_PARUSUWAN",
+    "id": 836
+  },
+  {
+    "devName": "DEV_TANDON",
+    "id": 837
+  },
+  {
+    "devName": "DEV_TOROGGON",
+    "id": 838
+  },
+  {
+    "devName": "DEV_SEKITANZAN",
+    "id": 839
+  },
+  {
+    "devName": "DEV_KAZITTYU",
+    "id": 840
+  },
+  {
+    "devName": "DEV_APPURYUU",
+    "id": 841
+  },
+  {
+    "devName": "DEV_TARUPPURU",
+    "id": 842
+  },
+  {
+    "devName": "DEV_SUNAHEBI",
+    "id": 843
+  },
+  {
+    "devName": "DEV_SADAIZYA",
+    "id": 844
+  },
+  {
+    "devName": "DEV_UUU",
+    "id": 845
+  },
+  {
+    "devName": "DEV_SASIKAMASU",
+    "id": 846
+  },
+  {
+    "devName": "DEV_KAMASUZYOO",
+    "id": 847
+  },
+  {
+    "devName": "DEV_EREZUN",
+    "id": 848
+  },
+  {
+    "devName": "DEV_SUTORINDAA",
+    "id": 849
+  },
+  {
+    "devName": "DEV_YAKUDE",
+    "id": 850
+  },
+  {
+    "devName": "DEV_MARUYAKUDE",
+    "id": 851
+  },
+  {
+    "devName": "DEV_TATAKKO",
+    "id": 852
+  },
+  {
+    "devName": "DEV_OTOSUPASU",
+    "id": 853
+  },
+  {
+    "devName": "DEV_YABATYA",
+    "id": 854
+  },
+  {
+    "devName": "DEV_POTTODESU",
+    "id": 855
+  },
+  {
+    "devName": "DEV_MIBURIMU",
+    "id": 856
+  },
+  {
+    "devName": "DEV_TEBURIMU",
+    "id": 857
+  },
+  {
+    "devName": "DEV_BURIMUON",
+    "id": 858
+  },
+  {
+    "devName": "DEV_BEROBAA",
+    "id": 859
+  },
+  {
+    "devName": "DEV_GIMOO",
+    "id": 860
+  },
+  {
+    "devName": "DEV_OORONGE",
+    "id": 861
+  },
+  {
+    "devName": "DEV_TATIHUSAGUMA",
+    "id": 862
+  },
+  {
+    "devName": "DEV_NYAIKINGU",
+    "id": 863
+  },
+  {
+    "devName": "DEV_SANIGOON",
+    "id": 864
+  },
+  {
+    "devName": "DEV_NEGIGANAITO",
+    "id": 865
+  },
+  {
+    "devName": "DEV_BARIKOORU",
+    "id": 866
+  },
+  {
+    "devName": "DEV_DESUBAAN",
+    "id": 867
+  },
+  {
+    "devName": "DEV_MAHOMIRU",
+    "id": 868
+  },
+  {
+    "devName": "DEV_MAHOIPPU",
+    "id": 869
+  },
+  {
+    "devName": "DEV_TAIREETU",
+    "id": 870
+  },
+  {
+    "devName": "DEV_BATINUNI",
+    "id": 871
+  },
+  {
+    "devName": "DEV_YUKIHAMI",
+    "id": 872
+  },
+  {
+    "devName": "DEV_MOSUNOU",
+    "id": 873
+  },
+  {
+    "devName": "DEV_ISIHENZIN",
+    "id": 874
+  },
+  {
+    "devName": "DEV_KOORIPPO",
+    "id": 875
+  },
+  {
+    "devName": "DEV_IESSAN",
+    "id": 876
+  },
+  {
+    "devName": "DEV_MORUPEKO",
+    "id": 877
+  },
+  {
+    "devName": "DEV_ZOUDOU",
+    "id": 878
+  },
+  {
+    "devName": "DEV_DAIOUDOU",
+    "id": 879
+  },
+  {
+    "devName": "DEV_PATTIRAGON",
+    "id": 880
+  },
+  {
+    "devName": "DEV_PATTIRUDON",
+    "id": 881
+  },
+  {
+    "devName": "DEV_UONORAGON",
+    "id": 882
+  },
+  {
+    "devName": "DEV_UOTIRUDON",
+    "id": 883
+  },
+  {
+    "devName": "DEV_ZYURARUDON",
+    "id": 884
+  },
+  {
+    "devName": "DEV_DORAMESIYA",
+    "id": 885
+  },
+  {
+    "devName": "DEV_DORONTI",
+    "id": 886
+  },
+  {
+    "devName": "DEV_DORAPARUTO",
+    "id": 887
+  },
+  {
+    "devName": "DEV_ZASIAN",
+    "id": 888
+  },
+  {
+    "devName": "DEV_ZAMAZENTA",
+    "id": 889
+  },
+  {
+    "devName": "DEV_MUGENDAINA",
+    "id": 890
+  },
+  {
+    "devName": "DEV_AAMAA1",
+    "id": 891
+  },
+  {
+    "devName": "DEV_AAMAA2",
+    "id": 892
+  },
+  {
+    "devName": "DEV_m23",
+    "id": 893
+  },
+  {
+    "devName": "DEV_REDEN",
+    "id": 894
+  },
+  {
+    "devName": "DEV_REDORA",
+    "id": 895
+  },
+  {
+    "devName": "DEV_HAKUBA",
+    "id": 896
+  },
+  {
+    "devName": "DEV_KOKUBA",
+    "id": 897
+  },
+  {
+    "devName": "DEV_KURAUN",
+    "id": 898
+  },
+  {
+    "devName": "DEV_ODOSISI2",
+    "id": 899
+  },
+  {
+    "devName": "DEV_SUTORAIKU2",
+    "id": 900
+  },
+  {
+    "devName": "DEV_HIMEGUMA3",
+    "id": 901
+  },
+  {
+    "devName": "DEV_rBASURAO2",
+    "id": 902
+  },
+  {
+    "devName": "DEV_rNYUURA2",
+    "id": 903
+  },
+  {
+    "devName": "DEV_rHARISEN2",
+    "id": 904
+  },
+  {
+    "devName": "DEV_FEATOROSU",
+    "id": 905
+  },
+  {
+    "devName": "DEV_NEKO1",
+    "id": 906
+  },
+  {
+    "devName": "DEV_NEKO2",
+    "id": 907
+  },
+  {
+    "devName": "DEV_NEKO3",
+    "id": 908
+  },
+  {
+    "devName": "DEV_WANI1",
+    "id": 909
+  },
+  {
+    "devName": "DEV_WANI2",
+    "id": 910
+  },
+  {
+    "devName": "DEV_WANI3",
+    "id": 911
+  },
+  {
+    "devName": "DEV_KAMO1",
+    "id": 912
+  },
+  {
+    "devName": "DEV_KAMO2",
+    "id": 913
+  },
+  {
+    "devName": "DEV_KAMO3",
+    "id": 914
+  },
+  {
+    "devName": "DEV_BUTA1",
+    "id": 915
+  },
+  {
+    "devName": "DEV_BUTA2",
+    "id": 916
+  },
+  {
+    "devName": "DEV_NOKOTTI2",
+    "id": 917
+  },
+  {
+    "devName": "DEV_KUMO1",
+    "id": 918
+  },
+  {
+    "devName": "DEV_KUMO2",
+    "id": 919
+  },
+  {
+    "devName": "DEV_BATTA1",
+    "id": 920
+  },
+  {
+    "devName": "DEV_BATTA2",
+    "id": 921
+  },
+  {
+    "devName": "DEV_SUKARABE1",
+    "id": 922
+  },
+  {
+    "devName": "DEV_SUKARABE2",
+    "id": 923
+  },
+  {
+    "devName": "DEV_OBAKEINU1",
+    "id": 924
+  },
+  {
+    "devName": "DEV_OBAKEINU2",
+    "id": 925
+  },
+  {
+    "devName": "DEV_DATYOU1",
+    "id": 926
+  },
+  {
+    "devName": "DEV_DATYOU2",
+    "id": 927
+  },
+  {
+    "devName": "DEV_KIRINRIKI2",
+    "id": 928
+  },
+  {
+    "devName": "DEV_UMIDHIGUDA",
+    "id": 929
+  },
+  {
+    "devName": "DEV_UMITORIO",
+    "id": 930
+  },
+  {
+    "devName": "DEV_OYAKATA",
+    "id": 931
+  },
+  {
+    "devName": "DEV_MERURUUSA",
+    "id": 932
+  },
+  {
+    "devName": "DEV_IRUKA1",
+    "id": 933
+  },
+  {
+    "devName": "DEV_IRUKA2",
+    "id": 934
+  },
+  {
+    "devName": "DEV_ORIIBU1",
+    "id": 935
+  },
+  {
+    "devName": "DEV_ORIIBU2",
+    "id": 936
+  },
+  {
+    "devName": "DEV_ORIIBU3",
+    "id": 937
+  },
+  {
+    "devName": "DEV_HABANERO1",
+    "id": 938
+  },
+  {
+    "devName": "DEV_HABANERO2",
+    "id": 939
+  },
+  {
+    "devName": "DEV_KAERU1",
+    "id": 940
+  },
+  {
+    "devName": "DEV_KAERU2",
+    "id": 941
+  },
+  {
+    "devName": "DEV_ENZIN1",
+    "id": 942
+  },
+  {
+    "devName": "DEV_ENZIN2",
+    "id": 943
+  },
+  {
+    "devName": "DEV_MIMIZU",
+    "id": 944
+  },
+  {
+    "devName": "DEV_NEZUMI1",
+    "id": 945
+  },
+  {
+    "devName": "DEV_NEZUMI2",
+    "id": 946
+  },
+  {
+    "devName": "DEV_OKAKUZIRA1",
+    "id": 947
+  },
+  {
+    "devName": "DEV_OKAKUZIRA2",
+    "id": 948
+  },
+  {
+    "devName": "DEV_KOORIDORA1",
+    "id": 949
+  },
+  {
+    "devName": "DEV_KOORIDORA2",
+    "id": 950
+  },
+  {
+    "devName": "DEV_KOORIDORA3",
+    "id": 951
+  },
+  {
+    "devName": "DEV_SUSIDORA",
+    "id": 952
+  },
+  {
+    "devName": "DEV_BAIKU",
+    "id": 953
+  },
+  {
+    "devName": "DEV_MAAMOTTO1",
+    "id": 954
+  },
+  {
+    "devName": "DEV_MAAMOTTO2",
+    "id": 955
+  },
+  {
+    "devName": "DEV_MAAMOTTO3",
+    "id": 956
+  },
+  {
+    "devName": "DEV_MIZUDORI1",
+    "id": 957
+  },
+  {
+    "devName": "DEV_MIZUDORI2",
+    "id": 958
+  },
+  {
+    "devName": "DEV_KOUNOTORI",
+    "id": 959
+  },
+  {
+    "devName": "DEV_INKO",
+    "id": 960
+  },
+  {
+    "devName": "DEV_HURAMINGO",
+    "id": 961
+  },
+  {
+    "devName": "DEV_KEGANI",
+    "id": 962
+  },
+  {
+    "devName": "DEV_GANEN1",
+    "id": 963
+  },
+  {
+    "devName": "DEV_GANEN2",
+    "id": 964
+  },
+  {
+    "devName": "DEV_GANEN3",
+    "id": 965
+  },
+  {
+    "devName": "DEV_KARUKAN1",
+    "id": 966
+  },
+  {
+    "devName": "DEV_KARUKAN2",
+    "id": 967
+  },
+  {
+    "devName": "DEV_AIAI1",
+    "id": 968
+  },
+  {
+    "devName": "DEV_AIAI2",
+    "id": 969
+  },
+  {
+    "devName": "DEV_PANINU1",
+    "id": 970
+  },
+  {
+    "devName": "DEV_PANINU2",
+    "id": 971
+  },
+  {
+    "devName": "DEV_MASUTHIHU1",
+    "id": 972
+  },
+  {
+    "devName": "DEV_MASUTHIHU2",
+    "id": 973
+  },
+  {
+    "devName": "DEV_TANBURU1",
+    "id": 974
+  },
+  {
+    "devName": "DEV_TANBURU2",
+    "id": 975
+  },
+  {
+    "devName": "DEV_KOIN1",
+    "id": 976
+  },
+  {
+    "devName": "DEV_KOIN2",
+    "id": 977
+  },
+  {
+    "devName": "DEV_ADONFAN",
+    "id": 978
+  },
+  {
+    "devName": "DEV_AMOROBARERU",
+    "id": 979
+  },
+  {
+    "devName": "DEV_AKETUBAN",
+    "id": 980
+  },
+  {
+    "devName": "DEV_AREAKOIRU",
+    "id": 981
+  },
+  {
+    "devName": "DEV_APURIN",
+    "id": 982
+  },
+  {
+    "devName": "DEV_AMUUMA",
+    "id": 983
+  },
+  {
+    "devName": "DEV_AURUGAMOSU",
+    "id": 984
+  },
+  {
+    "devName": "DEV_AAAAA",
+    "id": 985
+  },
+  {
+    "devName": "DEV_BDONFAN",
+    "id": 986
+  },
+  {
+    "devName": "DEV_BKETUBAN",
+    "id": 987
+  },
+  {
+    "devName": "DEV_BURUGAMOSU",
+    "id": 988
+  },
+  {
+    "devName": "DEV_BHARITEYAMA",
+    "id": 989
+  },
+  {
+    "devName": "DEV_BSAZANDORA",
+    "id": 990
+  },
+  {
+    "devName": "DEV_BBANGIRASU",
+    "id": 991
+  },
+  {
+    "devName": "DEV_BKOORI",
+    "id": 992
+  },
+  {
+    "devName": "DEV_BBBBB",
+    "id": 993
+  },
+  {
+    "devName": "DEV_ZYUNDEN1",
+    "id": 994
+  },
+  {
+    "devName": "DEV_ZYUNDEN2",
+    "id": 995
+  },
+  {
+    "devName": "DEV_ZYUNDEN3",
+    "id": 996
+  },
+  {
+    "devName": "DEV_ZYUNDEN4",
+    "id": 997
+  },
+  {
+    "devName": "DEV_AIGUANA",
+    "id": 998
+  },
+  {
+    "devName": "DEV_BIGUANA",
+    "id": 999
+  },
+  {
+    "devName": "DEV_FEARII1",
+    "id": 1000
+  },
+  {
+    "devName": "DEV_FEARII2",
+    "id": 1001
+  },
+  {
+    "devName": "DEV_FEARII3",
+    "id": 1002
+  },
+  {
+    "devName": "DEV_HINOKO1",
+    "id": 1003
+  },
+  {
+    "devName": "DEV_HINOKO2A",
+    "id": 1004
+  },
+  {
+    "devName": "DEV_HINOKO2B",
+    "id": 1005
+  },
+  {
+    "devName": "DEV_OKAKINGU",
+    "id": 1006
+  },
+  {
+    "devName": "DEV_OKAGYARADOSU",
+    "id": 1007
+  },
+  {
+    "devName": "DEV_KOMATANA3",
+    "id": 1008
+  },
+  {
+    "devName": "DEV_rUPAA2",
+    "id": 1009
+  },
+  {
+    "devName": "DEV_MANKII3",
+    "id": 1010
+  }
+]
