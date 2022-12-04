@@ -1,10 +1,8 @@
 import subprocess
 
-def generateBinary():
-  # command = "flatc.exe -b ./src/world/data/encount/pokedata/pokedata/pokedata_array.bfbs ./pokedata_array.json"
+def generateBinary(schemaPath:str, jsonPath:str):
+  # command = "flatc.exe -b schema.bfbs data.json"
   flatcPath = "./src/flatc.exe"
-  schemaPath = "./src/pokedata_array.bfbs"
-  jsonPath = "./pokedata_array.json"
 
   process = subprocess.run([
     flatcPath,

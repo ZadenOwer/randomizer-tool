@@ -6,19 +6,32 @@ import random
 pokemonData = {
   "values": []
 }
+personalData = {
+  "Table": []
+}
 pokemonList = []
+abilityList = []
+tmList = []
+moveList = []
 paldeaDex = []
 legendaryDex = []
 paradoxDex = []
 
 with (
   open('./src/jsons/pokedata_array.json', 'r', encoding='utf-8-sig') as pokedata_array_file,
+  open('./src/jsons/personal_array.json', 'r', encoding='utf-8-sig') as personal_array_file,
   open('./src/jsons/pokemon_list.json', 'r', encoding='utf-8-sig') as pokemon_list_file,
   open('./src/jsons/dex.json', 'r', encoding='utf-8-sig') as dex_file,
+  open('./src/jsons/ability_list.json', 'r', encoding='utf-8-sig') as ability_list_file,
+  open('./src/jsons/tm_list.json', 'r', encoding='utf-8-sig') as tm_list_file,
+  open('./src/jsons/move_list.json', 'r', encoding='utf-8-sig') as move_list_file,
 ):
-
   pokemonData = json.load(pokedata_array_file)
+  personalData = json.load(personal_array_file)
   pokemonList = json.load(pokemon_list_file)
+  abilityList = json.load(ability_list_file)
+  tmList = json.load(tm_list_file)
+  moveList = json.load(move_list_file)
   dex = json.load(dex_file)
   paldeaDex = dex["paldeaDex"]
   legendaryDex = dex["legendaryDex"]
@@ -39,6 +52,8 @@ with (
   itemList = json.load(item_list_file)
 
 # Ending Item Data Imports
+
+# ********* Areas Randomizer Start *********
 
 def generateRandomPaldeaPokemon(options: dict = None):
   rng = random.randrange(start=0, stop=len(paldeaDex), step=1)
@@ -84,13 +99,13 @@ def generateRandomItem():
   except:
     return "ITEMID_NONE"
 
-def getRandomizedList(options: dict = None):
-  print('Randomizing with options:', options)
+def getRandomizedArea(options: dict = None):
+  print('Randomizing Areas with options:', options)
   alreadyUsedId = []
-  randomizedList = []
+  randomizedAreaList = []
   for pokemon in pokemonData["values"]:
     if (pokemon["bandtype"] == "BOSS"):
-      randomizedList.append(pokemon)
+      randomizedAreaList.append(pokemon)
       continue
 
     randomPokemon = generateRandomPaldeaPokemon(options)
@@ -105,14 +120,14 @@ def getRandomizedList(options: dict = None):
 
     if (options is None or options["items"] is None or options["items"] == False):
       #  No randomized items
-      randomizedList.append({
+      randomizedAreaList.append({
         **pokemon,
         "devid": randomPokemon["devName"]
       })
       continue
 
     randomItem = generateRandomItem()
-    randomizedList.append({
+    randomizedAreaList.append({
       **pokemon,
       "devid": randomPokemon["devName"],
       "bringItem": {
@@ -122,4 +137,85 @@ def getRandomizedList(options: dict = None):
     })
     continue
 
-  return randomizedList
+  return randomizedAreaList
+
+# ********* Areas Randomizer End *********
+
+# ********* Pokemon Randomizer End *********
+def getRandomizedAbility(blacklist: list = []):
+  randomizedAbility = None
+
+  while (randomizedAbility is None or randomizedAbility in blacklist):
+    rng = random.randrange(start=0, stop=len(abilityList), step=1)
+    randomizedAbility = abilityList[rng]
+
+  return randomizedAbility
+
+def getRandomizedTMList():
+  maxTMList = 51
+  randomizedTMList = []
+
+  for item in range(0, maxTMList):
+    randomizedTM = None
+
+    while (randomizedTM is None or randomizedTM in randomizedTMList):
+      rng = random.randrange(start=0, stop=len(tmList), step=1)
+      randomizedTM = tmList[rng]
+
+    randomizedTMList.append(randomizedTM)
+
+  return randomizedTMList
+
+def getRandomizedLearnset(defaultLearnset: list):
+  randomizedLearnset = []
+  alreadyUsedIds = []
+
+  for defaultMove in defaultLearnset:
+    moveId = None
+
+    while (moveId is None or moveId in alreadyUsedIds):
+      rngMoveId = random.randrange(start=0, stop=len(moveList), step=1)
+      randomMove = moveList[rngMoveId]
+
+      moveId = randomMove["id"]
+
+    randomizedLearnset.append({
+      **defaultMove,
+      "Move": moveId
+    })
+
+  return randomizedLearnset
+
+def getRandomizedPokemonList(options: dict = None):
+  print('Randomizing Pokemon with options:', options)
+  randomizedPokemonList = []
+  for pokemon in personalData["Table"]:
+
+    if not pokemon["IsPresentInGame"]:
+      randomizedPokemonList.append(pokemon)
+      continue
+
+    randomizedPokemon = {
+      **pokemon
+    }
+
+    if (options["abilities"] == True):
+      # Randomizing Abilities
+      randomizedPokemon["Ability1"] = getRandomizedAbility()
+      randomizedPokemon["Ability2"] = getRandomizedAbility(blacklist=[randomizedPokemon["Ability1"]])
+      randomizedPokemon["AbilityH"] = getRandomizedAbility(blacklist=[randomizedPokemon["Ability1"], randomizedPokemon["Ability2"]])
+
+    if (options["tm"]):
+      # Randomizing TM compatibility
+      randomizedPokemon["TechnicalMachine"] = getRandomizedTMList()
+
+    if (options["learnset"]):
+      # Randomizing Pool of moves the pokemon will learn by level
+      randomizedPokemon["Learnset"]
+
+    randomizedPokemonList.append(randomizedPokemon)
+    continue
+
+  return randomizedPokemonList
+
+# ********* Pokemon Randomizer End *********
