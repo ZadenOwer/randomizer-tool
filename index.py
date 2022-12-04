@@ -17,7 +17,8 @@ optionsValues = {
   "paradox": True,
   "abilities": True,
   "tm": False,
-  "learnset": False
+  "learnset": False,
+  "keepFiles": False
 }
 
 window = WindowFrame.getWindowFrame(optionsValues)
@@ -44,6 +45,11 @@ while True:
 
   if event == 'Randomize!':
     # Serializing options
+
+    serializedGlobalOptions = {
+      "keepFiles": False if ("keepFiles" not in values.keys() or values["keepFiles"] is None or values["keepFiles"] == False) else True,
+    }
+
     serializedAreaOptions = {
       "items": False if ("items" not in values.keys() or values["items"] is None or values["items"] == False) else True,
       "legendaries": False if ("legendaries" not in values.keys() or values["legendaries"] is None or values["legendaries"] == False) else True,
@@ -92,17 +98,22 @@ while True:
 
     shutil.copy('./src/pokedata_array.bfbs', pokedataPath)
 
-    os.replace('./pokedata_array.bin', f'{pokedataPath}/pokedata_array.bin')
-    os.replace('./personal_array.bin', f'{personalDataPath}/personal_array.bin')
-
+    if serializedGlobalOptions["keepFiles"]:
+      shutil.copy('./pokedata_array.bin', f'{pokedataPath}/pokedata_array.bin')
+      shutil.copy('./personal_array.bin', f'{personalDataPath}/personal_array.bin')
+    else:
+      os.replace('./pokedata_array.bin', f'{pokedataPath}/pokedata_array.bin')
+      os.replace('./personal_array.bin', f'{personalDataPath}/personal_array.bin')
+      
     print('Generating ZIP with the mod..')
     shutil.make_archive('randomized_pokemon', 'zip', './static')
     print('ZIP created!')
 
+    if not serializedGlobalOptions["keepFiles"]:
     # Clean up
-    os.remove('./pokedata_array.json')
-    os.remove('./personal_array.json')
-    shutil.rmtree('./static')
+      os.remove('./pokedata_array.json')  
+      os.remove('./personal_array.json')
   
+    shutil.rmtree('./static')
 
 window.close()

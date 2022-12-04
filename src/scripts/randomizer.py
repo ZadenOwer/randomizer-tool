@@ -84,20 +84,18 @@ def generateRandomItem():
 
   rngItemType = random.randrange(start=0, stop=len(itemTypesWeighted), step=1)
   itemType = itemTypesWeighted[rngItemType]
-  itemsByType = filter(
+  itemsByType = list(filter(
     lambda item: item["ItemType"] == itemType and item["FieldPocket"] not in bannedFieldPocket,
     itemData["values"]
-  )
+  ))
+  print(itemsByType)
+  item = None
+  while (item is None):
+    rngItem = random.randrange(start=0, stop=len(itemsByType), step=1)
+    itemRaw = itemsByType[rngItem]
+    item = next((item for item in itemList if item["id"] == itemRaw["Id"]), None)
 
-  try:
-    item = None
-    while (item is None):
-      rngItem = random.randrange(start=0, stop=len(itemsByType), step=1)
-      itemRaw = itemsByType[rngItem]
-      item = next(item for item in itemList if item["id"] == itemRaw["id"])
-
-  except:
-    return "ITEMID_NONE"
+  return item["id"]
 
 def getRandomizedArea(options: dict = None):
   print('Randomizing Areas with options:', options)
@@ -205,9 +203,10 @@ def getRandomizedPokemonList(options: dict = None):
 
     if (options["abilities"] == True):
       # Randomizing Abilities
-      randomizedPokemon["Ability1"] = getRandomizedAbility()
-      randomizedPokemon["Ability2"] = getRandomizedAbility(blacklist=[randomizedPokemon["Ability1"]])
-      randomizedPokemon["AbilityH"] = getRandomizedAbility(blacklist=[randomizedPokemon["Ability1"], randomizedPokemon["Ability2"]])
+      defaultAbilities = [randomizedPokemon["Ability1"], randomizedPokemon["Ability2"], randomizedPokemon["AbilityH"]]
+      randomizedPokemon["Ability1"] = getRandomizedAbility(blacklist=defaultAbilities)
+      randomizedPokemon["Ability2"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["Ability1"]])
+      randomizedPokemon["AbilityH"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["Ability1"], randomizedPokemon["Ability2"]])
 
     if (options["tm"]):
       # Randomizing TM compatibility

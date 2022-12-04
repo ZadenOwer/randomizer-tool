@@ -2,17 +2,15 @@
 
 ## Index Table
 
-- [Randomizer Tool](#randomizer-tool)
-  - [Index Table](#index-table)
-  - [Introduction](#introduction)
-  - [Using this Repo](#using-this-repo)
-  - [Things you need](#things-you-need)
-  - [How to install](#how-to-install)
-  - [Running the application locally](#running-the-application-locally)
-  - [Generate your own version .exe](#generate-your-own-version-exe)
-  - [I generate my mod .zip, What's next?](#i-generate-my-mod-zip-whats-next)
+- [Introduction](#introduction)
+- [Using this Repo](#using-this-repo)
+- [Things you need](#things-you-need)
+- [How to install](#how-to-install)
+- [Running the application locally](#running-the-application-locally)
+- [Generate your own version .exe](#generate-your-own-version-exe)
+- [I generate my mod .zip, What's next?](#i-generate-my-mod-zip-whats-next)
 - [Question and Answers](#question-and-answers)
-  - [Author and thanks](#author-and-thanks)
+- [Author and thanks](#author-and-thanks)
 
 ## Introduction
 

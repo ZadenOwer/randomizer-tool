@@ -138,6 +138,10 @@ def getWindowFrame(optionsValues: dict):
     sg.Button("Step 3"),
   ]
 
+  DEVS_HELP = [
+    [sg.Checkbox("Keep files generated (such as binaries and jsons)", key="keepFiles", default=optionsValues["keepFiles"], text_color=DANGER_COLOR, background_color=BG_COLOR)]
+  ]
+
   RANDOMIZE_BUTTON = [[sg.Button("Randomize!")]]
 
   NOTES = [
@@ -163,7 +167,7 @@ def getWindowFrame(optionsValues: dict):
     [
       sg.Column(areasLayout, key="step1", background_color=BG_COLOR),
       sg.Column(pokemonLayout, key="step2", visible=False, background_color=BG_COLOR),
-      sg.Column(RANDOMIZE_BUTTON + NOTES + COPYRIGHT, key="step3", visible=False, background_color=BG_COLOR)
+      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + COPYRIGHT, key="step3", visible=False, background_color=BG_COLOR)
     ],
     
     LAYOUTS_BUTTONS
