@@ -80,10 +80,7 @@ while True:
       print('Error creating binary:', areaRandomizeResult.stderr)
       continue
 
-    pokemonRandomizeResult = FlatC.generateBinary(schemaPath = "./src/personal_array.bfbs", jsonPath = "./personal_array.json")  # Generates the Randomized Pokemon binary
-    if pokemonRandomizeResult.stderr != b'':
-      print('Error creating binary:', pokemonRandomizeResult.stderr)
-      continue
+    FlatC.serializeJson(jsonPath='./personal_array.json', ouputName='personal_array.bin') # Generates the Randomized Pokemon binary
 
     print('Binaries created!')
 
