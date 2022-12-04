@@ -151,18 +151,22 @@ def getRandomizedAbility(blacklist: list = []):
 
   return randomizedAbility
 
-def getRandomizedTMList():
-  maxTMList = 51
+def getRandomizedTMList(default: list):
+  maxTMList = len(default)
   randomizedTMList = []
+  movesPool = tmList
 
   for item in range(0, maxTMList):
     randomizedTM = None
 
-    while (randomizedTM is None or randomizedTM in randomizedTMList):
-      rng = random.randrange(start=0, stop=len(tmList), step=1)
-      randomizedTM = tmList[rng]
+    if (len(randomizedTMList) == len(tmList)):
+      movesPool = moveList
 
-    randomizedTMList.append(randomizedTM)
+    while (randomizedTM is None or randomizedTM in randomizedTMList):
+      rng = random.randrange(start=0, stop=len(movesPool), step=1)
+      randomizedTM = movesPool[rng]
+
+    randomizedTMList.append(randomizedTM["id"])
 
   return randomizedTMList
 
@@ -207,11 +211,11 @@ def getRandomizedPokemonList(options: dict = None):
 
     if (options["tm"]):
       # Randomizing TM compatibility
-      randomizedPokemon["TechnicalMachine"] = getRandomizedTMList()
+      randomizedPokemon["TechnicalMachine"] = getRandomizedTMList(default=randomizedPokemon["TechnicalMachine"])
 
     if (options["learnset"]):
       # Randomizing Pool of moves the pokemon will learn by level
-      randomizedPokemon["Learnset"]
+      randomizedPokemon["Learnset"] = getRandomizedLearnset(randomizedPokemon["Learnset"])
 
     randomizedPokemonList.append(randomizedPokemon)
     continue
