@@ -1,10 +1,18 @@
 import subprocess
+import json
 
-def generateBinary():
-  # command = "flatc.exe -b ./src/world/data/encount/pokedata/pokedata/pokedata_array.bfbs ./pokedata_array.json"
+from pythonnet import load
+load("coreclr")
+
+import clr
+
+clr.AddReference('./src/dlls/FlatSharp')
+clr.AddReference('./src/dlls/FlatBufferConverter')
+from FlatBufferConverter import FlatSerializer, PersonalTable9SVfb
+
+def generateBinary(schemaPath:str, jsonPath:str):
+  # command = "flatc.exe -b schema.bfbs data.json"
   flatcPath = "./src/flatc.exe"
-  schemaPath = "./src/pokedata_array.bfbs"
-  jsonPath = "./pokedata_array.json"
 
   process = subprocess.run([
     flatcPath,
@@ -14,3 +22,9 @@ def generateBinary():
   ], capture_output=True)
 
   return process
+
+def serializeJson(jsonPath: str, ouputName: str):
+  with open(jsonPath, 'r') as jsonData:
+    strJson = jsonData.read()
+    my_instance = FlatSerializer()
+    my_instance.SerializeFrom(strJson, ouputName)
