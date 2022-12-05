@@ -1,0 +1,22 @@
+[
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI", //	Blazing Torque - Signature Mov of the Fire Star Team Car
+    "id": 896
+  },
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI2", //	Wicked Torque - Signature Mov of the Dark Star Team Car
+    "id": 897
+  },
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI3", //	Noxious Torque - Signature Mov of the Posion Star Team Car
+    "id": 898
+  },
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI4", //	Combat Torque - Signature Mov of the Fighting Star Team Car
+    "id": 899
+  },
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI5", //	Magical Torque - Signature Mov of the Fairy Star Team Car
+    "id": 900
+  }
+]
