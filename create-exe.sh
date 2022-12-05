@@ -37,6 +37,7 @@ cp -v "$PWD\src\flatc.exe" "$PWD\dist\src\flatc.exe"
 cp -v "$PWD\src\pokedata_array.bfbs" "$PWD\dist\src\pokedata_array.bfbs"
 
 rm -r "$PWD\randomizer$1.spec"
+rm -r "$PWD\myscript.spec"
 rm -r "$PWD\build"
 
 exit 0
