@@ -12,7 +12,7 @@ echo "Version $1"
 rm -r "$PWD\build"
 rm -r "$PWD\dist"
 
-pyinstaller \
+python -m PyInstaller \
 --onefile \
 --clean \
 -n randomizer$1 \
@@ -21,10 +21,16 @@ index.py
 mkdir 'dist'
 mkdir 'dist/src'
 mkdir 'dist/src/jsons'
+mkdir 'dist/src/dlls'
 
 for f in src/jsons/*.json
 do 
    cp -v "$f" dist/"${f%.json}".json
+done
+
+for f in src/dlls/*.dll
+do 
+   cp -v "$f" dist/"${f%.dll}".dll
 done
 
 cp -v "$PWD\src\flatc.exe" "$PWD\dist\src\flatc.exe"
