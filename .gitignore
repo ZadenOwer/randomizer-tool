@@ -1,2 +1,8 @@
 build
 dist
+static
+src/scripts/__pycache__/
+
+randomized_pokemon.zip
+*.json
+*.bin
