@@ -2,23 +2,26 @@ import os
 
 import PySimpleGUI as sg
 
-LAYOUT_SIZE = (800, 600) # (WIDTH, HEIGHT)
+LAYOUT_SIZE = (800, 800) # (WIDTH, HEIGHT)
 
 DEFAULT_FONT_FAMILY = ''
 
-TITLE_FONT = ('Courier', 24)
+TITLE_FONT = ('Courier', 24, 'bold')
+HEADER_FONT = ('', 18)
 INPUT_FONT = (DEFAULT_FONT_FAMILY, 14, 'bold')
 TEXT_FONT = (DEFAULT_FONT_FAMILY, 12)
 COPYRIGHT_FONT = (DEFAULT_FONT_FAMILY, 12, 'italic')
 
 BG_COLOR = "#7c8487"
+WHITE_COLOR = "#FFFFFF"
 
 DANGER_COLOR = "#894103"
 
 ON_CLOSE = sg.WIN_CLOSED
 
 def getAreasLayout(optionsValues: dict):
-  
+  LAYOUT_HEADER = [[sg.Text("Areas/Spawn Options", font=HEADER_FONT, background_color=BG_COLOR)]]
+
   ITEMS_CHECKBOX = [
     [
       # Input
@@ -59,11 +62,12 @@ def getAreasLayout(optionsValues: dict):
     ]
   ]
 
-  layout = ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
+  layout = LAYOUT_HEADER + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
 
   return layout
 
 def getPokemonLayout(optionsValues: dict):
+  LAYOUT_HEADER = [[sg.Text("Pokemon Options", font=HEADER_FONT, background_color=BG_COLOR)]]
   
   ABILITIES_CHECKBOX = [
     [
@@ -113,7 +117,118 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
-  layout = ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX
+  layout = LAYOUT_HEADER + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX
+
+  return layout
+
+def getTrainersLayout(optionsValues: dict):
+  LAYOUT_HEADER = [[sg.Text("Trainers Options", font=HEADER_FONT, background_color=BG_COLOR)]]
+
+  TERACRISTALIZE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Teracristalize", key="trainerTeracristalize", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["trainerTeracristalize"]),
+    ],
+    # Description
+    [
+      sg.Text("Every trainer will attempt to teracristalize.", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+
+  FULL_TEAM_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Force Full Team", key="forceFullTeam", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["forceFullTeam"]),
+    ],
+    # Description
+    [
+      sg.Text("Every trainer will have 6 pokemon on his team", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+
+  KEEP_TYPE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Keep Themed Trainers", key="keepGymType", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["keepGymType"]),
+    ],
+    # Description
+    [
+      sg.Text("Randomize the pokemon of themed trainers (such as gym leaders) for others with same type", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+
+  ITEMS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Trainers' Pokemon Items", key="trainersItems", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["trainersItems"]),
+    ],
+    # Description
+    [
+      sg.Text("Try to put an item on every pokemon of every trainer", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+
+  COMPETITIVE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Perfect IVs", key="competitivePkm", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["competitivePkm"]),
+    ],
+    # Description
+    [
+      sg.Text("Every pokemon of every trainer will have perfect IVs on each stat (keeping the 30 IVs on a random stat)", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+
+  SHINY_INPUT = [
+    [
+      # Input
+      sg.Input("", key="trainerShiniesRate", background_color=WHITE_COLOR, size=(12,1)),
+      sg.Text("Shiny Rate (Value [0-100])", font=INPUT_FONT, background_color=BG_COLOR),
+    ],
+    # Description
+    [
+      sg.Text("Shiny rate for every pokemon of every trainer", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: If the value is lesser than 0 will be treated as 0, if the value is greater than 100, will be treated as 100,", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ],
+    [
+      sg.Text("or if the value is not a number, will be ignored", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+
+  FORCE_EVOLUTION_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Force Final Evolution", key="forceFinalEvolution", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["forceFinalEvolution"]),
+    ],
+    # Description
+    [
+      sg.Text("Force every pokemon of every trainer be on they final evolution (if have) based on a value as a threshold", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+
+  EVOLUTION_CAP_INPUT = [
+    [
+      # Input
+      sg.Input("", key="finalEvolutionCap", background_color=WHITE_COLOR, size=(12,1)),
+      sg.Text("Force Evolution Threshold (Value [1-99])", font=INPUT_FONT, background_color=BG_COLOR),
+    ],
+    # Description
+    [
+      sg.Text("Pokemon with this level and above will be forced to swap for they final evolution", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: If the value is less than or equal to 0 or greather than or equal to 100, or if the value is not a number,", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ],
+    [
+      sg.Text("will be ignored", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+
+  layout = LAYOUT_HEADER + TERACRISTALIZE_CHECKBOX + FULL_TEAM_CHECKBOX + KEEP_TYPE_CHECKBOX + ITEMS_CHECKBOX + COMPETITIVE_CHECKBOX + SHINY_INPUT + FORCE_EVOLUTION_CHECKBOX + EVOLUTION_CAP_INPUT
 
   return layout
 
@@ -136,6 +251,7 @@ def getWindowFrame(optionsValues: dict):
     sg.Button("Step 1"),
     sg.Button("Step 2"),
     sg.Button("Step 3"),
+    sg.Button("Step 4"),
   ]
 
   DEVS_HELP = [
@@ -160,6 +276,7 @@ def getWindowFrame(optionsValues: dict):
 
   areasLayout = getAreasLayout(optionsValues)
   pokemonLayout = getPokemonLayout(optionsValues)
+  trainersLayout = getTrainersLayout(optionsValues)
 
   finalLayout = [
     HEADER_TEXT,
@@ -167,7 +284,8 @@ def getWindowFrame(optionsValues: dict):
     [
       sg.Column(areasLayout, key="step1", background_color=BG_COLOR),
       sg.Column(pokemonLayout, key="step2", visible=False, background_color=BG_COLOR),
-      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + COPYRIGHT, key="step3", visible=False, background_color=BG_COLOR)
+      sg.Column(trainersLayout, key="step3", visible=False, background_color=BG_COLOR),
+      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + COPYRIGHT, key="step4", visible=False, background_color=BG_COLOR)
     ],
     
     LAYOUTS_BUTTONS
