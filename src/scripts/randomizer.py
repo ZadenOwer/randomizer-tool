@@ -471,7 +471,6 @@ def getRandomizedTrainersList(options: dict = None):
         "devId": randomPokemon["devName"],
         "formId": 0,
         "ballId": "MONSUTAABOORU",
-        
       }
 
       if options["forceFullTeam"]:
