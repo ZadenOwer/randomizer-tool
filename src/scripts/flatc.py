@@ -15,10 +15,10 @@ def generateBinary(schemaPath:str, jsonPath:str):
   flatcPath = "./src/flatc.exe"
 
   process = subprocess.run([
-    flatcPath,
+    os.path.abspath(flatcPath),
     "-b",
-    schemaPath,
-    jsonPath
+    os.path.abspath(schemaPath),
+    os.path.abspath(jsonPath)
   ], capture_output=True)
 
   return process
