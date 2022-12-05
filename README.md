@@ -1,5 +1,7 @@
 # Randomizer Tool
 
+Last version: 1.0.3
+
 ## Index Table
 
 - [Introduction](#introduction)
