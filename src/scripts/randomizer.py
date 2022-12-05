@@ -509,7 +509,7 @@ def getRandomizedTrainersList(options: dict = None):
 
       if options["forceFinalEvolution"]:
         if options["finalEvolutionCap"] > 0 or options["finalEvolutionCap"] < 100:
-          if randomizedTrainer[pokeKey]["level"] < options["finalEvolutionCap"]:          
+          if randomizedTrainer[pokeKey]["level"] >= options["finalEvolutionCap"]:          
             finalEvoName = getFinalEvolution(dexId=randomPokemon["id"])
 
             randomizedTrainer[pokeKey] = {
