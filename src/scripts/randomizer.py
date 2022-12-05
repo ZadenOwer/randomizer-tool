@@ -88,7 +88,7 @@ def generateRandomItem():
     lambda item: item["ItemType"] == itemType and item["FieldPocket"] not in bannedFieldPocket,
     itemData["values"]
   ))
-  print(itemsByType)
+
   item = None
   while (item is None):
     rngItem = random.randrange(start=0, stop=len(itemsByType), step=1)
