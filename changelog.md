@@ -1,3 +1,14 @@
+# 1.0.4 - 12/05/2022
+
+Trainers randomizer:
+- Trainer can use teracristalize
+- Force Full Team
+- Keep Important Trainers Type (Gym leader, Team Start Boss, Elite 4)
+- Trainers' Pokemon held Items
+- Trainers' Pokemon with perfect IVs
+- Trainers' Pokemon Shiny Rate
+- Force Final Evolution when Pokemon great or equal to a threshold level
+
 # 1.0.3 - 12/04/2022
 
 - Implemented Abilities Randomizer
