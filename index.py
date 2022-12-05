@@ -8,7 +8,7 @@ from src.scripts import flatc as FlatC
 from src.scripts import frame as WindowFrame
 
 # Env Vars
-os.environ["VERSION"] = "1.0.2"
+os.environ["VERSION"] = "1.0.3"
 
 # Create the window
 optionsValues = {

@@ -1,14 +1,14 @@
 import subprocess
-import json
+import os
 
 from pythonnet import load
 load("coreclr")
 
 import clr
 
-clr.AddReference('./src/dlls/FlatSharp')
-clr.AddReference('./src/dlls/FlatBufferConverter')
-from FlatBufferConverter import FlatSerializer, PersonalTable9SVfb
+clr.AddReference(os.path.abspath('./src/dlls/FlatSharp'))
+clr.AddReference(os.path.abspath('./src/dlls/FlatBufferConverter'))
+from FlatBufferConverter import FlatSerializer
 
 def generateBinary(schemaPath:str, jsonPath:str):
   # command = "flatc.exe -b schema.bfbs data.json"
