@@ -17,6 +17,8 @@ moveList = []
 paldeaDex = []
 legendaryDex = []
 paradoxDex = []
+addPokemonEvents = []
+fixedPokemonEvents = []
 
 with (
   open('./src/jsons/pokedata_array.json', 'r', encoding='utf-8-sig') as pokedata_array_file,
@@ -26,6 +28,8 @@ with (
   open('./src/jsons/ability_list.json', 'r', encoding='utf-8-sig') as ability_list_file,
   open('./src/jsons/tm_list.json', 'r', encoding='utf-8-sig') as tm_list_file,
   open('./src/jsons/move_list.json', 'r', encoding='utf-8-sig') as move_list_file,
+  open('./src/jsons/eventAddPokemon_array.json', 'r', encoding='utf-8-sig') as add_pokemon_events_file,
+  open('./src/jsons/fixed_symbol_table_array.json', 'r', encoding='utf-8-sig') as fixed_pokemon_events_file,
 ):
   pokemonData = json.load(pokedata_array_file)
   personalData = json.load(personal_array_file)
@@ -37,6 +41,8 @@ with (
   paldeaDex = dex["paldeaDex"]
   legendaryDex = dex["legendaryDex"]
   paradoxDex = dex["paradoxDex"]
+  addPokemonEvents = json.load(add_pokemon_events_file)
+  fixedPokemonEvents = json.load(fixed_pokemon_events_file)
 # Ending Pokemon Data Imports
 
 # Starting Item Data Imports
@@ -67,8 +73,6 @@ with (
 
 def getRNG(maxValue: int, minValue: int = 0):
   return random.randrange(start=minValue, stop=maxValue, step=1)
-
-# ********* Areas Randomizer Start *********
 
 def generateRandomPaldeaPokemon(options: dict = None):
   rng = getRNG(maxValue=len(paldeaDex))
@@ -111,6 +115,70 @@ def generateRandomItem():
     item = next((item for item in itemList if item["id"] == itemRaw["Id"]), None)
 
   return item
+
+def getRandomForm(devName: str):
+  # TO - DO
+  # Randomize the forms of the pokemon
+
+  return 0
+
+# ********* Add Pokemon Events Randomizer Start *********
+def getRandomizedAddPokemonEvents(options: dict = None):
+  randomizedList = []
+
+  for event in addPokemonEvents["values"]:
+    randomPokemon = generateRandomPaldeaPokemon(options)
+
+    try:
+      while (randomPokemon is None):
+        randomPokemon = generateRandomPaldeaPokemon(options)
+    except:
+      None
+
+    event["pokeData"]["devId"] = randomPokemon["devName"]
+    event["pokeData"]["formId"] = getRandomForm(randomPokemon["devName"])
+    event["pokeData"]["tokusei"] = "RANDOM_123"
+    event["pokeData"]["rareType"] = "DEFAULT"
+
+    # if "hono" in event["label"]:
+      # Fire starter
+
+    # if "kusa" in event["label"]:
+      # Plant starter
+
+    # if "mizu" in event["label"]:
+      # Water starter
+
+    randomizedList.append(event)
+
+  return randomizedList
+
+# ********* Add Pokemon Events Randomizer End *********
+
+# ********* Static Pokemon Events Randomizer Start *********
+def getRandomizedStaticPokemonEvents(options: dict = None):
+  randomizedList = []
+
+  for event in fixedPokemonEvents["values"]:
+    randomPokemon = generateRandomPaldeaPokemon(options)
+
+    try:
+      while (randomPokemon is None):
+        randomPokemon = generateRandomPaldeaPokemon(options)
+    except:
+      None
+
+    event["pokeDataSymbol"]["devId"] = randomPokemon["devName"]
+    event["pokeDataSymbol"]["formId"] = getRandomForm(randomPokemon["devName"])
+    event["pokeDataSymbol"]["tokuseiIndex"] = "RANDOM_123"
+    event["pokeDataSymbol"]["rareType"] = "DEFAULT"
+
+    randomizedList.append(event)
+
+  return randomizedList
+# ********* Static Pokemon Events Randomizer End *********
+
+# ********* Areas Randomizer Start *********
 
 def getRandomizedArea(options: dict = None):
   print('Randomizing Areas with options:', options)
