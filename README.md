@@ -18,9 +18,10 @@ Last version: 1.0.5
 
 This is a tool that allow you to randomize the pokemon from Scarlet and Violet, is still on a alpha version, but I gonna try to keep a consist working on it to make it better.
 
-![Tool Screenshot 1](https://images.gamebanana.com/img/ss/tools/638d4708b3519.jpg)
-![Tool Screenshot 2](https://images.gamebanana.com/img/ss/tools/638d4708bd3e6.jpg)
-![Tool Screenshot 3](https://images.gamebanana.com/img/ss/tools/638d4708c315f.jpg)
+![Tool Screenshot 1](https://images.gamebanana.com/img/ss/tools/639000a8be8c6.jpg)
+![Tool Screenshot 2](https://images.gamebanana.com/img/ss/tools/639000a8c4553.jpg)
+![Tool Screenshot 3](https://images.gamebanana.com/img/ss/tools/639000a8dedb1.jpg)
+![Tool Screenshot 4](https://images.gamebanana.com/img/ss/tools/639000a8d3b7c.jpg)
 
 There are several issues, but this not break the experience, as far I know.
 
