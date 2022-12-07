@@ -1,3 +1,8 @@
+# 1.0.5 - 12/06/2022
+
+- Initials randomizera
+- New randomizing options
+
 # 1.0.4 - 12/05/2022
 
 Trainers randomizer:
