@@ -1,0 +1,682 @@
+[
+  {
+    "devName": "WAZA_NULL", // Null option
+    "id": 0
+  },
+  {
+    "devName": "WAZA_KARATETYOPPU", // Karate Chop
+    "id": 2
+  },
+  {
+    "devName": "WAZA_OUHUKUBINTA",  // Double Slap
+    "id": 3
+  },
+  {
+    "devName": "WAZA_RENZOKUPANTI", // Comet Punch
+    "id": 4
+  },
+  {
+    "devName": "WAZA_KAMAITATI",  // Razor Wind
+    "id": 13
+  },
+  {
+    "devName": "WAZA_TOBIGERI", // Jump Kick
+    "id": 26
+  },
+  {
+    "devName": "WAZA_MAWASIGERI", // Rolling Kick
+    "id": 27
+  },
+  {
+    "devName": "WAZA_DABURUNIIDORU",  // Twineedle
+    "id": 41
+  },
+  {
+    "devName": "WAZA_SONIKKUBUUMU", // Sonic Boom
+    "id": 49
+  },
+  {
+    "devName": "WAZA_RYUUNOIKARI",  // Dragon Rage
+    "id": 82
+  },
+  {
+    "devName": "WAZA_YOGANOPOOZU",  // Meditate
+    "id": 96
+  },
+  {
+    "devName": "WAZA_IKARI",  // Rage
+    "id": 99
+  },
+  {
+    "devName": "WAZA_BARIAA", // Barrier
+    "id": 112
+  },
+  {
+    "devName": "WAZA_GAMAN",  // Bide
+    "id": 117
+  },
+  {
+    "devName": "WAZA_OUMUGAESI",  // Mirror Move
+    "id": 119
+  },
+  {
+    "devName": "WAZA_TAMAGOBAKUDAN",  // Egg Bomb
+    "id": 121
+  },
+  {
+    "devName": "WAZA_HONEKONBOU", // Bone Club
+    "id": 125
+  },
+  {
+    "devName": "WAZA_KARADEHASAMU", // Clamp
+    "id": 128
+  },
+  {
+    "devName": "WAZA_TOGEKYANON", // Spike Cannon
+    "id": 131
+  },
+  {
+    "devName": "WAZA_KARAMITUKU", // Constrict
+    "id": 132
+  },
+  {
+    "devName": "WAZA_TAMANAGE", // Barrage
+    "id": 140
+  },
+  {
+    "devName": "WAZA_AWA",  // Bubble
+    "id": 145
+  },
+  {
+    "devName": "WAZA_PIYOPIYOPANTI",  // Dizzy Punch
+    "id": 146
+  },
+  {
+    "devName": "WAZA_HURASSYU", // Flash
+    "id": 148
+  },
+  {
+    "devName": "WAZA_SAIKOWHEEBU",  // Psywave
+    "id": 149
+  },
+  {
+    "devName": "WAZA_KAKUBARU", // Sharpen
+    "id": 159
+  },
+  {
+    "devName": "WAZA_KUMONOSU", // Spider Web
+    "id": 169
+  },
+  {
+    "devName": "WAZA_AKUMU",  // Nightmare
+    "id": 171
+  },
+  {
+    "devName": "WAZA_DAMASIUTI",  // Feint Attack
+    "id": 185
+  },
+  {
+    "devName": "WAZA_MIYABURU", // Foresight
+    "id": 193
+  },
+  {
+    "devName": "WAZA_ONGAESI",  // Return
+    "id": 216
+  },
+  {
+    "devName": "WAZA_YATUATARI",  // Frustation
+    "id": 218
+  },
+  {
+    "devName": "WAZA_MAGUNITYUUDO", // Magnitude
+    "id": 222
+  },
+  {
+    "devName": "WAZA_OIUTI", // Pursuit
+    "id": 228
+  },
+  {
+    "devName": "WAZA_MEZAMERUPAWAA",  // Hidden Power
+    "id": 237
+  },
+  {
+    "devName": "WAZA_KITUKE", // Smelling Salts
+    "id": 265
+  },
+  {
+    "devName": "WAZA_NEKONOTE", // Assit
+    "id": 274
+  },
+  {
+    "devName": "WAZA_RIHURESSYU", // Refresh
+    "id": 287
+  },
+  {
+    "devName": "WAZA_YOKODORI", // Snatch
+    "id": 289
+  },
+  {
+    "devName": "WAZA_HIMITUNOTIKARA", // Secret Power
+    "id": 290
+  },
+  {
+    "devName": "WAZA_HOGOSYOKU",  // Camouflage
+    "id": 293
+  },
+  {
+    "devName": "WAZA_HOTARUBI", // Tail Glow
+    "id": 294
+  },
+  {
+    "devName": "WAZA_DOROASOBI",  // Mud Sport
+    "id": 300
+  },
+  {
+    "devName": "WAZA_AISUBOORU",  // Ice Ball
+    "id": 301
+  },
+  {
+    "devName": "WAZA_NIIDORUAAMU",  // Needle Arm
+    "id": 302
+  },
+  {
+    "devName": "WAZA_KAGIWAKERU", // Odor Sleuth
+    "id": 316
+  },
+  {
+    "devName": "WAZA_GINIRONOKAZE", // Silver Wind
+    "id": 318
+  },
+  {
+    "devName": "WAZA_KUSABUE",  // Grass Whistle
+    "id": 320
+  },
+  {
+    "devName": "WAZA_SIGUNARUBIIMU",  // Signal Beam
+    "id": 324
+  },
+  {
+    "devName": "WAZA_SUKAIAPPAA", // Sky Uppercut
+    "id": 327
+  },
+  {
+    "devName": "WAZA_MIZUASOBI",  // Water Sport
+    "id": 346
+  },
+  {
+    "devName": "WAZA_SAIKOBUUSUTO", // Psycho Boost
+    "id": 354
+  },
+  {
+    "devName": "WAZA_MIRAKURUAI", // Miracle Eye
+    "id": 357
+  },
+  {
+    "devName": "WAZA_MEZAMASIBINTA",  // Wake-Up Slap
+    "id": 358
+  },
+  {
+    "devName": "WAZA_SIZENNOMEGUMI",  // Natural Gift
+    "id": 363
+  },
+  {
+    "devName": "WAZA_SASIOSAE", // Embargo
+    "id": 373
+  },
+  {
+    "devName": "WAZA_SIBORITORU", // Wring Out
+    "id": 378
+  },
+  {
+    "devName": "WAZA_KIRIHUDA", // Trump Card
+    "id": 376
+  },
+  {
+    "devName": "WAZA_KAIHUKUHUUZI", // Heal Block
+    "id": 377
+  },
+  {
+    "devName": "WAZA_OMAZINAI", // Lucky Chant
+    "id": 381
+  },
+  {
+    "devName": "WAZA_SAKIDORI", // Me first
+    "id": 382
+  },
+  {
+    "devName": "WAZA_OSIOKI", // Punishment
+    "id": 386
+  },
+  {
+    "devName": "WAZA_HAATOSUWAPPU", // Heart Swap
+    "id": 391
+  },
+  {
+    "devName": "WAZA_DOROBAKUDAN",  // Mud Bomb
+    "id": 426
+  },
+  {
+    "devName": "WAZA_MIRAASYOTTO",  // Mirror Shot
+    "id": 429
+  },
+  {
+    "devName": "WAZA_ROKKUKURAIMU", // Rock Climb
+    "id": 431
+  },
+  {
+    "devName": "WAZA_MAGUNETTOBOMU",  // Magnet Bomb
+    "id": 443
+  },
+  {
+    "devName": "WAZA_YUUWAKU",  // Secret Power
+    "id": 445
+  },
+  {
+    "devName": "WAZA_KAIHUKUSIREI", // Heal Order
+    "id": 456
+  },
+  {
+    "devName": "WAZA_AYASIIKAZE", // Ominous Wind
+    "id": 466
+  },
+  {
+    "devName": "WAZA_TEREKINESISU", // Telekinesis
+    "id": 477
+  },
+  {
+    "devName": "WAZA_HAZIKERUHONOO",  // Flame Burst
+    "id": 481
+  },
+  {
+    "devName": "WAZA_SINKURONOIZU", // Synchronoise
+    "id": 485
+  },
+  {
+    "devName": "WAZA_NASIKUZUSI", // Chip Away
+    "id": 498
+  },
+  {
+    "devName": "WAZA_HURIIFOORU", // Sky Drop
+    "id": 507
+  },
+  {
+    "devName": "WAZA_GIHUTOPASU", // Bestow
+    "id": 516
+  },
+  {
+    "devName": "WAZA_HAATOSUTANPU", // Heart Stamp
+    "id": 531
+  },
+  {
+    "devName": "WAZA_HAADOROORAA",  // Steamroller
+    "id": 537
+  },
+  {
+    "devName": "WAZA_TAGAYASU", // Rototiller
+    "id": 563
+  },
+  {
+    "devName": "WAZA_PURAZUMASYAWAA", // Ion Deluge
+    "id": 569
+  },
+  {
+    "devName": "WAZA_URUTORADASSYUATAKKU",  // Z Moves Start
+    "id": 622
+  },
+  {
+    "devName": "WAZA_NOOMARUZENRYOKU",
+    "id": 623
+  },
+  {
+    "devName": "WAZA_ZENRYOKUMUSOUGEKIRETUKEN",
+    "id": 624
+  },
+  {
+    "devName": "WAZA_KAKUTOUZENRYOKU",
+    "id": 625
+  },
+  {
+    "devName": "WAZA_FAINARUDAIBUKURASSYU",
+    "id": 626
+  },
+  {
+    "devName": "WAZA_HIKOUZENRYOKU",
+    "id": 627
+  },
+  {
+    "devName": "WAZA_ASIDDOPOIZUNDERIITO",
+    "id": 628
+  },
+  {
+    "devName": "WAZA_DOKUZENRYOKU",
+    "id": 629
+  },
+  {
+    "devName": "WAZA_RAIZINGURANDOOOBAA",
+    "id": 630
+  },
+  {
+    "devName": "WAZA_ZIMENZENRYOKU",
+    "id": 631
+  },
+  {
+    "devName": "WAZA_WAARUZUENDOFOORU",
+    "id": 632
+  },
+  {
+    "devName": "WAZA_IWAZENRYOKU",
+    "id": 633
+  },
+  {
+    "devName": "WAZA_ZETTAIHOSYOKUKAITENZAN",
+    "id": 634
+  },
+  {
+    "devName": "WAZA_MUSIZENRYOKU",
+    "id": 635
+  },
+  {
+    "devName": "WAZA_MUGENANYAHENOIZANAI",
+    "id": 636
+  },
+  {
+    "devName": "WAZA_GOOSUTOZENRYOKU",
+    "id": 637
+  },
+  {
+    "devName": "WAZA_TYOUZETURASENRENGEKI",
+    "id": 638
+  },
+  {
+    "devName": "WAZA_HAGANEZENRYOKU",
+    "id": 639
+  },
+  {
+    "devName": "WAZA_DAINAMIKKUHURUHUREIMU",
+    "id": 640
+  },
+  {
+    "devName": "WAZA_HONOOZENRYOKU",
+    "id": 641
+  },
+  {
+    "devName": "WAZA_SUUPAAAKUATORUNEEDO",
+    "id": 642
+  },
+  {
+    "devName": "WAZA_MIZUZENRYOKU",
+    "id": 643
+  },
+  {
+    "devName": "WAZA_BURUUMUSYAINEKUSUTORA",
+    "id": 644
+  },
+  {
+    "devName": "WAZA_KUSAZENRYOKU",
+    "id": 645
+  },
+  {
+    "devName": "WAZA_SUPAAKINGUGIGABORUTO",
+    "id": 646
+  },
+  {
+    "devName": "WAZA_DENKIZENRYOKU",
+    "id": 647
+  },
+  {
+    "devName": "WAZA_MAKISIMAMUSAIBUREIKAA",
+    "id": 648
+  },
+  {
+    "devName": "WAZA_ESUPAAZENRYOKU",
+    "id": 649
+  },
+  {
+    "devName": "WAZA_REIZINGUZIOHURIIZU",
+    "id": 650
+  },
+  {
+    "devName": "WAZA_KOORIZENRYOKU",
+    "id": 651
+  },
+  {
+    "devName": "WAZA_ARUTHIMETTODORAGONBAAN",
+    "id": 652
+  },
+  {
+    "devName": "WAZA_DORAGONZENRYOKU",
+    "id": 653
+  },
+  {
+    "devName": "WAZA_BURAKKUHOORUIKURIPUSU",
+    "id": 654
+  },
+  {
+    "devName": "WAZA_AKUZENRYOKU",
+    "id": 655
+  },
+  {
+    "devName": "WAZA_RABURIISUTAAINPAKUTO",
+    "id": 656
+  },
+  {
+    "devName": "WAZA_FEARIIZENRYOKU",
+    "id": 657
+  },
+  {
+    "devName": "WAZA_HISSATUNOPIKATYUUTO",
+    "id": 658
+  },
+  {
+    "devName": "WAZA_SYADOOAROOZUSUTORAIKU",
+    "id": 695
+  },
+  {
+    "devName": "WAZA_HAIPAADAAKUKURASSYAA",
+    "id": 696
+  },
+  {
+    "devName": "WAZA_WADATUMINOSINFONIA",
+    "id": 697
+  },
+  {
+    "devName": "WAZA_GAADHIANDEAROORA",
+    "id": 698
+  },
+  {
+    "devName": "WAZA_SITISEIDAKKONTAI",
+    "id": 699
+  },
+  {
+    "devName": "WAZA_RAITONINGUSAAHURAIDO",
+    "id": 700
+  },
+  {
+    "devName": "WAZA_HONKIWODASUKOUGEKI",
+    "id": 701
+  },
+  {
+    "devName": "WAZA_NAINEBORUBUUSUTO",
+    "id": 702
+  },
+  {
+    "devName": "WAZA_ORIZINZUSUUPAANOVHA",
+    "id": 703
+  },
+  {
+    "devName": "WAZA_TENKOGASUMETUBOUNOHIKARI",
+    "id": 723
+  },
+  {
+    "devName": "WAZA_SANSYAINSUMASSYAA",
+    "id": 724
+  },
+  {
+    "devName": "WAZA_MUUNRAITOBURASUTAA",
+    "id": 725
+  },
+  {
+    "devName": "WAZA_POKABOKAHURENDOTAIMU",
+    "id": 726
+  },
+  {
+    "devName": "WAZA_RAZIARUEZZISUTOOMU",
+    "id": 727
+  },
+  {
+    "devName": "WAZA_BUREIZINGUSOURUBIITO",  // Z Moves End
+    "id": 728
+  },
+  {
+    "devName": "WAZA_BATIBATIAKUSERU",  // Zippy Zap
+    "id": 729
+  },
+  {
+    "devName": "WAZA_ZABUZABUSAAHU",  // Splishy Splash
+    "id": 730
+  },
+  {
+    "devName": "WAZA_HUWAHUWAFOORU",  // Floaty Fall
+    "id": 731
+  },
+  {
+    "devName": "WAZA_PIKAPIKASANDAA", // Pika Papow
+    "id": 732
+  },
+  {
+    "devName": "WAZA_IKIIKIBABURU", // Bouncy Bubble
+    "id": 733
+  },
+  {
+    "devName": "WAZA_BIRIBIRIEREKI",  // Buzzy Buzz
+    "id": 734
+  },
+  {
+    "devName": "WAZA_MERAMERABAAN", // Sizzly Slide
+    "id": 735
+  },
+  {
+    "devName": "WAZA_DOBADOBAOORA", // Glitzy Glow
+    "id": 736
+  },
+  {
+    "devName": "WAZA_WARUWARUZOON", // Baddy Bad
+    "id": 737
+  },
+  {
+    "devName": "WAZA_SUKUSUKUBONBAA", // Sappy Seed
+    "id": 738
+  },
+  {
+    "devName": "WAZA_KOTIKOTIHUROSUTO", // Freezy Frost
+    "id": 739
+  },
+  {
+    "devName": "WAZA_KIRAKIRASUTOOMU",  // Sparkly Swirl
+    "id": 740
+  },
+  {
+    "devName": "WAZA_BUIBUIBUREIKU",  // Veevee Volley
+    "id": 741
+  },
+  {
+    "devName": "WAZA_DAIWHOORU",  // Dynamax Moves Start
+    "id": 743
+  },
+  {
+    "devName": "WAZA_DAIBAAN",
+    "id": 757
+  },
+  {
+    "devName": "WAZA_DAIWAAMU",
+    "id": 758
+  },
+  {
+    "devName": "WAZA_DAISANDAA",
+    "id": 759
+  },
+  {
+    "devName": "WAZA_DAIATAKKU",
+    "id": 760
+  },
+  {
+    "devName": "WAZA_DAINAKKURU",
+    "id": 761
+  },
+  {
+    "devName": "WAZA_DAIHOROU",
+    "id": 762
+  },
+  {
+    "devName": "WAZA_DAIAISU",
+    "id": 763
+  },
+  {
+    "devName": "WAZA_DAIASIDDO",
+    "id": 764
+  },
+  {
+    "devName": "WAZA_DAISUTORIIMU",
+    "id": 765
+  },
+  {
+    "devName": "WAZA_DAIJETTO",
+    "id": 766
+  },
+  {
+    "devName": "WAZA_DAIFEARII",
+    "id": 767
+  },
+  {
+    "devName": "WAZA_DAIDORAGUUN",
+    "id": 768
+  },
+  {
+    "devName": "WAZA_DAISAIKO",
+    "id": 769
+  },
+  {
+    "devName": "WAZA_DAIROKKU",
+    "id": 770
+  },
+  {
+    "devName": "WAZA_DAIAASU",
+    "id": 771
+  },
+  {
+    "devName": "WAZA_DAIAAKU",
+    "id": 772
+  },
+  {
+    "devName": "WAZA_DAISOUGEN",
+    "id": 773
+  },
+  {
+    "devName": "WAZA_DAISUTIRU",  // Dynamax Moves End
+    "id": 774
+  },
+  {
+    "devName": "WAZA_MUGENDAIBIIMU",  // Eternabeam
+    "id": 795
+  },
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI", //	Blazing Torque - Signature Mov of the Team Star Fire Car
+    "id": 896
+  },
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI2", //	Wicked Torque - Signature Mov of the Team Star Dark Car
+    "id": 897
+  },
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI3", //	Noxious Torque - Signature Mov of the Team Star Posion Car
+    "id": 898
+  },
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI4", //	Combat Torque - Signature Mov of the Team Star Fighting Car
+    "id": 899
+  },
+  {
+    "devName": "WAZA_MOOBIRUKOUGEKI5", //	Magical Torque - Signature Mov of the Team Star Fairy Car
+    "id": 900
+  }
+]

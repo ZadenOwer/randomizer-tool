@@ -14,6 +14,7 @@ pokemonList = []
 abilityList = []
 tmList = []
 moveList = []
+pokeDex = []
 paldeaDex = []
 legendaryDex = []
 paradoxDex = []
@@ -38,6 +39,7 @@ with (
   tmList = json.load(tm_list_file)
   moveList = json.load(move_list_file)
   dex = json.load(dex_file)
+  pokeDex = dex["pokeDex"]
   paldeaDex = dex["paldeaDex"]
   legendaryDex = dex["legendaryDex"]
   paradoxDex = dex["paradoxDex"]
@@ -94,6 +96,26 @@ def generateRandomPaldeaPokemon(options: dict = None):
   except:
     return None
 
+def generateRandomPokemon(options: dict = None):
+  rng = getRNG(maxValue=len(pokeDex))
+  randomId = pokeDex[rng]
+
+  if (options["legendaries"] == False):
+    # No legendaries allowed
+    if (randomId in legendaryDex):
+      return None
+
+  if (options["paradox"] == False):
+    # No paradox allowed
+    if (randomId in paradoxDex):
+      return None
+
+  try:
+    generatedPokemon = next(pk for pk in pokemonList if pk["id"] == randomId)
+    return generatedPokemon
+  except:
+    return None
+
 def generateRandomItem():
   # itemTypesWeighted helps randomize the type of item that it will be used
   itemTypesWeighted = ['ITEMTYPE_NUTS', 'ITEMTYPE_NUTS', 'ITEMTYPE_NUTS', 'ITEMTYPE_NUTS', 'ITEMTYPE_NUTS', 'ITEMTYPE_NUTS', 'ITEMTYPE_NUTS', 'ITEMTYPE_NUTS', 'ITEMTYPE_NUTS', 'ITEMTYPE_NONE', 'ITEMTYPE_NONE', 'ITEMTYPE_NONE', 'ITEMTYPE_NONE', 'ITEMTYPE_NONE', 'ITEMTYPE_NONE', 'ITEMTYPE_NONE', 'ITEMTYPE_NONE', 'ITEMTYPE_NONE', 'ITEMTYPE_DRUG', 'ITEMTYPE_DRUG', 'ITEMTYPE_DRUG', 'ITEMTYPE_DRUG', 'ITEMTYPE_DRUG', 'ITEMTYPE_DRUG', 'ITEMTYPE_BALL', 'ITEMTYPE_BALL', 'ITEMTYPE_BALL', 'ITEMTYPE_BALL', 'ITEMTYPE_BALL', 'ITEMTYPE_BALL', 'ITEMTYPE_WAZA', 'ITEMTYPE_WAZA', 'ITEMTYPE_WAZA', 'ITEMTYPE_WAZA', 'ITEMTYPE_WAZA', 'ITEMTYPE_WAZA']
@@ -104,7 +126,7 @@ def generateRandomItem():
   rngItemType = getRNG(maxValue=len(itemTypesWeighted))
   itemType = itemTypesWeighted[rngItemType]
   itemsByType = list(filter(
-    lambda item: item["ItemType"] == itemType and item["FieldPocket"] not in bannedFieldPocket,
+    lambda item: item["SetToPoke"] == True and item["ItemType"] == itemType and item["FieldPocket"] not in bannedFieldPocket,
     itemData["values"]
   ))
 
@@ -112,7 +134,7 @@ def generateRandomItem():
   while (item is None):
     rngItem = getRNG(maxValue=len(itemsByType))
     itemRaw = itemsByType[rngItem]
-    item = next((item for item in itemList if item["id"] == itemRaw["Id"]), None)
+    item = next((item for item in itemList if item["id"] == itemRaw["Id"]), None)    
 
   return item
 
@@ -125,33 +147,66 @@ def getRandomForm(devName: str):
 # ********* Add Pokemon Events Randomizer Start *********
 def getRandomizedAddPokemonEvents(options: dict = None):
   randomizedList = []
+  starters = {
+    "fire": "",
+    "water": "",
+    "grass": "",
+  }
 
   for event in addPokemonEvents["values"]:
-    randomPokemon = generateRandomPaldeaPokemon(options)
+    isStarter = True if "hono" in event["label"] or "kusa" in event["label"] or "mizu" in event["label"] else False
 
-    try:
-      while (randomPokemon is None):
-        randomPokemon = generateRandomPaldeaPokemon(options)
-    except:
-      None
+    generator = generateRandomPaldeaPokemon
 
-    event["pokeData"]["devId"] = randomPokemon["devName"]
-    event["pokeData"]["formId"] = getRandomForm(randomPokemon["devName"])
-    event["pokeData"]["tokusei"] = "RANDOM_123"
+    if options["fullPokeDex"]:
+      generator = generateRandomPokemon
+
+    randomPokemon = None
+
+    if isStarter and options["initials"]:
+        randomPokemon = generator(options)
+
+        while (randomPokemon is None):
+          randomPokemon = generator(options)
+
+        event["pokeData"]["devId"] = randomPokemon["devName"]
+        event["pokeData"]["formId"] = getRandomForm(randomPokemon["devName"])
+
+    if not isStarter and options["areasSpawnRandomized"]:
+        randomPokemon = generator(options)
+
+        while (randomPokemon is None):
+          randomPokemon = generator(options)
+
+        event["pokeData"]["devId"] = randomPokemon["devName"]
+        event["pokeData"]["formId"] = getRandomForm(randomPokemon["devName"])
+    
+    if isStarter:
+      starterId = randomPokemon["id"] if randomPokemon is not None else event["pokeData"]["devId"]
+
+      if "hono" in event["label"]:
+        # Fire starter
+        starters["fire"] = starterId
+
+      if "kusa" in event["label"]:
+        # Plant starter
+        starters["grass"] = starterId
+
+      if "mizu" in event["label"]:
+        # Water starter
+        starters["water"] = starterId
+      
+    if options["abilities"]:
+      event["pokeData"]["tokusei"] = "RANDOM_123"
+
+    if options["items"]:
+      event["pokeData"]["item"] = generateRandomItem()["devName"]
+
     event["pokeData"]["rareType"] = "DEFAULT"
-
-    # if "hono" in event["label"]:
-      # Fire starter
-
-    # if "kusa" in event["label"]:
-      # Plant starter
-
-    # if "mizu" in event["label"]:
-      # Water starter
 
     randomizedList.append(event)
 
-  return randomizedList
+  return randomizedList, starters
 
 # ********* Add Pokemon Events Randomizer End *********
 
@@ -160,57 +215,71 @@ def getRandomizedStaticPokemonEvents(options: dict = None):
   randomizedList = []
 
   for event in fixedPokemonEvents["values"]:
-    randomPokemon = generateRandomPaldeaPokemon(options)
+    if options["areasSpawnRandomized"]:
+      generator = generateRandomPaldeaPokemon
 
-    try:
-      while (randomPokemon is None):
-        randomPokemon = generateRandomPaldeaPokemon(options)
-    except:
-      None
+      if options["fullPokeDex"]:
+        generator = generateRandomPokemon
 
-    event["pokeDataSymbol"]["devId"] = randomPokemon["devName"]
-    event["pokeDataSymbol"]["formId"] = getRandomForm(randomPokemon["devName"])
-    event["pokeDataSymbol"]["tokuseiIndex"] = "RANDOM_123"
+      randomPokemon = generator(options)
+
+      try:
+        while (randomPokemon is None):
+          randomPokemon = generator(options)
+      except:
+        None
+
+      event["pokeDataSymbol"]["devId"] = randomPokemon["devName"]
+      event["pokeDataSymbol"]["formId"] = getRandomForm(randomPokemon["devName"])
+
+    if options["abilities"]:
+      event["pokeDataSymbol"]["tokuseiIndex"] = "RANDOM_123"
+    
     event["pokeDataSymbol"]["rareType"] = "DEFAULT"
 
     randomizedList.append(event)
 
   return randomizedList
+
 # ********* Static Pokemon Events Randomizer End *********
 
 # ********* Areas Randomizer Start *********
-
 def getRandomizedArea(options: dict = None):
   print('Randomizing Areas with options:', options)
   alreadyUsedId = []
   randomizedAreaList = []
+
   for pokemon in pokemonData["values"]:
-    if (pokemon["bandtype"] == "BOSS"):
+    if pokemon["bandtype"] == "BOSS":
       randomizedAreaList.append(pokemon)
       continue
 
-    randomPokemon = generateRandomPaldeaPokemon(options)
+    if options["areasSpawnRandomized"]:
+      pokemonGenerator = generateRandomPaldeaPokemon
 
-    try:
-      while (randomPokemon is None or alreadyUsedId.index(randomPokemon["id"])):
-        randomPokemon = generateRandomPaldeaPokemon(options)
-    except:
-      None
+      if options["fullPokeDex"] == True:
+        pokemonGenerator = generateRandomPokemon
 
-    alreadyUsedId.append(randomPokemon["id"])
+      randomPokemon = pokemonGenerator(options)
 
-    if (options is None or options["items"] is None or options["items"] == False):
+      try:
+        while (randomPokemon is None or alreadyUsedId.index(randomPokemon["id"])):
+          randomPokemon = pokemonGenerator(options)
+      except:
+        None
+
+      pokemon["devid"] = randomPokemon["devName"]
+
+      alreadyUsedId.append(randomPokemon["id"])
+
+    if options["items"] == False:
       #  No randomized items
-      randomizedAreaList.append({
-        **pokemon,
-        "devid": randomPokemon["devName"]
-      })
+      randomizedAreaList.append(pokemon)
       continue
 
     randomItem = generateRandomItem()
     randomizedAreaList.append({
       **pokemon,
-      "devid": randomPokemon["devName"],
       "bringItem": {
         "itemID": randomItem["id"],
         "bringRate": 100
@@ -275,6 +344,9 @@ def getRandomizedPokemonList(options: dict = None):
   print('Randomizing Pokemon with options:', options)
   randomizedPokemonList = []
   for pokemon in personalData["Table"]:
+
+    if options["fullPokeDex"]:
+      pokemon["IsPresentInGame"] = True
 
     if not pokemon["IsPresentInGame"]:
       randomizedPokemonList.append(pokemon)
@@ -512,34 +584,39 @@ def getRandomizedTrainersList(options: dict = None):
       }
 
     for pokeKey in pokemonKeys:
-      if (not options["forceFullTeam"] and randomizedTrainer[pokeKey] == "DEV_NULL"):
+      if (options["forceFullTeam"] == False and randomizedTrainer[pokeKey]["devId"] == "DEV_NULL"):
         continue
 
-      randomPokemon = generateRandomPaldeaPokemon(options)
-      randomPokemonPersonal = getPokemonPersonalData(randomPokemon["id"])
+      if options["trainersRandomized"]:
+        pokemonGenerator = generateRandomPaldeaPokemon
+        if options["fullPokeDex"]:
+          pokemonGenerator = generateRandomPokemon
 
-      try:
-        while (randomPokemon is None or alreadyUsedId.index(randomPokemon["id"])):
-          randomPokemon = generateRandomPaldeaPokemon(options)
+        randomPokemon = pokemonGenerator(options)
+        randomPokemonPersonal = getPokemonPersonalData(randomPokemon["id"])
 
-          if options["keepGymType"]:
-            if isMonotypeTrainer(trainerTypeName=randomizedTrainer["trainerType"]):
-              trainerTypeId = getTrainerTypeId(trainerTypeName=randomizedTrainer["trainerType"])
-              type1 = randomPokemonPersonal["Type1"]
-              type2 = randomPokemonPersonal["Type2"]
+        try:
+          while (randomPokemon is None or alreadyUsedId.index(randomPokemon["id"])):
+            randomPokemon = pokemonGenerator(options)
 
-              if (trainerTypeId not in [type1, type2]):
-                # Randomize again if any type not match with the trainerType
-                randomPokemon = generateRandomPaldeaPokemon(options)
-      except:
-        None
+            if options["keepGymType"]:
+              if isMonotypeTrainer(trainerTypeName=randomizedTrainer["trainerType"]):
+                trainerTypeId = getTrainerTypeId(trainerTypeName=randomizedTrainer["trainerType"])
+                type1 = randomPokemonPersonal["Type1"]
+                type2 = randomPokemonPersonal["Type2"]
 
-      randomizedTrainer[pokeKey] = {
-        **randomizedTrainer[pokeKey],
-        "devId": randomPokemon["devName"],
-        "formId": 0,
-        "ballId": "MONSUTAABOORU",
-      }
+                if (trainerTypeId not in [type1, type2]):
+                  # Randomize again if any type not match with the trainerType
+                  randomPokemon = pokemonGenerator(options)
+        except:
+          None
+
+        randomizedTrainer[pokeKey] = {
+          **randomizedTrainer[pokeKey],
+          "devId": randomPokemon["devName"],
+          "formId": getRandomForm(devName=randomPokemon["devName"]),
+          "ballId": "MONSUTAABOORU",
+        }
 
       if options["forceFullTeam"]:
         randomizedTrainer[pokeKey]["level"] = pokemonLvl[pokeKey]["level"]
