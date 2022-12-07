@@ -1,23 +1,7 @@
 [
   {
-    "devName": "WAZA_NULL",
-    "id": 0
-  },
-  {
     "devName": "WAZA_HATAKU",
     "id": 1
-  },
-  {
-    "devName": "WAZA_KARATETYOPPU",
-    "id": 2
-  },
-  {
-    "devName": "WAZA_OUHUKUBINTA",
-    "id": 3
-  },
-  {
-    "devName": "WAZA_RENZOKUPANTI",
-    "id": 4
   },
   {
     "devName": "WAZA_MEGATONPANTI",
@@ -50,10 +34,6 @@
   {
     "devName": "WAZA_HASAMIGIROTIN",
     "id": 12
-  },
-  {
-    "devName": "WAZA_KAMAITATI",
-    "id": 13
   },
   {
     "devName": "WAZA_TURUGINOMAI",
@@ -102,14 +82,6 @@
   {
     "devName": "WAZA_MEGATONKIKKU",
     "id": 25
-  },
-  {
-    "devName": "WAZA_TOBIGERI",
-    "id": 26
-  },
-  {
-    "devName": "WAZA_MAWASIGERI",
-    "id": 27
   },
   {
     "devName": "WAZA_SUNAKAKE",
@@ -164,10 +136,6 @@
     "id": 40
   },
   {
-    "devName": "WAZA_DABURUNIIDORU",
-    "id": 41
-  },
-  {
     "devName": "WAZA_MISAIRUBARI",
     "id": 42
   },
@@ -194,10 +162,6 @@
   {
     "devName": "WAZA_TYOUONPA",
     "id": 48
-  },
-  {
-    "devName": "WAZA_SONIKKUBUUMU",
-    "id": 49
   },
   {
     "devName": "WAZA_KANASIBARI",
@@ -328,10 +292,6 @@
     "id": 81
   },
   {
-    "devName": "WAZA_RYUUNOIKARI",
-    "id": 82
-  },
-  {
     "devName": "WAZA_HONOONOUZU",
     "id": 83
   },
@@ -384,20 +344,12 @@
     "id": 95
   },
   {
-    "devName": "WAZA_YOGANOPOOZU",
-    "id": 96
-  },
-  {
     "devName": "WAZA_KOUSOKUIDOU",
     "id": 97
   },
   {
     "devName": "WAZA_DENKOUSEKKA",
     "id": 98
-  },
-  {
-    "devName": "WAZA_IKARI",
-    "id": 99
   },
   {
     "devName": "WAZA_TEREPOOTO",
@@ -448,10 +400,6 @@
     "id": 111
   },
   {
-    "devName": "WAZA_BARIAA",
-    "id": 112
-  },
-  {
     "devName": "WAZA_HIKARINOKABE",
     "id": 113
   },
@@ -468,24 +416,12 @@
     "id": 116
   },
   {
-    "devName": "WAZA_GAMAN",
-    "id": 117
-  },
-  {
     "devName": "WAZA_YUBIWOHURU",
     "id": 118
   },
   {
-    "devName": "WAZA_OUMUGAESI",
-    "id": 119
-  },
-  {
     "devName": "WAZA_ZIBAKU",
     "id": 120
-  },
-  {
-    "devName": "WAZA_TAMAGOBAKUDAN",
-    "id": 121
   },
   {
     "devName": "WAZA_SITADENAMERU",
@@ -500,10 +436,6 @@
     "id": 124
   },
   {
-    "devName": "WAZA_HONEKONBOU",
-    "id": 125
-  },
-  {
     "devName": "WAZA_DAIMONZI",
     "id": 126
   },
@@ -512,24 +444,12 @@
     "id": 127
   },
   {
-    "devName": "WAZA_KARADEHASAMU",
-    "id": 128
-  },
-  {
     "devName": "WAZA_SUPIIDOSUTAA",
     "id": 129
   },
   {
     "devName": "WAZA_ROKETTOZUTUKI",
     "id": 130
-  },
-  {
-    "devName": "WAZA_TOGEKYANON",
-    "id": 131
-  },
-  {
-    "devName": "WAZA_KARAMITUKU",
-    "id": 132
   },
   {
     "devName": "WAZA_DOWASURE",
@@ -560,10 +480,6 @@
     "id": 139
   },
   {
-    "devName": "WAZA_TAMANAGE",
-    "id": 140
-  },
-  {
     "devName": "WAZA_KYUUKETU",
     "id": 141
   },
@@ -580,24 +496,8 @@
     "id": 144
   },
   {
-    "devName": "WAZA_AWA",
-    "id": 145
-  },
-  {
-    "devName": "WAZA_PIYOPIYOPANTI",
-    "id": 146
-  },
-  {
     "devName": "WAZA_KINOKONOHOUSI",
     "id": 147
-  },
-  {
-    "devName": "WAZA_HURASSYU",
-    "id": 148
-  },
-  {
-    "devName": "WAZA_SAIKOWHEEBU",
-    "id": 149
   },
   {
     "devName": "WAZA_HANERU",
@@ -636,10 +536,6 @@
     "id": 158
   },
   {
-    "devName": "WAZA_KAKUBARU",
-    "id": 159
-  },
-  {
     "devName": "WAZA_TEKUSUTYAA",
     "id": 160
   },
@@ -676,16 +572,8 @@
     "id": 168
   },
   {
-    "devName": "WAZA_KUMONOSU",
-    "id": 169
-  },
-  {
     "devName": "WAZA_KOKORONOME",
     "id": 170
-  },
-  {
-    "devName": "WAZA_AKUMU",
-    "id": 171
   },
   {
     "devName": "WAZA_KAENGURUMA",
@@ -740,10 +628,6 @@
     "id": 184
   },
   {
-    "devName": "WAZA_DAMASIUTI",
-    "id": 185
-  },
-  {
     "devName": "WAZA_TENSINOKISSU",
     "id": 186
   },
@@ -770,10 +654,6 @@
   {
     "devName": "WAZA_DENZIHOU",
     "id": 192
-  },
-  {
-    "devName": "WAZA_MIYABURU",
-    "id": 193
   },
   {
     "devName": "WAZA_MITIDURE",
@@ -864,16 +744,8 @@
     "id": 215
   },
   {
-    "devName": "WAZA_ONGAESI",
-    "id": 216
-  },
-  {
     "devName": "WAZA_PUREZENTO",
     "id": 217
-  },
-  {
-    "devName": "WAZA_YATUATARI",
-    "id": 218
   },
   {
     "devName": "WAZA_SINPINOMAMORI",
@@ -886,10 +758,6 @@
   {
     "devName": "WAZA_SEINARUHONOO",
     "id": 221
-  },
-  {
-    "devName": "WAZA_MAGUNITYUUDO",
-    "id": 222
   },
   {
     "devName": "WAZA_BAKURETUPANTI",
@@ -910,10 +778,6 @@
   {
     "devName": "WAZA_ANKOORU",
     "id": 227
-  },
-  {
-    "devName": "WAZA_OIUTI",
-    "id": 228
   },
   {
     "devName": "WAZA_KOUSOKUSUPIN",
@@ -946,10 +810,6 @@
   {
     "devName": "WAZA_TUKINOHIKARI",
     "id": 236
-  },
-  {
-    "devName": "WAZA_MEZAMERUPAWAA",
-    "id": 237
   },
   {
     "devName": "WAZA_KUROSUTYOPPU",
@@ -1060,10 +920,6 @@
     "id": 264
   },
   {
-    "devName": "WAZA_KITUKE",
-    "id": 265
-  },
-  {
     "devName": "WAZA_KONOYUBITOMARE",
     "id": 266
   },
@@ -1094,10 +950,6 @@
   {
     "devName": "WAZA_NEGAIGOTO",
     "id": 273
-  },
-  {
-    "devName": "WAZA_NEKONOTE",
-    "id": 274
   },
   {
     "devName": "WAZA_NEWOHARU",
@@ -1148,20 +1000,8 @@
     "id": 286
   },
   {
-    "devName": "WAZA_RIHURESSYU",
-    "id": 287
-  },
-  {
     "devName": "WAZA_ONNEN",
     "id": 288
-  },
-  {
-    "devName": "WAZA_YOKODORI",
-    "id": 289
-  },
-  {
-    "devName": "WAZA_HIMITUNOTIKARA",
-    "id": 290
   },
   {
     "devName": "WAZA_DAIBINGU",
@@ -1170,14 +1010,6 @@
   {
     "devName": "WAZA_TUPPARI",
     "id": 292
-  },
-  {
-    "devName": "WAZA_HOGOSYOKU",
-    "id": 293
-  },
-  {
-    "devName": "WAZA_HOTARUBI",
-    "id": 294
   },
   {
     "devName": "WAZA_RASUTAAPAAZI",
@@ -1198,18 +1030,6 @@
   {
     "devName": "WAZA_BUREIZUKIKKU",
     "id": 299
-  },
-  {
-    "devName": "WAZA_DOROASOBI",
-    "id": 300
-  },
-  {
-    "devName": "WAZA_AISUBOORU",
-    "id": 301
-  },
-  {
-    "devName": "WAZA_NIIDORUAAMU",
-    "id": 302
   },
   {
     "devName": "WAZA_NAMAKERU",
@@ -1264,24 +1084,12 @@
     "id": 315
   },
   {
-    "devName": "WAZA_KAGIWAKERU",
-    "id": 316
-  },
-  {
     "devName": "WAZA_GANSEKIHUUZI",
     "id": 317
   },
   {
-    "devName": "WAZA_GINIRONOKAZE",
-    "id": 318
-  },
-  {
     "devName": "WAZA_KINZOKUON",
     "id": 319
-  },
-  {
-    "devName": "WAZA_KUSABUE",
-    "id": 320
   },
   {
     "devName": "WAZA_KUSUGURU",
@@ -1296,20 +1104,12 @@
     "id": 323
   },
   {
-    "devName": "WAZA_SIGUNARUBIIMU",
-    "id": 324
-  },
-  {
     "devName": "WAZA_SYADOOPANTI",
     "id": 325
   },
   {
     "devName": "WAZA_ZINTUURIKI",
     "id": 326
-  },
-  {
-    "devName": "WAZA_SUKAIAPPAA",
-    "id": 327
   },
   {
     "devName": "WAZA_SUNAZIGOKU",
@@ -1384,10 +1184,6 @@
     "id": 345
   },
   {
-    "devName": "WAZA_MIZUASOBI",
-    "id": 346
-  },
-  {
     "devName": "WAZA_MEISOU",
     "id": 347
   },
@@ -1416,24 +1212,12 @@
     "id": 353
   },
   {
-    "devName": "WAZA_SAIKOBUUSUTO",
-    "id": 354
-  },
-  {
     "devName": "WAZA_HANEYASUME",
     "id": 355
   },
   {
     "devName": "WAZA_ZYUURYOKU",
     "id": 356
-  },
-  {
-    "devName": "WAZA_MIRAKURUAI",
-    "id": 357
-  },
-  {
-    "devName": "WAZA_MEZAMASIBINTA",
-    "id": 358
   },
   {
     "devName": "WAZA_AAMUHANMAA",
@@ -1450,10 +1234,6 @@
   {
     "devName": "WAZA_SIOMIZU",
     "id": 362
-  },
-  {
-    "devName": "WAZA_SIZENNOMEGUMI",
-    "id": 363
   },
   {
     "devName": "WAZA_FEINTO",
@@ -1492,10 +1272,6 @@
     "id": 372
   },
   {
-    "devName": "WAZA_SASIOSAE",
-    "id": 373
-  },
-  {
     "devName": "WAZA_NAGETUKERU",
     "id": 374
   },
@@ -1504,32 +1280,12 @@
     "id": 375
   },
   {
-    "devName": "WAZA_KIRIHUDA",
-    "id": 376
-  },
-  {
-    "devName": "WAZA_KAIHUKUHUUZI",
-    "id": 377
-  },
-  {
-    "devName": "WAZA_SIBORITORU",
-    "id": 378
-  },
-  {
     "devName": "WAZA_PAWAATORIKKU",
     "id": 379
   },
   {
     "devName": "WAZA_IEKI",
     "id": 380
-  },
-  {
-    "devName": "WAZA_OMAZINAI",
-    "id": 381
-  },
-  {
-    "devName": "WAZA_SAKIDORI",
-    "id": 382
   },
   {
     "devName": "WAZA_MANEKKO",
@@ -1542,10 +1298,6 @@
   {
     "devName": "WAZA_GAADOSUWAPPU",
     "id": 385
-  },
-  {
-    "devName": "WAZA_OSIOKI",
-    "id": 386
   },
   {
     "devName": "WAZA_TOTTEOKI",
@@ -1562,10 +1314,6 @@
   {
     "devName": "WAZA_DOKUBISI",
     "id": 390
-  },
-  {
-    "devName": "WAZA_HAATOSUWAPPU",
-    "id": 391
   },
   {
     "devName": "WAZA_AKUARINGU",
@@ -1704,10 +1452,6 @@
     "id": 425
   },
   {
-    "devName": "WAZA_DOROBAKUDAN",
-    "id": 426
-  },
-  {
     "devName": "WAZA_SAIKOKATTAA",
     "id": 427
   },
@@ -1716,16 +1460,8 @@
     "id": 428
   },
   {
-    "devName": "WAZA_MIRAASYOTTO",
-    "id": 429
-  },
-  {
     "devName": "WAZA_RASUTAAKANON",
     "id": 430
-  },
-  {
-    "devName": "WAZA_ROKKUKURAIMU",
-    "id": 431
   },
   {
     "devName": "WAZA_KIRIBARAI",
@@ -1772,16 +1508,8 @@
     "id": 442
   },
   {
-    "devName": "WAZA_MAGUNETTOBOMU",
-    "id": 443
-  },
-  {
     "devName": "WAZA_SUTOONEZZI",
     "id": 444
-  },
-  {
-    "devName": "WAZA_YUUWAKU",
-    "id": 445
   },
   {
     "devName": "WAZA_SUTERUSUROKKU",
@@ -1824,10 +1552,6 @@
     "id": 455
   },
   {
-    "devName": "WAZA_KAIHUKUSIREI",
-    "id": 456
-  },
-  {
     "devName": "WAZA_MOROHANOZUTUKI",
     "id": 457
   },
@@ -1862,10 +1586,6 @@
   {
     "devName": "WAZA_SIIDOHUREA",
     "id": 465
-  },
-  {
-    "devName": "WAZA_AYASIIKAZE",
-    "id": 466
   },
   {
     "devName": "WAZA_SYADOODAIBU",
@@ -1908,10 +1628,6 @@
     "id": 476
   },
   {
-    "devName": "WAZA_TEREKINESISU",
-    "id": 477
-  },
-  {
     "devName": "WAZA_MAZIKKURUUMU",
     "id": 478
   },
@@ -1924,10 +1640,6 @@
     "id": 480
   },
   {
-    "devName": "WAZA_HAZIKERUHONOO",
-    "id": 481
-  },
-  {
     "devName": "WAZA_HEDOROWHEEBU",
     "id": 482
   },
@@ -1938,10 +1650,6 @@
   {
     "devName": "WAZA_HEBIIBONBAA",
     "id": 484
-  },
-  {
-    "devName": "WAZA_SINKURONOIZU",
-    "id": 485
   },
   {
     "devName": "WAZA_EREKIBOORU",
@@ -1992,10 +1700,6 @@
     "id": 497
   },
   {
-    "devName": "WAZA_NASIKUZUSI",
-    "id": 498
-  },
-  {
     "devName": "WAZA_KURIASUMOGGU",
     "id": 499
   },
@@ -2028,10 +1732,6 @@
     "id": 506
   },
   {
-    "devName": "WAZA_HURIIFOORU",
-    "id": 507
-  },
-  {
     "devName": "WAZA_GIATHENZI",
     "id": 508
   },
@@ -2062,10 +1762,6 @@
   {
     "devName": "WAZA_INOTIGAKE",
     "id": 515
-  },
-  {
-    "devName": "WAZA_GIHUTOPASU",
-    "id": 516
   },
   {
     "devName": "WAZA_RENGOKU",
@@ -2124,10 +1820,6 @@
     "id": 530
   },
   {
-    "devName": "WAZA_HAATOSUTANPU",
-    "id": 531
-  },
-  {
     "devName": "WAZA_UDDOHOON",
     "id": 532
   },
@@ -2146,10 +1838,6 @@
   {
     "devName": "WAZA_GURASUMIKISAA",
     "id": 536
-  },
-  {
-    "devName": "WAZA_HAADOROORAA",
-    "id": 537
   },
   {
     "devName": "WAZA_KOTTONGAADO",
@@ -2252,10 +1940,6 @@
     "id": 562
   },
   {
-    "devName": "WAZA_TAGAYASU",
-    "id": 563
-  },
-  {
     "devName": "WAZA_NEBANEBANETTO",
     "id": 564
   },
@@ -2274,10 +1958,6 @@
   {
     "devName": "WAZA_OTAKEBI",
     "id": 568
-  },
-  {
-    "devName": "WAZA_PURAZUMASYAWAA",
-    "id": 569
   },
   {
     "devName": "WAZA_PARABORATYAAZI",
@@ -2488,154 +2168,6 @@
     "id": 621
   },
   {
-    "devName": "WAZA_URUTORADASSYUATAKKU",
-    "id": 622
-  },
-  {
-    "devName": "WAZA_NOOMARUZENRYOKU",
-    "id": 623
-  },
-  {
-    "devName": "WAZA_ZENRYOKUMUSOUGEKIRETUKEN",
-    "id": 624
-  },
-  {
-    "devName": "WAZA_KAKUTOUZENRYOKU",
-    "id": 625
-  },
-  {
-    "devName": "WAZA_FAINARUDAIBUKURASSYU",
-    "id": 626
-  },
-  {
-    "devName": "WAZA_HIKOUZENRYOKU",
-    "id": 627
-  },
-  {
-    "devName": "WAZA_ASIDDOPOIZUNDERIITO",
-    "id": 628
-  },
-  {
-    "devName": "WAZA_DOKUZENRYOKU",
-    "id": 629
-  },
-  {
-    "devName": "WAZA_RAIZINGURANDOOOBAA",
-    "id": 630
-  },
-  {
-    "devName": "WAZA_ZIMENZENRYOKU",
-    "id": 631
-  },
-  {
-    "devName": "WAZA_WAARUZUENDOFOORU",
-    "id": 632
-  },
-  {
-    "devName": "WAZA_IWAZENRYOKU",
-    "id": 633
-  },
-  {
-    "devName": "WAZA_ZETTAIHOSYOKUKAITENZAN",
-    "id": 634
-  },
-  {
-    "devName": "WAZA_MUSIZENRYOKU",
-    "id": 635
-  },
-  {
-    "devName": "WAZA_MUGENANYAHENOIZANAI",
-    "id": 636
-  },
-  {
-    "devName": "WAZA_GOOSUTOZENRYOKU",
-    "id": 637
-  },
-  {
-    "devName": "WAZA_TYOUZETURASENRENGEKI",
-    "id": 638
-  },
-  {
-    "devName": "WAZA_HAGANEZENRYOKU",
-    "id": 639
-  },
-  {
-    "devName": "WAZA_DAINAMIKKUHURUHUREIMU",
-    "id": 640
-  },
-  {
-    "devName": "WAZA_HONOOZENRYOKU",
-    "id": 641
-  },
-  {
-    "devName": "WAZA_SUUPAAAKUATORUNEEDO",
-    "id": 642
-  },
-  {
-    "devName": "WAZA_MIZUZENRYOKU",
-    "id": 643
-  },
-  {
-    "devName": "WAZA_BURUUMUSYAINEKUSUTORA",
-    "id": 644
-  },
-  {
-    "devName": "WAZA_KUSAZENRYOKU",
-    "id": 645
-  },
-  {
-    "devName": "WAZA_SUPAAKINGUGIGABORUTO",
-    "id": 646
-  },
-  {
-    "devName": "WAZA_DENKIZENRYOKU",
-    "id": 647
-  },
-  {
-    "devName": "WAZA_MAKISIMAMUSAIBUREIKAA",
-    "id": 648
-  },
-  {
-    "devName": "WAZA_ESUPAAZENRYOKU",
-    "id": 649
-  },
-  {
-    "devName": "WAZA_REIZINGUZIOHURIIZU",
-    "id": 650
-  },
-  {
-    "devName": "WAZA_KOORIZENRYOKU",
-    "id": 651
-  },
-  {
-    "devName": "WAZA_ARUTHIMETTODORAGONBAAN",
-    "id": 652
-  },
-  {
-    "devName": "WAZA_DORAGONZENRYOKU",
-    "id": 653
-  },
-  {
-    "devName": "WAZA_BURAKKUHOORUIKURIPUSU",
-    "id": 654
-  },
-  {
-    "devName": "WAZA_AKUZENRYOKU",
-    "id": 655
-  },
-  {
-    "devName": "WAZA_RABURIISUTAAINPAKUTO",
-    "id": 656
-  },
-  {
-    "devName": "WAZA_FEARIIZENRYOKU",
-    "id": 657
-  },
-  {
-    "devName": "WAZA_HISSATUNOPIKATYUUTO",
-    "id": 658
-  },
-  {
     "devName": "WAZA_SUNAATUME",
     "id": 659
   },
@@ -2780,42 +2312,6 @@
     "id": 694
   },
   {
-    "devName": "WAZA_SYADOOAROOZUSUTORAIKU",
-    "id": 695
-  },
-  {
-    "devName": "WAZA_HAIPAADAAKUKURASSYAA",
-    "id": 696
-  },
-  {
-    "devName": "WAZA_WADATUMINOSINFONIA",
-    "id": 697
-  },
-  {
-    "devName": "WAZA_GAADHIANDEAROORA",
-    "id": 698
-  },
-  {
-    "devName": "WAZA_SITISEIDAKKONTAI",
-    "id": 699
-  },
-  {
-    "devName": "WAZA_RAITONINGUSAAHURAIDO",
-    "id": 700
-  },
-  {
-    "devName": "WAZA_HONKIWODASUKOUGEKI",
-    "id": 701
-  },
-  {
-    "devName": "WAZA_NAINEBORUBUUSUTO",
-    "id": 702
-  },
-  {
-    "devName": "WAZA_ORIZINZUSUUPAANOVHA",
-    "id": 703
-  },
-  {
     "devName": "WAZA_TORAPPUSHERU",
     "id": 704
   },
@@ -2892,88 +2388,8 @@
     "id": 722
   },
   {
-    "devName": "WAZA_TENKOGASUMETUBOUNOHIKARI",
-    "id": 723
-  },
-  {
-    "devName": "WAZA_SANSYAINSUMASSYAA",
-    "id": 724
-  },
-  {
-    "devName": "WAZA_MUUNRAITOBURASUTAA",
-    "id": 725
-  },
-  {
-    "devName": "WAZA_POKABOKAHURENDOTAIMU",
-    "id": 726
-  },
-  {
-    "devName": "WAZA_RAZIARUEZZISUTOOMU",
-    "id": 727
-  },
-  {
-    "devName": "WAZA_BUREIZINGUSOURUBIITO",
-    "id": 728
-  },
-  {
-    "devName": "WAZA_BATIBATIAKUSERU",
-    "id": 729
-  },
-  {
-    "devName": "WAZA_ZABUZABUSAAHU",
-    "id": 730
-  },
-  {
-    "devName": "WAZA_HUWAHUWAFOORU",
-    "id": 731
-  },
-  {
-    "devName": "WAZA_PIKAPIKASANDAA",
-    "id": 732
-  },
-  {
-    "devName": "WAZA_IKIIKIBABURU",
-    "id": 733
-  },
-  {
-    "devName": "WAZA_BIRIBIRIEREKI",
-    "id": 734
-  },
-  {
-    "devName": "WAZA_MERAMERABAAN",
-    "id": 735
-  },
-  {
-    "devName": "WAZA_DOBADOBAOORA",
-    "id": 736
-  },
-  {
-    "devName": "WAZA_WARUWARUZOON",
-    "id": 737
-  },
-  {
-    "devName": "WAZA_SUKUSUKUBONBAA",
-    "id": 738
-  },
-  {
-    "devName": "WAZA_KOTIKOTIHUROSUTO",
-    "id": 739
-  },
-  {
-    "devName": "WAZA_KIRAKIRASUTOOMU",
-    "id": 740
-  },
-  {
-    "devName": "WAZA_BUIBUIBUREIKU",
-    "id": 741
-  },
-  {
     "devName": "WAZA_DABURUPANTHAA",
     "id": 742
-  },
-  {
-    "devName": "WAZA_DAIWHOORU",
-    "id": 743
   },
   {
     "devName": "WAZA_DAIMAKKUSUHOU",
@@ -3026,78 +2442,6 @@
   {
     "devName": "WAZA_KOOTOTHENZI",
     "id": 756
-  },
-  {
-    "devName": "WAZA_DAIBAAN",
-    "id": 757
-  },
-  {
-    "devName": "WAZA_DAIWAAMU",
-    "id": 758
-  },
-  {
-    "devName": "WAZA_DAISANDAA",
-    "id": 759
-  },
-  {
-    "devName": "WAZA_DAIATAKKU",
-    "id": 760
-  },
-  {
-    "devName": "WAZA_DAINAKKURU",
-    "id": 761
-  },
-  {
-    "devName": "WAZA_DAIHOROU",
-    "id": 762
-  },
-  {
-    "devName": "WAZA_DAIAISU",
-    "id": 763
-  },
-  {
-    "devName": "WAZA_DAIASIDDO",
-    "id": 764
-  },
-  {
-    "devName": "WAZA_DAISUTORIIMU",
-    "id": 765
-  },
-  {
-    "devName": "WAZA_DAIJETTO",
-    "id": 766
-  },
-  {
-    "devName": "WAZA_DAIFEARII",
-    "id": 767
-  },
-  {
-    "devName": "WAZA_DAIDORAGUUN",
-    "id": 768
-  },
-  {
-    "devName": "WAZA_DAISAIKO",
-    "id": 769
-  },
-  {
-    "devName": "WAZA_DAIROKKU",
-    "id": 770
-  },
-  {
-    "devName": "WAZA_DAIAASU",
-    "id": 771
-  },
-  {
-    "devName": "WAZA_DAIAAKU",
-    "id": 772
-  },
-  {
-    "devName": "WAZA_DAISOUGEN",
-    "id": 773
-  },
-  {
-    "devName": "WAZA_DAISUTIRU",
-    "id": 774
   },
   {
     "devName": "WAZA_SOURUBIITO",
@@ -3178,10 +2522,6 @@
   {
     "devName": "WAZA_SUTAAASARUTO",
     "id": 794
-  },
-  {
-    "devName": "WAZA_MUGENDAIBIIMU",
-    "id": 795
   },
   {
     "devName": "WAZA_TETTEIKOUSEN",

@@ -8,16 +8,19 @@ from src.scripts import flatc as FlatC
 from src.scripts import frame as WindowFrame
 
 # Env Vars
-os.environ["VERSION"] = "1.0.4"
+os.environ["VERSION"] = "1.0.5"
 
 # Create the window
 optionsValues = {
   "keepFiles": False,
-
-  ### Areas Options Start ###
-  "items": True,
+  "fullPokeDex": False,
+  "initials": False,
   "legendaries": True,
   "paradox": True,
+
+  ### Areas Options Start ###
+  "areasSpawnRandomized": True,
+  "items": True,
   ### Areas Options End ###
 
   ### Pokemon Options Start ###
@@ -27,6 +30,7 @@ optionsValues = {
   ### Pokemon Options End ###
 
   ### Trainers Options Start ###
+  "trainersRandomized": True,
   "trainerTeracristalize": True,
   "forceFullTeam": False,
   "keepGymType": False,
@@ -68,18 +72,23 @@ while True:
 
     serializedGlobalOptions = {
       "keepFiles": False if ("keepFiles" not in values.keys() or values["keepFiles"] is None or values["keepFiles"] == False) else True,
+      "fullPokeDex": False if ("fullPokeDex" not in values.keys() or values["fullPokeDex"] is None or values["fullPokeDex"] == False) else True,
+      "initials": False if ("initials" not in values.keys() or values["initials"] is None or values["initials"] == False) else True,
+      "abilities": False if ("abilities" not in values.keys() or values["abilities"] is None or values["abilities"] == False) else True,
+      "legendaries": False if ("legendaries" not in values.keys() or values["legendaries"] is None or values["legendaries"] == False) else True,
+      "paradox": False if ("paradox" not in values.keys() or values["paradox"] is None or values["paradox"] == False) else True,
     }
 
     serializedAreaOptions = {
+      "areasSpawnRandomized": False if ("areasSpawnRandomized" not in values.keys() or values["areasSpawnRandomized"] is None or values["areasSpawnRandomized"] == False) else True,
       "items": False if ("items" not in values.keys() or values["items"] is None or values["items"] == False) else True,
-      "legendaries": False if ("legendaries" not in values.keys() or values["legendaries"] is None or values["legendaries"] == False) else True,
-      "paradox": False if ("paradox" not in values.keys() or values["paradox"] is None or values["paradox"] == False) else True
+      **serializedGlobalOptions
     }
 
     serializedPokemonOptions = {
-      "abilities": False if ("abilities" not in values.keys() or values["abilities"] is None or values["abilities"] == False) else True,
       "tm": False if ("tm" not in values.keys() or values["tm"] is None or values["tm"] == False) else True,
-      "learnset": False if ("learnset" not in values.keys() or values["learnset"] is None or values["learnset"] == False) else True
+      "learnset": False if ("learnset" not in values.keys() or values["learnset"] is None or values["learnset"] == False) else True,
+      **serializedGlobalOptions
     }
 
     try:
@@ -93,9 +102,7 @@ while True:
       finalEvolutionCap = 0
 
     serializedTrainersOptions = {
-      "abilities": False if ("abilities" not in values.keys() or values["abilities"] is None or values["abilities"] == False) else True,
-      "legendaries": False if ("legendaries" not in values.keys() or values["legendaries"] is None or values["legendaries"] == False) else True,
-      "paradox": False if ("paradox" not in values.keys() or values["paradox"] is None or values["paradox"] == False) else True,
+      "trainersRandomized": False if ("trainersRandomized" not in values.keys() or values["trainersRandomized"] is None or values["trainersRandomized"] == False) else True,
       "trainerTeracristalize": False if ("trainerTeracristalize" not in values.keys() or values["trainerTeracristalize"] is None or values["trainerTeracristalize"] == False) else True,
       "forceFullTeam": False if ("forceFullTeam" not in values.keys() or values["forceFullTeam"] is None or values["forceFullTeam"] == False) else True,
       "keepGymType": False if ("keepGymType" not in values.keys() or values["keepGymType"] is None or values["keepGymType"] == False) else True,
@@ -103,7 +110,8 @@ while True:
       "competitivePkm": False if ("competitivePkm" not in values.keys() or values["competitivePkm"] is None or values["competitivePkm"] == False) else True,
       "trainerShiniesRate": trainerShiniesRate,
       "forceFinalEvolution": False if ("forceFinalEvolution" not in values.keys() or values["forceFinalEvolution"] is None or values["forceFinalEvolution"] == False) else True,
-      "finalEvolutionCap": finalEvolutionCap
+      "finalEvolutionCap": finalEvolutionCap,
+      **serializedGlobalOptions
     }
 
     print('Area Options', serializedAreaOptions)
@@ -127,10 +135,15 @@ while True:
       "trainers": trainersFileName
     }
 
-    addEventsRandomized = Randomizer.getRandomizedAddPokemonEvents(serializedAreaOptions) # Randomize the add pokemon events (such as initials)
+    addEventsRandomized, starters = Randomizer.getRandomizedAddPokemonEvents(serializedAreaOptions) # Randomize the add pokemon events (such as initials)
     jsonArrayFile = open(f'{fileNames["addPokemonEvents"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": addEventsRandomized}))
     jsonArrayFile.close()
+
+    if serializedGlobalOptions["initials"]:
+      jsonArrayFile = open(f'starters.json', 'w')
+      jsonArrayFile.write(json.dumps(starters))
+      jsonArrayFile.close()
 
     staticEventsRandomized = Randomizer.getRandomizedStaticPokemonEvents(serializedAreaOptions) # Randomize the static pokemon events
     jsonArrayFile = open(f'{fileNames["staticPokemonEvents"]}.json', 'w')
@@ -218,6 +231,6 @@ while True:
     shutil.make_archive('randomized_pokemon', 'zip', './static')
     print('ZIP created!')
   
-    # shutil.rmtree('./static')
+    shutil.rmtree('./static')
 
 window.close()

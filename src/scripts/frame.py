@@ -22,6 +22,45 @@ ON_CLOSE = sg.WIN_CLOSED
 def getAreasLayout(optionsValues: dict):
   LAYOUT_HEADER = [[sg.Text("Areas/Spawn Options", font=HEADER_FONT, background_color=BG_COLOR)]]
 
+  RANDOMIZE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Randomize Spawns", key="areasSpawnRandomized", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["areasSpawnRandomized"]),
+    ],
+    # Description
+    [
+      sg.Text("Randomize the spawns of each pokemon.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub Description
+    [
+      sg.Text("Note: There'r scripted pokemon that always spawn of certain locations, such as the Lechonk of the catch tutorial.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ],
+    [
+      sg.Text("or the pokemon from cinematics.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ],
+  ]
+  
+  INITIALS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Initials", key="initials", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["initials"]),
+    ],
+    # Description
+    [
+      sg.Text("The initials will be random.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: You can't see the models neither the names of the randomized ones.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ],
+    [
+      sg.Text("This because their names and models are scripted for the initial part of the game until you put one on your team", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR)
+    ],
+    [
+      sg.Text("If you check this option an additional file 'starts.json' will be generated with the names of the real starters", font=TEXT_FONT, background_color=BG_COLOR)
+    ],
+  ]
+
   ITEMS_CHECKBOX = [
     [
       # Input
@@ -37,6 +76,17 @@ def getAreasLayout(optionsValues: dict):
     ],
     [
       sg.Text("Ex: All the Meowth with have a pokeball.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR)
+    ]
+  ]
+
+  FULL_POKEDEX_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Full Pokedex", key="fullPokeDex", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["fullPokeDex"]),
+    ],
+    [
+      # Description
+      sg.Text("Use the whole pokedex instead of the Paldean Dex.", font=TEXT_FONT, background_color=BG_COLOR),
     ]
   ]
 
@@ -62,13 +112,14 @@ def getAreasLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
+  # layout = LAYOUT_HEADER + FULL_POKEDEX_CHECKBOX + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
+  layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + INITIALS_CHECKBOX + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
 
   return layout
 
 def getPokemonLayout(optionsValues: dict):
   LAYOUT_HEADER = [[sg.Text("Pokemon Options", font=HEADER_FONT, background_color=BG_COLOR)]]
-  
+
   ABILITIES_CHECKBOX = [
     [
       # Input
@@ -123,6 +174,21 @@ def getPokemonLayout(optionsValues: dict):
 
 def getTrainersLayout(optionsValues: dict):
   LAYOUT_HEADER = [[sg.Text("Trainers Options", font=HEADER_FONT, background_color=BG_COLOR)]]
+
+  RANDOMIZE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Randomize Team", key="trainersRandomized", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["trainersRandomized"]),
+    ],
+    # Description
+    [
+      sg.Text("Randomize the team of each trainer.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub Description
+    [
+      sg.Text("Note: The rival will have a random team each time you battle.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ],
+  ]
 
   TERACRISTALIZE_CHECKBOX = [
     [
@@ -228,7 +294,7 @@ def getTrainersLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + TERACRISTALIZE_CHECKBOX + FULL_TEAM_CHECKBOX + KEEP_TYPE_CHECKBOX + ITEMS_CHECKBOX + COMPETITIVE_CHECKBOX + SHINY_INPUT + FORCE_EVOLUTION_CHECKBOX + EVOLUTION_CAP_INPUT
+  layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + TERACRISTALIZE_CHECKBOX + FULL_TEAM_CHECKBOX + KEEP_TYPE_CHECKBOX + ITEMS_CHECKBOX + COMPETITIVE_CHECKBOX + SHINY_INPUT + FORCE_EVOLUTION_CHECKBOX + EVOLUTION_CAP_INPUT
 
   return layout
 
@@ -266,7 +332,7 @@ def getWindowFrame(optionsValues: dict):
     [sg.Text("* Pokemon from both version can spawn", font=TEXT_FONT, background_color=BG_COLOR)],
     [sg.Text("* Can spawn eggs (Shiny Lv. 0) on the overworld, but you can't do anything with them (as far I know)", font=TEXT_FONT, background_color=BG_COLOR)],
     [sg.Text("* Maybe the randomizer try to put an invalid item, so you may encounter pokemon without item", font=TEXT_FONT, background_color=BG_COLOR)],
-    [sg.Text("* Just the overworld pokemon are randomized, trainers and raids still remain the same", font=TEXT_FONT, background_color=BG_COLOR)],
+    [sg.Text("* The raids still remain the same", font=TEXT_FONT, background_color=BG_COLOR)],
   ]
 
   COPYRIGHT = [
