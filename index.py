@@ -141,7 +141,6 @@ while True:
     jsonArrayFile.close()
 
     if serializedGlobalOptions["initials"]:
-      os.remove(f'./starters.json')  
       jsonArrayFile = open('starters.json', 'w')
       jsonArrayFile.write(json.dumps(starters))
       jsonArrayFile.close()

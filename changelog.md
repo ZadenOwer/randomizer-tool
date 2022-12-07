@@ -1,6 +1,6 @@
 # 1.0.5 - 12/06/2022
 
-- Initials randomizera
+- Initials randomizer
 - New randomizing options
 
 # 1.0.4 - 12/05/2022
