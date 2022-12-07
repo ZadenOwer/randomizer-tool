@@ -2,6 +2,7 @@
 
 - Initials randomizer
 - New randomizing options
+- [Fix] All the trainers have full team
 
 # 1.0.4 - 12/05/2022
 
