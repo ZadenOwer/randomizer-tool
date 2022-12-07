@@ -161,6 +161,8 @@ def getRandomizedAddPokemonEvents(options: dict = None):
     if options["fullPokeDex"]:
       generator = generateRandomPokemon
 
+    randomPokemon = None
+
     if isStarter and options["initials"]:
         randomPokemon = generator(options)
 

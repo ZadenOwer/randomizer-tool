@@ -2,7 +2,7 @@ import os
 
 import PySimpleGUI as sg
 
-LAYOUT_SIZE = (800, 800) # (WIDTH, HEIGHT)
+LAYOUT_SIZE = (810, 850) # (WIDTH, HEIGHT)
 
 DEFAULT_FONT_FAMILY = ''
 
@@ -33,7 +33,7 @@ def getAreasLayout(optionsValues: dict):
     ],
     # Sub Description
     [
-      sg.Text("Note: There'r scripted pokemon that always spawn of certain locations, such as the Lechonk of the catch tutorial.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+      sg.Text("Note: There'r scripted pokemon that always spawn in certain locations, such as Lechonk of the catch tutorial.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
     ],
     [
       sg.Text("or the pokemon from cinematics.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
@@ -57,7 +57,7 @@ def getAreasLayout(optionsValues: dict):
       sg.Text("This because their names and models are scripted for the initial part of the game until you put one on your team", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR)
     ],
     [
-      sg.Text("If you check this option an additional file 'starts.json' will be generated with the names of the real starters", font=TEXT_FONT, background_color=BG_COLOR)
+      sg.Text("If you check this option an additional file 'starters.json' will be generated with the Dex Ids of the real starters", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR)
     ],
   ]
 
@@ -118,7 +118,7 @@ def getAreasLayout(optionsValues: dict):
   return layout
 
 def getPokemonLayout(optionsValues: dict):
-  LAYOUT_HEADER = [[sg.Text("Pokemon Options", font=HEADER_FONT, background_color=BG_COLOR)]]
+  LAYOUT_HEADER = [[sg.Text("Individual Pokemon Options", font=HEADER_FONT, background_color=BG_COLOR)]]
 
   ABILITIES_CHECKBOX = [
     [
