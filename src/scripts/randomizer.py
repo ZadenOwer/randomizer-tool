@@ -592,7 +592,11 @@ def getRandomizedTrainersList(options: dict = None):
         if options["fullPokeDex"]:
           pokemonGenerator = generateRandomPokemon
 
-        randomPokemon = pokemonGenerator(options)
+        randomPokemon = None
+
+        while (randomPokemon is None):
+          randomPokemon = pokemonGenerator(options)
+
         randomPokemonPersonal = getPokemonPersonalData(randomPokemon["id"])
 
         try:
