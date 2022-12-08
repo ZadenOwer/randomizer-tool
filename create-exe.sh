@@ -28,10 +28,10 @@ do
    cp -v "$f" dist/"${f%.json}".json
 done
 
-for f in src/dlls/*.dll
-do 
-   cp -v "$f" dist/"${f%.dll}".dll
-done
+# for f in src/dlls/*.dll
+# do 
+#    cp -v "$f" dist/"${f%.dll}".dll
+# done
 
 for f in src/*.bfbs
 do 
