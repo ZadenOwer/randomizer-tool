@@ -335,7 +335,7 @@ def getRandomizedLearnset(defaultLearnset: list):
 
     randomizedLearnset.append({
       **defaultMove,
-      "Move": moveId
+      "move": moveId
     })
 
   return randomizedLearnset
@@ -346,9 +346,9 @@ def getRandomizedPokemonList(options: dict = None):
   for pokemon in personalData["Table"]:
 
     if options["fullPokeDex"]:
-      pokemon["IsPresentInGame"] = True
+      pokemon["is_present"] = True
 
-    if not pokemon["IsPresentInGame"]:
+    if not pokemon["is_present"]:
       randomizedPokemonList.append(pokemon)
       continue
 
@@ -358,18 +358,18 @@ def getRandomizedPokemonList(options: dict = None):
 
     if (options["abilities"] == True):
       # Randomizing Abilities
-      defaultAbilities = [randomizedPokemon["Ability1"], randomizedPokemon["Ability2"], randomizedPokemon["AbilityH"]]
-      randomizedPokemon["Ability1"] = getRandomizedAbility(blacklist=defaultAbilities)
-      randomizedPokemon["Ability2"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["Ability1"]])
-      randomizedPokemon["AbilityH"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["Ability1"], randomizedPokemon["Ability2"]])
+      defaultAbilities = [randomizedPokemon["ability_1"], randomizedPokemon["ability_2"], randomizedPokemon["ability_3"]]
+      randomizedPokemon["ability_1"] = getRandomizedAbility(blacklist=defaultAbilities)
+      randomizedPokemon["ability_2"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["ability_1"]])
+      randomizedPokemon["ability_3"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["ability_1"], randomizedPokemon["ability_2"]])
 
     if (options["tm"]):
       # Randomizing TM compatibility
-      randomizedPokemon["TechnicalMachine"] = getRandomizedTMList(default=randomizedPokemon["TechnicalMachine"])
+      randomizedPokemon["tm_moves"] = getRandomizedTMList(default=randomizedPokemon["tm_moves"])
 
     if (options["learnset"]):
       # Randomizing Pool of moves the pokemon will learn by level
-      randomizedPokemon["Learnset"] = getRandomizedLearnset(randomizedPokemon["Learnset"])
+      randomizedPokemon["levelup_moves"] = getRandomizedLearnset(randomizedPokemon["levelup_moves"])
 
     randomizedPokemonList.append(randomizedPokemon)
     continue
@@ -427,7 +427,7 @@ def isShiny(rateValue: int):
   return 0
 
 def getPokemonPersonalData(dexId: int):
-  return next(pokemon for pokemon in personalData["Table"] if pokemon["Info"]["DexIndexNational"] == dexId)
+  return next(pokemon for pokemon in personalData["Table"] if pokemon["species"]["species"] == dexId)
 
 def getPokemonDevName(dexId: int):
   return next(pokemon for pokemon in pokemonList if pokemon["id"] == dexId)["devName"]
@@ -439,14 +439,14 @@ def getFinalEvolution(dexId: int):
   try:
     pokemon = getPokemonPersonalData(dexId)
     
-    while len(pokemon["Evolutions"]) != 0:
+    while len(pokemon["evo_data"]) != 0:
       evoDexId = 0
-      if len(pokemon["Evolutions"]) > 1:
-        evoDexId = getRNG(maxValue=len(pokemon["Evolutions"]))
+      if len(pokemon["evo_data"]) > 1:
+        evoDexId = getRNG(maxValue=len(pokemon["evo_data"]))
 
-      pokemon = getPokemonPersonalData(dexId=pokemon["Evolutions"][evoDexId]["Species"])
+      pokemon = getPokemonPersonalData(dexId=pokemon["evo_data"][evoDexId]["species"])
 
-    return getPokemonDevName(pokemon["Info"]["DexIndexNational"])
+    return getPokemonDevName(pokemon["species"]["species"])
   except:
     return "DEV_NULL"
 
@@ -602,8 +602,8 @@ def getRandomizedTrainersList(options: dict = None):
             if options["keepGymType"]:
               if isMonotypeTrainer(trainerTypeName=randomizedTrainer["trainerType"]):
                 trainerTypeId = getTrainerTypeId(trainerTypeName=randomizedTrainer["trainerType"])
-                type1 = randomPokemonPersonal["Type1"]
-                type2 = randomPokemonPersonal["Type2"]
+                type1 = randomPokemonPersonal["type_1"]
+                type2 = randomPokemonPersonal["type_2"]
 
                 if (trainerTypeId not in [type1, type2]):
                   # Randomize again if any type not match with the trainerType
@@ -616,6 +616,7 @@ def getRandomizedTrainersList(options: dict = None):
           "devId": randomPokemon["devName"],
           "formId": getRandomForm(devName=randomPokemon["devName"]),
           "ballId": "MONSUTAABOORU",
+          "sex": "DEFAULT",
         }
 
       if options["forceFullTeam"]:

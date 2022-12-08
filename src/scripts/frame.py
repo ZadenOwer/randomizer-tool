@@ -2,7 +2,8 @@ import os
 
 import PySimpleGUI as sg
 
-LAYOUT_SIZE = (810, 850) # (WIDTH, HEIGHT)
+LAYOUT_SIZE = (810, 800) # (WIDTH, HEIGHT)
+COLUMN_SIZE = (810, 600) # (WIDTH, HEIGHT)
 
 DEFAULT_FONT_FAMILY = ''
 
@@ -348,13 +349,14 @@ def getWindowFrame(optionsValues: dict):
     HEADER_TEXT,
 
     [
-      sg.Column(areasLayout, key="step1", background_color=BG_COLOR),
-      sg.Column(pokemonLayout, key="step2", visible=False, background_color=BG_COLOR),
-      sg.Column(trainersLayout, key="step3", visible=False, background_color=BG_COLOR),
-      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + COPYRIGHT, key="step4", visible=False, background_color=BG_COLOR)
+      sg.Column(areasLayout, key="step1", background_color=BG_COLOR, size=COLUMN_SIZE),
+      sg.Column(pokemonLayout, key="step2", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE),
+      sg.Column(trainersLayout, key="step3", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
+      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES, key="step4", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
     ],
     
-    LAYOUTS_BUTTONS
+    LAYOUTS_BUTTONS,
+    COPYRIGHT
   ]
 
   window = sg.Window(f"Randomizer {os.environ.get('VERSION')}", finalLayout, size=LAYOUT_SIZE, background_color=BG_COLOR)
