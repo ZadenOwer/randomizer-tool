@@ -114,15 +114,15 @@ At this moment just the Paldea's Dex is available, that means that you cannot se
 
 > **The executable is detected as a virus, are you scamming me?**
 
-This is my first time working with executable files, so I think that I missed several "good practices", that's why I bring access to this repo, that way you can see the source code and be aware of what's going on.
+This is my first time working with executable files, so I think that I missed several "good practices", that's why I giving access to this repo, that way you can see the source code and be aware of what's going on.
 
 > **I see eggs spawning on the overworld, my game will crash if I interact with them?**
 
-Yeah, that's something that I'm not 100% aware about why is happening, but my theory is that when I randomize, the pokemon with diferent forms, like the Paldean Tauros, Squawkabilly or Rotom, need a specific way of be randomized and I'm not doing it, so they become "Bad eggs" instead.
+Yeah, that's something that I'm not 100% aware about why is happening, but I think is funny to see them spawn around so I didn't try to fix it yet.
 
-You cannot do anything with this Eggs, you can interact with them but at the moment of start the battle, this will finish instantly, getting no XP nor material.
+You cannot do anything with this Eggs, you can interact with them but at the moment of start the battle, it will finish instantly, getting no XP or materials.
 
-A funny think is that every egg will be Shiny and Lv. 0.
+A funny thing is that every egg will be Shiny and Lv. 0.
 
 > **I activated the Items option, but a pokemon I catched don't bring any item**
 
@@ -132,6 +132,6 @@ This is because the randomizer try to force the pokemon to bring an item, but if
 
 This tool was made entirely by me, `ZadenOwer`.
 
-Special thanks to the people of discord of Pokemon Switch Modding that help me to understand How to get access to the files and How to read it, modify and everything else.
+Special thanks to the people of the discord server "Pokemon Switch Modding" that help me to understand How to get access to the files and How to read it, modify and everything else.
 
 > **"From fans and for fans"** 
