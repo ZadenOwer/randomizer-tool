@@ -110,7 +110,7 @@ I only test this mod on Ryujinx Emulator (I thinks can also be used on Yuzu, but
 
 > **Can I randomize every pokemon of the franchise?**
 
-At this moment just the Paldea's Dex is available, that means that you cannot see pokemon like Ultra beast or Hisuian forms... at the moment.
+At this moment just the Paldea's Dex is available, that means that you cannot see pokemon like Ultra beast or pokemon from that aren't on the base game yet.
 
 > **The executable is detected as a virus, are you scamming me?**
 
