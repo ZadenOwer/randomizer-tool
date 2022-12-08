@@ -1,3 +1,9 @@
+# 1.0.6 - 12/07/2022
+
+- The window frame now is scrollable, to avoid getting stuck on the Step 3
+- New way on the creation of the personal_array binary, this makes possible to not use the DLLs anymore
+- Trainers' Pokemon sex change to "DEFAULT" value when randomizing them
+
 # 1.0.5 - 12/06/2022
 
 - Initials randomizer

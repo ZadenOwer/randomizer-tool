@@ -183,7 +183,11 @@ while True:
       print('Error creating binary:', areaRandomizeResult.stderr)
       continue
 
-    FlatC.serializeJson(jsonPath=f'./{fileNames["personal"]}.json', ouputName=f'{fileNames["personal"]}.bin') # Generates the Randomized Pokemon binary
+    # FlatC.serializeJson(jsonPath=f'./{fileNames["personal"]}.json', ouputName=f'{fileNames["personal"]}.bin') # Generates the Randomized Pokemon binary
+    personalDataRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["personal"]}.bfbs', jsonPath = f'./{fileNames["personal"]}.json')  # Generates the Randomized Areas binary
+    if personalDataRandomizeResult.stderr != b'':
+      print('Error creating binary:', personalDataRandomizeResult.stderr)
+      continue
 
     trainerRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["trainers"]}.bfbs', jsonPath = f'./{fileNames["trainers"]}.json')  # Generates the Randomized Trainers binary
     if trainerRandomizeResult.stderr != b'':
@@ -211,13 +215,6 @@ while True:
 
     for fileName in fileNames:
       print(f'{paths[fileName]}/{fileNames[fileName]}.bin')
-      if fileName == 'personal':
-        if serializedGlobalOptions["keepFiles"]:
-          shutil.copy(f'./{fileNames[fileName]}.bin', f'{paths[fileName]}/{fileNames[fileName]}.bin')
-        else:
-          os.replace(f'./{fileNames[fileName]}.bin', f'{paths[fileName]}/{fileNames[fileName]}.bin')
-          os.remove(f'./{fileNames[fileName]}.json')  
-        continue
 
       shutil.copy(f'./src/{fileNames[fileName]}.bfbs', f'{paths[fileName]}/{fileNames[fileName]}.bfbs')
 
