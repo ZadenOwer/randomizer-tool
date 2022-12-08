@@ -1,3 +1,8 @@
+# 1.0.7 - 12/08/2022
+
+- Missing Paldean Dex entries added to the randomizer
+- Fixed the pokemon forms randomizing
+
 # 1.0.6 - 12/07/2022
 
 - The window frame now is scrollable, to avoid getting stuck on the Step 3

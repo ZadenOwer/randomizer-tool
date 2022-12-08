@@ -94,6 +94,7 @@ def generateRandomPaldeaPokemon(options: dict = None):
     generatedPokemon = next(pk for pk in pokemonList if pk["id"] == randomId)
     return generatedPokemon
   except:
+    print('An error ocurred on random pokemon generation')
     return None
 
 def generateRandomPokemon(options: dict = None):
@@ -138,14 +139,18 @@ def generateRandomItem():
 
   return item
 
-def getRandomForm(devName: str):
-  # TO - DO
+def getRandomForm(forms: int):
   # Randomize the forms of the pokemon
+  if forms == 1:
+    return 0
 
-  return 0
+  randomForm = getRNG(forms)
+
+  return randomForm
 
 # ********* Add Pokemon Events Randomizer Start *********
 def getRandomizedAddPokemonEvents(options: dict = None):
+  print('Randomizing Initials and Trades Events')
   randomizedList = []
   starters = {
     "fire": "",
@@ -170,7 +175,7 @@ def getRandomizedAddPokemonEvents(options: dict = None):
           randomPokemon = generator(options)
 
         event["pokeData"]["devId"] = randomPokemon["devName"]
-        event["pokeData"]["formId"] = getRandomForm(randomPokemon["devName"])
+        event["pokeData"]["formId"] = getRandomForm(randomPokemon["forms"])
 
     if not isStarter and options["areasSpawnRandomized"]:
         randomPokemon = generator(options)
@@ -179,7 +184,7 @@ def getRandomizedAddPokemonEvents(options: dict = None):
           randomPokemon = generator(options)
 
         event["pokeData"]["devId"] = randomPokemon["devName"]
-        event["pokeData"]["formId"] = getRandomForm(randomPokemon["devName"])
+        event["pokeData"]["formId"] = getRandomForm(randomPokemon["forms"])
     
     if isStarter:
       starterId = randomPokemon["id"] if randomPokemon is not None else event["pokeData"]["devId"]
@@ -212,6 +217,7 @@ def getRandomizedAddPokemonEvents(options: dict = None):
 
 # ********* Static Pokemon Events Randomizer Start *********
 def getRandomizedStaticPokemonEvents(options: dict = None):
+  print('Randomizing Statics Events')
   randomizedList = []
 
   for event in fixedPokemonEvents["values"]:
@@ -230,7 +236,7 @@ def getRandomizedStaticPokemonEvents(options: dict = None):
         None
 
       event["pokeDataSymbol"]["devId"] = randomPokemon["devName"]
-      event["pokeDataSymbol"]["formId"] = getRandomForm(randomPokemon["devName"])
+      event["pokeDataSymbol"]["formId"] = getRandomForm(randomPokemon["forms"])
 
     if options["abilities"]:
       event["pokeDataSymbol"]["tokuseiIndex"] = "RANDOM_123"
@@ -246,7 +252,6 @@ def getRandomizedStaticPokemonEvents(options: dict = None):
 # ********* Areas Randomizer Start *********
 def getRandomizedArea(options: dict = None):
   print('Randomizing Areas with options:', options)
-  alreadyUsedId = []
   randomizedAreaList = []
 
   for pokemon in pokemonData["values"]:
@@ -261,16 +266,12 @@ def getRandomizedArea(options: dict = None):
         pokemonGenerator = generateRandomPokemon
 
       randomPokemon = pokemonGenerator(options)
-
-      try:
-        while (randomPokemon is None or alreadyUsedId.index(randomPokemon["id"])):
-          randomPokemon = pokemonGenerator(options)
-      except:
-        None
+      
+      while (randomPokemon is None):
+        randomPokemon = pokemonGenerator(options)
 
       pokemon["devid"] = randomPokemon["devName"]
-
-      alreadyUsedId.append(randomPokemon["id"])
+      pokemon["formno"] = getRandomForm(randomPokemon["forms"])
 
     if options["items"] == False:
       #  No randomized items
@@ -618,7 +619,7 @@ def getRandomizedTrainersList(options: dict = None):
         randomizedTrainer[pokeKey] = {
           **randomizedTrainer[pokeKey],
           "devId": randomPokemon["devName"],
-          "formId": getRandomForm(devName=randomPokemon["devName"]),
+          "formId": getRandomForm(randomPokemon["forms"]),
           "ballId": "MONSUTAABOORU",
           "sex": "DEFAULT",
         }
