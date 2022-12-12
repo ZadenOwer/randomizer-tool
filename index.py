@@ -157,7 +157,7 @@ while True:
 
     pokemonRandomize = Randomizer.getRandomizedPokemonList(serializedPokemonOptions) # Randomize each pokemon individually
     jsonArrayFile = open(f'{fileNames["personal"]}.json', 'w')
-    jsonArrayFile.write(json.dumps({"Table": pokemonRandomize}))
+    jsonArrayFile.write(json.dumps({"entry": pokemonRandomize}))
     jsonArrayFile.close()
 
     trainersRandomize = Randomizer.getRandomizedTrainersList(serializedTrainersOptions) # Randomize each trainer team and values
