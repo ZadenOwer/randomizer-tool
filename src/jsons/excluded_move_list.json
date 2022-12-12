@@ -36,6 +36,10 @@
     "id": 49
   },
   {
+    "devName": "WAZA_ZIGOKUGURUMA", // Submission
+    "id": 66
+  },
+  {
     "devName": "WAZA_RYUUNOIKARI",  // Dragon Rage
     "id": 82
   },
@@ -72,6 +76,10 @@
     "id": 128
   },
   {
+    "devName": "WAZA_ROKETTOZUTUKI", // Skull Bash
+    "id": 130
+  },
+  {
     "devName": "WAZA_TOGEKYANON", // Spike Cannon
     "id": 131
   },
@@ -80,8 +88,16 @@
     "id": 132
   },
   {
+    "devName": "WAZA_SUPUUNMAGE", // Kinesis
+    "id": 134
+  },
+  {
     "devName": "WAZA_TAMANAGE", // Barrage
     "id": 140
+  },
+  {
+    "devName": "WAZA_AKUMANOKISSU", // Lovely Kiss
+    "id": 142
   },
   {
     "devName": "WAZA_AWA",  // Bubble
@@ -100,20 +116,56 @@
     "id": 149
   },
   {
+    "devName": "WAZA_HONEBUUMERAN", // Bonemerang
+    "id": 155
+  },
+  {
+    "devName": "WAZA_HISSATUMAEBA", // Hyper Fang
+    "id": 158
+  },
+  {
     "devName": "WAZA_KAKUBARU", // Sharpen
     "id": 159
+  },
+  {
+    "devName": "WAZA_TEKUSUTYAA", // Conversion
+    "id": 160
+  },
+  {
+    "devName": "WAZA_SUKETTI", // Sketch
+    "id": 166
+  },
+  {
+    "devName": "WAZA_TORIPURUKIKKU", // Triple Kick
+    "id": 167
   },
   {
     "devName": "WAZA_KUMONOSU", // Spider Web
     "id": 169
   },
   {
+    "devName": "WAZA_KOKORONOME", // Mind Reader
+    "id": 170
+  },
+  {
     "devName": "WAZA_AKUMU",  // Nightmare
     "id": 171
   },
   {
+    "devName": "WAZA_TEKUSUTYAA2", // Conversion 2
+    "id": 176
+  },
+  {
+    "devName": "WAZA_EAROBURASUTO", // Aeroblast
+    "id": 177
+  },
+  {
     "devName": "WAZA_DAMASIUTI",  // Feint Attack
     "id": 185
+  },
+  {
+    "devName": "WAZA_OKUTANHOU", // Octazooka
+    "id": 190
   },
   {
     "devName": "WAZA_MIYABURU", // Foresight
@@ -128,6 +180,10 @@
     "id": 218
   },
   {
+    "devName": "WAZA_SEINARUHONOO", // Sacred Fire
+    "id": 221
+  },
+  {
     "devName": "WAZA_MAGUNITYUUDO", // Magnitude
     "id": 222
   },
@@ -136,20 +192,44 @@
     "id": 228
   },
   {
+    "devName": "WAZA_ATEMINAGE", // Vital Throw
+    "id": 233
+  },
+  {
     "devName": "WAZA_MEZAMERUPAWAA",  // Hidden Power
     "id": 237
+  },
+  {
+    "devName": "WAZA_ARARE", // Hail
+    "id": 258
   },
   {
     "devName": "WAZA_KITUKE", // Smelling Salts
     "id": 265
   },
   {
+    "devName": "WAZA_SIZENNOTIKARA", // Nature Power
+    "id": 267
+  },
+  {
     "devName": "WAZA_NEKONOTE", // Assit
     "id": 274
   },
   {
+    "devName": "WAZA_MAZIKKUKOOTO", // Magic Coat
+    "id": 277
+  },
+  {
+    "devName": "WAZA_RIBENZI", // Revenge
+    "id": 279
+  },
+  {
     "devName": "WAZA_RIHURESSYU", // Refresh
     "id": 287
+  },
+  {
+    "devName": "WAZA_ONNEN", // Grudge
+    "id": 288
   },
   {
     "devName": "WAZA_YOKODORI", // Snatch
@@ -168,6 +248,14 @@
     "id": 294
   },
   {
+    "devName": "WAZA_RASUTAAPAAZI", // Luster Purge
+    "id": 295
+  },
+  {
+    "devName": "WAZA_MISUTOBOORU", // Mist Ball
+    "id": 296
+  },
+  {
     "devName": "WAZA_DOROASOBI",  // Mud Sport
     "id": 300
   },
@@ -178,6 +266,10 @@
   {
     "devName": "WAZA_NIIDORUAAMU",  // Needle Arm
     "id": 302
+  },
+  {
+    "devName": "WAZA_AROMASERAPII", // Aromatherapy
+    "id": 312
   },
   {
     "devName": "WAZA_KAGIWAKERU", // Odor Sleuth
@@ -204,6 +296,10 @@
     "id": 346
   },
   {
+    "devName": "WAZA_HAMETUNONEGAI", // Doom Desire
+    "id": 353
+  },
+  {
     "devName": "WAZA_SAIKOBUUSUTO", // Psycho Boost
     "id": 354
   },
@@ -224,8 +320,8 @@
     "id": 373
   },
   {
-    "devName": "WAZA_SIBORITORU", // Wring Out
-    "id": 378
+    "devName": "WAZA_SAIKOSIHUTO", // Psycho Shift
+    "id": 375
   },
   {
     "devName": "WAZA_KIRIHUDA", // Trump Card
@@ -234,6 +330,10 @@
   {
     "devName": "WAZA_KAIHUKUHUUZI", // Heal Block
     "id": 377
+  },
+  {
+    "devName": "WAZA_SIBORITORU", // Wring Out
+    "id": 378
   },
   {
     "devName": "WAZA_OMAZINAI", // Lucky Chant
@@ -264,6 +364,10 @@
     "id": 431
   },
   {
+    "devName": "WAZA_GANSEKIHOU", // Rock Wrecker
+    "id": 439
+  },
+  {
     "devName": "WAZA_MAGUNETTOBOMU",  // Magnet Bomb
     "id": 443
   },
@@ -272,16 +376,40 @@
     "id": 445
   },
   {
+    "devName": "WAZA_OSYABERI", // Chatter
+    "id": 448
+  },
+  {
     "devName": "WAZA_KAIHUKUSIREI", // Heal Order
     "id": 456
+  },
+  {
+    "devName": "WAZA_NIGIRITUBUSU", // Crush Grip
+    "id": 462
+  },
+  {
+    "devName": "WAZA_DAAKUHOORU", // Dark Void
+    "id": 464
+  },
+  {
+    "devName": "WAZA_SIIDOHUREA", // Seed Flare
+    "id": 465
   },
   {
     "devName": "WAZA_AYASIIKAZE", // Ominous Wind
     "id": 466
   },
   {
+    "devName": "WAZA_BODHIPAAZI", // Autotomize
+    "id": 475
+  },
+  {
     "devName": "WAZA_TEREKINESISU", // Telekinesis
     "id": 477
+  },
+  {
+    "devName": "WAZA_YAMAARASI", // Storm Throw
+    "id": 480
   },
   {
     "devName": "WAZA_HAZIKERUHONOO",  // Flame Burst
@@ -304,20 +432,144 @@
     "id": 516
   },
   {
+    "devName": "WAZA_DABURUTYOPPU", // Dual Chop
+    "id": 530
+  },
+  {
     "devName": "WAZA_HAATOSUTANPU", // Heart Stamp
     "id": 531
+  },
+  {
+    "devName": "WAZA_GURASUMIKISAA", // Leaf Tornado
+    "id": 536
   },
   {
     "devName": "WAZA_HAADOROORAA",  // Steamroller
     "id": 537
   },
   {
+    "devName": "WAZA_AHUROBUREIKU", // Head Charge
+    "id": 543
+  },
+  {
+    "devName": "WAZA_GIASOOSAA", // Gear Grind
+    "id": 544
+  },
+  {
+    "devName": "WAZA_KAENDAN", // Searing Shot
+    "id": 545
+  },
+  {
+    "devName": "WAZA_TEKUNOBASUTAA", // Techno Blast
+    "id": 546
+  },
+  {
+    "devName": "WAZA_SINPINOTURUGI", // Secret Sword
+    "id": 548
+  },
+  {
+    "devName": "WAZA_KOGOERUSEKAI", // Glaciate
+    "id": 549
+  },
+  {
+    "devName": "WAZA_RAIGEKI", // Bolt Strike
+    "id": 550
+  },
+  {
+    "devName": "WAZA_AOIHONOO", // Blue Flare
+    "id": 551
+  },
+  {
+    "devName": "WAZA_HURIIZUBORUTO", // Freeze Shock
+    "id": 553
+  },
+  {
+    "devName": "WAZA_KOORUDOHUREA", // Ice Burn
+    "id": 554
+  },
+  {
+    "devName": "WAZA_KUROSUHUREIMU", // Fusion Flare
+    "id": 558
+  },
+  {
+    "devName": "WAZA_KUROSUSANDAA", // Fusion Bolt
+    "id": 559
+  },
+  {
+    "devName": "WAZA_TATAMIGAESI", // Mat Block
+    "id": 561
+  },
+  {
     "devName": "WAZA_TAGAYASU", // Rototiller
     "id": 563
   },
   {
+    "devName": "WAZA_HAROWHIN", // Trick-or-Treat
+    "id": 567
+  },
+  {
     "devName": "WAZA_PURAZUMASYAWAA", // Ion Deluge
     "id": 569
+  },
+  {
+    "devName": "WAZA_MORINONOROI", // Forest's Curse
+    "id": 571
+  },
+  {
+    "devName": "WAZA_HIKKURIKAESU", // Topsy-Turvy
+    "id": 576
+  },
+  {
+    "devName": "WAZA_TORIKKUGAADO", // Crafty Shield
+    "id": 578
+  },
+  {
+    "devName": "WAZA_HURAWAAGAADO", // Flower Shield
+    "id": 579
+  },
+  {
+    "devName": "WAZA_SOUDEN", // Electrify
+    "id": 582
+  },
+  {
+    "devName": "WAZA_KINGUSIIRUDO", // King's Shield
+    "id": 588
+  },
+  {
+    "devName": "WAZA_BENOMUTORAPPU", // Venom Drench
+    "id": 599
+  },
+  {
+    "devName": "WAZA_HUNZIN", // Powder
+    "id": 600
+  },
+  {
+    "devName": "WAZA_ZIOKONTOROORU", // Geomancy
+    "id": 601
+  },
+  {
+    "devName": "WAZA_GUROUPANTI", // Power-Up Punch
+    "id": 612
+  },
+  {
+    "devName": "WAZA_DESUUINGU", // Oblivion Wing
+    "id": 613
+  },
+  {
+    "devName": "WAZA_SAUZANAROO", // Thousand Arrows
+    "id": 614
+  },
+  {
+    "devName": "WAZA_SAUZANWHEEBU", // Thousand Waves
+    "id": 615
+  },
+  {
+    "devName": "WAZA_GURANDOFOOSU", // Land's Wrath
+    "id": 616
+  },
+  {
+    "devName": "WAZA_HAMETUNOHIKARI", // Light of Ruin
+    "id": 617
   },
   {
     "devName": "WAZA_URUTORADASSYUATAKKU",  // Z Moves Start
@@ -468,6 +720,54 @@
     "id": 658
   },
   {
+    "devName": "WAZA_UTAKATANOARIA", // Sparkling Aria
+    "id": 664
+  },
+  {
+    "devName": "WAZA_HURAWAAHIIRU", // Floral Healing
+    "id": 666
+  },
+  {
+    "devName": "WAZA_SUPOTTORAITO", // Spotlight
+    "id": 671
+  },
+  {
+    "devName": "WAZA_DOKUNOITO", // Toxic Thread
+    "id": 672
+  },
+  {
+    "devName": "WAZA_TOGISUMASU", // Laser Focus
+    "id": 673
+  },
+  {
+    "devName": "WAZA_ASISUTOGIA", // Gear Up
+    "id": 674
+  },
+  {
+    "devName": "WAZA_ANKAASYOTTO", // Anchor Shot
+    "id": 677
+  },
+  {
+    "devName": "WAZA_ZYOUKA", // Purify
+    "id": 685
+  },
+  {
+    "devName": "WAZA_KOAPANISSYAA", // Core Enforcer
+    "id": 687
+  },
+  {
+    "devName": "WAZA_KUTIBASIKYANON", // Beak Blast
+    "id": 690
+  },
+  {
+    "devName": "WAZA_SUKEIRUNOIZU", // Clanging Scales
+    "id": 691
+  },
+  {
+    "devName": "WAZA_DORAGONHANMAA", // Dragon Hammer
+    "id": 692
+  },
+  {
     "devName": "WAZA_SYADOOAROOZUSUTORAIKU",
     "id": 695
   },
@@ -502,6 +802,54 @@
   {
     "devName": "WAZA_ORIZINZUSUUPAANOVHA",
     "id": 703
+  },
+  {
+    "devName": "WAZA_TORAPPUSHERU", // Shell Trap
+    "id": 704
+  },
+  {
+    "devName": "WAZA_SYADOOBOON", // Shadow Bone
+    "id": 708
+  },
+  {
+    "devName": "WAZA_PURIZUMUREEZAA", // Prismatic Laser
+    "id": 711
+  },
+  {
+    "devName": "WAZA_SYADOOSUTIIRU", // Spectral Thief
+    "id": 712
+  },
+  {
+    "devName": "WAZA_METEODORAIBU", // Sunsteel Strike
+    "id": 713
+  },
+  {
+    "devName": "WAZA_SYADOOREI", // Moongeist Beam
+    "id": 714
+  },
+  {
+    "devName": "WAZA_SIZENNOIKARI", // Nature's Madness
+    "id": 717
+  },
+  {
+    "devName": "WAZA_MARUTIATAKKU", // Multi-Attack
+    "id": 718
+  },
+  {
+    "devName": "WAZA_1000MANBORUTO", // 10,000,000 Volt Thunderbolt
+    "id": 719
+  },
+  {
+    "devName": "WAZA_BIKKURIHEDDO", // Mind Blown
+    "id": 720
+  },
+  {
+    "devName": "WAZA_PURAZUMAFISUTO", // Plasma Fists
+    "id": 721
+  },
+  {
+    "devName": "WAZA_FOTONGEIZAA", // Photon Geyser
+    "id": 722
   },
   {
     "devName": "WAZA_TENKOGASUMETUBOUNOHIKARI",
@@ -580,15 +928,31 @@
     "id": 741
   },
   {
-    "devName": "WAZA_DAIWHOORU",  // Dynamax Moves Start
+    "devName": "WAZA_DABURUPANTHAA", // Double Iron Bash
+    "id": 742
+  },
+  {
+    "devName": "WAZA_DAIWHOORU",  // Max Guard
     "id": 743
   },
   {
-    "devName": "WAZA_DAIBAAN",
+    "devName": "WAZA_TAKOGATAME", // Octolock
+    "id": 753
+  },
+  {
+    "devName": "WAZA_DENGEKIKUTIBASI", // Bolt Beak
+    "id": 754
+  },
+  {
+    "devName": "WAZA_ERAGAMI", // Fishious Rend
+    "id": 755
+  },
+  {
+    "devName": "WAZA_DAIBAAN", // Court Change
     "id": 757
   },
   {
-    "devName": "WAZA_DAIWAAMU",
+    "devName": "WAZA_DAIWAAMU", // Dynamax Moves Start
     "id": 758
   },
   {
@@ -656,8 +1020,40 @@
     "id": 774
   },
   {
+    "devName": "WAZA_SOURUBIITO", // Clangorous Soulblaze
+    "id": 775
+  },
+  {
+    "devName": "WAZA_DEKOREESYON", // Decorate
+    "id": 777
+  },
+  {
+    "devName": "WAZA_TORABASAMI", // Snap Trap
+    "id": 779
+  },
+  {
+    "devName": "WAZA_OORAGURUMA", // Aura Wheel
+    "id": 783
+  },
+  {
+    "devName": "WAZA_WANDAASUTIIMU", // Strange Steam
+    "id": 790
+  },
+  {
+    "devName": "WAZA_BUROKKINGU", // Obstruct
+    "id": 792
+  },
+  {
+    "devName": "WAZA_SUTAAASARUTO", // Meteor Assault
+    "id": 794
+  },
+  {
     "devName": "WAZA_MUGENDAIBIIMU",  // Eternabeam
     "id": 795
+  },
+  {
+    "devName": "WAZA_BUREIBUTYAAZI", // Take Heart
+    "id": 850
   },
   {
     "devName": "WAZA_MOOBIRUKOUGEKI", //	Blazing Torque - Signature Mov of the Team Star Fire Car
