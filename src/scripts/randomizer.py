@@ -344,7 +344,7 @@ def getRandomizedLearnset(defaultLearnset: list):
 def getRandomizedPokemonList(options: dict = None):
   print('Randomizing Pokemon with options:', options)
   randomizedPokemonList = []
-  for pokemon in personalData["Table"]:
+  for pokemon in personalData["entry"]:
 
     if options["fullPokeDex"]:
       pokemon["is_present"] = True
@@ -428,7 +428,7 @@ def isShiny(rateValue: int):
   return 0
 
 def getPokemonPersonalData(dexId: int):
-  return next(pokemon for pokemon in personalData["Table"] if pokemon["species"]["species"] == dexId)
+  return next(pokemon for pokemon in personalData["entry"] if pokemon["species"]["species"] == dexId)
 
 def getPokemonDevName(dexId: int):
   return next(pokemon for pokemon in pokemonList if pokemon["id"] == dexId)["devName"]
