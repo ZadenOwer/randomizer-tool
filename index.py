@@ -8,7 +8,7 @@ from src.scripts import flatc as FlatC
 from src.scripts import frame as WindowFrame
 
 # Env Vars
-os.environ["VERSION"] = "1.0.7"
+os.environ["VERSION"] = "1.0.8"
 
 # Create the window
 optionsValues = {
@@ -157,7 +157,7 @@ while True:
 
     pokemonRandomize = Randomizer.getRandomizedPokemonList(serializedPokemonOptions) # Randomize each pokemon individually
     jsonArrayFile = open(f'{fileNames["personal"]}.json', 'w')
-    jsonArrayFile.write(json.dumps({"Table": pokemonRandomize}))
+    jsonArrayFile.write(json.dumps({"entry": pokemonRandomize}))
     jsonArrayFile.close()
 
     trainersRandomize = Randomizer.getRandomizedTrainersList(serializedTrainersOptions) # Randomize each trainer team and values

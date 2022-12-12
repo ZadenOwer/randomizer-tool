@@ -1,3 +1,8 @@
+# 1.0.8 - 12/12/2022
+
+- Evolutions data for every pokemon updated
+- Excluded moves updated to the last list of excluded moves from 9th
+
 # 1.0.7 - 12/08/2022
 
 - Missing Paldean Dex entries added to the randomizer
