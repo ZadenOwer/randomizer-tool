@@ -21,7 +21,7 @@ index.py
 mkdir 'dist'
 mkdir 'dist/src'
 mkdir 'dist/src/jsons'
-mkdir 'dist/src/dlls'
+# mkdir 'dist/src/dlls'
 
 for f in src/jsons/*.json
 do 
