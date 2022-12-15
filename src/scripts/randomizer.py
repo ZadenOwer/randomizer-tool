@@ -148,14 +148,20 @@ def getPokemonDev(dexId: int = None, devName: str = None):
   
   return next((pokemon for pokemon in pokemonList if pokemon["devName"] == devName), None)
 
-def getRandomForm(forms: int):
+def getRandomForm(dexId: int, forms: int):
   # Randomize the forms of the pokemon
   if forms == 1:
-    return 0
+    return 0, "DEFAULT"
 
   randomForm = getRNG(forms)
+  
+  if dexId in [876, 902, 916]: # 	Indeedee(876), Basculegion(902), Oinkologne(916)
+    if randomForm == 0:
+      return randomForm, "MALE"
+    if randomForm == 1:
+      return randomForm, "FEMALE"
 
-  return randomForm
+  return randomForm, "DEFAULT"
 
 def getBaseStatsTotal(pkmPersonalData: dict):
   statsKey = ["HP", "ATK", "DEF", "SPA", "SPD", "SPE"]
@@ -289,7 +295,9 @@ def getRandomizedAddPokemonEvents(options: dict = None):
               loopCtrl += 1
 
       event["pokeData"]["devId"] = randomPokemon["devName"]
-      event["pokeData"]["formId"] = getRandomForm(randomPokemon["forms"])
+      form, sex = getRandomForm(randomPokemon["id"], randomPokemon["forms"])
+      event["pokeData"]["formId"] = form
+      event["pokeData"]["sex"] = sex
       logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {event["pokeData"]["formId"]}')
 
     if not isStarter and options["areasSpawnRandomized"]:
@@ -316,7 +324,9 @@ def getRandomizedAddPokemonEvents(options: dict = None):
               loopCtrl += 1
 
       event["pokeData"]["devId"] = randomPokemon["devName"]
-      event["pokeData"]["formId"] = getRandomForm(randomPokemon["forms"])
+      form, sex = getRandomForm(randomPokemon["id"], randomPokemon["forms"])
+      event["pokeData"]["formId"] = form
+      event["pokeData"]["sex"] = sex
       logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {event["pokeData"]["formId"]}')
 
     if isStarter:
@@ -386,7 +396,9 @@ def getRandomizedStaticPokemonEvents(options: dict = None):
               loopCtrl += 1
 
       event["pokeDataSymbol"]["devId"] = randomPokemon["devName"]
-      event["pokeDataSymbol"]["formId"] = getRandomForm(randomPokemon["forms"])
+      form, sex = getRandomForm(randomPokemon["id"], randomPokemon["forms"])
+      event["pokeDataSymbol"]["formId"] = form
+      event["pokeDataSymbol"]["sex"] = sex
       logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {event["pokeDataSymbol"]["formId"]}')
 
     if options["abilities"]:
@@ -438,7 +450,9 @@ def getRandomizedArea(options: dict = None):
               loopCtrl += 1
 
       pokemon["devid"] = randomPokemon["devName"]
-      pokemon["formno"] = getRandomForm(randomPokemon["forms"])
+      form, sex = getRandomForm(randomPokemon["id"], randomPokemon["forms"])
+      pokemon["formno"] = form
+      pokemon["sex"] = sex
       logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {pokemon["formno"]}')
     
     if options["items"] == False:
@@ -914,12 +928,14 @@ def getRandomizedTrainersList(options: dict = None):
 
           alreadyUsedId.append(randomPokemon["id"])
 
+          form, sex = getRandomForm(randomPokemon["id"], randomPokemon["forms"])
+
           randomizedTrainer[pokeKey] = {
             **randomizedTrainer[pokeKey],
             "devId": randomPokemon["devName"],
-            "formId": getRandomForm(randomPokemon["forms"]),
+            "formId": form,
             "ballId": "MONSUTAABOORU",
-            "sex": "DEFAULT",
+            "sex": sex,
           }
 
           logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {randomizedTrainer[pokeKey]["formId"]}')
