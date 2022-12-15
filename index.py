@@ -2,14 +2,19 @@
 import os
 import shutil
 import json
+import time
 
 from src.scripts import randomizer as Randomizer
 from src.scripts import flatc as FlatC
 from src.scripts import frame as WindowFrame
 
+from src.scripts.logger import setup_custom_logger
+
 # Env Vars
 os.environ["VERSION"] = "1.0.9"
 
+logger = setup_custom_logger(os.environ.get('VERSION'))
+logger.info('STARTING LOGS')
 # Create the window
 optionsValues = {
   "keepFiles": False,
@@ -49,7 +54,6 @@ optionsValues = {
 
 window = WindowFrame.getWindowFrame(optionsValues)
 
-print('Opening window...')
 # Create an event loop
 while True:
   # Start the window of the program 
@@ -57,7 +61,7 @@ while True:
 
   if event == WindowFrame.ON_CLOSE:
     # End program if user closes window
-    print('Closing window...')
+    logger.info('CLOSING LOGS')
     break
 
   if event == 'Step 1':
@@ -122,11 +126,12 @@ while True:
       **serializedGlobalOptions
     }
 
-    print('Area Options', serializedAreaOptions)
-    print('Pokemon Options', serializedPokemonOptions)
+    logger.info(f'Areas Options: {serializedAreaOptions}')
+    logger.info(f'Pokemon Options: {serializedPokemonOptions}')
+    logger.info(f'Trainers Options: {serializedTrainersOptions}')
     # Ending serializing options
 
-    print('Starting randomizer...')
+    logger.info('Starting randomizer...')
 
     # Files Names
     addPokemonEventsFileName = 'eventAddPokemon_array'
@@ -143,65 +148,76 @@ while True:
       "trainers": trainersFileName
     }
 
+    logger.info('Randomizing Trade Events...')
     addEventsRandomized, starters = Randomizer.getRandomizedAddPokemonEvents(serializedAreaOptions) # Randomize the add pokemon events (such as initials)
     jsonArrayFile = open(f'{fileNames["addPokemonEvents"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": addEventsRandomized}))
     jsonArrayFile.close()
+    logger.info('Trade Events randomized!')
 
     if serializedGlobalOptions["initials"]:
+      logger.info('Randomizing Starters...')
       jsonArrayFile = open('starters.json', 'w')
       jsonArrayFile.write(json.dumps(starters))
       jsonArrayFile.close()
+      logger.info('Starters randomized!')
 
+    logger.info('Randomizing Static Events...')
     staticEventsRandomized = Randomizer.getRandomizedStaticPokemonEvents(serializedAreaOptions) # Randomize the static pokemon events
     jsonArrayFile = open(f'{fileNames["staticPokemonEvents"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": staticEventsRandomized}))
     jsonArrayFile.close()
+    logger.info('Static Events randomized!')
 
+    logger.info('Randomizing Spawning Areas...')
     areaRandomized = Randomizer.getRandomizedArea(serializedAreaOptions)  # Randomize the pokemon that spawns each areas
     jsonArrayFile = open(f'{fileNames["pokedata"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": areaRandomized}))
     jsonArrayFile.close()
+    logger.info('Spawning Areas randomized!')
 
+    logger.info('Randomizing Pokemon Personal Data...')
     pokemonRandomize = Randomizer.getRandomizedPokemonList(serializedPokemonOptions) # Randomize each pokemon individually
     jsonArrayFile = open(f'{fileNames["personal"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"entry": pokemonRandomize}))
     jsonArrayFile.close()
+    logger.info('Personal Data randomized!')
 
+    logger.info('Randomizing Trainers...')
     trainersRandomize = Randomizer.getRandomizedTrainersList(serializedTrainersOptions) # Randomize each trainer team and values
     jsonArrayFile = open(f'{fileNames["trainers"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": trainersRandomize}))
     jsonArrayFile.close()
+    logger.info('Trainers randomized!')
 
-    print('Randomized!')
-
-    print('Generating binaries..')
+    logger.info('Generating binaries...')
     addEventsResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["addPokemonEvents"]}.bfbs', jsonPath = f'./{fileNames["addPokemonEvents"]}.json')  # Generates the Randomized Add pokemon events binary
     if addEventsResult.stderr != b'':
-      print('Error creating binary:', addEventsResult.stderr)
+      logger.error(f'Error creating binary for Add Events: {addEventsResult.stderr}')
       continue
 
     staticEventsResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["staticPokemonEvents"]}.bfbs', jsonPath = f'./{fileNames["staticPokemonEvents"]}.json')  # Generates the Randomized Static pokemon events binary
     if staticEventsResult.stderr != b'':
-      print('Error creating binary:', staticEventsResult.stderr)
+      logger.error(f'Error creating binary for Static Events: {addEventsResult.stderr}')
       continue
 
     areaRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["pokedata"]}.bfbs', jsonPath = f'./{fileNames["pokedata"]}.json')  # Generates the Randomized Areas binary
     if areaRandomizeResult.stderr != b'':
-      print('Error creating binary:', areaRandomizeResult.stderr)
+      logger.error(f'Error creating binary for Areas: {addEventsResult.stderr}')
       continue
 
     # FlatC.serializeJson(jsonPath=f'./{fileNames["personal"]}.json', ouputName=f'{fileNames["personal"]}.bin') # Generates the Randomized Pokemon binary
     personalDataRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["personal"]}.bfbs', jsonPath = f'./{fileNames["personal"]}.json')  # Generates the Randomized Areas binary
     if personalDataRandomizeResult.stderr != b'':
-      print('Error creating binary:', personalDataRandomizeResult.stderr)
+      logger.error(f'Error creating binary for Personal Data: {addEventsResult.stderr}')
       continue
 
     trainerRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["trainers"]}.bfbs', jsonPath = f'./{fileNames["trainers"]}.json')  # Generates the Randomized Trainers binary
     if trainerRandomizeResult.stderr != b'':
-      print('Error creating binary:', trainerRandomizeResult.stderr)
+      logger.error(f'Error creating binary for Trainers: {addEventsResult.stderr}')
       continue
-    print('Binaries created!')
+
+    logger.info('Binaries created!')
 
     # Files Paths
     addPokemonEventsPath = './static/world/data/event/event_add_pokemon/eventAddPokemon'
@@ -222,8 +238,6 @@ while True:
       os.makedirs(f'{paths[pathName]}/')
 
     for fileName in fileNames:
-      print(f'{paths[fileName]}/{fileNames[fileName]}.bin')
-
       shutil.copy(f'./src/{fileNames[fileName]}.bfbs', f'{paths[fileName]}/{fileNames[fileName]}.bfbs')
 
       if serializedGlobalOptions["keepFiles"]:
@@ -232,9 +246,9 @@ while True:
         os.replace(f'./{fileNames[fileName]}.bin', f'{paths[fileName]}/{fileNames[fileName]}.bin')
         os.remove(f'./{fileNames[fileName]}.json')  
       
-    print('Generating ZIP with the mod..')
     shutil.make_archive('randomized_pokemon', 'zip', './static')
-    print('ZIP created!')
+    logger.info('ZIP created!')
+    logger.info('Randomizing finished...')
   
     shutil.rmtree('./static')
 

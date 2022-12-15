@@ -1,8 +1,11 @@
 build
 dist
 static
+logs
+
+__pycache__/
 src/scripts/__pycache__/
 
-randomized_pokemon.zip
-./*.json
-./*.bin
+/*.zip
+/*.json
+/*.bin
