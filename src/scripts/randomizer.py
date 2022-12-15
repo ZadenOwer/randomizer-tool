@@ -350,6 +350,9 @@ def getRandomizedArea(options: dict = None):
       while (randomPokemon is None):
         randomPokemon = pokemonGenerator(options)[0]
 
+        if randomPokemon is None:
+          continue
+
         if options["similarStats"] == True and not hasSimilarStats(loopCtrl=loopCtrl, oldPkmDevName=pokemon["devid"], newPkmId=randomPokemon["id"], maxSpecies=maxSpecies):
           if loopCtrl < 10:
             # To avoid infinite loop
@@ -673,36 +676,29 @@ def getRandomizedTrainersList(options: dict = None):
           rivalStage = int(rivalParams[1][1])
 
     if options["keepRivalInitial"] and isRival:
-      print('Rival trainer')
       if options["initials"]:
         # Get the initial from the json created
         with open('starters.json', 'r', encoding='utf-8-sig') as startersJson:
           randomStarters = json.load(startersJson)
 
           if rivalType == 9: #Fire
-            print('Rival type: grass')
             rivalPokemon = getPokemonDev(dexId=randomStarters["grass"])
 
           if rivalType == 10: #Water
-            print('Rival type: fire')
             rivalPokemon = getPokemonDev(dexId=randomStarters["fire"])
 
           if rivalType == 11: #Plant
-            print('Rival type: water')
             rivalPokemon = getPokemonDev(dexId=randomStarters["water"])
           
           rivalStarterName = rivalPokemon["devName"]
       else:
         if rivalType == 9: #Fire
-          print('Rival type: grass')
           rivalStarterName = "DEV_NEKO1"
 
         if rivalType == 10: #Water
-          print('Rival type: fire')
           rivalStarterName = "DEV_WANI1"
 
         if rivalType == 11: #Plant
-          print('Rival type: water')
           rivalStarterName = "DEV_KAMO1"
 
         rivalPokemon = getPokemonDev(devName=rivalStarterName)
@@ -714,9 +710,6 @@ def getRandomizedTrainersList(options: dict = None):
       if (isinstance(rivalStage, int) and rivalStage >= 5) or rivalStage == "multi":
         # Initial should be on final evolution
         rivalPokemon = getFinalEvolution(devName=rivalStarterName)
-
-      print('Rival stage', rivalStage)
-      print(f'Rival pokemon {rivalPokemon["id"]} - {rivalPokemon["devName"]}')
 
     if options["trainerTeracristalize"]:
       randomizedTrainer["changeGem"] = True
@@ -761,14 +754,9 @@ def getRandomizedTrainersList(options: dict = None):
         continue
 
       if options["trainersRandomized"]:
-        pokemonGenerator = generateRandomPaldeaPokemon
-        if options["fullPokeDex"]:
-          pokemonGenerator = generateRandomPokemon
-
         if options["keepRivalInitial"] and isRival:
           # Not randomize and get the starter instead
           if (randomizedTrainer[pokeKey]["devId"][:-1] in originalStarters):
-            print('Original rival pokemon', randomizedTrainer[pokeKey]["devId"])
             randomizedTrainer[pokeKey] = {
               **randomizedTrainer[pokeKey],
               "devId": rivalPokemon["devName"],
@@ -779,6 +767,10 @@ def getRandomizedTrainersList(options: dict = None):
 
             alreadyUsedId.append(rivalPokemon["id"])
             continue
+
+        pokemonGenerator = generateRandomPaldeaPokemon
+        if options["fullPokeDex"]:
+          pokemonGenerator = generateRandomPokemon
 
         randomPokemon = None
 
@@ -809,16 +801,16 @@ def getRandomizedTrainersList(options: dict = None):
                   continue
 
             if options["keepGymType"]:
-                  if isMonotypeTrainer(trainerTypeName=randomizedTrainer["trainerType"]):
-                    trainerTypeId = getTrainerTypeId(trainerTypeName=randomizedTrainer["trainerType"])
-                    randomPokemonPersonal = getPokemonPersonalData(randomPokemon["id"])
-                    
-                    type1 = randomPokemonPersonal["type_1"]
-                    type2 = randomPokemonPersonal["type_2"]
+              if isMonotypeTrainer(trainerTypeName=randomizedTrainer["trainerType"]):
+                trainerTypeId = getTrainerTypeId(trainerTypeName=randomizedTrainer["trainerType"])
+                randomPokemonPersonal = getPokemonPersonalData(randomPokemon["id"])
+                
+                type1 = randomPokemonPersonal["type_1"]
+                type2 = randomPokemonPersonal["type_2"]
 
-                    if (trainerTypeId not in [type1, type2]):
-                      # Randomize again if any type not match with the trainerType
-                      randomPokemon = None
+                if (trainerTypeId not in [type1, type2]):
+                  # Randomize again if any type not match with the trainerType
+                  randomPokemon = None
               
         except:
           None
