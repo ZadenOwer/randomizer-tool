@@ -8,15 +8,16 @@ from src.scripts import flatc as FlatC
 from src.scripts import frame as WindowFrame
 
 # Env Vars
-os.environ["VERSION"] = "1.0.8"
+os.environ["VERSION"] = "1.0.9"
 
 # Create the window
 optionsValues = {
   "keepFiles": False,
   "fullPokeDex": False,
   "initials": False,
-  "legendaries": True,
+  "legendaries": False,
   "paradox": True,
+  "similarStats": True,
 
   ### Areas Options Start ###
   "areasSpawnRandomized": True,
@@ -31,8 +32,12 @@ optionsValues = {
 
   ### Trainers Options Start ###
   "trainersRandomized": True,
-  "trainerTeracristalize": True,
+  "trainerSimilarStats": True,
+  "trainerTeracristalize": False,
+  "trainerLegendaries": False,
+  "trainerParadox": False,
   "forceFullTeam": False,
+  "keepRivalInitial": True,
   "keepGymType": False,
   "trainersItems": False,
   "competitivePkm": False,
@@ -64,8 +69,8 @@ while True:
   if event == 'Step 3':
     WindowFrame.changeStep(window, 'step3')
 
-  if event == 'Step 4':
-    WindowFrame.changeStep(window, 'step4')
+  if event == 'Final Step':
+    WindowFrame.changeStep(window, 'finalStep')
 
   if event == 'Randomize!':
     # Serializing options
@@ -77,6 +82,7 @@ while True:
       "abilities": False if ("abilities" not in values.keys() or values["abilities"] is None or values["abilities"] == False) else True,
       "legendaries": False if ("legendaries" not in values.keys() or values["legendaries"] is None or values["legendaries"] == False) else True,
       "paradox": False if ("paradox" not in values.keys() or values["paradox"] is None or values["paradox"] == False) else True,
+      "similarStats": False if ("similarStats" not in values.keys() or values["similarStats"] is None or values["similarStats"] == False) else True,
     }
 
     serializedAreaOptions = {
@@ -103,8 +109,10 @@ while True:
 
     serializedTrainersOptions = {
       "trainersRandomized": False if ("trainersRandomized" not in values.keys() or values["trainersRandomized"] is None or values["trainersRandomized"] == False) else True,
+      "trainerSimilarStats": False if ("trainerSimilarStats" not in values.keys() or values["trainerSimilarStats"] is None or values["trainerSimilarStats"] == False) else True,
       "trainerTeracristalize": False if ("trainerTeracristalize" not in values.keys() or values["trainerTeracristalize"] is None or values["trainerTeracristalize"] == False) else True,
       "forceFullTeam": False if ("forceFullTeam" not in values.keys() or values["forceFullTeam"] is None or values["forceFullTeam"] == False) else True,
+      "keepRivalInitial": False if ("keepRivalInitial" not in values.keys() or values["keepRivalInitial"] is None or values["keepRivalInitial"] == False) else True,
       "keepGymType": False if ("keepGymType" not in values.keys() or values["keepGymType"] is None or values["keepGymType"] == False) else True,
       "trainersItems": False if ("trainersItems" not in values.keys() or values["trainersItems"] is None or values["trainersItems"] == False) else True,
       "competitivePkm": False if ("competitivePkm" not in values.keys() or values["competitivePkm"] is None or values["competitivePkm"] == False) else True,
