@@ -53,6 +53,10 @@ def getAreasLayout(optionsValues: dict):
     [
       # Sub description
       sg.Text("this will affect initials and the overworld pokemon, if they're randomized (trainers have they own option).", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: The tool will attempt 30 times to get one, if fails, will take the last random pokemon validated", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
     ]
   ]
 
@@ -226,6 +230,10 @@ def getTrainersLayout(optionsValues: dict):
     [
       # Sub description
       sg.Text("If force full team is checked, the new added pokemon will have similar stats to the previous one", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: If the pokemon fails to get a random pokemon with similar stats, the pokemon will be completly random (be aware)", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
     ]
   ]
 

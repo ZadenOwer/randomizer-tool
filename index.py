@@ -35,7 +35,7 @@ optionsValues = {
   "trainerSimilarStats": True,
   "trainerTeracristalize": False,
   "trainerLegendaries": False,
-  "trainerParadox": False,
+  "trainerParadox": True,
   "forceFullTeam": False,
   "keepRivalInitial": True,
   "keepGymType": False,
