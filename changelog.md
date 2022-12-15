@@ -1,3 +1,8 @@
+# 1.0.9 - 12/14/2022
+
+- Option for check similar base stat when randomizing was implemented
+- Option for keep the respective initial of the Rival Nemona/Mencía 
+
 # 1.0.8 - 12/12/2022
 
 - Evolutions data for every pokemon updated
