@@ -26,7 +26,7 @@ paradoxDex = []
 addPokemonEvents = []
 fixedPokemonEvents = []
 
-MAX_SIMILIAR_STATS_TRIES = 30
+MAX_SIMILIAR_STATS_TRIES = 50
 
 with (
   open('./src/jsons/pokedata_array.json', 'r', encoding='utf-8-sig') as pokedata_array_file,
