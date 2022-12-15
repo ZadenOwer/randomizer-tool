@@ -9,7 +9,6 @@ echo "Creating executable on: $PWD/dist"
 
 echo "Version $1"
 
-rm -r "$PWD\build"
 rm -r "$PWD\dist"
 
 python -m PyInstaller \
@@ -21,12 +20,10 @@ index.py
 mkdir 'dist'
 mkdir 'dist/src'
 mkdir 'dist/src/jsons'
-mkdir 'dist/src/dlls'
+# mkdir 'dist/src/dlls'
 
-for f in src/jsons/*.json
-do 
-   cp -v "$f" dist/"${f%.json}".json
-done
+
+cp -R minified/jsons dist/src/
 
 # for f in src/dlls/*.dll
 # do 
@@ -41,7 +38,6 @@ done
 cp -v "$PWD\src\flatc.exe" "$PWD\dist\src\flatc.exe"
 
 rm -r "$PWD\randomizer$1.spec"
-rm -r "$PWD\myscript.spec"
 rm -r "$PWD\build"
 
 exit 0
