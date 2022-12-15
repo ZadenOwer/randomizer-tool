@@ -140,7 +140,7 @@ def generateRandomItem():
   return item
 
 def getPokemonPersonalData(dexId: int):
-  return next((pokemon for pokemon in personalData["entry"] if pokemon["species"]["species"] == dexId), None)
+  return next((pokemon for pokemon in personalData["entry"] if pokemon["species"]["model"] == dexId), None)
 
 def getPokemonDev(dexId: int = None, devName: str = None):
   if dexId is not None:
@@ -193,8 +193,8 @@ def hasSimilarStats(newPkmId: int, oldPkmId: int = None, oldPkmDevName: str = No
   lowValue = (oldPkmBST * 10) / 11
   highValue = (oldPkmBST * 11) / 10
 
-  logger.info(f'Old Pokemon {oldPkm["species"]["species"]} Stats: {oldPkmBST}')
-  logger.info(f'New Pokemon {newPkm["species"]["species"]} Stats: {newPkmBST}')
+  logger.info(f'Old Pokemon {oldPkm["species"]["model"]} Stats: {oldPkmBST}')
+  logger.info(f'New Pokemon {newPkm["species"]["model"]} Stats: {newPkmBST}')
   logger.info(f'lowValue {lowValue}')
   logger.info(f'highValue {highValue}')
 
@@ -204,7 +204,7 @@ def hasSimilarStats(newPkmId: int, oldPkmId: int = None, oldPkmDevName: str = No
   return result 
 
 def checkEvoStats(oldPkmPersonalData: dict, newPkmPersonalData: dict):
-  logger.info(f'Checking evos stats for {newPkmPersonalData["species"]["species"]}')
+  logger.info(f'Checking evos stats for {newPkmPersonalData["species"]["model"]}')
 
   if oldPkmPersonalData is None or newPkmPersonalData is None:
     logger.info('Some of the personal data is None')
@@ -214,28 +214,28 @@ def checkEvoStats(oldPkmPersonalData: dict, newPkmPersonalData: dict):
     logger.info('The same evo stage an different base stat, this random pkm is ignored atm')
     return None
 
-  if newPkmPersonalData["egg_hatch"]["species"] == newPkmPersonalData["species"]["species"]:
+  if newPkmPersonalData["egg_hatch"]["species"] == newPkmPersonalData["species"]["model"]:
     logger.info('Is a pokemon without evolutions, ignored atm')
     return None
 
   # Checks if any evolution match
   if oldPkmPersonalData["evo_stage"] == 1:
     #First Evolution
-    if hasSimilarStats(oldPkmDevName=oldPkmPersonalData["species"]["species"], newPkmId=newPkmPersonalData["egg_hatch"]["species"]):
+    if hasSimilarStats(oldPkmDevName=oldPkmPersonalData["species"]["model"], newPkmId=newPkmPersonalData["egg_hatch"]["species"]):
       logger.info('The first evo from the random pkm match')
       return getPokemonDev(dexId=newPkmPersonalData["egg_hatch"]["species"])
 
   if oldPkmPersonalData["evo_stage"] == 2:
     #Second Evolution (or final for some species)
     randomSecondEvo = getNextEvolution(dexId=newPkmPersonalData["egg_hatch"]["species"])
-    if hasSimilarStats(oldPkmDevName=oldPkmPersonalData["species"]["species"], newPkmId=randomSecondEvo["id"]):
+    if hasSimilarStats(oldPkmDevName=oldPkmPersonalData["species"]["model"], newPkmId=randomSecondEvo["id"]):
       logger.info('The second evo from the random pkm match')
       return randomSecondEvo
 
   if oldPkmPersonalData["evo_stage"] == 3:
     #Third Evolution
     randomFinalEvo = getFinalEvolution(dexId=newPkmPersonalData["id"])
-    if hasSimilarStats(oldPkmDevName=oldPkmPersonalData["species"]["species"], newPkmId=randomFinalEvo["id"]):
+    if hasSimilarStats(oldPkmDevName=oldPkmPersonalData["species"]["model"], newPkmId=randomFinalEvo["id"]):
       logger.info('The third evo from the random pkm match')
       return randomFinalEvo
 
@@ -621,7 +621,7 @@ def getNextEvolution(dexId: int = None, devName: str = None):
   if pokemon == None:
     return None
 
-  return getPokemonDev(pokemon["species"]["species"])
+  return getPokemonDev(pokemon["species"]["model"])
 
 def getFinalEvolution(dexId: int = None, devName: str = None):
   if dexId == 0 or (dexId is None and devName is None) or devName == "DEV_NULL":
@@ -649,7 +649,7 @@ def getFinalEvolution(dexId: int = None, devName: str = None):
   if pokemon == None:
     return None
 
-  return getPokemonDev(pokemon["species"]["species"])
+  return getPokemonDev(pokemon["species"]["model"])
 
 def getTrainerTypeId(trainerTypeName: str):
   if "normal" in trainerTypeName: #Normal (duh)
