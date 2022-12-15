@@ -41,6 +41,25 @@ def getAreasLayout(optionsValues: dict):
     ],
   ]
   
+  SIMILAR_STATS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Similar Base Stats", key="similarStats", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["similarStats"]),
+    ],
+    [
+      # Description
+      sg.Text("The random pokemon will have similar base stats to the original pokemon,", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("this will affect initials and the overworld pokemon, if they're randomized (trainers have they own option).", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: The tool will attempt 30 times to get one, if fails, will take the last random pokemon validated", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+
   INITIALS_CHECKBOX = [
     [
       # Input
@@ -55,7 +74,7 @@ def getAreasLayout(optionsValues: dict):
       sg.Text("Note: You can't see the models neither the names of the randomized ones.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
     ],
     [
-      sg.Text("This because their names and models are scripted for the initial part of the game until you put one on your team", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR)
+      sg.Text("This because their names and models are scripted for the start of the game, until you put one on your team", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR)
     ],
     [
       sg.Text("If you check this option an additional file 'starters.json' will be generated with the Dex Ids of the real starters", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR)
@@ -99,6 +118,10 @@ def getAreasLayout(optionsValues: dict):
     [
       # Description
       sg.Text("Legendary Pokemon can spawn at the overworld like normal pokemon.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("If similar stats is checked, will reduce the probably of powerful legendaries at low level too.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
     ]
   ]
 
@@ -110,11 +133,15 @@ def getAreasLayout(optionsValues: dict):
     [
       # Description
       sg.Text("Paradox Pokemon can spawn at the overworld like normal pokemon.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("If similar stats is checked, will reduce the probably of powerful paradox at low level too.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
     ]
   ]
 
-  # layout = LAYOUT_HEADER + FULL_POKEDEX_CHECKBOX + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
-  layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + INITIALS_CHECKBOX + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
+  # layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + FULL_POKEDEX_CHECKBOX + SIMILAR_STATS_CHECKBOX + INITIALS_CHECKBOX + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
+  layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + SIMILAR_STATS_CHECKBOX + INITIALS_CHECKBOX + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
 
   return layout
 
@@ -191,6 +218,25 @@ def getTrainersLayout(optionsValues: dict):
     ],
   ]
 
+  SIMILAR_STATS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Similar Stats", key="trainerSimilarStats", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["trainerSimilarStats"]),
+    ],
+    [
+      # Description
+      sg.Text("Each pokemon on the team will have similar base stats to the original one.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("If force full team is checked, the new added pokemon will have similar stats to the previous one", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: If the pokemon fails to get a random pokemon with similar stats, the pokemon will be completly random (be aware)", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+
   TERACRISTALIZE_CHECKBOX = [
     [
       # Input
@@ -202,6 +248,36 @@ def getTrainersLayout(optionsValues: dict):
     ]
   ]
 
+  LEGENDARIES_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Legendaries", key="trainerLegendaries", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["trainerLegendaries"]),
+    ],
+    # Description
+    [
+      sg.Text("Trainers can have legendaries pokemon.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("If similar stats is checked, will reduce the probably of powerful legendaries at low level too.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+
+  PARADOX_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Paradox", key="trainerParadox", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["trainerParadox"]),
+    ],
+    # Description
+    [
+      sg.Text("Trainers can have paradox pokemon.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("If similar stats is checked, will reduce the probably of powerful paradox at low level too.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+
   FULL_TEAM_CHECKBOX = [
     [
       # Input
@@ -210,6 +286,20 @@ def getTrainersLayout(optionsValues: dict):
     # Description
     [
       sg.Text("Every trainer will have 6 pokemon on his team", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      sg.Text("The new added pokemon will have levels based on a calculation, 3 will have the lowest level, 2 an intermediate level and 1 the highest level", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+
+  KEEP_RIVAL_INITIAL_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Keep Rival Initial", key="keepRivalInitial", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["keepRivalInitial"]),
+    ],
+    # Description
+    [
+      sg.Text("If the initials were randomized, the rival will have the designed initial based on your choice", font=TEXT_FONT, background_color=BG_COLOR),
     ]
   ]
 
@@ -295,7 +385,7 @@ def getTrainersLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + TERACRISTALIZE_CHECKBOX + FULL_TEAM_CHECKBOX + KEEP_TYPE_CHECKBOX + ITEMS_CHECKBOX + COMPETITIVE_CHECKBOX + SHINY_INPUT + FORCE_EVOLUTION_CHECKBOX + EVOLUTION_CAP_INPUT
+  layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + SIMILAR_STATS_CHECKBOX + TERACRISTALIZE_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX + FULL_TEAM_CHECKBOX + KEEP_RIVAL_INITIAL_CHECKBOX + KEEP_TYPE_CHECKBOX + ITEMS_CHECKBOX + COMPETITIVE_CHECKBOX + SHINY_INPUT + FORCE_EVOLUTION_CHECKBOX + EVOLUTION_CAP_INPUT
 
   return layout
 
@@ -318,7 +408,7 @@ def getWindowFrame(optionsValues: dict):
     sg.Button("Step 1"),
     sg.Button("Step 2"),
     sg.Button("Step 3"),
-    sg.Button("Step 4"),
+    sg.Button("Final Step"),
   ]
 
   DEVS_HELP = [
@@ -329,7 +419,7 @@ def getWindowFrame(optionsValues: dict):
 
   NOTES = [
     [sg.Text("You should consider:", font=TEXT_FONT, background_color=BG_COLOR, text_color=DANGER_COLOR)],
-    [sg.Text("* This only had been tested on Ryujinx Emulator", font=TEXT_FONT, background_color=BG_COLOR)],
+    [sg.Text("* This only had been tested on Ryujinx Emulator with version 1.0.1 of the game", font=TEXT_FONT, background_color=BG_COLOR)],
     [sg.Text("* Pokemon from both version can spawn", font=TEXT_FONT, background_color=BG_COLOR)],
     [sg.Text("* Can spawn eggs (Shiny Lv. 0) on the overworld, but you can't do anything with them (as far I know)", font=TEXT_FONT, background_color=BG_COLOR)],
     [sg.Text("* Maybe the randomizer try to put an invalid item, so you may encounter pokemon without item", font=TEXT_FONT, background_color=BG_COLOR)],
@@ -349,10 +439,10 @@ def getWindowFrame(optionsValues: dict):
     HEADER_TEXT,
 
     [
-      sg.Column(areasLayout, key="step1", background_color=BG_COLOR, size=COLUMN_SIZE),
+      sg.Column(areasLayout, key="step1", background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(pokemonLayout, key="step2", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE),
       sg.Column(trainersLayout, key="step3", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
-      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES, key="step4", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
+      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES, key="finalStep", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
     ],
     
     LAYOUTS_BUTTONS,
