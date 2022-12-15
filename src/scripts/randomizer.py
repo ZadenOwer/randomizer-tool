@@ -21,6 +21,8 @@ paradoxDex = []
 addPokemonEvents = []
 fixedPokemonEvents = []
 
+MAX_SIMILIAR_STATS_TRIES = 30
+
 with (
   open('./src/jsons/pokedata_array.json', 'r', encoding='utf-8-sig') as pokedata_array_file,
   open('./src/jsons/personal_array.json', 'r', encoding='utf-8-sig') as personal_array_file,
@@ -229,7 +231,7 @@ def getRandomizedAddPokemonEvents(options: dict = None):
             continue
 
           if options["similarStats"] == True and not hasSimilarStats(loopCtrl=loopCtrl, oldPkmDevName=event["pokeData"]["devId"], newPkmId=randomPokemon["id"], maxSpecies=maxSpecies):
-            if loopCtrl < 30:
+            if loopCtrl < MAX_SIMILIAR_STATS_TRIES:
               # To avoid infinite loop
               randomPokemon = None
               loopCtrl += 1
@@ -248,7 +250,7 @@ def getRandomizedAddPokemonEvents(options: dict = None):
             continue
 
           if options["similarStats"] == True and not hasSimilarStats(loopCtrl=loopCtrl, oldPkmDevName=event["pokeData"]["devId"], newPkmId=randomPokemon["id"], maxSpecies=maxSpecies):
-            if loopCtrl < 10:
+            if loopCtrl < MAX_SIMILIAR_STATS_TRIES:
               # To avoid infinite loop
               randomPokemon = None
               loopCtrl += 1
@@ -308,7 +310,7 @@ def getRandomizedStaticPokemonEvents(options: dict = None):
           continue
 
         if options["similarStats"] == True and not hasSimilarStats(loopCtrl=loopCtrl, oldPkmDevName=event["pokeDataSymbol"]["devId"], newPkmId=randomPokemon["id"], maxSpecies=maxSpecies):
-          if loopCtrl < 10:
+          if loopCtrl < MAX_SIMILIAR_STATS_TRIES:
             # To avoid infinite loop
             randomPokemon = None
             loopCtrl += 1
@@ -354,7 +356,7 @@ def getRandomizedArea(options: dict = None):
           continue
 
         if options["similarStats"] == True and not hasSimilarStats(loopCtrl=loopCtrl, oldPkmDevName=pokemon["devid"], newPkmId=randomPokemon["id"], maxSpecies=maxSpecies):
-          if loopCtrl < 10:
+          if loopCtrl < MAX_SIMILIAR_STATS_TRIES:
             # To avoid infinite loop
             randomPokemon = None
             loopCtrl += 1
@@ -794,7 +796,7 @@ def getRandomizedTrainersList(options: dict = None):
                 similarStats = hasSimilarStats(loopCtrl=loopCtrl, oldPkmDevName=randomizedTrainer[pokeKey]["devid"], newPkmId=randomPokemon["id"], maxSpecies=maxSpecies)
 
               if not similarStats:
-                if loopCtrl < 10:
+                if loopCtrl < MAX_SIMILIAR_STATS_TRIES:
                   # To avoid infinite loop
                   randomPokemon = None
                   loopCtrl += 1
