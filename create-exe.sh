@@ -19,6 +19,7 @@ index.py
 
 mkdir 'dist'
 mkdir 'dist/src'
+mkdir 'dist/logs'
 mkdir 'dist/src/jsons'
 # mkdir 'dist/src/dlls'
 
