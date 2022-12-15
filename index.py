@@ -2,7 +2,6 @@
 import os
 import shutil
 import json
-import time
 
 from src.scripts import randomizer as Randomizer
 from src.scripts import flatc as FlatC
@@ -11,7 +10,7 @@ from src.scripts import frame as WindowFrame
 from src.scripts.logger import setup_custom_logger
 
 # Env Vars
-os.environ["VERSION"] = "1.0.9"
+os.environ["VERSION"] = "1.1.0"
 
 logger = setup_custom_logger(os.environ.get('VERSION'))
 logger.info('STARTING LOGS')
@@ -248,7 +247,7 @@ while True:
       
     shutil.make_archive('randomized_pokemon', 'zip', './static')
     logger.info('ZIP created!')
-    logger.info('Randomizing finished...')
+    logger.info('Randomizing finished!')
   
     shutil.rmtree('./static')
 
