@@ -1,3 +1,8 @@
+# 1.1.0 - 12/15/2022
+
+- Logger implemented
+- Validations on species ID and similar stats fixed
+
 # 1.0.9 - 12/14/2022
 
 - Option for check similar base stat when randomizing was implemented
