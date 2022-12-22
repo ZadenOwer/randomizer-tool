@@ -936,6 +936,23 @@ def getRandomizedTrainersList(options: dict = None):
             "formId": form,
             "ballId": "MONSUTAABOORU",
             "sex": sex,
+            "wazaType": "DEFAULT",
+            "waza1": {
+              "wazaId": "WAZA_NULL",
+              "pointUp": 0
+            },
+            "waza2": {
+              "wazaId": "WAZA_NULL",
+              "pointUp": 0
+            },
+            "waza3": {
+              "wazaId": "WAZA_NULL",
+              "pointUp": 0
+            },
+            "waza4": {
+              "wazaId": "WAZA_NULL",
+              "pointUp": 0
+            }
           }
 
           logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {randomizedTrainer[pokeKey]["formId"]}')
