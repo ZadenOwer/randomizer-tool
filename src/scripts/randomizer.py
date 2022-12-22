@@ -749,6 +749,31 @@ def getMinMaxLv(trainerPokemon: dict):
 
   return minLv, maxLv
 
+def trainerPokeTemplate():
+  return {
+    "ballId": "MONSUTAABOORU",
+    "gemType": "DEFAULT",
+    "tokusei": "RANDOM_12",
+    "talentType": "RANDOM",
+    "wazaType": "DEFAULT",
+    "waza1": {
+      "wazaId": "WAZA_NULL",
+      "pointUp": 0
+    },
+    "waza2": {
+      "wazaId": "WAZA_NULL",
+      "pointUp": 0
+    },
+    "waza3": {
+      "wazaId": "WAZA_NULL",
+      "pointUp": 0
+    },
+    "waza4": {
+      "wazaId": "WAZA_NULL",
+      "pointUp": 0
+    }
+  }
+
 def getRandomizedTrainersList(options: dict = None):
   logger.info('Starting logs for Trainers Randomizer')
 
@@ -934,8 +959,8 @@ def getRandomizedTrainersList(options: dict = None):
             **randomizedTrainer[pokeKey],
             "devId": randomPokemon["devName"],
             "formId": form,
-            "ballId": "MONSUTAABOORU",
             "sex": sex,
+            **trainerPokeTemplate()
           }
 
           logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {randomizedTrainer[pokeKey]["formId"]}')
