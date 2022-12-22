@@ -10,7 +10,7 @@ from src.scripts import frame as WindowFrame
 from src.scripts.logger import setup_custom_logger
 
 # Env Vars
-os.environ["VERSION"] = "1.1.0"
+os.environ["VERSION"] = "1.1.1"
 
 logger = setup_custom_logger(os.environ.get('VERSION'))
 logger.info('STARTING LOGS')

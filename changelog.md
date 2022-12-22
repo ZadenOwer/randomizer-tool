@@ -1,3 +1,7 @@
+# 1.1.1 - 12/22/2022
+
+- Fix on trainers' pkm with static moves
+
 # 1.1.0 - 12/15/2022
 
 - Logger implemented
