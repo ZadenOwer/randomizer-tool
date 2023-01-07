@@ -1,4 +1,9 @@
-# 1.1.1 - 12/22/2022
+# 1.1.2 - 01/06/2023
+
+- Option for randomize the base stats values was implemented
+- Improvement on the value randomization logic
+  
+- # 1.1.1 - 12/22/2022
 
 - Fix on trainers' pkm with static moves
 

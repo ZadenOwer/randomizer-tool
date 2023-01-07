@@ -10,7 +10,7 @@ from src.scripts import frame as WindowFrame
 from src.scripts.logger import setup_custom_logger
 
 # Env Vars
-os.environ["VERSION"] = "1.1.1"
+os.environ["VERSION"] = "1.1.2"
 
 logger = setup_custom_logger(os.environ.get('VERSION'))
 logger.info('STARTING LOGS')
@@ -22,6 +22,7 @@ optionsValues = {
   "legendaries": False,
   "paradox": True,
   "similarStats": True,
+  "randomBaseStats": True,
 
   ### Areas Options Start ###
   "areasSpawnRandomized": True,
@@ -86,6 +87,7 @@ while True:
       "legendaries": False if ("legendaries" not in values.keys() or values["legendaries"] is None or values["legendaries"] == False) else True,
       "paradox": False if ("paradox" not in values.keys() or values["paradox"] is None or values["paradox"] == False) else True,
       "similarStats": False if ("similarStats" not in values.keys() or values["similarStats"] is None or values["similarStats"] == False) else True,
+      "randomBaseStats": False if ("randomBaseStats" not in values.keys() or values["randomBaseStats"] is None or values["randomBaseStats"] == False) else True,
     }
 
     serializedAreaOptions = {
