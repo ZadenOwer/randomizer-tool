@@ -22,7 +22,7 @@ optionsValues = {
   "legendaries": False,
   "paradox": True,
   "similarStats": True,
-  "randomBaseStats": True,
+  "randomBaseStats": False,
 
   ### Areas Options Start ###
   "areasSpawnRandomized": True,
