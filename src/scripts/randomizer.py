@@ -251,7 +251,6 @@ def getRandomBaseStats(pkmPersonalData: dict):
   newStats = {}
 
   for statName in baseStats.keys():
-    logger.info(statsNames)
     randomStat = getRandomValue(statsNames)
     newStats[statName] = baseStats[randomStat]
     
