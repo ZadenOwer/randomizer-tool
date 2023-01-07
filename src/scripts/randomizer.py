@@ -29,29 +29,29 @@ fixedPokemonEvents = []
 MAX_SIMILIAR_STATS_TRIES = 50
 
 with (
-  json.load('./src/jsons/pokedata_array.json') as pokedata_array_file,
-  json.load('./src/jsons/personal_array.json') as personal_array_file,
-  json.load('./src/jsons/pokemon_list.json') as pokemon_list_file,
-  json.load('./src/jsons/dex.json') as dex_file,
-  json.load('./src/jsons/ability_list.json') as ability_list_file,
-  json.load('./src/jsons/tm_list.json') as tm_list_file,
-  json.load('./src/jsons/move_list.json') as move_list_file,
-  json.load('./src/jsons/eventAddPokemon_array.json') as add_pokemon_events_file,
-  json.load('./src/jsons/fixed_symbol_table_array.json') as fixed_pokemon_events_file,
+  open('./src/jsons/pokedata_array.json', 'r', encoding='utf-8-sig') as pokedata_array_file,
+  open('./src/jsons/personal_array.json', 'r', encoding='utf-8-sig') as personal_array_file,
+  open('./src/jsons/pokemon_list.json', 'r', encoding='utf-8-sig') as pokemon_list_file,
+  open('./src/jsons/dex.json', 'r', encoding='utf-8-sig') as dex_file,
+  open('./src/jsons/ability_list.json', 'r', encoding='utf-8-sig') as ability_list_file,
+  open('./src/jsons/tm_list.json', 'r', encoding='utf-8-sig') as tm_list_file,
+  open('./src/jsons/move_list.json', 'r', encoding='utf-8-sig') as move_list_file,
+  open('./src/jsons/eventAddPokemon_array.json', 'r', encoding='utf-8-sig') as add_pokemon_events_file,
+  open('./src/jsons/fixed_symbol_table_array.json', 'r', encoding='utf-8-sig') as fixed_pokemon_events_file,
 ):
-  pokemonData = pokedata_array_file
-  personalData = personal_array_file
-  pokemonList = pokemon_list_file
-  abilityList = ability_list_file
-  tmList = tm_list_file
-  moveList = move_list_file
-  dex = dex_file
+  pokemonData = json.load(pokedata_array_file)
+  personalData = json.load(personal_array_file)
+  pokemonList = json.load(pokemon_list_file)
+  abilityList = json.load(ability_list_file)
+  tmList = json.load(tm_list_file)
+  moveList = json.load(move_list_file)
+  dex = json.load(dex_file)
   pokeDex = dex["pokeDex"]
   paldeaDex = dex["paldeaDex"]
   legendaryDex = dex["legendaryDex"]
   paradoxDex = dex["paradoxDex"]
-  addPokemonEvents = add_pokemon_events_file
-  fixedPokemonEvents = fixed_pokemon_events_file
+  addPokemonEvents = json.load(add_pokemon_events_file)
+  fixedPokemonEvents = json.load(fixed_pokemon_events_file)
 # Ending Pokemon Data Imports
 
 # Starting Item Data Imports
@@ -61,11 +61,11 @@ itemData = {
 itemList = []
 
 with (
-  json.load('./src/jsons/itemdata_array.json') as itemdata_array_file,
-  json.load('./src/jsons/item_list.json') as item_list_file
+  open('./src/jsons/itemdata_array.json', 'r', encoding='utf-8-sig') as itemdata_array_file,
+  open('./src/jsons/item_list.json', 'r', encoding='utf-8-sig') as item_list_file
 ):
-  itemData = itemdata_array_file
-  itemList = item_list_file
+  itemData = json.load(itemdata_array_file)
+  itemList = json.load(item_list_file)
 
 # Ending Item Data Imports
 
@@ -75,9 +75,9 @@ trainersData = {
 }
 
 with (
-  json.load('./src/jsons/trdata_array.json') as trainersdata_array_file,
+  open('./src/jsons/trdata_array.json', 'r', encoding='utf-8-sig') as trainersdata_array_file,
 ):
-  trainersData = trainersdata_array_file
+  trainersData = json.load(trainersdata_array_file)
 # Starting Trainers Data Imports
 
 def getRandomValue(items: list):
@@ -245,6 +245,20 @@ def checkEvoStats(oldPkmPersonalData: dict, newPkmPersonalData: dict):
   logger.debug('Not evo match was found')
   return None
 
+def getRandomBaseStats(pkmPersonalData: dict):
+  baseStats = pkmPersonalData["base_stats"]
+  statsNames = list(baseStats.keys())
+  newStats = {}
+
+  for statName in baseStats.keys():
+    logger.info(statsNames)
+    randomStat = getRandomValue(statsNames)
+    newStats[statName] = baseStats[randomStat]
+    
+    statsNames.remove(randomStat)
+  
+  return newStats
+
 # ********* Add Pokemon Events Randomizer Start *********
 def getRandomizedAddPokemonEvents(options: dict = None):
   logger.debug('Starting logs for Initials Randomizer')
@@ -276,7 +290,7 @@ def getRandomizedAddPokemonEvents(options: dict = None):
         if (randomPokemon is None):
           continue
 
-        if options["similarStats"] == True:
+        if options["similarStats"]:
           if not hasSimilarStats(oldPkmDevName=event["pokeData"]["devId"], newPkmId=randomPokemon["id"]):
             randomPkmPersonal = getPokemonPersonalData(dexId=randomPokemon["id"])
             oldPkmPersonal = getPokemonPersonalData(dexId=event["pokeData"]["devId"])              
@@ -532,16 +546,21 @@ def getRandomizedPokemonList(options: dict = None):
       randomizedPokemonList.append(pokemon)
       continue
 
+    devPkm = getPokemonDev(dexId=pokemon["species"]["model"])
+    logger.debug(f'Randomizing data for pokemon: {devPkm["id"]} - {devPkm["devName"]} - form {pokemon["species"]["form"]}')
+
     randomizedPokemon = {
       **pokemon
     }
 
     if (options["abilities"] == True):
       # Randomizing Abilities
+      logger.debug('Original Abilities:', f'A:{randomizedPokemon["ability_1"]}, B:{randomizedPokemon["ability_2"]}, H: {randomizedPokemon["ability_3"]}')
       defaultAbilities = [randomizedPokemon["ability_1"], randomizedPokemon["ability_2"], randomizedPokemon["ability_3"]]
       randomizedPokemon["ability_1"] = getRandomizedAbility(blacklist=defaultAbilities)
       randomizedPokemon["ability_2"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["ability_1"]])
       randomizedPokemon["ability_3"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["ability_1"], randomizedPokemon["ability_2"]])
+      logger.debug('New Abilities:', f'A:{randomizedPokemon["ability_1"]}, B:{randomizedPokemon["ability_2"]}, H: {randomizedPokemon["ability_3"]}')
 
     if (options["tm"]):
       # Randomizing TM compatibility
@@ -550,6 +569,12 @@ def getRandomizedPokemonList(options: dict = None):
     if (options["learnset"]):
       # Randomizing Pool of moves the pokemon will learn by level
       randomizedPokemon["levelup_moves"] = getRandomizedLearnset(randomizedPokemon["levelup_moves"])
+
+    if options["randomBaseStats"]:
+      randomStats = getRandomBaseStats(pkmPersonalData=randomizedPokemon)
+      logger.debug('Original Base Stats:', randomizedPokemon["base_stats"])
+      logger.debug('New Base Stats:', randomStats)
+      randomizedPokemon["base_stats"] = randomStats
 
     randomizedPokemonList.append(randomizedPokemon)
     continue

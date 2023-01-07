@@ -197,7 +197,22 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX
+  BASE_STATS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Random Base Stats", key="randomBaseStats", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["randomBaseStats"]),
+    ],
+    # Description
+    [
+      sg.Text("Randomize the base stats of every pokemon", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("The total base stats will remain, but the distribution of each value will change", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+
+  layout = LAYOUT_HEADER + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX + BASE_STATS_CHECKBOX
 
   return layout
 
