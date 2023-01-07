@@ -80,12 +80,11 @@ with (
   trainersData = json.load(trainersdata_array_file)
 # Starting Trainers Data Imports
 
-def getRNG(maxValue: int, minValue: int = 0):
-  return random.randrange(start=minValue, stop=maxValue, step=1)
+def getRandomValue(items: list):
+  return random.choice(items)
 
 def generateRandomPaldeaPokemon(options: dict = None):
-  rng = getRNG(maxValue=len(paldeaDex))
-  randomId = paldeaDex[rng]
+  randomId = getRandomValue(paldeaDex)
 
   if (options["legendaries"] == False):
     # No legendaries allowed
@@ -101,8 +100,7 @@ def generateRandomPaldeaPokemon(options: dict = None):
   return generatedPokemon
 
 def generateRandomPokemon(options: dict = None):
-  rng = getRNG(maxValue=len(pokeDex))
-  randomId = pokeDex[rng]
+  randomId = getRandomValue(pokeDex)
 
   if (options["legendaries"] == False):
     # No legendaries allowed
@@ -124,8 +122,8 @@ def generateRandomItem():
     'FPOCKET_PICNIC' # Skip all the picnic items
   ]
 
-  rngItemType = getRNG(maxValue=len(itemTypesWeighted))
-  itemType = itemTypesWeighted[rngItemType]
+  itemType = getRandomValue(items=itemTypesWeighted)
+
   itemsByType = list(filter(
     lambda item: item["SetToPoke"] == True and item["ItemType"] == itemType and item["FieldPocket"] not in bannedFieldPocket,
     itemData["values"]
@@ -133,8 +131,7 @@ def generateRandomItem():
 
   item = None
   while (item is None):
-    rngItem = getRNG(maxValue=len(itemsByType))
-    itemRaw = itemsByType[rngItem]
+    itemRaw = getRandomValue(items=itemsByType)
     item = next((item for item in itemList if item["id"] == itemRaw["Id"]), None)    
 
   return item
@@ -153,7 +150,7 @@ def getRandomForm(dexId: int, forms: int):
   if forms == 1:
     return 0, "DEFAULT"
 
-  randomForm = getRNG(forms)
+  randomForm = getRandomValue(items=range(0,forms))
   
   if dexId in [876, 902, 916]: # 	Indeedee(876), Basculegion(902), Oinkologne(916)
     if randomForm == 0:
@@ -248,6 +245,19 @@ def checkEvoStats(oldPkmPersonalData: dict, newPkmPersonalData: dict):
   logger.info('Not evo match was found')
   return None
 
+def getRandomBaseStats(pkmPersonalData: dict):
+  baseStats = pkmPersonalData["base_stats"]
+  statsNames = list(baseStats.keys())
+  newStats = {}
+
+  for statName in baseStats.keys():
+    randomStat = getRandomValue(statsNames)
+    newStats[statName] = baseStats[randomStat]
+    
+    statsNames.remove(randomStat)
+  
+  return newStats
+
 # ********* Add Pokemon Events Randomizer Start *********
 def getRandomizedAddPokemonEvents(options: dict = None):
   logger.info('Starting logs for Initials Randomizer')
@@ -279,7 +289,7 @@ def getRandomizedAddPokemonEvents(options: dict = None):
         if (randomPokemon is None):
           continue
 
-        if options["similarStats"] == True:
+        if options["similarStats"]:
           if not hasSimilarStats(oldPkmDevName=event["pokeData"]["devId"], newPkmId=randomPokemon["id"]):
             randomPkmPersonal = getPokemonPersonalData(dexId=randomPokemon["id"])
             oldPkmPersonal = getPokemonPersonalData(dexId=event["pokeData"]["devId"])              
@@ -453,7 +463,8 @@ def getRandomizedArea(options: dict = None):
       form, sex = getRandomForm(randomPokemon["id"], randomPokemon["forms"])
       pokemon["formno"] = form
       pokemon["sex"] = sex
-      logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {pokemon["formno"]}')
+
+      logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - form {pokemon["formno"]}')
     
     if options["items"] == False:
       #  No randomized items
@@ -480,8 +491,7 @@ def getRandomizedAbility(blacklist: list = []):
   randomizedAbility = None
 
   while (randomizedAbility is None or randomizedAbility in blacklist):
-    rng = getRNG(maxValue=len(abilityList))
-    randomizedAbility = abilityList[rng]
+    randomizedAbility = getRandomValue(items=abilityList)
 
   return randomizedAbility
 
@@ -497,8 +507,7 @@ def getRandomizedTMList(default: list):
       movesPool = moveList
 
     while (randomizedTM is None or randomizedTM in randomizedTMList):
-      rng = getRNG(maxValue=len(movesPool))
-      randomizedTM = movesPool[rng]
+      randomizedTM = getRandomValue(items=movesPool)
 
     randomizedTMList.append(randomizedTM["id"])
 
@@ -512,8 +521,7 @@ def getRandomizedLearnset(defaultLearnset: list):
     moveId = None
 
     while (moveId is None or moveId in alreadyUsedIds):
-      rngMoveId = getRNG(maxValue=len(moveList))
-      randomMove = moveList[rngMoveId]
+      randomMove = getRandomValue(items=moveList)
 
       moveId = randomMove["id"]
 
@@ -537,16 +545,21 @@ def getRandomizedPokemonList(options: dict = None):
       randomizedPokemonList.append(pokemon)
       continue
 
+    devPkm = getPokemonDev(dexId=pokemon["species"]["model"])
+    logger.info(f'Randomizing data for pokemon: {devPkm["id"]} - {devPkm["devName"]} - form {pokemon["species"]["form"]}')
+
     randomizedPokemon = {
       **pokemon
     }
 
     if (options["abilities"] == True):
       # Randomizing Abilities
+      logger.info(f'Original Abilities: A:{randomizedPokemon["ability_1"]}, B:{randomizedPokemon["ability_2"]}, H: {randomizedPokemon["ability_3"]}')
       defaultAbilities = [randomizedPokemon["ability_1"], randomizedPokemon["ability_2"], randomizedPokemon["ability_3"]]
       randomizedPokemon["ability_1"] = getRandomizedAbility(blacklist=defaultAbilities)
       randomizedPokemon["ability_2"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["ability_1"]])
       randomizedPokemon["ability_3"] = getRandomizedAbility(blacklist=defaultAbilities+[randomizedPokemon["ability_1"], randomizedPokemon["ability_2"]])
+      logger.info(f'New Abilities: A:{randomizedPokemon["ability_1"]}, B:{randomizedPokemon["ability_2"]}, H: {randomizedPokemon["ability_3"]}')
 
     if (options["tm"]):
       # Randomizing TM compatibility
@@ -555,6 +568,12 @@ def getRandomizedPokemonList(options: dict = None):
     if (options["learnset"]):
       # Randomizing Pool of moves the pokemon will learn by level
       randomizedPokemon["levelup_moves"] = getRandomizedLearnset(randomizedPokemon["levelup_moves"])
+
+    if options["randomBaseStats"]:
+      randomStats = getRandomBaseStats(pkmPersonalData=randomizedPokemon)
+      logger.info(f'Original Base Stats: {randomizedPokemon["base_stats"]}')
+      logger.info(f'New Base Stats: {randomStats}')
+      randomizedPokemon["base_stats"] = randomStats
 
     randomizedPokemonList.append(randomizedPokemon)
     continue
@@ -567,8 +586,7 @@ def getRandomizedPokemonList(options: dict = None):
 # ********* Trainers Randomizer Start *********
 def getPerfectIvs():
   stats = ["hp", "atk", "def", "spAtk", "spDef", "agi"]
-  rngLowerStat = getRNG(maxValue=len(stats))
-  lowerStat = stats[rngLowerStat]
+  lowerStat = getRandomValue(items=stats)
 
   talentValue = {
     "hp": 31,
@@ -585,7 +603,7 @@ def getPerfectIvs():
 
 def getCompetitiveEvs():
   stats = ["hp", "atk", "def", "spAtk", "spDef", "agi"]
-  rngLowerStat = getRNG(maxValue=len(stats))
+  lowerStat = getRandomValue(items=stats)
 
   EVsTotalValue = 510
   EVsMaxValue = 255
@@ -606,7 +624,8 @@ def isShiny(rateValue: int):
   # return 0 - Not Shiny
   # return 1 - Shiny
 
-  rng = getRNG(maxValue=100, minValue=1)
+  rng = getRandomValue(items=range(0,101))
+
   if rng <= rateValue:
     return 1
 
@@ -629,8 +648,8 @@ def getNextEvolution(dexId: int = None, devName: str = None):
     return None
 
   if len(pokemon["evo_data"]) >= 1:
-    evoDexId = getRNG(maxValue=len(pokemon["evo_data"]))
-    pokemon = getPokemonPersonalData(dexId=pokemon["evo_data"][evoDexId]["species"])
+    randomPossibleEvo = getRandomValue(items=pokemon["evo_data"])
+    pokemon = getPokemonPersonalData(dexId=randomPossibleEvo["species"])
   
   if pokemon == None:
     return None
@@ -654,11 +673,11 @@ def getFinalEvolution(dexId: int = None, devName: str = None):
     return None
   
   while len(pokemon["evo_data"]) != 0:
-    evoDexId = 0
+    evoData = pokemon["evo_data"][0]
     if len(pokemon["evo_data"]) > 1:
-      evoDexId = getRNG(maxValue=len(pokemon["evo_data"]))
+      evoData = getRandomValue(items=pokemon["evo_data"])
 
-    pokemon = getPokemonPersonalData(dexId=pokemon["evo_data"][evoDexId]["species"])
+    pokemon = getPokemonPersonalData(dexId=evoData["species"])
   
   if pokemon == None:
     return None
@@ -788,6 +807,9 @@ def getRandomizedTrainersList(options: dict = None):
   rivalInitialShiny = shinyValues[shiny]
 
   for trainer in trainersData["values"]:
+
+    logger.info(f'Trainer: {trainer["trid"]} - Type: {trainer["trainerType"]}')
+
     randomizedTrainer = {
       **trainer
     }
@@ -899,8 +921,8 @@ def getRandomizedTrainersList(options: dict = None):
               **randomizedTrainer[pokeKey],
               "devId": rivalPokemon["devName"],
               "formId": 0,
-              "ballId": "MONSUTAABOORU",
               "sex": "DEFAULT",
+              **trainerPokeTemplate()
             }
 
             logger.info(f'Rival starter type {rivalParams[2]} changed for: {rivalPokemon["id"]} - {rivalPokemon["devName"]}')
@@ -963,7 +985,7 @@ def getRandomizedTrainersList(options: dict = None):
             **trainerPokeTemplate()
           }
 
-          logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {randomizedTrainer[pokeKey]["formId"]}')
+          logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - form {randomizedTrainer[pokeKey]["formId"]}')
 
       if options["forceFullTeam"]:
         randomizedTrainer[pokeKey]["level"] = pokemonLvl[pokeKey]["level"]
