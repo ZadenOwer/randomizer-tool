@@ -77,6 +77,7 @@ optionsValues = {
   "abilities": True,
   "tm": False,
   "learnset": False,
+  "instantHatchEgg": False,
   ### Pokemon Options End ###
 
   ### Trainers Options Start ###
@@ -108,21 +109,21 @@ while True:
     logger.info('CLOSING LOGS')
     break
 
-  if event == 'Spawns':
+  if event == 'spawnsStepButton':
     WindowFrame.changeStep(window, 'spawns')
 
-  if event == 'Pokemon':
+  if event == 'pokemonStepButton':
     WindowFrame.changeStep(window, 'pokemon')
 
-  if event == 'Trainers':
+  if event == 'trainerStepButton':
     WindowFrame.changeStep(window, 'trainers')
 
-  if event == 'Final Step':
+  if event == 'finalStepButton':
     WindowFrame.changeStep(window, 'finalStep')
 
-  if event == 'Randomize!':
+  if event == 'randomizeButton':
     # Serializing options
-
+    WindowFrame.toggleLayoutButtons()
     serializedGlobalOptions = {
       "keepFiles": False if ("keepFiles" not in values.keys() or values["keepFiles"] is None or values["keepFiles"] == False) else True,
       "fullPokeDex": False if ("fullPokeDex" not in values.keys() or values["fullPokeDex"] is None or values["fullPokeDex"] == False) else True,
@@ -143,6 +144,7 @@ while True:
     serializedPokemonOptions = {
       "tm": False if ("tm" not in values.keys() or values["tm"] is None or values["tm"] == False) else True,
       "learnset": False if ("learnset" not in values.keys() or values["learnset"] is None or values["learnset"] == False) else True,
+      "instantHatchEgg": False if ("instantHatchEgg" not in values.keys() or values["instantHatchEgg"] is None or values["instantHatchEgg"] == False) else True,
       **serializedGlobalOptions
     }
 
@@ -160,6 +162,8 @@ while True:
       "trainersRandomized": False if ("trainersRandomized" not in values.keys() or values["trainersRandomized"] is None or values["trainersRandomized"] == False) else True,
       "trainerSimilarStats": False if ("trainerSimilarStats" not in values.keys() or values["trainerSimilarStats"] is None or values["trainerSimilarStats"] == False) else True,
       "trainerTeracristalize": False if ("trainerTeracristalize" not in values.keys() or values["trainerTeracristalize"] is None or values["trainerTeracristalize"] == False) else True,
+      "trainerLegendaries": False if ("trainerLegendaries" not in values.keys() or values["trainerLegendaries"] is None or values["trainerLegendaries"] == False) else True,
+      "trainerParadox": False if ("trainerParadox" not in values.keys() or values["trainerParadox"] is None or values["trainerParadox"] == False) else True,
       "forceFullTeam": False if ("forceFullTeam" not in values.keys() or values["forceFullTeam"] is None or values["forceFullTeam"] == False) else True,
       "keepRivalInitial": False if ("keepRivalInitial" not in values.keys() or values["keepRivalInitial"] is None or values["keepRivalInitial"] == False) else True,
       "keepGymType": False if ("keepGymType" not in values.keys() or values["keepGymType"] is None or values["keepGymType"] == False) else True,
@@ -194,7 +198,17 @@ while True:
     }
 
     spawnsRandomizer = SpawnsRandomizer(data=staticData)
+    pokemonRandomizer = PokemonRandomizer(data=staticData)
+    trainersRandomizer = TrainersRandomizer(data=staticData)
 
+    spawnsRandomizer.addEventsProgress = 0
+    spawnsRandomizer.staticEventsProgress = 0
+    spawnsRandomizer.areaProgress = 0
+
+    pokemonRandomizer.pokemonProgress = 0
+    
+    trainersRandomizer.trainerProgress = 0
+    
     logger.info('Randomizing Trade Events...')
     addEventsRandomized, starters = spawnsRandomizer.getRandomizedAddPokemonEvents(serializedAreaOptions) # Randomize the add pokemon events (such as initials)
     jsonArrayFile = open(f'{fileNames["addPokemonEvents"]}.json', 'w')
@@ -223,16 +237,12 @@ while True:
     jsonArrayFile.close()
     logger.info('Spawning Areas randomized!')
 
-    pokemonRandomizer = PokemonRandomizer(data=staticData)
-
     logger.info('Randomizing Pokemon Personal Data...')
     pokemonRandomize = pokemonRandomizer.getRandomizedPokemonList(serializedPokemonOptions) # Randomize each pokemon individually
     jsonArrayFile = open(f'{fileNames["personal"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"entry": pokemonRandomize}))
     jsonArrayFile.close()
     logger.info('Personal Data randomized!')
-
-    trainersRandomizer = TrainersRandomizer(data=staticData)
 
     logger.info('Randomizing Trainers...')
     trainersRandomize = trainersRandomizer.getRandomizedTrainersList(serializedTrainersOptions) # Randomize each trainer team and values
@@ -299,7 +309,8 @@ while True:
     shutil.make_archive('randomized_pokemon', 'zip', './static')
     logger.info('ZIP created!')
     logger.info('Randomizing finished!')
-  
+    WindowFrame.updateProgress(100, title='COMPLETED')
+    WindowFrame.toggleLayoutButtons()
     shutil.rmtree('./static')
 
 window.close()

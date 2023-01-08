@@ -8,7 +8,7 @@ from src.scripts.randomizer.items import ItemRandomizer
 
 class BaseRandomizer:
   logger = logging.getLogger(os.environ.get('VERSION'))
-  MAX_SIMILIAR_STATS_TRIES = 50
+  MAX_SIMILIAR_STATS_TRIES = 30
 
   POKEMON_WITH_STATIC_FORM_BY_GENDER = {
     876: ['MALE', 'FEMALE'], # Indeedee(876)
@@ -97,7 +97,7 @@ class BaseRandomizer:
     if dexId is not None:
       return self.pokemonList[str(dexId)]
     
-    return next((pokemon for pokemon in self.pokemonList.values() if pokemon["devName"] == devName), None)
+    return next((pokemon for pokemon in list(self.pokemonList.values()) if pokemon["devName"] == devName), None)
 
   def getNextEvolution(self, dexId: int = None, devName: str = None):
     if dexId == 0 or (dexId is None and devName is None) or devName == "DEV_NULL":
@@ -197,13 +197,15 @@ class BaseRandomizer:
     oldPkmBST = self.getBaseStatsTotal(oldPkm)
     newPkmBST = self.getBaseStatsTotal(newPkm)
 
-    diff = abs(oldPkmBST - newPkmBST)
+    lowValue = (oldPkmBST * 10) / 11
+    highValue = (oldPkmBST * 11) / 10
+
+    result = lowValue <= newPkmBST and highValue >= newPkmBST 
 
     self.logger.info(f'Old Pokemon {oldPkm["species"]["model"]} Stats: {oldPkmBST}')
     self.logger.info(f'New Pokemon {newPkm["species"]["model"]} Stats: {newPkmBST}')
-    self.logger.info(f'Difference on BST {diff} (should be 10% of oldPkmBST)')
-
-    result = diff <= (oldPkmBST * 0.1)
+    self.logger.info(f'lowValue {lowValue}')
+    self.logger.info(f'highValue {highValue}')
     self.logger.info(f'hasSimilarStats {result}')
 
     return result 
@@ -214,7 +216,7 @@ class BaseRandomizer:
     if oldPkmPersonalData is None or newPkmPersonalData is None:
       return None
 
-    if newPkmPersonalData["egg_hatch"]["species"] == newPkmPersonalData["species"]["model"]:
+    if len(newPkmPersonalData["evo_data"]) == 0:
       self.logger.info('Is a pokemon without evolutions, ignored atm')
       return None
 

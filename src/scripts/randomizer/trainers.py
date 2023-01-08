@@ -5,8 +5,11 @@ import json
 import random
 
 from src.scripts.randomizer.base import BaseRandomizer
+from src.scripts.frame import updateProgress
 
 class TrainersRandomizer(BaseRandomizer):
+
+  trainerProgress = 0
 
   def __init__(self, data: dict) -> None:
     super().__init__(data)
@@ -14,8 +17,16 @@ class TrainersRandomizer(BaseRandomizer):
   def generateTrainerRandomPokemon(self, devName: str, trainerType: str, options: dict, blacklist: list = []):
     randomPokemon = None
     loopCtrl = 0
-    while (randomPokemon is None):               
-      randomPokemon = self.generateRandomPokemon(options, blacklist=blacklist)
+    trainerOptions = {**options}
+
+    if options["trainerLegendaries"]:
+      trainerOptions["legendaries"] = True
+
+    if options["trainerParadox"]:
+      trainerOptions["paradox"] = True
+
+    while (randomPokemon is None):
+      randomPokemon = self.generateRandomPokemon(options=trainerOptions, blacklist=blacklist)
 
       if options["trainerSimilarStats"] == True:
         if not self.hasSimilarStats(oldPkmDevName=devName, newPkmId=randomPokemon["id"]):
@@ -55,21 +66,18 @@ class TrainersRandomizer(BaseRandomizer):
 
   def getPerfectIvs(self):
     # This was made in order to be optimum and not easy to read, but you can see the getRandomBaseStats on the pokemon.py to have a reference of what's going on
-    return dict(zip({
+    talentValue = {
       "hp": 31,
       "atk": 31,
       "def": 31,
       "spAtk": 31,
       "spDef": 30,
       "agi": 31
-    }.keys(), random.shuffle(list({
-      "hp": 31,
-      "atk": 31,
-      "def": 31,
-      "spAtk": 31,
-      "spDef": 30,
-      "agi": 31
-    }.values()))))
+    }
+
+    values = list(talentValue.values())
+    random.shuffle(values)
+    return dict(zip(talentValue.keys(), values))
 
   def getCompetitiveEvs(self):
     stats = ["hp", "atk", "def", "spAtk", "spDef", "agi"]
@@ -223,6 +231,8 @@ class TrainersRandomizer(BaseRandomizer):
 
     rivalInitialShiny = shinyValues[shiny]
 
+    totalItems = len(self.trainersData["values"])
+
     for trainer in self.trainersData["values"]:
 
       self.logger.info(f'Trainer: {trainer["trid"]} - Type: {trainer["trainerType"]}')
@@ -271,8 +281,6 @@ class TrainersRandomizer(BaseRandomizer):
               rivalPokemon = self.getPokemonDev(dexId=randomStarters["water"])
             
             rivalStarterName = rivalPokemon["devName"]
-
-          rivalPokemon = self.getPokemonDev(devName=rivalStarterName)
 
         if rivalStage == 4:
           # Should evolve initial once
@@ -329,19 +337,20 @@ class TrainersRandomizer(BaseRandomizer):
           continue
 
         if options["trainersRandomized"]:
-          if options["keepRivalInitial"] and isRival:
+          if options["keepRivalInitial"] and isRival and randomizedTrainer[pokeKey]["devId"][:-1] in originalStarters:
             # Not randomize and get the starter instead
-            if (randomizedTrainer[pokeKey]["devId"][:-1] in originalStarters):
-              randomizedTrainer[pokeKey] = {
-                **randomizedTrainer[pokeKey],
-                "devId": rivalPokemon["devName"],
-                "formId": 0,
-                "sex": "DEFAULT",
-                **self.trainerPokeTemplate()
-              }
+            rivalPokemon = self.getPokemonDev(devName=rivalStarterName)
 
-              self.logger.info(f'Rival stage {rivalParams[2]} starter changed for: {rivalPokemon["id"]} - {rivalPokemon["devName"]}')
-              alreadyUsedId.append(rivalPokemon["id"])
+            randomizedTrainer[pokeKey] = {
+              **randomizedTrainer[pokeKey],
+              "devId": rivalPokemon["devName"],
+              "formId": 0,
+              "sex": "DEFAULT",
+              **self.trainerPokeTemplate()
+            }
+
+            self.logger.info(f'Rival stage {rivalParams[2]} starter changed for: {rivalPokemon["id"]} - {rivalPokemon["devName"]}')
+            alreadyUsedId.append(rivalPokemon["id"])
           else:
             pokeDevName = randomizedTrainer[pokeKey]["devId"]
             if pokeDevName == "DEV_NULL":
@@ -391,6 +400,7 @@ class TrainersRandomizer(BaseRandomizer):
         if options["forceFinalEvolution"]:
           if options["finalEvolutionCap"] > 0 and options["finalEvolutionCap"] < 100:
             if randomizedTrainer[pokeKey]["level"] >= options["finalEvolutionCap"]:
+              self.logger.info(f'devName: {randomizedTrainer[pokeKey]["devId"]}')
               pkmDev = self.getPokemonDev(devName=randomizedTrainer[pokeKey]["devId"])
               finalEvo = self.getFinalEvolution(dexId=pkmDev["id"])
 
@@ -398,6 +408,9 @@ class TrainersRandomizer(BaseRandomizer):
                 randomizedTrainer[pokeKey]["devId"] = finalEvo["devName"]
 
       randomizedTrainersList.append(randomizedTrainer)
+      self.trainerProgress = math.floor((len(randomizedTrainersList)/totalItems)*100)
+      print(f'Processing: {self.trainerProgress}% / 100%', end='\r')
+      updateProgress(value=self.trainerProgress, title="Processing: Trainers Data")
 
     self.logger.info('Closing logs for Trainers Randomizer')
     return randomizedTrainersList

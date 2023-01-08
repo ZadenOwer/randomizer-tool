@@ -1,9 +1,14 @@
 # randomizer/spawns.py
-
+import math
 from collections import defaultdict
 from src.scripts.randomizer.base import BaseRandomizer
+from src.scripts.frame import updateProgress
 
 class SpawnsRandomizer(BaseRandomizer):
+
+  addEventsProgress = 0
+  staticEventsProgress = 0
+  areaProgress = 0
 
   def __init__(self, data: dict) -> None:
     super().__init__(data)
@@ -45,6 +50,7 @@ class SpawnsRandomizer(BaseRandomizer):
     randomizedList = []
     alreadyUsed = []
     starters = defaultdict(int)
+    totalItems = len(self.addPokemonEvents["values"])
 
     for event in self.addPokemonEvents["values"]:
       isStarter = True if "hono" in event["label"] or "kusa" in event["label"] or "mizu" in event["label"] else False
@@ -54,11 +60,14 @@ class SpawnsRandomizer(BaseRandomizer):
           randomPokemon = self.generateSpawnPokemon(devName=event["pokeData"]["devId"], options=options, blacklist=list(starters.values())+alreadyUsed)        
         elif not isStarter and options["areasSpawnRandomized"]:
           randomPokemon = self.generateSpawnPokemon(devName=event["pokeData"]["devId"], options=options, blacklist=alreadyUsed)
+        else:
+          randomPokemon = None
 
-        event["pokeData"]["devId"] = randomPokemon["devName"]
-        event["pokeData"]["formId"] = randomPokemon["form"]
-        event["pokeData"]["sex"] = randomPokemon["sex"]
-        alreadyUsed.append(randomPokemon["id"])
+        if randomPokemon is not None:
+          event["pokeData"]["devId"] = randomPokemon["devName"]
+          event["pokeData"]["formId"] = randomPokemon["form"]
+          event["pokeData"]["sex"] = randomPokemon["sex"]
+          alreadyUsed.append(randomPokemon["id"])
 
       if isStarter and options["initials"]:
         starterId = self.getPokemonDev(devName=event["pokeData"]["devId"])["id"]
@@ -84,6 +93,9 @@ class SpawnsRandomizer(BaseRandomizer):
       event["pokeData"]["rareType"] = "DEFAULT"
 
       randomizedList.append(event)
+      self.addEventsProgress = math.floor((len(randomizedList)/totalItems)*100)
+      print(f'Processing: {self.addEventsProgress}% / 100%', end='\r')
+      updateProgress(value=self.addEventsProgress, title="Processing: Trade Events Data")
 
     self.logger.info('Closing logs for Initials Randomizer')
     return randomizedList, starters
@@ -94,17 +106,16 @@ class SpawnsRandomizer(BaseRandomizer):
   def getRandomizedStaticPokemonEvents(self, options: dict = None):
     self.logger.info('Starting logs for Statics Randomizer')
     randomizedList = []
-    alreadyUsed = []
+    totalItems = len(self.fixedPokemonEvents["values"])
 
     for event in self.fixedPokemonEvents["values"]:
       if options["areasSpawnRandomized"]:
 
-        randomPokemon = self.generateSpawnPokemon(devName=event["pokeDataSymbol"]["devId"], options=options, blacklist=alreadyUsed)
+        randomPokemon = self.generateSpawnPokemon(devName=event["pokeDataSymbol"]["devId"], options=options)
 
         event["pokeDataSymbol"]["devId"] = randomPokemon["devName"]
         event["pokeDataSymbol"]["formId"] = randomPokemon["form"]
         event["pokeDataSymbol"]["sex"] = randomPokemon["sex"]
-        alreadyUsed.append(randomPokemon["id"])
 
       if options["abilities"]:
         event["pokeDataSymbol"]["tokuseiIndex"] = "RANDOM_123"
@@ -112,6 +123,9 @@ class SpawnsRandomizer(BaseRandomizer):
       event["pokeDataSymbol"]["rareType"] = "DEFAULT"
 
       randomizedList.append(event)
+      self.staticEventsProgress = math.floor((len(randomizedList)/totalItems)*100)
+      print(f'Processing: {self.staticEventsProgress}% / 100%', end='\r')
+      updateProgress(value=self.staticEventsProgress, title="Processing: Statics Events Data")
 
     self.logger.info('Closing logs for Statics Randomizer')
     return randomizedList
@@ -122,6 +136,7 @@ class SpawnsRandomizer(BaseRandomizer):
   def getRandomizedArea(self, options: dict = None):
     self.logger.info('Starting logs for Areas Randomizer')
     randomizedAreaList = []
+    totalItems = len(self.pokemonData["values"])
 
     for pokemon in self.pokemonData["values"]:
       if options["areasSpawnRandomized"]:
@@ -144,6 +159,9 @@ class SpawnsRandomizer(BaseRandomizer):
           "bringRate": 100
         }
       })
+      self.areaProgress = math.floor((len(randomizedAreaList)/totalItems)*100)
+      print(f'Processing: {self.areaProgress}% / 100%', end='\r')
+      updateProgress(value=self.areaProgress, title="Processing: Area Spawns Data")
 
     self.logger.info('Closing logs for Areas Randomizer')
     return randomizedAreaList
