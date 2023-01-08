@@ -51,7 +51,7 @@ class SpawnsRandomizer(BaseRandomizer):
 
       if options["initials"] or options["areasSpawnRandomized"]:
         if isStarter and options["initials"]:
-          randomPokemon = self.generateSpawnPokemon(devName=event["pokeData"]["devId"], options=options, blacklist=starters.values()+alreadyUsed)        
+          randomPokemon = self.generateSpawnPokemon(devName=event["pokeData"]["devId"], options=options, blacklist=list(starters.values())+alreadyUsed)        
         elif not isStarter and options["areasSpawnRandomized"]:
           randomPokemon = self.generateSpawnPokemon(devName=event["pokeData"]["devId"], options=options, blacklist=alreadyUsed)
 

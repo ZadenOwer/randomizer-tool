@@ -305,6 +305,10 @@ def getTrainersLayout(optionsValues: dict):
     ],
     [
       sg.Text("The new added pokemon will have levels based on a calculation, 3 will have the lowest level, 2 an intermediate level and 1 the highest level", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("If the trainer team is not randomized, this option will be ignored", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
     ]
   ]
 
