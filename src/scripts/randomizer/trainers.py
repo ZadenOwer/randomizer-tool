@@ -57,59 +57,6 @@ class TrainersRandomizer(BaseRandomizer):
 
     return 0
 
-  def getNextEvolution(self, dexId: int = None, devName: str = None):
-    if dexId == 0 or (dexId is None and devName is None) or devName == "DEV_NULL":
-      return None
-
-    pokemon = None
-
-    if dexId is not None:
-      pokemon = self.getPokemonPersonalData(dexId)
-
-    if devName is not None:
-      fromList = self.getPokemonDev(devName=devName)
-      pokemon = self.getPokemonPersonalData(fromList["id"])
-    
-    if pokemon == None:
-      return None
-
-    if len(pokemon["evo_data"]) >= 1:
-      randomPossibleEvo = self.getRandomValue(items=pokemon["evo_data"])
-      pokemon = self.getPokemonPersonalData(dexId=randomPossibleEvo["species"])
-    
-    if pokemon == None:
-      return None
-
-    return self.getPokemonDev(pokemon["species"]["model"])
-
-  def getFinalEvolution(self, dexId: int = None, devName: str = None):
-    if dexId == 0 or (dexId is None and devName is None) or devName == "DEV_NULL":
-      return {"devName": "DEV_NULL", "id": 0}
-
-    pokemon = None
-
-    if dexId is not None:
-      pokemon = self.getPokemonPersonalData(dexId)
-
-    if devName is not None:
-      fromList = self.getPokemonDev(devName=devName)
-      pokemon = self.getPokemonPersonalData(fromList["id"])
-    
-    if pokemon == None:
-      return None
-    
-    while len(pokemon["evo_data"]) != 0:
-      evoData = pokemon["evo_data"][0]
-      if len(pokemon["evo_data"]) > 1:
-        evoData = self.getRandomValue(items=pokemon["evo_data"])
-
-      pokemon = self.getPokemonPersonalData(dexId=evoData["species"])
-    
-    if pokemon == None:
-      return None
-
-    return self.getPokemonDev(pokemon["species"]["model"])
-
   def getTrainerTypeId(self, trainerTypeName: str):
     if "normal" in trainerTypeName: #Normal (duh)
       return 0
