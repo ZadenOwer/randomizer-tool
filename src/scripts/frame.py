@@ -421,9 +421,9 @@ def getWindowFrame(optionsValues: dict):
   HEADER_TEXT = [sg.Text("Pokemon S/V Randomizer", font=TITLE_FONT, background_color=BG_COLOR)]
 
   LAYOUTS_BUTTONS = [
-    sg.Button("Step 1"),
-    sg.Button("Step 2"),
-    sg.Button("Step 3"),
+    sg.Button("Spawns"),
+    sg.Button("Pokemon"),
+    sg.Button("Trainers"),
     sg.Button("Final Step"),
   ]
 
@@ -455,9 +455,9 @@ def getWindowFrame(optionsValues: dict):
     HEADER_TEXT,
 
     [
-      sg.Column(areasLayout, key="step1", background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
-      sg.Column(pokemonLayout, key="step2", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE),
-      sg.Column(trainersLayout, key="step3", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
+      sg.Column(areasLayout, key="spawns", background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
+      sg.Column(pokemonLayout, key="pokemon", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE),
+      sg.Column(trainersLayout, key="trainers", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES, key="finalStep", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
     ],
     

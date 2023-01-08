@@ -10,10 +10,11 @@ from src.scripts import frame as WindowFrame
 from src.scripts.logger import setup_custom_logger
 
 # Env Vars
-os.environ["VERSION"] = "1.1.2"
+os.environ["VERSION"] = "1.1.3"
 
 logger = setup_custom_logger(os.environ.get('VERSION'))
 logger.info('STARTING LOGS')
+
 # Create the window
 optionsValues = {
   "keepFiles": False,
@@ -64,14 +65,14 @@ while True:
     logger.info('CLOSING LOGS')
     break
 
-  if event == 'Step 1':
-    WindowFrame.changeStep(window, 'step1')
+  if event == 'Spawns':
+    WindowFrame.changeStep(window, 'spawns')
 
-  if event == 'Step 2':
-    WindowFrame.changeStep(window, 'step2')
+  if event == 'Pokemon':
+    WindowFrame.changeStep(window, 'pokemon')
 
-  if event == 'Step 3':
-    WindowFrame.changeStep(window, 'step3')
+  if event == 'Trainers':
+    WindowFrame.changeStep(window, 'trainers')
 
   if event == 'Final Step':
     WindowFrame.changeStep(window, 'finalStep')
@@ -192,28 +193,27 @@ while True:
     logger.info('Trainers randomized!')
 
     logger.info('Generating binaries...')
-    addEventsResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["addPokemonEvents"]}.bfbs', jsonPath = f'./{fileNames["addPokemonEvents"]}.json')  # Generates the Randomized Add pokemon events binary
+    addEventsResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["addPokemonEvents"]}.bfbs', jsonPath = f'./{fileNames["addPokemonEvents"]}.json')  # Generates the Randomized Add pokemon events binary
     if addEventsResult.stderr != b'':
       logger.error(f'Error creating binary for Add Events: {addEventsResult.stderr}')
       continue
 
-    staticEventsResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["staticPokemonEvents"]}.bfbs', jsonPath = f'./{fileNames["staticPokemonEvents"]}.json')  # Generates the Randomized Static pokemon events binary
+    staticEventsResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["staticPokemonEvents"]}.bfbs', jsonPath = f'./{fileNames["staticPokemonEvents"]}.json')  # Generates the Randomized Static pokemon events binary
     if staticEventsResult.stderr != b'':
       logger.error(f'Error creating binary for Static Events: {addEventsResult.stderr}')
       continue
 
-    areaRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["pokedata"]}.bfbs', jsonPath = f'./{fileNames["pokedata"]}.json')  # Generates the Randomized Areas binary
+    areaRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["pokedata"]}.bfbs', jsonPath = f'./{fileNames["pokedata"]}.json')  # Generates the Randomized Areas binary
     if areaRandomizeResult.stderr != b'':
       logger.error(f'Error creating binary for Areas: {addEventsResult.stderr}')
       continue
 
-    # FlatC.serializeJson(jsonPath=f'./{fileNames["personal"]}.json', ouputName=f'{fileNames["personal"]}.bin') # Generates the Randomized Pokemon binary
-    personalDataRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["personal"]}.bfbs', jsonPath = f'./{fileNames["personal"]}.json')  # Generates the Randomized Areas binary
+    personalDataRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["personal"]}.bfbs', jsonPath = f'./{fileNames["personal"]}.json')  # Generates the Randomized Areas binary
     if personalDataRandomizeResult.stderr != b'':
       logger.error(f'Error creating binary for Personal Data: {addEventsResult.stderr}')
       continue
 
-    trainerRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/{fileNames["trainers"]}.bfbs', jsonPath = f'./{fileNames["trainers"]}.json')  # Generates the Randomized Trainers binary
+    trainerRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["trainers"]}.bfbs', jsonPath = f'./{fileNames["trainers"]}.json')  # Generates the Randomized Trainers binary
     if trainerRandomizeResult.stderr != b'':
       logger.error(f'Error creating binary for Trainers: {addEventsResult.stderr}')
       continue
@@ -239,7 +239,7 @@ while True:
       os.makedirs(f'{paths[pathName]}/')
 
     for fileName in fileNames:
-      shutil.copy(f'./src/{fileNames[fileName]}.bfbs', f'{paths[fileName]}/{fileNames[fileName]}.bfbs')
+      shutil.copy(f'./src/statics/{fileNames[fileName]}.bfbs', f'{paths[fileName]}/{fileNames[fileName]}.bfbs')
 
       if serializedGlobalOptions["keepFiles"]:
         shutil.copy(f'./{fileNames[fileName]}.bin', f'{paths[fileName]}/{fileNames[fileName]}.bin')

@@ -21,22 +21,24 @@ mkdir 'dist'
 mkdir 'dist/src'
 mkdir 'dist/logs'
 mkdir 'dist/src/jsons'
+mkdir 'dist/src/statics'
 # mkdir 'dist/src/dlls'
 
 
 cp -R minified/jsons dist/src/
+cp -R src/statics dist/src/
 
 # for f in src/dlls/*.dll
 # do 
 #    cp -v "$f" dist/"${f%.dll}".dll
 # done
 
-for f in src/*.bfbs
-do 
-   cp -v "$f" dist/"${f%.bfbs}".bfbs
-done
+# for f in src/*.bfbs
+# do 
+#    cp -v "$f" dist/"${f%.bfbs}".bfbs
+# done
 
-cp -v "$PWD\src\flatc.exe" "$PWD\dist\src\flatc.exe"
+cp -v "$PWD\src\static\flatc.exe" "$PWD\dist\src\static\flatc.exe"
 
 rm -r "$PWD\randomizer$1.spec"
 rm -r "$PWD\build"
