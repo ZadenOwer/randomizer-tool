@@ -3,7 +3,10 @@ import os
 import shutil
 import json
 
-from src.scripts import randomizer as Randomizer
+from src.scripts.randomizer.pokemon import PokemonRandomizer
+from src.scripts.randomizer.trainers import TrainersRandomizer
+from src.scripts.randomizer.spawns import SpawnsRandomizer
+
 from src.scripts import flatc as FlatC
 from src.scripts import frame as WindowFrame
 
@@ -14,6 +17,46 @@ os.environ["VERSION"] = "1.1.3"
 
 logger = setup_custom_logger(os.environ.get('VERSION'))
 logger.info('STARTING LOGS')
+
+staticData = {}
+
+with (
+  # Pokemon Data Imports
+  open('./src/jsons/pokedata_array.json', 'r', encoding='utf-8-sig') as pokedata_array_file,
+  open('./src/jsons/personal_array.json', 'r', encoding='utf-8-sig') as personal_array_file,
+  open('./src/jsons/pokemon_list.json', 'r', encoding='utf-8-sig') as pokemon_list_file,
+  open('./src/jsons/dex.json', 'r', encoding='utf-8-sig') as dex_file,
+  open('./src/jsons/ability_list.json', 'r', encoding='utf-8-sig') as ability_list_file,
+  open('./src/jsons/tm_list.json', 'r', encoding='utf-8-sig') as tm_list_file,
+  open('./src/jsons/move_list.json', 'r', encoding='utf-8-sig') as move_list_file,
+  open('./src/jsons/eventAddPokemon_array.json', 'r', encoding='utf-8-sig') as add_pokemon_events_file,
+  open('./src/jsons/fixed_symbol_table_array.json', 'r', encoding='utf-8-sig') as fixed_pokemon_events_file,
+
+  # Item Data Imports
+  open('./src/jsons/itemdata_array.json', 'r', encoding='utf-8-sig') as itemdata_array_file,
+  open('./src/jsons/item_list.json', 'r', encoding='utf-8-sig') as item_list_file,
+
+  # Trainers Data Imports
+  open('./src/jsons/trdata_array.json', 'r', encoding='utf-8-sig') as trainersdata_array_file
+):
+  staticData["pokedata_array_file"] = json.load(pokedata_array_file)
+  staticData["personal_array_file"] = json.load(personal_array_file)
+  staticData["pokemon_list_file"] = json.load(pokemon_list_file)
+  staticData["ability_list_file"] = json.load(ability_list_file)
+  staticData["tm_list_file"] = json.load(tm_list_file)
+  staticData["move_list_file"] = json.load(move_list_file)
+  dex = json.load(dex_file)
+  staticData["pokeDex"] = dex["pokeDex"]
+  staticData["paldeaDex"] = dex["paldeaDex"]
+  staticData["legendaryDex"] = dex["legendaryDex"]
+  staticData["paradoxDex"] = dex["paradoxDex"]
+  staticData["add_pokemon_events_file"] = json.load(add_pokemon_events_file)
+  staticData["fixed_pokemon_events_file"] = json.load(fixed_pokemon_events_file)
+  
+  staticData["itemdata_array_file"] = json.load(itemdata_array_file)
+  staticData["item_list_file"] = json.load(item_list_file)
+  
+  staticData["trainersdata_array_file"] = json.load(trainersdata_array_file)
 
 # Create the window
 optionsValues = {
@@ -150,8 +193,10 @@ while True:
       "trainers": trainersFileName
     }
 
+    spawnsRandomizer = SpawnsRandomizer(data=staticData)
+
     logger.info('Randomizing Trade Events...')
-    addEventsRandomized, starters = Randomizer.getRandomizedAddPokemonEvents(serializedAreaOptions) # Randomize the add pokemon events (such as initials)
+    addEventsRandomized, starters = spawnsRandomizer.getRandomizedAddPokemonEvents(serializedAreaOptions) # Randomize the add pokemon events (such as initials)
     jsonArrayFile = open(f'{fileNames["addPokemonEvents"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": addEventsRandomized}))
     jsonArrayFile.close()
@@ -165,28 +210,32 @@ while True:
       logger.info('Starters randomized!')
 
     logger.info('Randomizing Static Events...')
-    staticEventsRandomized = Randomizer.getRandomizedStaticPokemonEvents(serializedAreaOptions) # Randomize the static pokemon events
+    staticEventsRandomized = spawnsRandomizer.getRandomizedStaticPokemonEvents(serializedAreaOptions) # Randomize the static pokemon events
     jsonArrayFile = open(f'{fileNames["staticPokemonEvents"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": staticEventsRandomized}))
     jsonArrayFile.close()
     logger.info('Static Events randomized!')
 
     logger.info('Randomizing Spawning Areas...')
-    areaRandomized = Randomizer.getRandomizedArea(serializedAreaOptions)  # Randomize the pokemon that spawns each areas
+    areaRandomized = spawnsRandomizer.getRandomizedArea(serializedAreaOptions)  # Randomize the pokemon that spawns each areas
     jsonArrayFile = open(f'{fileNames["pokedata"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": areaRandomized}))
     jsonArrayFile.close()
     logger.info('Spawning Areas randomized!')
 
+    pokemonRandomizer = PokemonRandomizer(data=staticData)
+
     logger.info('Randomizing Pokemon Personal Data...')
-    pokemonRandomize = Randomizer.getRandomizedPokemonList(serializedPokemonOptions) # Randomize each pokemon individually
+    pokemonRandomize = pokemonRandomizer.getRandomizedPokemonList(serializedPokemonOptions) # Randomize each pokemon individually
     jsonArrayFile = open(f'{fileNames["personal"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"entry": pokemonRandomize}))
     jsonArrayFile.close()
     logger.info('Personal Data randomized!')
 
+    trainersRandomizer = TrainersRandomizer(data=staticData)
+
     logger.info('Randomizing Trainers...')
-    trainersRandomize = Randomizer.getRandomizedTrainersList(serializedTrainersOptions) # Randomize each trainer team and values
+    trainersRandomize = trainersRandomizer.getRandomizedTrainersList(serializedTrainersOptions) # Randomize each trainer team and values
     jsonArrayFile = open(f'{fileNames["trainers"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": trainersRandomize}))
     jsonArrayFile.close()
