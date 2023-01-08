@@ -20,17 +20,12 @@ class SpawnsRandomizer(BaseRandomizer):
     for event in self.addPokemonEvents["values"]:
       isStarter = True if "hono" in event["label"] or "kusa" in event["label"] or "mizu" in event["label"] else False
 
-      generator = self.generateRandomPaldeaPokemon
-
-      if options["fullPokeDex"]:
-        generator = self.generateRandomPokemon
-
       randomPokemon = None
 
       if isStarter and options["initials"]:
         loopCtrl = 0
         while (randomPokemon is None):
-          randomPokemon = generator(options)
+          randomPokemon = self.generateRandomPokemon(options)
 
           if (randomPokemon["id"] in list(starters.values())):
             randomPokemon = None
@@ -62,7 +57,7 @@ class SpawnsRandomizer(BaseRandomizer):
       if not isStarter and options["areasSpawnRandomized"]:
         loopCtrl = 0
         while (randomPokemon is None):
-          randomPokemon = generator(options)
+          randomPokemon = self.generateRandomPokemon(options)
 
           if (randomPokemon is None):
             continue
@@ -125,16 +120,12 @@ class SpawnsRandomizer(BaseRandomizer):
 
     for event in self.fixedPokemonEvents["values"]:
       if options["areasSpawnRandomized"]:
-        generator = self.generateRandomPaldeaPokemon
-
-        if options["fullPokeDex"]:
-          generator = self.generateRandomPokemon
 
         randomPokemon = None
 
         loopCtrl = 0
         while (randomPokemon is None):
-          randomPokemon = generator(options)
+          randomPokemon = self.generateRandomPokemon(options)
 
           if (randomPokemon is None):
             continue
@@ -179,16 +170,11 @@ class SpawnsRandomizer(BaseRandomizer):
 
     for pokemon in self.pokemonData["values"]:
       if options["areasSpawnRandomized"]:
-        pokemonGenerator = self.generateRandomPaldeaPokemon
-
-        if options["fullPokeDex"] == True:
-          pokemonGenerator = self.generateRandomPokemon
-
         randomPokemon = None
 
         loopCtrl = 0
         while (randomPokemon is None):
-          randomPokemon = pokemonGenerator(options)
+          randomPokemon = self.generateRandomPokemon(options)
 
           if randomPokemon is None:
             continue

@@ -12,7 +12,7 @@ class BaseRandomizer:
   personalData = {
     "Table": []
   }
-  pokemonList = []
+  pokemonList = {}
   abilityList = []
   tmList = []
   moveList = []
@@ -33,57 +33,45 @@ class BaseRandomizer:
   }
 
   def __init__(self, data: dict) -> None:
-      self.pokemonData = data["pokedata_array_file"]
-      self.personalData = data["personal_array_file"]
-      self.pokemonList = data["pokemon_list_file"]
-      self.abilityList = data["ability_list_file"]
-      self.tmList = data["tm_list_file"]
-      self.moveList = data["move_list_file"]
-      self.pokeDex = data["pokeDex"]
-      self.paldeaDex = data["paldeaDex"]
-      self.legendaryDex = data["legendaryDex"]
-      self.paradoxDex = data["paradoxDex"]
-      self.addPokemonEvents = data["add_pokemon_events_file"]
-      self.fixedPokemonEvents = data["fixed_pokemon_events_file"]
-      
-      self.itemData = data["itemdata_array_file"]
-      self.itemList = data["item_list_file"]
-      
-      self.trainersData = data["trainersdata_array_file"]
+    self.pokemonData = data["pokedata_array_file"]
+    self.personalData = data["personal_array_file"]
+    self.pokemonList = data["pokemon_list_file"]
+    self.abilityList = data["ability_list_file"]
+    self.tmList = data["tm_list_file"]
+    self.moveList = data["move_list_file"]
+    self.pokeDex = data["pokeDex"]
+    self.paldeaDex = data["paldeaDex"]
+    self.legendaryDex = data["legendaryDex"]
+    self.paradoxDex = data["paradoxDex"]
+    self.addPokemonEvents = data["add_pokemon_events_file"]
+    self.fixedPokemonEvents = data["fixed_pokemon_events_file"]
+    
+    self.itemData = data["itemdata_array_file"]
+    self.itemList = data["item_list_file"]
+    
+    self.trainersData = data["trainersdata_array_file"]
 
   def getRandomValue(self, items: list):
     return random.choice(items)
 
-  def generateRandomPaldeaPokemon(self, options: dict = None):
-    randomId = self.getRandomValue(self.paldeaDex)
-
-    if (options["legendaries"] == False):
-      # No legendaries allowed
-      if (randomId in self.legendaryDex):
-        return None
-
-    if (options["paradox"] == False):
-      # No paradox allowed
-      if (randomId in self.paradoxDex):
-        return None
-
-    generatedPokemon = next((pk for pk in self.pokemonList if pk["id"] == randomId), None)
-    return generatedPokemon
-
   def generateRandomPokemon(self, options: dict = None):
-    randomId = self.getRandomValue(self.pokeDex)
+    if options["fullPokeDex"]:
+      randomId = self.getRandomValue(self.pokeDex)
+    else:
+      # Just Paldean Dex
+      randomId = self.getRandomValue(self.paldeaDex)
 
-    if (options["legendaries"] == False):
+    if not options["legendaries"]:
       # No legendaries allowed
-      if (randomId in self.legendaryDex):
+      if any(randomId == x for x in self.legendaryDex):
         return None
 
-    if (options["paradox"] == False):
+    if not options["paradox"]:
       # No paradox allowed
-      if (randomId in self.paradoxDex):
+      if any(randomId == x for x in self.paradoxDex):
         return None
 
-    generatedPokemon = next((pk for pk in self.pokemonList if pk["id"] == randomId), None)
+    generatedPokemon = self.pokemonList[str(randomId)]
     return generatedPokemon
 
   def generateRandomItem(self, ):
@@ -112,9 +100,9 @@ class BaseRandomizer:
 
   def getPokemonDev(self, dexId: int = None, devName: str = None):
     if dexId is not None:
-      return next((pokemon for pokemon in self.pokemonList if pokemon["id"] == dexId), None)
+      return self.pokemonList[str(dexId)]
     
-    return next((pokemon for pokemon in self.pokemonList if pokemon["devName"] == devName), None)
+    return next((pokemon for pokemon in self.pokemonList.values() if pokemon["devName"] == devName), None)
 
   def getRandomForm(self, dexId: int, forms: int):
     # Randomize the forms of the pokemon

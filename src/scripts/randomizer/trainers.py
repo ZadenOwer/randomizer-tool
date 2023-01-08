@@ -354,15 +354,11 @@ class TrainersRandomizer(BaseRandomizer):
               self.logger.info(f'Rival starter type {rivalParams[2]} changed for: {rivalPokemon["id"]} - {rivalPokemon["devName"]}')
               alreadyUsedId.append(rivalPokemon["id"])
           else:              
-            pokemonGenerator = self.generateRandomPaldeaPokemon
-            if options["fullPokeDex"]:
-              pokemonGenerator = self.generateRandomPokemon
-
             randomPokemon = None
 
             loopCtrl = 0
             while (randomPokemon is None or randomPokemon["id"] in alreadyUsedId):               
-              randomPokemon = pokemonGenerator(options)
+              randomPokemon = self.generateRandomPokemon(options)
 
               if (randomPokemon is None):
                 continue
