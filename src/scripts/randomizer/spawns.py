@@ -1,5 +1,6 @@
 # randomizer/spawns.py
 
+from collections import defaultdict
 from src.scripts.randomizer.base import BaseRandomizer
 
 class SpawnsRandomizer(BaseRandomizer):
@@ -9,83 +10,58 @@ class SpawnsRandomizer(BaseRandomizer):
 
   # ********* Add Pokemon Events Randomizer Start *********
 
+  def generateSpawnPokemon(self, devName: str, options: dict, blacklist: list = []):
+    randomPokemon = None
+    loopCtrl = 0
+    while (randomPokemon is None):
+      randomPokemon = self.generateRandomPokemon(options, blacklist=blacklist)
+
+      if options["similarStats"]:
+        if not self.hasSimilarStats(oldPkmDevName=devName, newPkmId=randomPokemon["id"]):
+          randomPkmPersonal = self.getPokemonPersonalData(dexId=randomPokemon["id"])
+          oldPkmPersonal = self.getPokemonPersonalData(dexId=devName)              
+          checkedPkm = self.checkEvoStats(oldPkmPersonalData=oldPkmPersonal, newPkmPersonalData=randomPkmPersonal)
+
+          if checkedPkm is not None:
+            randomPokemon = checkedPkm
+            continue
+
+          if loopCtrl < self.MAX_SIMILIAR_STATS_TRIES:
+            # To avoid infinite loop
+            randomPokemon = None
+            loopCtrl += 1
+
+    form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
+    self.logger.info(f'Random pokemon generated: ID: {randomPokemon["id"]} - NAME: {randomPokemon["devName"]} - FORM: {form}')
+
+    return {
+      **randomPokemon, # {devName, id}
+      "form": form,
+      "sex": sex
+    }
+
   def getRandomizedAddPokemonEvents(self, options: dict = None):
     self.logger.info('Starting logs for Initials Randomizer')
     randomizedList = []
-    starters = {
-      "fire": 0,
-      "water": 0,
-      "grass": 0,
-    }
+    alreadyUsed = []
+    starters = defaultdict(int)
 
     for event in self.addPokemonEvents["values"]:
       isStarter = True if "hono" in event["label"] or "kusa" in event["label"] or "mizu" in event["label"] else False
 
-      randomPokemon = None
+      if options["initials"] or options["areasSpawnRandomized"]:
+        if isStarter and options["initials"]:
+          randomPokemon = self.generateSpawnPokemon(devName=event["pokeData"]["devId"], options=options, blacklist=starters.values()+alreadyUsed)        
+        elif not isStarter and options["areasSpawnRandomized"]:
+          randomPokemon = self.generateSpawnPokemon(devName=event["pokeData"]["devId"], options=options, blacklist=alreadyUsed)
+
+        event["pokeData"]["devId"] = randomPokemon["devName"]
+        event["pokeData"]["formId"] = randomPokemon["form"]
+        event["pokeData"]["sex"] = randomPokemon["sex"]
+        alreadyUsed.append(randomPokemon["id"])
 
       if isStarter and options["initials"]:
-        loopCtrl = 0
-        while (randomPokemon is None):
-          randomPokemon = self.generateRandomPokemon(options)
-
-          if (randomPokemon["id"] in list(starters.values())):
-            randomPokemon = None
-
-          if (randomPokemon is None):
-            continue
-
-          if options["similarStats"]:
-            if not self.hasSimilarStats(oldPkmDevName=event["pokeData"]["devId"], newPkmId=randomPokemon["id"]):
-              randomPkmPersonal = self.getPokemonPersonalData(dexId=randomPokemon["id"])
-              oldPkmPersonal = self.getPokemonPersonalData(dexId=event["pokeData"]["devId"])              
-              checkedPkm = self.checkEvoStats(oldPkmPersonalData=oldPkmPersonal, newPkmPersonalData=randomPkmPersonal)
-
-              if checkedPkm is not None:
-                randomPokemon = checkedPkm
-                continue
-
-              if loopCtrl < self.MAX_SIMILIAR_STATS_TRIES:
-                # To avoid infinite loop
-                randomPokemon = None
-                loopCtrl += 1
-
-        event["pokeData"]["devId"] = randomPokemon["devName"]
-        form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
-        event["pokeData"]["formId"] = form
-        event["pokeData"]["sex"] = sex
-        self.logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {event["pokeData"]["formId"]}')
-
-      if not isStarter and options["areasSpawnRandomized"]:
-        loopCtrl = 0
-        while (randomPokemon is None):
-          randomPokemon = self.generateRandomPokemon(options)
-
-          if (randomPokemon is None):
-            continue
-
-          if options["similarStats"] == True:
-            if not self.hasSimilarStats(oldPkmDevName=event["pokeData"]["devId"], newPkmId=randomPokemon["id"]):
-              randomPkmPersonal = self.getPokemonPersonalData(dexId=randomPokemon["id"])
-              oldPkmPersonal = self.getPokemonPersonalData(dexId=event["pokeData"]["devId"])              
-              checkedPkm = self.checkEvoStats(oldPkmPersonalData=oldPkmPersonal, newPkmPersonalData=randomPkmPersonal)
-
-              if checkedPkm is not None:
-                randomPokemon = checkedPkm
-                continue
-
-              if loopCtrl < self.MAX_SIMILIAR_STATS_TRIES:
-                # To avoid infinite loop
-                randomPokemon = None
-                loopCtrl += 1
-
-        event["pokeData"]["devId"] = randomPokemon["devName"]
-        form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
-        event["pokeData"]["formId"] = form
-        event["pokeData"]["sex"] = sex
-        self.logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {event["pokeData"]["formId"]}')
-
-      if isStarter:
-        starterId = randomPokemon["id"] if randomPokemon is not None else event["pokeData"]["devId"]
+        starterId = self.getPokemonDev(devName=event["pokeData"]["devId"])["id"]
 
         if "hono" in event["label"]:
           # Fire starter
@@ -118,39 +94,17 @@ class SpawnsRandomizer(BaseRandomizer):
   def getRandomizedStaticPokemonEvents(self, options: dict = None):
     self.logger.info('Starting logs for Statics Randomizer')
     randomizedList = []
+    alreadyUsed = []
 
     for event in self.fixedPokemonEvents["values"]:
       if options["areasSpawnRandomized"]:
 
-        randomPokemon = None
-
-        loopCtrl = 0
-        while (randomPokemon is None):
-          randomPokemon = self.generateRandomPokemon(options)
-
-          if (randomPokemon is None):
-            continue
-
-          if options["similarStats"] == True:
-            if not self.hasSimilarStats(oldPkmDevName=event["pokeDataSymbol"]["devId"], newPkmId=randomPokemon["id"]):
-              randomPkmPersonal = self.getPokemonPersonalData(dexId=randomPokemon["id"])
-              oldPkmPersonal = self.getPokemonPersonalData(dexId=event["pokeDataSymbol"]["devId"])              
-              checkedPkm = self.checkEvoStats(oldPkmPersonalData=oldPkmPersonal, newPkmPersonalData=randomPkmPersonal)
-
-              if checkedPkm is not None:
-                randomPokemon = checkedPkm
-                continue
-
-              if loopCtrl < self.MAX_SIMILIAR_STATS_TRIES:
-                # To avoid infinite loop
-                randomPokemon = None
-                loopCtrl += 1
+        randomPokemon = self.generateSpawnPokemon(devName=event["pokeDataSymbol"]["devId"], options=options, blacklist=alreadyUsed)
 
         event["pokeDataSymbol"]["devId"] = randomPokemon["devName"]
-        form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
-        event["pokeDataSymbol"]["formId"] = form
-        event["pokeDataSymbol"]["sex"] = sex
-        self.logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - {event["pokeDataSymbol"]["formId"]}')
+        event["pokeDataSymbol"]["formId"] = randomPokemon["form"]
+        event["pokeDataSymbol"]["sex"] = randomPokemon["sex"]
+        alreadyUsed.append(randomPokemon["id"])
 
       if options["abilities"]:
         event["pokeDataSymbol"]["tokuseiIndex"] = "RANDOM_123"
@@ -171,36 +125,11 @@ class SpawnsRandomizer(BaseRandomizer):
 
     for pokemon in self.pokemonData["values"]:
       if options["areasSpawnRandomized"]:
-        randomPokemon = None
-
-        loopCtrl = 0
-        while (randomPokemon is None):
-          randomPokemon = self.generateRandomPokemon(options)
-
-          if randomPokemon is None:
-            continue
-
-          if options["similarStats"] == True:
-            if not self.hasSimilarStats(oldPkmDevName=pokemon["devid"], newPkmId=randomPokemon["id"]):
-              randomPkmPersonal = self.getPokemonPersonalData(dexId=randomPokemon["id"])
-              oldPkmPersonal = self.getPokemonPersonalData(dexId=pokemon["devid"])              
-              checkedPkm = self.checkEvoStats(oldPkmPersonalData=oldPkmPersonal, newPkmPersonalData=randomPkmPersonal)
-
-              if checkedPkm is not None:
-                randomPokemon = checkedPkm
-                continue
-
-              if loopCtrl < self.MAX_SIMILIAR_STATS_TRIES:
-                # To avoid infinite loop
-                randomPokemon = None
-                loopCtrl += 1
+        randomPokemon = self.generateSpawnPokemon(devName=pokemon["devid"], options=options)
 
         pokemon["devid"] = randomPokemon["devName"]
-        form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
-        pokemon["formno"] = form
-        pokemon["sex"] = sex
-
-        self.logger.info(f'Random pokemon generated: {randomPokemon["id"]} - {randomPokemon["devName"]} - form {pokemon["formno"]}')
+        pokemon["formno"] = randomPokemon["form"]
+        pokemon["sex"] = randomPokemon["sex"]
       
       if options["items"] == False:
         #  No randomized items
@@ -215,7 +144,6 @@ class SpawnsRandomizer(BaseRandomizer):
           "bringRate": 100
         }
       })
-      self.logger.info(f'Random item: {randomItem["id"]} - {randomItem["devName"]}')
 
     self.logger.info('Closing logs for Areas Randomizer')
     return randomizedAreaList

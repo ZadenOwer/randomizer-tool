@@ -64,24 +64,25 @@ class BaseRandomizer:
   def getRandomValue(self, items: list):
     return random.choice(items)
 
-  def generateRandomPokemon(self, options: dict = None):
+  def generateRandomPokemon(self, options: dict = None, blacklist: list = []):
     if options["fullPokeDex"]:
-      randomId = self.getRandomValue(self.pokeDex)
+      filteredList = self.pokemonList
     else:
       # Just Paldean Dex
-      randomId = self.getRandomValue(self.paldeaDex)
+      filteredList = {id: pokemon for id, pokemon in self.pokemonList.items() if int(id) in self.paldeaDex}
 
     if not options["legendaries"]:
       # No legendaries allowed
-      if any(randomId == x for x in self.legendaryDex):
-        return None
+      filteredList = {id: pokemon for id, pokemon in filteredList.items() if int(id) not in self.legendaryDex}
 
     if not options["paradox"]:
       # No paradox allowed
-      if any(randomId == x for x in self.paradoxDex):
-        return None
+      filteredList = {id: pokemon for id, pokemon in filteredList.items() if int(id) not in self.paradoxDex}
 
-    generatedPokemon = self.pokemonList[str(randomId)]
+    if len(blacklist) > 0:
+      filteredList = {id: pokemon for id, pokemon in filteredList.items() if int(id) not in blacklist}
+
+    generatedPokemon = self.getRandomValue(items=list(filteredList.values()))
     return generatedPokemon
 
   def generateRandomItem(self):
