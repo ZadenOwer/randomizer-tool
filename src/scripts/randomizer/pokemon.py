@@ -1,3 +1,6 @@
+# randomizer/pokemon.py
+
+import random
 
 from src.scripts.randomizer.base import BaseRandomizer
 
@@ -7,61 +10,39 @@ class PokemonRandomizer(BaseRandomizer):
     super().__init__(data)
 
   def getRandomBaseStats(self, pkmPersonalData: dict):
-    baseStats = pkmPersonalData["base_stats"]
-    statsNames = list(baseStats.keys())
-    newStats = {}
+    baseStats = list(pkmPersonalData["base_stats"].values())
+    random.shuffle(baseStats)
+    return dict(zip(pkmPersonalData["base_stats"].keys(), baseStats))
 
-    for statName in baseStats.keys():
-      randomStat = self.getRandomValue(statsNames)
-      newStats[statName] = baseStats[randomStat]
-      
-      statsNames.remove(randomStat)
-    
-    return newStats
-
-  # ********* Pokemon Randomizer End *********
   def getRandomizedAbility(self, blacklist: list = []):
-    randomizedAbility = None
-
-    while (randomizedAbility is None or randomizedAbility in blacklist):
-      randomizedAbility = self.getRandomValue(items=self.abilityList)
-
-    return randomizedAbility
+    abilities = [ability for ability in self.abilityList if ability not in blacklist]
+    return self.getRandomValue(items=abilities)
 
   def getRandomizedTMList(self, default: list):
-    maxTMList = len(default)
+    tmList = self.tmList.copy()
+    moveList = self.moveList.copy()
     randomizedTMList = []
-    movesPool = self.tmList
 
-    for item in range(0, maxTMList):
-      randomizedTM = None
+    while len(randomizedTMList) < len(default):
+      if len(tmList) == 0:
+        tmList = moveList
 
-      if (len(randomizedTMList) == len(self.tmList)):
-        movesPool = self.moveList
-
-      while (randomizedTM is None or randomizedTM in randomizedTMList):
-        randomizedTM = self.getRandomValue(items=movesPool)
-
+      randomizedTM = self.getRandomValue(items=tmList)
+      tmList.remove(randomizedTM)
       randomizedTMList.append(randomizedTM["id"])
 
     return randomizedTMList
 
   def getRandomizedLearnset(self, defaultLearnset: list):
+    moveIds = [move["id"] for move in self.moveList]
     randomizedLearnset = []
-    alreadyUsedIds = []
 
     for defaultMove in defaultLearnset:
-      moveId = None
-
-      while (moveId is None or moveId in alreadyUsedIds):
-        randomMove = self.getRandomValue(items=self.moveList)
-
-        moveId = randomMove["id"]
-
-      randomizedLearnset.append({
-        **defaultMove,
-        "move": moveId
-      })
+      randomMoveId = None
+      while randomMoveId is None or randomMoveId in moveIds:
+        randomMoveId = self.getRandomValue(items=moveIds)
+      moveIds.remove(randomMoveId)
+      randomizedLearnset.append({**defaultMove, "move": randomMoveId})
 
     return randomizedLearnset
 
@@ -70,11 +51,7 @@ class PokemonRandomizer(BaseRandomizer):
 
     randomizedPokemonList = []
     for pokemon in self.personalData["entry"]:
-
-      if options["fullPokeDex"]:
-        pokemon["is_present"] = True
-
-      if not pokemon["is_present"]:
+      if not options["fullPokeDex"] and not pokemon["is_present"]:
         randomizedPokemonList.append(pokemon)
         continue
 
@@ -105,7 +82,7 @@ class PokemonRandomizer(BaseRandomizer):
       if options["randomBaseStats"]:
         randomStats = self.getRandomBaseStats(pkmPersonalData=randomizedPokemon)
         self.logger.info(f'Original Base Stats: {randomizedPokemon["base_stats"]}')
-        self.logger.info(f'New Base Stats: {randomStats}')
+        self.logger.info(f'New randomized Base Stats: {randomStats}')
         randomizedPokemon["base_stats"] = randomStats
 
       randomizedPokemonList.append(randomizedPokemon)
@@ -113,5 +90,3 @@ class PokemonRandomizer(BaseRandomizer):
 
     self.logger.info('Closing logs for Pokemon Personal Data Randomizer')
     return randomizedPokemonList
-
-  # ********* Pokemon Randomizer End *********

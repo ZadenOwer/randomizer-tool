@@ -1,3 +1,5 @@
+# randomizer/items.py
+
 import random
 
 class ItemRandomizer:
