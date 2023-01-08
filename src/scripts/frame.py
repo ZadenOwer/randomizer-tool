@@ -151,7 +151,7 @@ def getAreasLayout(optionsValues: dict):
 def getPokemonLayout(optionsValues: dict):
   LAYOUT_HEADER = [[sg.Text("Individual Pokemon Options", font=HEADER_FONT, background_color=BG_COLOR)]]
 
-  ABILITIES_CHECKBOX = [
+  INSTANT_HATCH_EGGS_CHECKBOX = [
     [
       # Input
       sg.Check("Instant Hatch Eggs", key="instantHatchEgg", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["instantHatchEgg"]),
@@ -225,7 +225,7 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX + BASE_STATS_CHECKBOX
+  layout = LAYOUT_HEADER + INSTANT_HATCH_EGGS_CHECKBOX + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX + BASE_STATS_CHECKBOX
 
   return layout
 
