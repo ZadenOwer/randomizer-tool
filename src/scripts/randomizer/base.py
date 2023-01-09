@@ -7,7 +7,7 @@ import logging
 from src.scripts.randomizer.items import ItemRandomizer
 
 class BaseRandomizer:
-  logger = logging.getLogger(os.environ.get('VERSION'))
+  logger = logging.getLogger(f'DEBUG{os.environ.get("VERSION")}')
   MAX_SIMILIAR_STATS_TRIES = 30
 
   POKEMON_WITH_STATIC_FORM_BY_GENDER = {
@@ -25,7 +25,7 @@ class BaseRandomizer:
   pokemonList = {}
   abilityList = []
   tmList = []
-  moveList = []
+  moveList = {}
   pokeDex = []
   paldeaDex = []
   legendaryDex = []

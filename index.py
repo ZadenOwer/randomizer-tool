@@ -4,7 +4,7 @@ import shutil
 import json
 
 # Env Vars
-os.environ["VERSION"] = "1.1.3"
+os.environ["VERSION"] = "1.1.4"
 
 from src.scripts.randomizer.pokemon import PokemonRandomizer
 from src.scripts.randomizer.trainers import TrainersRandomizer
@@ -76,6 +76,8 @@ optionsValues = {
   "abilities": True,
   "tm": False,
   "learnset": False,
+  "movePower": False,
+  "moveType": False,
   "instantHatchEgg": False,
   "types": False,
   "randomBaseStats": False,
@@ -144,6 +146,8 @@ while True:
     serializedPokemonOptions = {
       "tm": False if ("tm" not in values.keys() or values["tm"] is None or values["tm"] == False) else True,
       "learnset": False if ("learnset" not in values.keys() or values["learnset"] is None or values["learnset"] == False) else True,
+      "movePower": False if ("movePower" not in values.keys() or values["movePower"] is None or values["movePower"] == False) else True,
+      "moveType": False if ("moveType" not in values.keys() or values["moveType"] is None or values["moveType"] == False) else True,
       "instantHatchEgg": False if ("instantHatchEgg" not in values.keys() or values["instantHatchEgg"] is None or values["instantHatchEgg"] == False) else True,
       "types": False if ("types" not in values.keys() or values["types"] is None or values["types"] == False) else True,
       "randomBaseStats": False if ("randomBaseStats" not in values.keys() or values["randomBaseStats"] is None or values["randomBaseStats"] == False) else True,

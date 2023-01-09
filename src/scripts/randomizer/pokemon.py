@@ -8,6 +8,7 @@ from src.scripts.frame import updateProgress
 class PokemonRandomizer(BaseRandomizer):
 
   pokemonProgress = 0
+  STATUS_MOVE = "STATUS"
 
   def __init__(self, data: dict) -> None:
     super().__init__(data)
@@ -38,14 +39,72 @@ class PokemonRandomizer(BaseRandomizer):
 
     return randomizedTMList
 
-  def getRandomizedLearnset(self, defaultLearnset: list):
-    moveIds = [move["id"] for move in self.moveList]
+  def hasSimilarPower(self, oldMovePower: int, newMovePower: int | str):
+    if newMovePower == self.STATUS_MOVE:
+      # All the status move are possible choices for the random move
+      return True
+
+    if oldMovePower >= 200:
+      return (oldMovePower - 50 < newMovePower) and (newMovePower < oldMovePower + 50)
+    
+    if oldMovePower >= 100:
+      return (oldMovePower - 20 < newMovePower) and (newMovePower < oldMovePower + 20)
+
+    return (oldMovePower - 10 < newMovePower) and (newMovePower < oldMovePower + 10)
+
+  def hasSimilarType(self, oldMoveType: int, newMoveType: int):
+    if oldMoveType == newMoveType:
+      return True
+
+    return False
+  
+  def getRandomMove(self, defaultMove: dict, options: dict, blacklist: list = []):
+    moveList = {id: move for id, move in self.moveList.items() if move["id"] not in blacklist}
+    moveData = None
+    try:
+      moveData = self.moveList[str(defaultMove["move"])]
+    except:
+      # The old move isn't valid for the 9th gen, putting a default move based on the level
+      if defaultMove["level"] <= 10:
+        moveData = self.moveList["364"] # Feint - Normal - Power 30
+      elif defaultMove["level"] <= 30:
+        moveData = self.moveList["229"] # Rapid Spin - Normal - Power 50:
+      else:
+        moveData = self.moveList["5"] # Mega Punch - Normal - Power 100:
+
+    if options["movePower"]:
+      isStatus = True if moveData["power"] == self.STATUS_MOVE else False
+      
+      if isStatus:
+        # If the old move is a status one, a fake power will be calculated based on the level this move is learned
+        if defaultMove["level"] <= 10:
+          fakePower = 30
+        elif defaultMove["level"] <= 30:
+          fakePower = 50
+        else:
+          fakePower = 100
+
+        moveList = {id: move for id, move in moveList.items() if self.hasSimilarPower(oldMovePower=fakePower, newMovePower=move["power"])}
+
+      if not isStatus:
+        moveList = {id: move for id, move in moveList.items() if self.hasSimilarPower(oldMovePower=moveData["power"], newMovePower=move["power"])}
+
+    if options["moveType"]:
+      moveList = {id: move for id, move in moveList.items() if self.hasSimilarType(oldMoveType=moveData["type"], newMoveType=move["type"])}
+
+    randomMove = self.getRandomValue(items=list(moveList.values()))
+    return randomMove
+
+  def getRandomizedLearnset(self, defaultLearnset: list, options: dict):
     randomizedLearnset = []
+    alreadyUsed = []
 
     for defaultMove in defaultLearnset:
-      randomMoveId = self.getRandomValue(items=moveIds)
-      moveIds.remove(randomMoveId)
-      randomizedLearnset.append({**defaultMove, "move": randomMoveId})
+      randomMove = self.getRandomMove(defaultMove=defaultMove, options=options, blacklist=alreadyUsed)
+      self.logger.info(f'Old move: ID {defaultMove["move"]} - AT LEVEL {defaultMove["level"]}')
+      self.logger.info(f'New move: ID {randomMove["id"]}')
+      randomizedLearnset.append({**defaultMove, "move": randomMove["id"]})
+      alreadyUsed.append(randomMove["id"])
 
     return randomizedLearnset
 
@@ -86,7 +145,9 @@ class PokemonRandomizer(BaseRandomizer):
 
       if options["learnset"]:
         # Randomizing Pool of moves the pokemon will learn by level
-        randomizedPokemon["levelup_moves"] = self.getRandomizedLearnset(randomizedPokemon["levelup_moves"])
+        self.logger.info(f'Randomizing Learnset')
+        randomizedPokemon["levelup_moves"] = self.getRandomizedLearnset(defaultLearnset=randomizedPokemon["levelup_moves"], options=options)
+        self.logger.info(f'Learnset randomized')
 
       if options["instantHatchEgg"]:
         # Egg Hatching just need 1 cycle

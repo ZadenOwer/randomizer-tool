@@ -195,7 +195,7 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
-  MOVES_CHECKBOX = [
+  LEARNSET_CHECKBOX = [
     [
       # Input
       sg.Check("Learnset", key="learnset", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["learnset"]),
@@ -207,6 +207,36 @@ def getPokemonLayout(optionsValues: dict):
     # Sub description
     [
       sg.Text("Ex: All the Fuecoco will learn Thunderbolt at level 12.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+
+  MOVE_POWER_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Move power", key="movePower", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["movePower"]),
+    ],
+    # Description
+    [
+      sg.Text("If the learnset is randomized, each move will be randomized by other with similar power (or a status move)", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: If the learnset isn't randomized, this option will be ignored.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+
+  MOVE_TYPE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Move Type", key="moveType", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["moveType"]),
+    ],
+    # Description
+    [
+      sg.Text("If the learnset is randomized, each move will be randomized by other with same type (or a status move)", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: If the learnset isn't randomized, this option will be ignored.", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
     ]
   ]
 
@@ -236,7 +266,7 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + INSTANT_HATCH_EGGS_CHECKBOX + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX + TYPES_CHECKBOX + BASE_STATS_CHECKBOX
+  layout = LAYOUT_HEADER + INSTANT_HATCH_EGGS_CHECKBOX + ABILITIES_CHECKBOX + TM_CHECKBOX + LEARNSET_CHECKBOX + MOVE_POWER_CHECKBOX + MOVE_TYPE_CHECKBOX + TYPES_CHECKBOX + BASE_STATS_CHECKBOX
 
   return layout
 

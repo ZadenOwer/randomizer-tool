@@ -113,16 +113,16 @@ class TrainersRandomizer(BaseRandomizer):
     if "normal" in trainerTypeName: #Normal (duh)
       return 0
 
-    if "kakutou" in trainerTypeName: #Fight
+    if "kakutou" in trainerTypeName: #Fighting
       return 1
 
-    if "hikou" in trainerTypeName: #Fly
+    if "hikou" in trainerTypeName: #Flying
       return 2
 
     if "doku" in trainerTypeName: #Poison
       return 3
 
-    if "jimen" in trainerTypeName: #Earth
+    if "jimen" in trainerTypeName: #Ground
       return 4
 
     if "iwa" in trainerTypeName: #Rock (still to confirm)
@@ -143,13 +143,13 @@ class TrainersRandomizer(BaseRandomizer):
     if "mizu" in trainerTypeName: #Water
       return 10
 
-    if "kusa" in trainerTypeName: #Plant
+    if "kusa" in trainerTypeName: #Grass
       return 11
 
     if "denki" in trainerTypeName: #Electric
       return 12
 
-    if "esper" in trainerTypeName: #Psiquic
+    if "esper" in trainerTypeName: #Psyquic
       return 13
 
     if "koori" in trainerTypeName: #Ice
