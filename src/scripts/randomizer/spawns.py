@@ -94,7 +94,7 @@ class SpawnsRandomizer(BaseRandomizer):
 
       randomizedList.append(event)
       self.addEventsProgress = math.floor((len(randomizedList)/totalItems)*100)
-      print(f'Processing: {self.addEventsProgress}% / 100%', end='\r')
+      print(f'Processing: Trade Events Data {self.addEventsProgress}% / 100%', end='\r')
       updateProgress(value=self.addEventsProgress, title="Processing: Trade Events Data")
 
     self.logger.info('Closing logs for Initials Randomizer')
@@ -124,7 +124,7 @@ class SpawnsRandomizer(BaseRandomizer):
 
       randomizedList.append(event)
       self.staticEventsProgress = math.floor((len(randomizedList)/totalItems)*100)
-      print(f'Processing: {self.staticEventsProgress}% / 100%', end='\r')
+      print(f'Processing: Statics Events Data {self.staticEventsProgress}% / 100%', end='\r')
       updateProgress(value=self.staticEventsProgress, title="Processing: Statics Events Data")
 
     self.logger.info('Closing logs for Statics Randomizer')
@@ -160,7 +160,7 @@ class SpawnsRandomizer(BaseRandomizer):
         }
       })
       self.areaProgress = math.floor((len(randomizedAreaList)/totalItems)*100)
-      print(f'Processing: {self.areaProgress}% / 100%', end='\r')
+      print(f'Processing: Area Spawns Data {self.areaProgress}% / 100%', end='\r')
       updateProgress(value=self.areaProgress, title="Processing: Area Spawns Data")
 
     self.logger.info('Closing logs for Areas Randomizer')

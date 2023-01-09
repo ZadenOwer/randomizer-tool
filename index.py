@@ -66,7 +66,6 @@ optionsValues = {
   "legendaries": False,
   "paradox": True,
   "similarStats": True,
-  "randomBaseStats": False,
 
   ### Areas Options Start ###
   "areasSpawnRandomized": True,
@@ -78,6 +77,8 @@ optionsValues = {
   "tm": False,
   "learnset": False,
   "instantHatchEgg": False,
+  "types": False,
+  "randomBaseStats": False,
   ### Pokemon Options End ###
 
   ### Trainers Options Start ###
@@ -132,7 +133,6 @@ while True:
       "legendaries": False if ("legendaries" not in values.keys() or values["legendaries"] is None or values["legendaries"] == False) else True,
       "paradox": False if ("paradox" not in values.keys() or values["paradox"] is None or values["paradox"] == False) else True,
       "similarStats": False if ("similarStats" not in values.keys() or values["similarStats"] is None or values["similarStats"] == False) else True,
-      "randomBaseStats": False if ("randomBaseStats" not in values.keys() or values["randomBaseStats"] is None or values["randomBaseStats"] == False) else True,
     }
 
     serializedAreaOptions = {
@@ -145,6 +145,8 @@ while True:
       "tm": False if ("tm" not in values.keys() or values["tm"] is None or values["tm"] == False) else True,
       "learnset": False if ("learnset" not in values.keys() or values["learnset"] is None or values["learnset"] == False) else True,
       "instantHatchEgg": False if ("instantHatchEgg" not in values.keys() or values["instantHatchEgg"] is None or values["instantHatchEgg"] == False) else True,
+      "types": False if ("types" not in values.keys() or values["types"] is None or values["types"] == False) else True,
+      "randomBaseStats": False if ("randomBaseStats" not in values.keys() or values["randomBaseStats"] is None or values["randomBaseStats"] == False) else True,
       **serializedGlobalOptions
     }
 

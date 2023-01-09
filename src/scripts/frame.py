@@ -210,6 +210,17 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
+  TYPES_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Random Types", key="types", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["types"]),
+    ],
+    # Description
+    [
+      sg.Text("Randomize the types of every pokemon", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+  
   BASE_STATS_CHECKBOX = [
     [
       # Input
@@ -225,7 +236,7 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + INSTANT_HATCH_EGGS_CHECKBOX + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX + BASE_STATS_CHECKBOX
+  layout = LAYOUT_HEADER + INSTANT_HATCH_EGGS_CHECKBOX + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX + TYPES_CHECKBOX + BASE_STATS_CHECKBOX
 
   return layout
 

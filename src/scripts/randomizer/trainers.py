@@ -409,7 +409,7 @@ class TrainersRandomizer(BaseRandomizer):
 
       randomizedTrainersList.append(randomizedTrainer)
       self.trainerProgress = math.floor((len(randomizedTrainersList)/totalItems)*100)
-      print(f'Processing: {self.trainerProgress}% / 100%', end='\r')
+      print(f'Processing: Trainers Data {self.trainerProgress}% / 100%', end='\r')
       updateProgress(value=self.trainerProgress, title="Processing: Trainers Data")
 
     self.logger.info('Closing logs for Trainers Randomizer')

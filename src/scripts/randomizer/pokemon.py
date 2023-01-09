@@ -49,6 +49,10 @@ class PokemonRandomizer(BaseRandomizer):
 
     return randomizedLearnset
 
+  def getRandomType(self, blacklist: list = []):
+    typesIds = [typeId for typeId in list(range(18)) if typeId not in blacklist]
+    return self.getRandomValue(items=typesIds)
+
   def getRandomizedPokemonList(self, options: dict = None):
     self.logger.info('Starting logs for Pokemon Personal Data Randomizer')
 
@@ -85,17 +89,31 @@ class PokemonRandomizer(BaseRandomizer):
         randomizedPokemon["levelup_moves"] = self.getRandomizedLearnset(randomizedPokemon["levelup_moves"])
 
       if options["instantHatchEgg"]:
+        # Egg Hatching just need 1 cycle
         randomizedPokemon["egg_hatch_steps"] = 1
 
       if options["randomBaseStats"]:
+        # Randomize the distribution of baseStats
         randomStats = self.getRandomBaseStats(pkmPersonalData=randomizedPokemon)
         self.logger.info(f'Original Base Stats: {randomizedPokemon["base_stats"]}')
         self.logger.info(f'New randomized Base Stats: {randomStats}')
         randomizedPokemon["base_stats"] = randomStats
 
+      if options["types"]:
+        # Randomize the types of the pokemon
+        isMonotype = randomizedPokemon["type_1"] == randomizedPokemon["type_2"]
+        randomType = self.getRandomType()
+        randomizedPokemon["type_1"] = randomType
+
+        if isMonotype:
+          randomizedPokemon["type_2"] = randomType
+        else:
+          randomType = self.getRandomType(blacklist=[randomizedPokemon["type_1"]])
+          randomizedPokemon["type_2"] = randomType
+
       randomizedPokemonList.append(randomizedPokemon)
       self.pokemonProgress = math.floor((len(randomizedPokemonList)/totalItems)*100)
-      print(f'Processing: {self.pokemonProgress}% / 100%', end='\r')
+      print(f'Processing: Pokemon Data {self.pokemonProgress}% / 100%', end='\r')
       updateProgress(value=self.pokemonProgress, title="Processing: Pokemon Data")
 
     self.logger.info('Closing logs for Pokemon Personal Data Randomizer')
