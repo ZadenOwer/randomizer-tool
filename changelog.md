@@ -1,4 +1,11 @@
-# 1.1.2 - 01/06/2023
+# 1.1.3 - 01/08/2023
+
+- Improvements on performance
+- Clean up code
+- Option for instant hatching eggs implemented
+- Better User Feedback with progress bar
+  
+- # 1.1.2 - 01/06/2023
 
 - Option for randomize the base stats values was implemented
 - Improvement on the value randomization logic
