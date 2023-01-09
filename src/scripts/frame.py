@@ -154,11 +154,11 @@ def getPokemonLayout(optionsValues: dict):
   INSTANT_HATCH_EGGS_CHECKBOX = [
     [
       # Input
-      sg.Check("Instant Hatch Eggs", key="instantHatchEgg", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["instantHatchEgg"]),
+      sg.Check("Instant Eggs Hatching", key="instantHatchEgg", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["instantHatchEgg"]),
     ],
     # Description
     [
-      sg.Text("Just need 1 step to hatch any egg", font=TEXT_FONT, background_color=BG_COLOR),
+      sg.Text("Reduce the cycles to hatch any egg to 1", font=TEXT_FONT, background_color=BG_COLOR),
     ]
   ]
 
