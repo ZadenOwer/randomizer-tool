@@ -3,7 +3,7 @@ import os
 
 def generateBinary(schemaPath:str, jsonPath:str):
   # command = "flatc.exe -b schema.bfbs data.json"
-  flatcPath = "./src/flatc.exe"
+  flatcPath = "./src/statics/flatc.exe"
 
   process = subprocess.run([
     os.path.abspath(flatcPath),

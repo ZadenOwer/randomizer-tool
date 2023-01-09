@@ -1,5052 +1,5052 @@
-﻿[
-  {
+﻿{
+  "1": {
     "devName": "DEV_HUSIGIDANE",
     "id": 1,
     "forms": 1
   },
-  {
+  "2": {
     "devName": "DEV_HUSIGISOU",
     "id": 2,
     "forms": 1
   },
-  {
+  "3": {
     "devName": "DEV_HUSIGIBANA",
     "id": 3,
     "forms": 1
   },
-  {
+  "4": {
     "devName": "DEV_HITOKAGE",
     "id": 4,
     "forms": 1
   },
-  {
+  "5": {
     "devName": "DEV_RIZAADO",
     "id": 5,
     "forms": 1
   },
-  {
+  "6": {
     "devName": "DEV_RIZAADON",
     "id": 6,
     "forms": 1
   },
-  {
+  "7": {
     "devName": "DEV_ZENIGAME",
     "id": 7,
     "forms": 1
   },
-  {
+  "8": {
     "devName": "DEV_KAMEERU",
     "id": 8,
     "forms": 1
   },
-  {
+  "9": {
     "devName": "DEV_KAMEKKUSU",
     "id": 9,
     "forms": 1
   },
-  {
+  "10": {
     "devName": "DEV_KYATAPII",
     "id": 10,
     "forms": 1
   },
-  {
+  "11": {
     "devName": "DEV_TORANSERU",
     "id": 11,
     "forms": 1
   },
-  {
+  "12": {
     "devName": "DEV_BATAHURII",
     "id": 12,
     "forms": 1
   },
-  {
+  "13": {
     "devName": "DEV_BIIDORU",
     "id": 13,
     "forms": 1
   },
-  {
+  "14": {
     "devName": "DEV_KOKUUN",
     "id": 14,
     "forms": 1
   },
-  {
+  "15": {
     "devName": "DEV_SUPIAA",
     "id": 15,
     "forms": 1
   },
-  {
+  "16": {
     "devName": "DEV_POPPO",
     "id": 16,
     "forms": 1
   },
-  {
+  "17": {
     "devName": "DEV_PIZYON",
     "id": 17,
     "forms": 1
   },
-  {
+  "18": {
     "devName": "DEV_PIZYOTTO",
     "id": 18,
     "forms": 1
   },
-  {
+  "19": {
     "devName": "DEV_KORATTA",
     "id": 19,
     "forms": 1
   },
-  {
+  "20": {
     "devName": "DEV_RATTA",
     "id": 20,
     "forms": 1
   },
-  {
+  "21": {
     "devName": "DEV_ONISUZUME",
     "id": 21,
     "forms": 1
   },
-  {
+  "22": {
     "devName": "DEV_ONIDORIRU",
     "id": 22,
     "forms": 1
   },
-  {
+  "23": {
     "devName": "DEV_AABO",
     "id": 23,
     "forms": 1
   },
-  {
+  "24": {
     "devName": "DEV_AABOKKU",
     "id": 24,
     "forms": 1
   },
-  {
+  "25": {
     "devName": "DEV_PIKATYUU",
     "id": 25,
     "forms": 9
   },
-  {
+  "26": {
     "devName": "DEV_RAITYUU",
     "id": 26,
     "forms": 2
   },
-  {
+  "27": {
     "devName": "DEV_SANDO",
     "id": 27,
     "forms": 1
   },
-  {
+  "28": {
     "devName": "DEV_SANDOPAN",
     "id": 28,
     "forms": 1
   },
-  {
+  "29": {
     "devName": "DEV_NIDORAN_F",
     "id": 29,
     "forms": 1
   },
-  {
+  "30": {
     "devName": "DEV_NIDORIINA",
     "id": 30,
     "forms": 1
   },
-  {
+  "31": {
     "devName": "DEV_NIDOKUIN",
     "id": 31,
     "forms": 1
   },
-  {
+  "32": {
     "devName": "DEV_NIDORAN_M",
     "id": 32,
     "forms": 1
   },
-  {
+  "33": {
     "devName": "DEV_NIDORIINO",
     "id": 33,
     "forms": 1
   },
-  {
+  "34": {
     "devName": "DEV_NIDOKINGU",
     "id": 34,
     "forms": 1
   },
-  {
+  "35": {
     "devName": "DEV_PIPPI",
     "id": 35,
     "forms": 1
   },
-  {
+  "36": {
     "devName": "DEV_PIKUSII",
     "id": 36,
     "forms": 1
   },
-  {
+  "37": {
     "devName": "DEV_ROKON",
     "id": 37,
     "forms": 1
   },
-  {
+  "38": {
     "devName": "DEV_KYUUKON",
     "id": 38,
     "forms": 1
   },
-  {
+  "39": {
     "devName": "DEV_PURIN",
     "id": 39,
     "forms": 1
   },
-  {
+  "40": {
     "devName": "DEV_PUKURIN",
     "id": 40,
     "forms": 1
   },
-  {
+  "41": {
     "devName": "DEV_ZUBATTO",
     "id": 41,
     "forms": 1
   },
-  {
+  "42": {
     "devName": "DEV_GORUBATTO",
     "id": 42,
     "forms": 1
   },
-  {
+  "43": {
     "devName": "DEV_NAZONOKUSA",
     "id": 43,
     "forms": 1
   },
-  {
+  "44": {
     "devName": "DEV_KUSAIHANA",
     "id": 44,
     "forms": 1
   },
-  {
+  "45": {
     "devName": "DEV_RAHURESIA",
     "id": 45,
     "forms": 1
   },
-  {
+  "46": {
     "devName": "DEV_PARASU",
     "id": 46,
     "forms": 1
   },
-  {
+  "47": {
     "devName": "DEV_PARASEKUTO",
     "id": 47,
     "forms": 1
   },
-  {
+  "48": {
     "devName": "DEV_KONPAN",
     "id": 48,
     "forms": 1
   },
-  {
+  "49": {
     "devName": "DEV_MORUFON",
     "id": 49,
     "forms": 1
   },
-  {
+  "50": {
     "devName": "DEV_DHIGUDA",
     "id": 50,
     "forms": 2
   },
-  {
+  "51": {
     "devName": "DEV_DAGUTORIO",
     "id": 51,
     "forms": 2
   },
-  {
+  "52": {
     "devName": "DEV_NYAASU",
     "id": 52,
     "forms": 3
   },
-  {
+  "53": {
     "devName": "DEV_PERUSIAN",
     "id": 53,
     "forms": 2
   },
-  {
+  "54": {
     "devName": "DEV_KODAKKU",
     "id": 54,
     "forms": 1
   },
-  {
+  "55": {
     "devName": "DEV_GORUDAKKU",
     "id": 55,
     "forms": 1
   },
-  {
+  "56": {
     "devName": "DEV_MANKII",
     "id": 56,
     "forms": 1
   },
-  {
+  "57": {
     "devName": "DEV_OKORIZARU",
     "id": 57,
     "forms": 1
   },
-  {
+  "58": {
     "devName": "DEV_GAADHI",
     "id": 58,
     "forms": 2
   },
-  {
+  "59": {
     "devName": "DEV_UINDHI",
     "id": 59,
     "forms": 2
   },
-  {
+  "60": {
     "devName": "DEV_NYOROMO",
     "id": 60,
     "forms": 1
   },
-  {
+  "61": {
     "devName": "DEV_NYOROZO",
     "id": 61,
     "forms": 1
   },
-  {
+  "62": {
     "devName": "DEV_NYOROBON",
     "id": 62,
     "forms": 1
   },
-  {
+  "63": {
     "devName": "DEV_KEESHI",
     "id": 63,
     "forms": 1
   },
-  {
+  "64": {
     "devName": "DEV_YUNGERAA",
     "id": 64,
     "forms": 1
   },
-  {
+  "65": {
     "devName": "DEV_HUUDHIN",
     "id": 65,
     "forms": 1
   },
-  {
+  "66": {
     "devName": "DEV_WANRIKII",
     "id": 66,
     "forms": 1
   },
-  {
+  "67": {
     "devName": "DEV_GOORIKII",
     "id": 67,
     "forms": 1
   },
-  {
+  "68": {
     "devName": "DEV_KAIRIKII",
     "id": 68,
     "forms": 1
   },
-  {
+  "69": {
     "devName": "DEV_MADATUBOMI",
     "id": 69,
     "forms": 1
   },
-  {
+  "70": {
     "devName": "DEV_UTUDON",
     "id": 70,
     "forms": 1
   },
-  {
+  "71": {
     "devName": "DEV_UTUBOTTO",
     "id": 71,
     "forms": 1
   },
-  {
+  "72": {
     "devName": "DEV_MENOKURAGE",
     "id": 72,
     "forms": 1
   },
-  {
+  "73": {
     "devName": "DEV_DOKUKURAGE",
     "id": 73,
     "forms": 1
   },
-  {
+  "74": {
     "devName": "DEV_ISITUBUTE",
     "id": 74,
     "forms": 1
   },
-  {
+  "75": {
     "devName": "DEV_GOROON",
     "id": 75,
     "forms": 1
   },
-  {
+  "76": {
     "devName": "DEV_GOROONYA",
     "id": 76,
     "forms": 1
   },
-  {
+  "77": {
     "devName": "DEV_PONIITA",
     "id": 77,
     "forms": 1
   },
-  {
+  "78": {
     "devName": "DEV_GYAROPPU",
     "id": 78,
     "forms": 1
   },
-  {
+  "79": {
     "devName": "DEV_YADON",
     "id": 79,
     "forms": 2
   },
-  {
+  "80": {
     "devName": "DEV_YADORAN",
     "id": 80,
     "forms": 2
   },
-  {
+  "81": {
     "devName": "DEV_KOIRU",
     "id": 81,
     "forms": 1
   },
-  {
+  "82": {
     "devName": "DEV_REAKOIRU",
     "id": 82,
     "forms": 1
   },
-  {
+  "83": {
     "devName": "DEV_KAMONEGI",
     "id": 83,
     "forms": 1
   },
-  {
+  "84": {
     "devName": "DEV_DOODOO",
     "id": 84,
     "forms": 1
   },
-  {
+  "85": {
     "devName": "DEV_DOODORIO",
     "id": 85,
     "forms": 1
   },
-  {
+  "86": {
     "devName": "DEV_PAUWAU",
     "id": 86,
     "forms": 1
   },
-  {
+  "87": {
     "devName": "DEV_ZYUGON",
     "id": 87,
     "forms": 1
   },
-  {
+  "88": {
     "devName": "DEV_BETOBETAA",
     "id": 88,
     "forms": 2
   },
-  {
+  "89": {
     "devName": "DEV_BETOBETON",
     "id": 89,
     "forms": 2
   },
-  {
+  "90": {
     "devName": "DEV_SHERUDAA",
     "id": 90,
     "forms": 1
   },
-  {
+  "91": {
     "devName": "DEV_PARUSHEN",
     "id": 91,
     "forms": 1
   },
-  {
+  "92": {
     "devName": "DEV_GOOSU",
     "id": 92,
     "forms": 1
   },
-  {
+  "93": {
     "devName": "DEV_GOOSUTO",
     "id": 93,
     "forms": 1
   },
-  {
+  "94": {
     "devName": "DEV_GENGAA",
     "id": 94,
     "forms": 1
   },
-  {
+  "95": {
     "devName": "DEV_IWAAKU",
     "id": 95,
     "forms": 1
   },
-  {
+  "96": {
     "devName": "DEV_SURIIPU",
     "id": 96,
     "forms": 1
   },
-  {
+  "97": {
     "devName": "DEV_SURIIPAA",
     "id": 97,
     "forms": 1
   },
-  {
+  "98": {
     "devName": "DEV_KURABU",
     "id": 98,
     "forms": 1
   },
-  {
+  "99": {
     "devName": "DEV_KINGURAA",
     "id": 99,
     "forms": 1
   },
-  {
+  "100": {
     "devName": "DEV_BIRIRIDAMA",
     "id": 100,
     "forms": 2
   },
-  {
+  "101": {
     "devName": "DEV_MARUMAIN",
     "id": 101,
     "forms": 2
   },
-  {
+  "102": {
     "devName": "DEV_TAMATAMA",
     "id": 102,
     "forms": 1
   },
-  {
+  "103": {
     "devName": "DEV_NASSII",
     "id": 103,
     "forms": 1
   },
-  {
+  "104": {
     "devName": "DEV_KARAKARA",
     "id": 104,
     "forms": 1
   },
-  {
+  "105": {
     "devName": "DEV_GARAGARA",
     "id": 105,
     "forms": 1
   },
-  {
+  "106": {
     "devName": "DEV_SAWAMURAA",
     "id": 106,
     "forms": 1
   },
-  {
+  "107": {
     "devName": "DEV_EBIWARAA",
     "id": 107,
     "forms": 1
   },
-  {
+  "108": {
     "devName": "DEV_BERORINGA",
     "id": 108,
     "forms": 1
   },
-  {
+  "109": {
     "devName": "DEV_DOGAASU",
     "id": 109,
     "forms": 1
   },
-  {
+  "110": {
     "devName": "DEV_MATADOGASU",
     "id": 110,
     "forms": 1
   },
-  {
+  "111": {
     "devName": "DEV_SAIHOON",
     "id": 111,
     "forms": 1
   },
-  {
+  "112": {
     "devName": "DEV_SAIDON",
     "id": 112,
     "forms": 1
   },
-  {
+  "113": {
     "devName": "DEV_RAKKII",
     "id": 113,
     "forms": 1
   },
-  {
+  "114": {
     "devName": "DEV_MONZYARA",
     "id": 114,
     "forms": 1
   },
-  {
+  "115": {
     "devName": "DEV_GARUURA",
     "id": 115,
     "forms": 1
   },
-  {
+  "116": {
     "devName": "DEV_TATTUU",
     "id": 116,
     "forms": 1
   },
-  {
+  "117": {
     "devName": "DEV_SIIDORA",
     "id": 117,
     "forms": 1
   },
-  {
+  "118": {
     "devName": "DEV_TOSAKINTO",
     "id": 118,
     "forms": 1
   },
-  {
+  "119": {
     "devName": "DEV_AZUMAOU",
     "id": 119,
     "forms": 1
   },
-  {
+  "120": {
     "devName": "DEV_HITODEMAN",
     "id": 120,
     "forms": 1
   },
-  {
+  "121": {
     "devName": "DEV_SUTAAMII",
     "id": 121,
     "forms": 1
   },
-  {
+  "122": {
     "devName": "DEV_BARIYAADO",
     "id": 122,
     "forms": 1
   },
-  {
+  "123": {
     "devName": "DEV_SUTORAIKU",
     "id": 123,
     "forms": 1
   },
-  {
+  "124": {
     "devName": "DEV_RUUZYURA",
     "id": 124,
     "forms": 1
   },
-  {
+  "125": {
     "devName": "DEV_EREBUU",
     "id": 125,
     "forms": 1
   },
-  {
+  "126": {
     "devName": "DEV_BUUBAA",
     "id": 126,
     "forms": 1
   },
-  {
+  "127": {
     "devName": "DEV_KAIROSU",
     "id": 127,
     "forms": 1
   },
-  {
+  "128": {
     "devName": "DEV_KENTAROSU",
     "id": 128,
     "forms": 4
   },
-  {
+  "129": {
     "devName": "DEV_KOIKINGU",
     "id": 129,
     "forms": 1
   },
-  {
+  "130": {
     "devName": "DEV_GYARADOSU",
     "id": 130,
     "forms": 1
   },
-  {
+  "131": {
     "devName": "DEV_RAPURASU",
     "id": 131,
     "forms": 1
   },
-  {
+  "132": {
     "devName": "DEV_METAMON",
     "id": 132,
     "forms": 1
   },
-  {
+  "133": {
     "devName": "DEV_IIBUI",
     "id": 133,
     "forms": 1
   },
-  {
+  "134": {
     "devName": "DEV_SYAWAAZU",
     "id": 134,
     "forms": 1
   },
-  {
+  "135": {
     "devName": "DEV_SANDAASU",
     "id": 135,
     "forms": 1
   },
-  {
+  "136": {
     "devName": "DEV_BUUSUTAA",
     "id": 136,
     "forms": 1
   },
-  {
+  "137": {
     "devName": "DEV_PORIGON",
     "id": 137,
     "forms": 1
   },
-  {
+  "138": {
     "devName": "DEV_OMUNAITO",
     "id": 138,
     "forms": 1
   },
-  {
+  "139": {
     "devName": "DEV_OMUSUTAA",
     "id": 139,
     "forms": 1
   },
-  {
+  "140": {
     "devName": "DEV_KABUTO",
     "id": 140,
     "forms": 1
   },
-  {
+  "141": {
     "devName": "DEV_KABUTOPUSU",
     "id": 141,
     "forms": 1
   },
-  {
+  "142": {
     "devName": "DEV_PUTERA",
     "id": 142,
     "forms": 1
   },
-  {
+  "143": {
     "devName": "DEV_KABIGON",
     "id": 143,
     "forms": 1
   },
-  {
+  "144": {
     "devName": "DEV_HURIIZAA",
     "id": 144,
     "forms": 2
   },
-  {
+  "145": {
     "devName": "DEV_SANDAA",
     "id": 145,
     "forms": 2
   },
-  {
+  "146": {
     "devName": "DEV_FAIYAA",
     "id": 146,
     "forms": 2
   },
-  {
+  "147": {
     "devName": "DEV_MINIRYUU",
     "id": 147,
     "forms": 1
   },
-  {
+  "148": {
     "devName": "DEV_HAKURYUU",
     "id": 148,
     "forms": 1
   },
-  {
+  "149": {
     "devName": "DEV_KAIRYUU",
     "id": 149,
     "forms": 1
   },
-  {
+  "150": {
     "devName": "DEV_MYUUTUU",
     "id": 150,
     "forms": 1
   },
-  {
+  "151": {
     "devName": "DEV_MYUU",
     "id": 151,
     "forms": 1
   },
-  {
+  "152": {
     "devName": "DEV_TIKORIITA",
     "id": 152,
     "forms": 1
   },
-  {
+  "153": {
     "devName": "DEV_BEIRIIHU",
     "id": 153,
     "forms": 1
   },
-  {
+  "154": {
     "devName": "DEV_MEGANIUMU",
     "id": 154,
     "forms": 1
   },
-  {
+  "155": {
     "devName": "DEV_HINOARASI",
     "id": 155,
     "forms": 1
   },
-  {
+  "156": {
     "devName": "DEV_MAGUMARASI",
     "id": 156,
     "forms": 1
   },
-  {
+  "157": {
     "devName": "DEV_BAKUHUUN",
     "id": 157,
     "forms": 2
   },
-  {
+  "158": {
     "devName": "DEV_WANINOKO",
     "id": 158,
     "forms": 1
   },
-  {
+  "159": {
     "devName": "DEV_ARIGEITU",
     "id": 159,
     "forms": 1
   },
-  {
+  "160": {
     "devName": "DEV_OODAIRU",
     "id": 160,
     "forms": 1
   },
-  {
+  "161": {
     "devName": "DEV_OTATI",
     "id": 161,
     "forms": 1
   },
-  {
+  "162": {
     "devName": "DEV_OOTATI",
     "id": 162,
     "forms": 1
   },
-  {
+  "163": {
     "devName": "DEV_HOOHOO",
     "id": 163,
     "forms": 1
   },
-  {
+  "164": {
     "devName": "DEV_YORUNOZUKU",
     "id": 164,
     "forms": 1
   },
-  {
+  "165": {
     "devName": "DEV_REDHIBA",
     "id": 165,
     "forms": 1
   },
-  {
+  "166": {
     "devName": "DEV_REDHIAN",
     "id": 166,
     "forms": 1
   },
-  {
+  "167": {
     "devName": "DEV_ITOMARU",
     "id": 167,
     "forms": 1
   },
-  {
+  "168": {
     "devName": "DEV_ARIADOSU",
     "id": 168,
     "forms": 1
   },
-  {
+  "169": {
     "devName": "DEV_KUROBATTO",
     "id": 169,
     "forms": 1
   },
-  {
+  "170": {
     "devName": "DEV_TYONTII",
     "id": 170,
     "forms": 1
   },
-  {
+  "171": {
     "devName": "DEV_RANTAAN",
     "id": 171,
     "forms": 1
   },
-  {
+  "172": {
     "devName": "DEV_PITYUU",
     "id": 172,
     "forms": 1
   },
-  {
+  "173": {
     "devName": "DEV_PHI",
     "id": 173,
     "forms": 1
   },
-  {
+  "174": {
     "devName": "DEV_PUPURIN",
     "id": 174,
     "forms": 1
   },
-  {
+  "175": {
     "devName": "DEV_TOGEPII",
     "id": 175,
     "forms": 1
   },
-  {
+  "176": {
     "devName": "DEV_TOGETIKKU",
     "id": 176,
     "forms": 1
   },
-  {
+  "177": {
     "devName": "DEV_NEITHI",
     "id": 177,
     "forms": 1
   },
-  {
+  "178": {
     "devName": "DEV_NEITHIO",
     "id": 178,
     "forms": 1
   },
-  {
+  "179": {
     "devName": "DEV_MERIIPU",
     "id": 179,
     "forms": 1
   },
-  {
+  "180": {
     "devName": "DEV_MOKOKO",
     "id": 180,
     "forms": 1
   },
-  {
+  "181": {
     "devName": "DEV_DENRYUU",
     "id": 181,
     "forms": 1
   },
-  {
+  "182": {
     "devName": "DEV_KIREIHANA",
     "id": 182,
     "forms": 1
   },
-  {
+  "183": {
     "devName": "DEV_MARIRU",
     "id": 183,
     "forms": 1
   },
-  {
+  "184": {
     "devName": "DEV_MARIRURI",
     "id": 184,
     "forms": 1
   },
-  {
+  "185": {
     "devName": "DEV_USOKKII",
     "id": 185,
     "forms": 1
   },
-  {
+  "186": {
     "devName": "DEV_NYOROTONO",
     "id": 186,
     "forms": 1
   },
-  {
+  "187": {
     "devName": "DEV_HANEKKO",
     "id": 187,
     "forms": 1
   },
-  {
+  "188": {
     "devName": "DEV_POPOKKO",
     "id": 188,
     "forms": 1
   },
-  {
+  "189": {
     "devName": "DEV_WATAKKO",
     "id": 189,
     "forms": 1
   },
-  {
+  "190": {
     "devName": "DEV_EIPAMU",
     "id": 190,
     "forms": 1
   },
-  {
+  "191": {
     "devName": "DEV_HIMANATTU",
     "id": 191,
     "forms": 1
   },
-  {
+  "192": {
     "devName": "DEV_KIMAWARI",
     "id": 192,
     "forms": 1
   },
-  {
+  "193": {
     "devName": "DEV_YANYANMA",
     "id": 193,
     "forms": 1
   },
-  {
+  "194": {
     "devName": "DEV_UPAA",
     "id": 194,
     "forms": 2
   },
-  {
+  "195": {
     "devName": "DEV_NUOO",
     "id": 195,
     "forms": 1
   },
-  {
+  "196": {
     "devName": "DEV_EEFI",
     "id": 196,
     "forms": 1
   },
-  {
+  "197": {
     "devName": "DEV_BURAKKII",
     "id": 197,
     "forms": 1
   },
-  {
+  "198": {
     "devName": "DEV_YAMIKARASU",
     "id": 198,
     "forms": 1
   },
-  {
+  "199": {
     "devName": "DEV_YADOKINGU",
     "id": 199,
     "forms": 2
   },
-  {
+  "200": {
     "devName": "DEV_MUUMA",
     "id": 200,
     "forms": 1
   },
-  {
+  "201": {
     "devName": "DEV_ANNOON",
     "id": 201,
     "forms": 1
   },
-  {
+  "202": {
     "devName": "DEV_SOONANSU",
     "id": 202,
     "forms": 1
   },
-  {
+  "203": {
     "devName": "DEV_KIRINRIKI",
     "id": 203,
     "forms": 1
   },
-  {
+  "204": {
     "devName": "DEV_KUNUGIDAMA",
     "id": 204,
     "forms": 1
   },
-  {
+  "205": {
     "devName": "DEV_FORETOSU",
     "id": 205,
     "forms": 1
   },
-  {
+  "206": {
     "devName": "DEV_NOKOTTI",
     "id": 206,
     "forms": 1
   },
-  {
+  "207": {
     "devName": "DEV_GURAIGAA",
     "id": 207,
     "forms": 1
   },
-  {
+  "208": {
     "devName": "DEV_HAGANEERU",
     "id": 208,
     "forms": 1
   },
-  {
+  "209": {
     "devName": "DEV_BURUU",
     "id": 209,
     "forms": 1
   },
-  {
+  "210": {
     "devName": "DEV_GURANBURU",
     "id": 210,
     "forms": 1
   },
-  {
+  "211": {
     "devName": "DEV_HARIISEN",
     "id": 211,
     "forms": 2
   },
-  {
+  "212": {
     "devName": "DEV_HASSAMU",
     "id": 212,
     "forms": 1
   },
-  {
+  "213": {
     "devName": "DEV_TUBOTUBO",
     "id": 213,
     "forms": 1
   },
-  {
+  "214": {
     "devName": "DEV_HERAKUROSU",
     "id": 214,
     "forms": 1
   },
-  {
+  "215": {
     "devName": "DEV_NYUURA",
     "id": 215,
     "forms": 2
   },
-  {
+  "216": {
     "devName": "DEV_HIMEGUMA",
     "id": 216,
     "forms": 1
   },
-  {
+  "217": {
     "devName": "DEV_RINGUMA",
     "id": 217,
     "forms": 1
   },
-  {
+  "218": {
     "devName": "DEV_MAGUMAGGU",
     "id": 218,
     "forms": 1
   },
-  {
+  "219": {
     "devName": "DEV_MAGUKARUGO",
     "id": 219,
     "forms": 1
   },
-  {
+  "220": {
     "devName": "DEV_URIMUU",
     "id": 220,
     "forms": 1
   },
-  {
+  "221": {
     "devName": "DEV_INOMUU",
     "id": 221,
     "forms": 1
   },
-  {
+  "222": {
     "devName": "DEV_SANIIGO",
     "id": 222,
     "forms": 1
   },
-  {
+  "223": {
     "devName": "DEV_TEPPOUO",
     "id": 223,
     "forms": 1
   },
-  {
+  "224": {
     "devName": "DEV_OKUTAN",
     "id": 224,
     "forms": 1
   },
-  {
+  "225": {
     "devName": "DEV_DERIBAADO",
     "id": 225,
     "forms": 1
   },
-  {
+  "226": {
     "devName": "DEV_MANTAIN",
     "id": 226,
     "forms": 1
   },
-  {
+  "227": {
     "devName": "DEV_EAAMUDO",
     "id": 227,
     "forms": 1
   },
-  {
+  "228": {
     "devName": "DEV_DERUBIRU",
     "id": 228,
     "forms": 1
   },
-  {
+  "229": {
     "devName": "DEV_HERUGAA",
     "id": 229,
     "forms": 1
   },
-  {
+  "230": {
     "devName": "DEV_KINGUDORA",
     "id": 230,
     "forms": 1
   },
-  {
+  "231": {
     "devName": "DEV_GOMAZOU",
     "id": 231,
     "forms": 1
   },
-  {
+  "232": {
     "devName": "DEV_DONFAN",
     "id": 232,
     "forms": 1
   },
-  {
+  "233": {
     "devName": "DEV_PORIGON2",
     "id": 233,
     "forms": 1
   },
-  {
+  "234": {
     "devName": "DEV_ODOSISI",
     "id": 234,
     "forms": 1
   },
-  {
+  "235": {
     "devName": "DEV_DOOBURU",
     "id": 235,
     "forms": 1
   },
-  {
+  "236": {
     "devName": "DEV_BARUKII",
     "id": 236,
     "forms": 1
   },
-  {
+  "237": {
     "devName": "DEV_KAPOERAA",
     "id": 237,
     "forms": 1
   },
-  {
+  "238": {
     "devName": "DEV_MUTYUURU",
     "id": 238,
     "forms": 1
   },
-  {
+  "239": {
     "devName": "DEV_EREKIDDO",
     "id": 239,
     "forms": 1
   },
-  {
+  "240": {
     "devName": "DEV_BUBHI",
     "id": 240,
     "forms": 1
   },
-  {
+  "241": {
     "devName": "DEV_MIRUTANKU",
     "id": 241,
     "forms": 1
   },
-  {
+  "242": {
     "devName": "DEV_HAPINASU",
     "id": 242,
     "forms": 1
   },
-  {
+  "243": {
     "devName": "DEV_RAIKOU",
     "id": 243,
     "forms": 1
   },
-  {
+  "244": {
     "devName": "DEV_ENTEI",
     "id": 244,
     "forms": 1
   },
-  {
+  "245": {
     "devName": "DEV_SUIKUN",
     "id": 245,
     "forms": 1
   },
-  {
+  "246": {
     "devName": "DEV_YOOGIRASU",
     "id": 246,
     "forms": 1
   },
-  {
+  "247": {
     "devName": "DEV_SANAGIRASU",
     "id": 247,
     "forms": 1
   },
-  {
+  "248": {
     "devName": "DEV_BANGIRASU",
     "id": 248,
     "forms": 1
   },
-  {
+  "249": {
     "devName": "DEV_RUGIA",
     "id": 249,
     "forms": 1
   },
-  {
+  "250": {
     "devName": "DEV_HOUOU",
     "id": 250,
     "forms": 1
   },
-  {
+  "251": {
     "devName": "DEV_SEREBHI",
     "id": 251,
     "forms": 1
   },
-  {
+  "252": {
     "devName": "DEV_KIMORI",
     "id": 252,
     "forms": 1
   },
-  {
+  "253": {
     "devName": "DEV_ZYUPUTORU",
     "id": 253,
     "forms": 1
   },
-  {
+  "254": {
     "devName": "DEV_ZYUKAIN",
     "id": 254,
     "forms": 1
   },
-  {
+  "255": {
     "devName": "DEV_ATYAMO",
     "id": 255,
     "forms": 1
   },
-  {
+  "256": {
     "devName": "DEV_WAKASYAMO",
     "id": 256,
     "forms": 1
   },
-  {
+  "257": {
     "devName": "DEV_BASYAAMO",
     "id": 257,
     "forms": 1
   },
-  {
+  "258": {
     "devName": "DEV_MIZUGOROU",
     "id": 258,
     "forms": 1
   },
-  {
+  "259": {
     "devName": "DEV_NUMAKUROO",
     "id": 259,
     "forms": 1
   },
-  {
+  "260": {
     "devName": "DEV_RAGURAAZI",
     "id": 260,
     "forms": 1
   },
-  {
+  "261": {
     "devName": "DEV_POTIENA",
     "id": 261,
     "forms": 1
   },
-  {
+  "262": {
     "devName": "DEV_GURAENA",
     "id": 262,
     "forms": 1
   },
-  {
+  "263": {
     "devName": "DEV_ZIGUZAGUMA",
     "id": 263,
     "forms": 1
   },
-  {
+  "264": {
     "devName": "DEV_MASSUGUMA",
     "id": 264,
     "forms": 1
   },
-  {
+  "265": {
     "devName": "DEV_KEMUSSO",
     "id": 265,
     "forms": 1
   },
-  {
+  "266": {
     "devName": "DEV_KARASARISU",
     "id": 266,
     "forms": 1
   },
-  {
+  "267": {
     "devName": "DEV_AGEHANTO",
     "id": 267,
     "forms": 1
   },
-  {
+  "268": {
     "devName": "DEV_MAYURUDO",
     "id": 268,
     "forms": 1
   },
-  {
+  "269": {
     "devName": "DEV_DOKUKEIRU",
     "id": 269,
     "forms": 1
   },
-  {
+  "270": {
     "devName": "DEV_HASUBOO",
     "id": 270,
     "forms": 1
   },
-  {
+  "271": {
     "devName": "DEV_HASUBURERO",
     "id": 271,
     "forms": 1
   },
-  {
+  "272": {
     "devName": "DEV_RUNPAPPA",
     "id": 272,
     "forms": 1
   },
-  {
+  "273": {
     "devName": "DEV_TANEBOO",
     "id": 273,
     "forms": 1
   },
-  {
+  "274": {
     "devName": "DEV_KONOHANA",
     "id": 274,
     "forms": 1
   },
-  {
+  "275": {
     "devName": "DEV_DAATENGU",
     "id": 275,
     "forms": 1
   },
-  {
+  "276": {
     "devName": "DEV_SUBAME",
     "id": 276,
     "forms": 1
   },
-  {
+  "277": {
     "devName": "DEV_OOSUBAME",
     "id": 277,
     "forms": 1
   },
-  {
+  "278": {
     "devName": "DEV_KYAMOME",
     "id": 278,
     "forms": 1
   },
-  {
+  "279": {
     "devName": "DEV_PERIPPAA",
     "id": 279,
     "forms": 1
   },
-  {
+  "280": {
     "devName": "DEV_RARUTOSU",
     "id": 280,
     "forms": 1
   },
-  {
+  "281": {
     "devName": "DEV_KIRURIA",
     "id": 281,
     "forms": 1
   },
-  {
+  "282": {
     "devName": "DEV_SAANAITO",
     "id": 282,
     "forms": 1
   },
-  {
+  "283": {
     "devName": "DEV_AMETAMA",
     "id": 283,
     "forms": 1
   },
-  {
+  "284": {
     "devName": "DEV_AMEMOOSU",
     "id": 284,
     "forms": 1
   },
-  {
+  "285": {
     "devName": "DEV_KINOKOKO",
     "id": 285,
     "forms": 1
   },
-  {
+  "286": {
     "devName": "DEV_KINOGASSA",
     "id": 286,
     "forms": 1
   },
-  {
+  "287": {
     "devName": "DEV_NAMAKERO",
     "id": 287,
     "forms": 1
   },
-  {
+  "288": {
     "devName": "DEV_YARUKIMONO",
     "id": 288,
     "forms": 1
   },
-  {
+  "289": {
     "devName": "DEV_KEKKINGU",
     "id": 289,
     "forms": 1
   },
-  {
+  "290": {
     "devName": "DEV_TUTININ",
     "id": 290,
     "forms": 1
   },
-  {
+  "291": {
     "devName": "DEV_TEKKANIN",
     "id": 291,
     "forms": 1
   },
-  {
+  "292": {
     "devName": "DEV_NUKENIN",
     "id": 292,
     "forms": 1
   },
-  {
+  "293": {
     "devName": "DEV_GONYONYO",
     "id": 293,
     "forms": 1
   },
-  {
+  "294": {
     "devName": "DEV_DOGOOMU",
     "id": 294,
     "forms": 1
   },
-  {
+  "295": {
     "devName": "DEV_BAKUONGU",
     "id": 295,
     "forms": 1
   },
-  {
+  "296": {
     "devName": "DEV_MAKUNOSITA",
     "id": 296,
     "forms": 1
   },
-  {
+  "297": {
     "devName": "DEV_HARITEYAMA",
     "id": 297,
     "forms": 1
   },
-  {
+  "298": {
     "devName": "DEV_RURIRI",
     "id": 298,
     "forms": 1
   },
-  {
+  "299": {
     "devName": "DEV_NOZUPASU",
     "id": 299,
     "forms": 1
   },
-  {
+  "300": {
     "devName": "DEV_ENEKO",
     "id": 300,
     "forms": 1
   },
-  {
+  "301": {
     "devName": "DEV_ENEKORORO",
     "id": 301,
     "forms": 1
   },
-  {
+  "302": {
     "devName": "DEV_YAMIRAMI",
     "id": 302,
     "forms": 1
   },
-  {
+  "303": {
     "devName": "DEV_KUTIITO",
     "id": 303,
     "forms": 1
   },
-  {
+  "304": {
     "devName": "DEV_KOKODORA",
     "id": 304,
     "forms": 1
   },
-  {
+  "305": {
     "devName": "DEV_KODORA",
     "id": 305,
     "forms": 1
   },
-  {
+  "306": {
     "devName": "DEV_BOSUGODORA",
     "id": 306,
     "forms": 1
   },
-  {
+  "307": {
     "devName": "DEV_ASANAN",
     "id": 307,
     "forms": 1
   },
-  {
+  "308": {
     "devName": "DEV_TYAAREMU",
     "id": 308,
     "forms": 1
   },
-  {
+  "309": {
     "devName": "DEV_RAKURAI",
     "id": 309,
     "forms": 1
   },
-  {
+  "310": {
     "devName": "DEV_RAIBORUTO",
     "id": 310,
     "forms": 1
   },
-  {
+  "311": {
     "devName": "DEV_PURASURU",
     "id": 311,
     "forms": 1
   },
-  {
+  "312": {
     "devName": "DEV_MAINAN",
     "id": 312,
     "forms": 1
   },
-  {
+  "313": {
     "devName": "DEV_BARUBIITO",
     "id": 313,
     "forms": 1
   },
-  {
+  "314": {
     "devName": "DEV_IRUMIIZE",
     "id": 314,
     "forms": 1
   },
-  {
+  "315": {
     "devName": "DEV_ROZERIA",
     "id": 315,
     "forms": 1
   },
-  {
+  "316": {
     "devName": "DEV_GOKURIN",
     "id": 316,
     "forms": 1
   },
-  {
+  "317": {
     "devName": "DEV_MARUNOOMU",
     "id": 317,
     "forms": 1
   },
-  {
+  "318": {
     "devName": "DEV_KIBANIA",
     "id": 318,
     "forms": 1
   },
-  {
+  "319": {
     "devName": "DEV_SAMEHADAA",
     "id": 319,
     "forms": 1
   },
-  {
+  "320": {
     "devName": "DEV_HOERUKO",
     "id": 320,
     "forms": 1
   },
-  {
+  "321": {
     "devName": "DEV_HOERUOO",
     "id": 321,
     "forms": 1
   },
-  {
+  "322": {
     "devName": "DEV_DONMERU",
     "id": 322,
     "forms": 1
   },
-  {
+  "323": {
     "devName": "DEV_BAKUUDA",
     "id": 323,
     "forms": 1
   },
-  {
+  "324": {
     "devName": "DEV_KOOTASU",
     "id": 324,
     "forms": 1
   },
-  {
+  "325": {
     "devName": "DEV_BANEBUU",
     "id": 325,
     "forms": 1
   },
-  {
+  "326": {
     "devName": "DEV_BUUPIGGU",
     "id": 326,
     "forms": 1
   },
-  {
+  "327": {
     "devName": "DEV_PATTIIRU",
     "id": 327,
     "forms": 1
   },
-  {
+  "328": {
     "devName": "DEV_NAKKURAA",
     "id": 328,
     "forms": 1
   },
-  {
+  "329": {
     "devName": "DEV_BIBURAABA",
     "id": 329,
     "forms": 1
   },
-  {
+  "330": {
     "devName": "DEV_HURAIGON",
     "id": 330,
     "forms": 1
   },
-  {
+  "331": {
     "devName": "DEV_SABONEA",
     "id": 331,
     "forms": 1
   },
-  {
+  "332": {
     "devName": "DEV_NOKUTASU",
     "id": 332,
     "forms": 1
   },
-  {
+  "333": {
     "devName": "DEV_TIRUTTO",
     "id": 333,
     "forms": 1
   },
-  {
+  "334": {
     "devName": "DEV_TIRUTARISU",
     "id": 334,
     "forms": 1
   },
-  {
+  "335": {
     "devName": "DEV_ZANGUUSU",
     "id": 335,
     "forms": 1
   },
-  {
+  "336": {
     "devName": "DEV_HABUNEEKU",
     "id": 336,
     "forms": 1
   },
-  {
+  "337": {
     "devName": "DEV_RUNATOON",
     "id": 337,
     "forms": 1
   },
-  {
+  "338": {
     "devName": "DEV_SORUROKKU",
     "id": 338,
     "forms": 1
   },
-  {
+  "339": {
     "devName": "DEV_DOZYOTTI",
     "id": 339,
     "forms": 1
   },
-  {
+  "340": {
     "devName": "DEV_NAMAZUN",
     "id": 340,
     "forms": 1
   },
-  {
+  "341": {
     "devName": "DEV_HEIGANI",
     "id": 341,
     "forms": 1
   },
-  {
+  "342": {
     "devName": "DEV_SIZARIGAA",
     "id": 342,
     "forms": 1
   },
-  {
+  "343": {
     "devName": "DEV_YAZIRON",
     "id": 343,
     "forms": 1
   },
-  {
+  "344": {
     "devName": "DEV_NENDOORU",
     "id": 344,
     "forms": 1
   },
-  {
+  "345": {
     "devName": "DEV_RIRIIRA",
     "id": 345,
     "forms": 1
   },
-  {
+  "346": {
     "devName": "DEV_YUREIDORU",
     "id": 346,
     "forms": 1
   },
-  {
+  "347": {
     "devName": "DEV_ANOPUSU",
     "id": 347,
     "forms": 1
   },
-  {
+  "348": {
     "devName": "DEV_AAMARUDO",
     "id": 348,
     "forms": 1
   },
-  {
+  "349": {
     "devName": "DEV_HINBASU",
     "id": 349,
     "forms": 1
   },
-  {
+  "350": {
     "devName": "DEV_MIROKAROSU",
     "id": 350,
     "forms": 1
   },
-  {
+  "351": {
     "devName": "DEV_POWARUN",
     "id": 351,
     "forms": 1
   },
-  {
+  "352": {
     "devName": "DEV_KAKUREON",
     "id": 352,
     "forms": 1
   },
-  {
+  "353": {
     "devName": "DEV_KAGEBOUZU",
     "id": 353,
     "forms": 1
   },
-  {
+  "354": {
     "devName": "DEV_ZYUPETTA",
     "id": 354,
     "forms": 1
   },
-  {
+  "355": {
     "devName": "DEV_YOMAWARU",
     "id": 355,
     "forms": 1
   },
-  {
+  "356": {
     "devName": "DEV_SAMAYOORU",
     "id": 356,
     "forms": 1
   },
-  {
+  "357": {
     "devName": "DEV_TOROPIUSU",
     "id": 357,
     "forms": 1
   },
-  {
+  "358": {
     "devName": "DEV_TIRIIN",
     "id": 358,
     "forms": 1
   },
-  {
+  "359": {
     "devName": "DEV_ABUSORU",
     "id": 359,
     "forms": 1
   },
-  {
+  "360": {
     "devName": "DEV_SOONANO",
     "id": 360,
     "forms": 1
   },
-  {
+  "361": {
     "devName": "DEV_YUKIWARASI",
     "id": 361,
     "forms": 1
   },
-  {
+  "362": {
     "devName": "DEV_ONIGOORI",
     "id": 362,
     "forms": 1
   },
-  {
+  "363": {
     "devName": "DEV_TAMAZARASI",
     "id": 363,
     "forms": 1
   },
-  {
+  "364": {
     "devName": "DEV_TODOGURAA",
     "id": 364,
     "forms": 1
   },
-  {
+  "365": {
     "devName": "DEV_TODOZERUGA",
     "id": 365,
     "forms": 1
   },
-  {
+  "366": {
     "devName": "DEV_PAARURU",
     "id": 366,
     "forms": 1
   },
-  {
+  "367": {
     "devName": "DEV_HANTEERU",
     "id": 367,
     "forms": 1
   },
-  {
+  "368": {
     "devName": "DEV_SAKURABISU",
     "id": 368,
     "forms": 1
   },
-  {
+  "369": {
     "devName": "DEV_ZIIRANSU",
     "id": 369,
     "forms": 1
   },
-  {
+  "370": {
     "devName": "DEV_RABUKASU",
     "id": 370,
     "forms": 1
   },
-  {
+  "371": {
     "devName": "DEV_TATUBEI",
     "id": 371,
     "forms": 1
   },
-  {
+  "372": {
     "devName": "DEV_KOMORUU",
     "id": 372,
     "forms": 1
   },
-  {
+  "373": {
     "devName": "DEV_BOOMANDA",
     "id": 373,
     "forms": 1
   },
-  {
+  "374": {
     "devName": "DEV_DANBARU",
     "id": 374,
     "forms": 1
   },
-  {
+  "375": {
     "devName": "DEV_METANGU",
     "id": 375,
     "forms": 1
   },
-  {
+  "376": {
     "devName": "DEV_METAGUROSU",
     "id": 376,
     "forms": 1
   },
-  {
+  "377": {
     "devName": "DEV_REZIROKKU",
     "id": 377,
     "forms": 1
   },
-  {
+  "378": {
     "devName": "DEV_REZIAISU",
     "id": 378,
     "forms": 1
   },
-  {
+  "379": {
     "devName": "DEV_REZISUTIRU",
     "id": 379,
     "forms": 1
   },
-  {
+  "380": {
     "devName": "DEV_RATHIASU",
     "id": 380,
     "forms": 1
   },
-  {
+  "381": {
     "devName": "DEV_RATHIOSU",
     "id": 381,
     "forms": 1
   },
-  {
+  "382": {
     "devName": "DEV_KAIOOGA",
     "id": 382,
     "forms": 1
   },
-  {
+  "383": {
     "devName": "DEV_GURAADON",
     "id": 383,
     "forms": 1
   },
-  {
+  "384": {
     "devName": "DEV_REKKUUZA",
     "id": 384,
     "forms": 1
   },
-  {
+  "385": {
     "devName": "DEV_ZIRAATI",
     "id": 385,
     "forms": 1
   },
-  {
+  "386": {
     "devName": "DEV_DEOKISISU",
     "id": 386,
     "forms": 1
   },
-  {
+  "387": {
     "devName": "DEV_NAETORU",
     "id": 387,
     "forms": 1
   },
-  {
+  "388": {
     "devName": "DEV_HAYASIGAME",
     "id": 388,
     "forms": 1
   },
-  {
+  "389": {
     "devName": "DEV_DODAITOSU",
     "id": 389,
     "forms": 1
   },
-  {
+  "390": {
     "devName": "DEV_HIKOZARU",
     "id": 390,
     "forms": 1
   },
-  {
+  "391": {
     "devName": "DEV_MOUKAZARU",
     "id": 391,
     "forms": 1
   },
-  {
+  "392": {
     "devName": "DEV_GOUKAZARU",
     "id": 392,
     "forms": 1
   },
-  {
+  "393": {
     "devName": "DEV_POTTYAMA",
     "id": 393,
     "forms": 1
   },
-  {
+  "394": {
     "devName": "DEV_POTTAISI",
     "id": 394,
     "forms": 1
   },
-  {
+  "395": {
     "devName": "DEV_ENPERUTO",
     "id": 395,
     "forms": 1
   },
-  {
+  "396": {
     "devName": "DEV_MUKKURU",
     "id": 396,
     "forms": 1
   },
-  {
+  "397": {
     "devName": "DEV_MUKUBAADO",
     "id": 397,
     "forms": 1
   },
-  {
+  "398": {
     "devName": "DEV_MUKUHOOKU",
     "id": 398,
     "forms": 1
   },
-  {
+  "399": {
     "devName": "DEV_BIPPA",
     "id": 399,
     "forms": 1
   },
-  {
+  "400": {
     "devName": "DEV_BIIDARU",
     "id": 400,
     "forms": 1
   },
-  {
+  "401": {
     "devName": "DEV_KOROBOOSI",
     "id": 401,
     "forms": 1
   },
-  {
+  "402": {
     "devName": "DEV_KOROTOKKU",
     "id": 402,
     "forms": 1
   },
-  {
+  "403": {
     "devName": "DEV_KORINKU",
     "id": 403,
     "forms": 1
   },
-  {
+  "404": {
     "devName": "DEV_RUKUSIO",
     "id": 404,
     "forms": 1
   },
-  {
+  "405": {
     "devName": "DEV_RENTORAA",
     "id": 405,
     "forms": 1
   },
-  {
+  "406": {
     "devName": "DEV_SUBOMII",
     "id": 406,
     "forms": 1
   },
-  {
+  "407": {
     "devName": "DEV_ROZUREIDO",
     "id": 407,
     "forms": 1
   },
-  {
+  "408": {
     "devName": "DEV_ZUGAIDOSU",
     "id": 408,
     "forms": 1
   },
-  {
+  "409": {
     "devName": "DEV_RAMUPARUDO",
     "id": 409,
     "forms": 1
   },
-  {
+  "410": {
     "devName": "DEV_TATETOPUSU",
     "id": 410,
     "forms": 1
   },
-  {
+  "411": {
     "devName": "DEV_TORIDEPUSU",
     "id": 411,
     "forms": 1
   },
-  {
+  "412": {
     "devName": "DEV_MINOMUTTI",
     "id": 412,
     "forms": 1
   },
-  {
+  "413": {
     "devName": "DEV_MINOMADAMU",
     "id": 413,
     "forms": 1
   },
-  {
+  "414": {
     "devName": "DEV_GAAMEIRU",
     "id": 414,
     "forms": 1
   },
-  {
+  "415": {
     "devName": "DEV_MITUHANII",
     "id": 415,
     "forms": 1
   },
-  {
+  "416": {
     "devName": "DEV_BIIKUIN",
     "id": 416,
     "forms": 1
   },
-  {
+  "417": {
     "devName": "DEV_PATIRISU",
     "id": 417,
     "forms": 1
   },
-  {
+  "418": {
     "devName": "DEV_BUIZERU",
     "id": 418,
     "forms": 1
   },
-  {
+  "419": {
     "devName": "DEV_HUROOZERU",
     "id": 419,
     "forms": 1
   },
-  {
+  "420": {
     "devName": "DEV_THERINBO",
     "id": 420,
     "forms": 1
   },
-  {
+  "421": {
     "devName": "DEV_THERIMU",
     "id": 421,
     "forms": 1
   },
-  {
+  "422": {
     "devName": "DEV_KARANAKUSI",
     "id": 422,
     "forms": 2
   },
-  {
+  "423": {
     "devName": "DEV_TORITODON",
     "id": 423,
     "forms": 2
   },
-  {
+  "424": {
     "devName": "DEV_ETEBOOSU",
     "id": 424,
     "forms": 1
   },
-  {
+  "425": {
     "devName": "DEV_HUWANTE",
     "id": 425,
     "forms": 1
   },
-  {
+  "426": {
     "devName": "DEV_HUWARAIDO",
     "id": 426,
     "forms": 1
   },
-  {
+  "427": {
     "devName": "DEV_MIMIRORU",
     "id": 427,
     "forms": 1
   },
-  {
+  "428": {
     "devName": "DEV_MIMIROPPU",
     "id": 428,
     "forms": 1
   },
-  {
+  "429": {
     "devName": "DEV_MUUMAAZI",
     "id": 429,
     "forms": 1
   },
-  {
+  "430": {
     "devName": "DEV_DONKARASU",
     "id": 430,
     "forms": 1
   },
-  {
+  "431": {
     "devName": "DEV_NYARUMAA",
     "id": 431,
     "forms": 1
   },
-  {
+  "432": {
     "devName": "DEV_BUNYATTO",
     "id": 432,
     "forms": 1
   },
-  {
+  "433": {
     "devName": "DEV_RIISYAN",
     "id": 433,
     "forms": 1
   },
-  {
+  "434": {
     "devName": "DEV_SUKANPUU",
     "id": 434,
     "forms": 1
   },
-  {
+  "435": {
     "devName": "DEV_SUKATANKU",
     "id": 435,
     "forms": 1
   },
-  {
+  "436": {
     "devName": "DEV_DOOMIRAA",
     "id": 436,
     "forms": 1
   },
-  {
+  "437": {
     "devName": "DEV_DOOTAKUN",
     "id": 437,
     "forms": 1
   },
-  {
+  "438": {
     "devName": "DEV_USOHATI",
     "id": 438,
     "forms": 1
   },
-  {
+  "439": {
     "devName": "DEV_MANENE",
     "id": 439,
     "forms": 1
   },
-  {
+  "440": {
     "devName": "DEV_PINPUKU",
     "id": 440,
     "forms": 1
   },
-  {
+  "441": {
     "devName": "DEV_PERAPPU",
     "id": 441,
     "forms": 1
   },
-  {
+  "442": {
     "devName": "DEV_MIKARUGE",
     "id": 442,
     "forms": 1
   },
-  {
+  "443": {
     "devName": "DEV_HUKAMARU",
     "id": 443,
     "forms": 1
   },
-  {
+  "444": {
     "devName": "DEV_GABAITO",
     "id": 444,
     "forms": 1
   },
-  {
+  "445": {
     "devName": "DEV_GABURIASU",
     "id": 445,
     "forms": 1
   },
-  {
+  "446": {
     "devName": "DEV_GONBE",
     "id": 446,
     "forms": 1
   },
-  {
+  "447": {
     "devName": "DEV_RIORU",
     "id": 447,
     "forms": 1
   },
-  {
+  "448": {
     "devName": "DEV_RUKARIO",
     "id": 448,
     "forms": 1
   },
-  {
+  "449": {
     "devName": "DEV_HIPOPOTASU",
     "id": 449,
     "forms": 1
   },
-  {
+  "450": {
     "devName": "DEV_KABARUDON",
     "id": 450,
     "forms": 1
   },
-  {
+  "451": {
     "devName": "DEV_SUKORUPI",
     "id": 451,
     "forms": 1
   },
-  {
+  "452": {
     "devName": "DEV_DORAPION",
     "id": 452,
     "forms": 1
   },
-  {
+  "453": {
     "devName": "DEV_GUREGGURU",
     "id": 453,
     "forms": 1
   },
-  {
+  "454": {
     "devName": "DEV_DOKUROGGU",
     "id": 454,
     "forms": 1
   },
-  {
+  "455": {
     "devName": "DEV_MASUKIPPA",
     "id": 455,
     "forms": 1
   },
-  {
+  "456": {
     "devName": "DEV_KEIKOUO",
     "id": 456,
     "forms": 1
   },
-  {
+  "457": {
     "devName": "DEV_NEORANTO",
     "id": 457,
     "forms": 1
   },
-  {
+  "458": {
     "devName": "DEV_TAMANTA",
     "id": 458,
     "forms": 1
   },
-  {
+  "459": {
     "devName": "DEV_YUKIKABURI",
     "id": 459,
     "forms": 1
   },
-  {
+  "460": {
     "devName": "DEV_YUKINOOO",
     "id": 460,
     "forms": 1
   },
-  {
+  "461": {
     "devName": "DEV_MANYUURA",
     "id": 461,
     "forms": 1
   },
-  {
+  "462": {
     "devName": "DEV_ZIBAKOIRU",
     "id": 462,
     "forms": 1
   },
-  {
+  "463": {
     "devName": "DEV_BEROBERUTO",
     "id": 463,
     "forms": 1
   },
-  {
+  "464": {
     "devName": "DEV_DOSAIDON",
     "id": 464,
     "forms": 1
   },
-  {
+  "465": {
     "devName": "DEV_MOZYANBO",
     "id": 465,
     "forms": 1
   },
-  {
+  "466": {
     "devName": "DEV_EREKIBURU",
     "id": 466,
     "forms": 1
   },
-  {
+  "467": {
     "devName": "DEV_BUUBAAN",
     "id": 467,
     "forms": 1
   },
-  {
+  "468": {
     "devName": "DEV_TOGEKISSU",
     "id": 468,
     "forms": 1
   },
-  {
+  "469": {
     "devName": "DEV_MEGAYANMA",
     "id": 469,
     "forms": 1
   },
-  {
+  "470": {
     "devName": "DEV_RIIFIA",
     "id": 470,
     "forms": 1
   },
-  {
+  "471": {
     "devName": "DEV_GUREISIA",
     "id": 471,
     "forms": 1
   },
-  {
+  "472": {
     "devName": "DEV_GURAION",
     "id": 472,
     "forms": 1
   },
-  {
+  "473": {
     "devName": "DEV_MANMUU",
     "id": 473,
     "forms": 1
   },
-  {
+  "474": {
     "devName": "DEV_PORIGONz",
     "id": 474,
     "forms": 1
   },
-  {
+  "475": {
     "devName": "DEV_ERUREIDO",
     "id": 475,
     "forms": 1
   },
-  {
+  "476": {
     "devName": "DEV_DAINOOZU",
     "id": 476,
     "forms": 1
   },
-  {
+  "477": {
     "devName": "DEV_YONOWAARU",
     "id": 477,
     "forms": 1
   },
-  {
+  "478": {
     "devName": "DEV_YUKIMENOKO",
     "id": 478,
     "forms": 1
   },
-  {
+  "479": {
     "devName": "DEV_ROTOMU",
     "id": 479,
     "forms": 6
   },
-  {
+  "480": {
     "devName": "DEV_YUKUSII",
     "id": 480,
     "forms": 1
   },
-  {
+  "481": {
     "devName": "DEV_EMURITTO",
     "id": 481,
     "forms": 1
   },
-  {
+  "482": {
     "devName": "DEV_AGUNOMU",
     "id": 482,
     "forms": 1
   },
-  {
+  "483": {
     "devName": "DEV_DHIARUGA",
     "id": 483,
     "forms": 2
   },
-  {
+  "484": {
     "devName": "DEV_PARUKIA",
     "id": 484,
     "forms": 2
   },
-  {
+  "485": {
     "devName": "DEV_HIIDORAN",
     "id": 485,
     "forms": 1
   },
-  {
+  "486": {
     "devName": "DEV_REZIGIGASU",
     "id": 486,
     "forms": 1
   },
-  {
+  "487": {
     "devName": "DEV_GIRATHINA",
     "id": 487,
     "forms": 2
   },
-  {
+  "488": {
     "devName": "DEV_KURESERIA",
     "id": 488,
     "forms": 1
   },
-  {
+  "489": {
     "devName": "DEV_FIONE",
     "id": 489,
     "forms": 1
   },
-  {
+  "490": {
     "devName": "DEV_MANAFI",
     "id": 490,
     "forms": 1
   },
-  {
+  "491": {
     "devName": "DEV_DAAKURAI",
     "id": 491,
     "forms": 1
   },
-  {
+  "492": {
     "devName": "DEV_SHEIMI",
     "id": 492,
     "forms": 1
   },
-  {
+  "493": {
     "devName": "DEV_ARUSEUSU",
     "id": 493,
     "forms": 18
   },
-  {
+  "494": {
     "devName": "DEV_BIKUTHINI",
     "id": 494,
     "forms": 1
   },
-  {
+  "495": {
     "devName": "DEV_TUTAAZYA",
     "id": 495,
     "forms": 1
   },
-  {
+  "496": {
     "devName": "DEV_ZYANOBII",
     "id": 496,
     "forms": 1
   },
-  {
+  "497": {
     "devName": "DEV_ZYAROODA",
     "id": 497,
     "forms": 1
   },
-  {
+  "498": {
     "devName": "DEV_POKABU",
     "id": 498,
     "forms": 1
   },
-  {
+  "499": {
     "devName": "DEV_TYAOBUU",
     "id": 499,
     "forms": 1
   },
-  {
+  "500": {
     "devName": "DEV_ENBUOO",
     "id": 500,
     "forms": 1
   },
-  {
+  "501": {
     "devName": "DEV_MIZYUMARU",
     "id": 501,
     "forms": 1
   },
-  {
+  "502": {
     "devName": "DEV_HUTATIMARU",
     "id": 502,
     "forms": 1
   },
-  {
+  "503": {
     "devName": "DEV_DAIKENKI",
     "id": 503,
     "forms": 2
   },
-  {
+  "504": {
     "devName": "DEV_MINEZUMI",
     "id": 504,
     "forms": 1
   },
-  {
+  "505": {
     "devName": "DEV_MIRUHOGGU",
     "id": 505,
     "forms": 1
   },
-  {
+  "506": {
     "devName": "DEV_YOOTERII",
     "id": 506,
     "forms": 1
   },
-  {
+  "507": {
     "devName": "DEV_HAADERIA",
     "id": 507,
     "forms": 1
   },
-  {
+  "508": {
     "devName": "DEV_MUURANDO",
     "id": 508,
     "forms": 1
   },
-  {
+  "509": {
     "devName": "DEV_TYORONEKO",
     "id": 509,
     "forms": 1
   },
-  {
+  "510": {
     "devName": "DEV_REPARUDASU",
     "id": 510,
     "forms": 1
   },
-  {
+  "511": {
     "devName": "DEV_YANAPPU",
     "id": 511,
     "forms": 1
   },
-  {
+  "512": {
     "devName": "DEV_YANAKKII",
     "id": 512,
     "forms": 1
   },
-  {
+  "513": {
     "devName": "DEV_BAOPPU",
     "id": 513,
     "forms": 1
   },
-  {
+  "514": {
     "devName": "DEV_BAOKKII",
     "id": 514,
     "forms": 1
   },
-  {
+  "515": {
     "devName": "DEV_HIYAPPU",
     "id": 515,
     "forms": 1
   },
-  {
+  "516": {
     "devName": "DEV_HIYAKKII",
     "id": 516,
     "forms": 1
   },
-  {
+  "517": {
     "devName": "DEV_MUNNA",
     "id": 517,
     "forms": 1
   },
-  {
+  "518": {
     "devName": "DEV_MUSYAANA",
     "id": 518,
     "forms": 1
   },
-  {
+  "519": {
     "devName": "DEV_MAMEPATO",
     "id": 519,
     "forms": 1
   },
-  {
+  "520": {
     "devName": "DEV_HATOOBOO",
     "id": 520,
     "forms": 1
   },
-  {
+  "521": {
     "devName": "DEV_KENHOROU",
     "id": 521,
     "forms": 1
   },
-  {
+  "522": {
     "devName": "DEV_SIMAMA",
     "id": 522,
     "forms": 1
   },
-  {
+  "523": {
     "devName": "DEV_ZEBURAIKA",
     "id": 523,
     "forms": 1
   },
-  {
+  "524": {
     "devName": "DEV_DANGORO",
     "id": 524,
     "forms": 1
   },
-  {
+  "525": {
     "devName": "DEV_GANTORU",
     "id": 525,
     "forms": 1
   },
-  {
+  "526": {
     "devName": "DEV_GIGAIASU",
     "id": 526,
     "forms": 1
   },
-  {
+  "527": {
     "devName": "DEV_KOROMORI",
     "id": 527,
     "forms": 1
   },
-  {
+  "528": {
     "devName": "DEV_KOKOROMORI",
     "id": 528,
     "forms": 1
   },
-  {
+  "529": {
     "devName": "DEV_MOGURYUU",
     "id": 529,
     "forms": 1
   },
-  {
+  "530": {
     "devName": "DEV_DORYUUZU",
     "id": 530,
     "forms": 1
   },
-  {
+  "531": {
     "devName": "DEV_TABUNNE",
     "id": 531,
     "forms": 1
   },
-  {
+  "532": {
     "devName": "DEV_DOKKORAA",
     "id": 532,
     "forms": 1
   },
-  {
+  "533": {
     "devName": "DEV_DOTEKKOTU",
     "id": 533,
     "forms": 1
   },
-  {
+  "534": {
     "devName": "DEV_ROOBUSIN",
     "id": 534,
     "forms": 1
   },
-  {
+  "535": {
     "devName": "DEV_OTAMARO",
     "id": 535,
     "forms": 1
   },
-  {
+  "536": {
     "devName": "DEV_GAMAGARU",
     "id": 536,
     "forms": 1
   },
-  {
+  "537": {
     "devName": "DEV_GAMAGEROGE",
     "id": 537,
     "forms": 1
   },
-  {
+  "538": {
     "devName": "DEV_NAGEKI",
     "id": 538,
     "forms": 1
   },
-  {
+  "539": {
     "devName": "DEV_DAGEKI",
     "id": 539,
     "forms": 1
   },
-  {
+  "540": {
     "devName": "DEV_KURUMIRU",
     "id": 540,
     "forms": 1
   },
-  {
+  "541": {
     "devName": "DEV_KURUMAYU",
     "id": 541,
     "forms": 1
   },
-  {
+  "542": {
     "devName": "DEV_HAHAKOMORI",
     "id": 542,
     "forms": 1
   },
-  {
+  "543": {
     "devName": "DEV_HUSIDE",
     "id": 543,
     "forms": 1
   },
-  {
+  "544": {
     "devName": "DEV_HOIIGA",
     "id": 544,
     "forms": 1
   },
-  {
+  "545": {
     "devName": "DEV_PENDORAA",
     "id": 545,
     "forms": 1
   },
-  {
+  "546": {
     "devName": "DEV_MONMEN",
     "id": 546,
     "forms": 1
   },
-  {
+  "547": {
     "devName": "DEV_ERUHUUN",
     "id": 547,
     "forms": 1
   },
-  {
+  "548": {
     "devName": "DEV_TYURINE",
     "id": 548,
     "forms": 1
   },
-  {
+  "549": {
     "devName": "DEV_DOREDHIA",
     "id": 549,
     "forms": 2
   },
-  {
+  "550": {
     "devName": "DEV_BASURAO",
     "id": 550,
     "forms": 3
   },
-  {
+  "551": {
     "devName": "DEV_MEGUROKO",
     "id": 551,
     "forms": 1
   },
-  {
+  "552": {
     "devName": "DEV_WARUBIRU",
     "id": 552,
     "forms": 1
   },
-  {
+  "553": {
     "devName": "DEV_WARUBIARU",
     "id": 553,
     "forms": 1
   },
-  {
+  "554": {
     "devName": "DEV_DARUMAKKA",
     "id": 554,
     "forms": 1
   },
-  {
+  "555": {
     "devName": "DEV_HIHIDARUMA",
     "id": 555,
     "forms": 1
   },
-  {
+  "556": {
     "devName": "DEV_MARAKATTI",
     "id": 556,
     "forms": 1
   },
-  {
+  "557": {
     "devName": "DEV_ISIZUMAI",
     "id": 557,
     "forms": 1
   },
-  {
+  "558": {
     "devName": "DEV_IWAPARESU",
     "id": 558,
     "forms": 1
   },
-  {
+  "559": {
     "devName": "DEV_ZURUGGU",
     "id": 559,
     "forms": 1
   },
-  {
+  "560": {
     "devName": "DEV_ZURUZUKIN",
     "id": 560,
     "forms": 1
   },
-  {
+  "561": {
     "devName": "DEV_SINBORAA",
     "id": 561,
     "forms": 1
   },
-  {
+  "562": {
     "devName": "DEV_DESUMASU",
     "id": 562,
     "forms": 1
   },
-  {
+  "563": {
     "devName": "DEV_DESUKAAN",
     "id": 563,
     "forms": 1
   },
-  {
+  "564": {
     "devName": "DEV_PUROTOOGA",
     "id": 564,
     "forms": 1
   },
-  {
+  "565": {
     "devName": "DEV_ABAGOORA",
     "id": 565,
     "forms": 1
   },
-  {
+  "566": {
     "devName": "DEV_AAKEN",
     "id": 566,
     "forms": 1
   },
-  {
+  "567": {
     "devName": "DEV_AAKEOSU",
     "id": 567,
     "forms": 1
   },
-  {
+  "568": {
     "devName": "DEV_YABUKURON",
     "id": 568,
     "forms": 1
   },
-  {
+  "569": {
     "devName": "DEV_DASUTODASU",
     "id": 569,
     "forms": 1
   },
-  {
+  "570": {
     "devName": "DEV_ZOROA",
     "id": 570,
     "forms": 2
   },
-  {
+  "571": {
     "devName": "DEV_ZOROAAKU",
     "id": 571,
     "forms": 2
   },
-  {
+  "572": {
     "devName": "DEV_TIRAAMHI",
     "id": 572,
     "forms": 1
   },
-  {
+  "573": {
     "devName": "DEV_TIRATIINO",
     "id": 573,
     "forms": 1
   },
-  {
+  "574": {
     "devName": "DEV_GOTIMU",
     "id": 574,
     "forms": 1
   },
-  {
+  "575": {
     "devName": "DEV_GOTIMIRU",
     "id": 575,
     "forms": 1
   },
-  {
+  "576": {
     "devName": "DEV_GOTIRUZERU",
     "id": 576,
     "forms": 1
   },
-  {
+  "577": {
     "devName": "DEV_YUNIRAN",
     "id": 577,
     "forms": 1
   },
-  {
+  "578": {
     "devName": "DEV_DABURAN",
     "id": 578,
     "forms": 1
   },
-  {
+  "579": {
     "devName": "DEV_RANKURUSU",
     "id": 579,
     "forms": 1
   },
-  {
+  "580": {
     "devName": "DEV_KOARUHII",
     "id": 580,
     "forms": 1
   },
-  {
+  "581": {
     "devName": "DEV_SUWANNA",
     "id": 581,
     "forms": 1
   },
-  {
+  "582": {
     "devName": "DEV_BANIPUTTI",
     "id": 582,
     "forms": 1
   },
-  {
+  "583": {
     "devName": "DEV_BANIRITTI",
     "id": 583,
     "forms": 1
   },
-  {
+  "584": {
     "devName": "DEV_BAIBANIRA",
     "id": 584,
     "forms": 1
   },
-  {
+  "585": {
     "devName": "DEV_SIKIZIKA",
     "id": 585,
     "forms": 4
   },
-  {
+  "586": {
     "devName": "DEV_MEBUKIZIKA",
     "id": 586,
     "forms": 4
   },
-  {
+  "587": {
     "devName": "DEV_EMONGA",
     "id": 587,
     "forms": 1
   },
-  {
+  "588": {
     "devName": "DEV_KABURUMO",
     "id": 588,
     "forms": 1
   },
-  {
+  "589": {
     "devName": "DEV_SYUBARUGO",
     "id": 589,
     "forms": 1
   },
-  {
+  "590": {
     "devName": "DEV_TAMAGETAKE",
     "id": 590,
     "forms": 1
   },
-  {
+  "591": {
     "devName": "DEV_MOROBARERU",
     "id": 591,
     "forms": 1
   },
-  {
+  "592": {
     "devName": "DEV_PURURIRU",
     "id": 592,
     "forms": 1
   },
-  {
+  "593": {
     "devName": "DEV_BURUNGERU",
     "id": 593,
     "forms": 1
   },
-  {
+  "594": {
     "devName": "DEV_MAMANBOU",
     "id": 594,
     "forms": 1
   },
-  {
+  "595": {
     "devName": "DEV_BATYURU",
     "id": 595,
     "forms": 1
   },
-  {
+  "596": {
     "devName": "DEV_DENTYURA",
     "id": 596,
     "forms": 1
   },
-  {
+  "597": {
     "devName": "DEV_TESSIIDO",
     "id": 597,
     "forms": 1
   },
-  {
+  "598": {
     "devName": "DEV_NATTOREI",
     "id": 598,
     "forms": 1
   },
-  {
+  "599": {
     "devName": "DEV_GIARU",
     "id": 599,
     "forms": 1
   },
-  {
+  "600": {
     "devName": "DEV_GIGIARU",
     "id": 600,
     "forms": 1
   },
-  {
+  "601": {
     "devName": "DEV_GIGIGIARU",
     "id": 601,
     "forms": 1
   },
-  {
+  "602": {
     "devName": "DEV_SIBISIRASU",
     "id": 602,
     "forms": 1
   },
-  {
+  "603": {
     "devName": "DEV_SIBIBIIRU",
     "id": 603,
     "forms": 1
   },
-  {
+  "604": {
     "devName": "DEV_SIBIRUDON",
     "id": 604,
     "forms": 1
   },
-  {
+  "605": {
     "devName": "DEV_RIGUREE",
     "id": 605,
     "forms": 1
   },
-  {
+  "606": {
     "devName": "DEV_OOBEMU",
     "id": 606,
     "forms": 1
   },
-  {
+  "607": {
     "devName": "DEV_HITOMOSI",
     "id": 607,
     "forms": 1
   },
-  {
+  "608": {
     "devName": "DEV_RANPURAA",
     "id": 608,
     "forms": 1
   },
-  {
+  "609": {
     "devName": "DEV_SYANDERA",
     "id": 609,
     "forms": 1
   },
-  {
+  "610": {
     "devName": "DEV_KIBAGO",
     "id": 610,
     "forms": 1
   },
-  {
+  "611": {
     "devName": "DEV_ONONDO",
     "id": 611,
     "forms": 1
   },
-  {
+  "612": {
     "devName": "DEV_ONONOKUSU",
     "id": 612,
     "forms": 1
   },
-  {
+  "613": {
     "devName": "DEV_KUMASYUN",
     "id": 613,
     "forms": 1
   },
-  {
+  "614": {
     "devName": "DEV_TUNBEAA",
     "id": 614,
     "forms": 1
   },
-  {
+  "615": {
     "devName": "DEV_HURIIZIO",
     "id": 615,
     "forms": 1
   },
-  {
+  "616": {
     "devName": "DEV_TYOBOMAKI",
     "id": 616,
     "forms": 1
   },
-  {
+  "617": {
     "devName": "DEV_AGIRUDAA",
     "id": 617,
     "forms": 1
   },
-  {
+  "618": {
     "devName": "DEV_MAGGYO",
     "id": 618,
     "forms": 1
   },
-  {
+  "619": {
     "devName": "DEV_KOZYOHUU",
     "id": 619,
     "forms": 1
   },
-  {
+  "620": {
     "devName": "DEV_KOZYONDO",
     "id": 620,
     "forms": 1
   },
-  {
+  "621": {
     "devName": "DEV_KURIMUGAN",
     "id": 621,
     "forms": 1
   },
-  {
+  "622": {
     "devName": "DEV_GOBITTO",
     "id": 622,
     "forms": 1
   },
-  {
+  "623": {
     "devName": "DEV_GORUUGU",
     "id": 623,
     "forms": 1
   },
-  {
+  "624": {
     "devName": "DEV_KOMATANA",
     "id": 624,
     "forms": 1
   },
-  {
+  "625": {
     "devName": "DEV_KIRIKIZAN",
     "id": 625,
     "forms": 1
   },
-  {
+  "626": {
     "devName": "DEV_BAHHURON",
     "id": 626,
     "forms": 1
   },
-  {
+  "627": {
     "devName": "DEV_WASIBON",
     "id": 627,
     "forms": 1
   },
-  {
+  "628": {
     "devName": "DEV_WHOOGURU",
     "id": 628,
     "forms": 2
   },
-  {
+  "629": {
     "devName": "DEV_BARUTYAI",
     "id": 629,
     "forms": 1
   },
-  {
+  "630": {
     "devName": "DEV_BARUZIINA",
     "id": 630,
     "forms": 1
   },
-  {
+  "631": {
     "devName": "DEV_KUITARAN",
     "id": 631,
     "forms": 1
   },
-  {
+  "632": {
     "devName": "DEV_AIANTO",
     "id": 632,
     "forms": 1
   },
-  {
+  "633": {
     "devName": "DEV_MONOZU",
     "id": 633,
     "forms": 1
   },
-  {
+  "634": {
     "devName": "DEV_ZIHEDDO",
     "id": 634,
     "forms": 1
   },
-  {
+  "635": {
     "devName": "DEV_SAZANDORA",
     "id": 635,
     "forms": 1
   },
-  {
+  "636": {
     "devName": "DEV_MERARUBA",
     "id": 636,
     "forms": 1
   },
-  {
+  "637": {
     "devName": "DEV_URUGAMOSU",
     "id": 637,
     "forms": 1
   },
-  {
+  "638": {
     "devName": "DEV_KOBARUON",
     "id": 638,
     "forms": 1
   },
-  {
+  "639": {
     "devName": "DEV_TERAKION",
     "id": 639,
     "forms": 1
   },
-  {
+  "640": {
     "devName": "DEV_BIRIZION",
     "id": 640,
     "forms": 1
   },
-  {
+  "641": {
     "devName": "DEV_TORUNEROSU",
     "id": 641,
     "forms": 2
   },
-  {
+  "642": {
     "devName": "DEV_BORUTOROSU",
     "id": 642,
     "forms": 2
   },
-  {
+  "643": {
     "devName": "DEV_RESIRAMU",
     "id": 643,
     "forms": 1
   },
-  {
+  "644": {
     "devName": "DEV_ZEKUROMU",
     "id": 644,
     "forms": 1
   },
-  {
+  "645": {
     "devName": "DEV_RANDOROSU",
     "id": 645,
     "forms": 2
   },
-  {
+  "646": {
     "devName": "DEV_KYUREMU",
     "id": 646,
     "forms": 1
   },
-  {
+  "647": {
     "devName": "DEV_KERUDHIO",
     "id": 647,
     "forms": 1
   },
-  {
+  "648": {
     "devName": "DEV_MEROETTA",
     "id": 648,
     "forms": 2
   },
-  {
+  "649": {
     "devName": "DEV_GENOSEKUTO",
     "id": 649,
     "forms": 1
   },
-  {
+  "650": {
     "devName": "DEV_HARIMARON",
     "id": 650,
     "forms": 1
   },
-  {
+  "651": {
     "devName": "DEV_HARIBOOGU",
     "id": 651,
     "forms": 1
   },
-  {
+  "652": {
     "devName": "DEV_BURIGARON",
     "id": 652,
     "forms": 1
   },
-  {
+  "653": {
     "devName": "DEV_FOKKO",
     "id": 653,
     "forms": 1
   },
-  {
+  "654": {
     "devName": "DEV_TEERUNAA",
     "id": 654,
     "forms": 1
   },
-  {
+  "655": {
     "devName": "DEV_MAFOKUSII",
     "id": 655,
     "forms": 1
   },
-  {
+  "656": {
     "devName": "DEV_KEROMATU",
     "id": 656,
     "forms": 1
   },
-  {
+  "657": {
     "devName": "DEV_GEKOGASIRA",
     "id": 657,
     "forms": 1
   },
-  {
+  "658": {
     "devName": "DEV_GEKKOUGA",
     "id": 658,
     "forms": 2
   },
-  {
+  "659": {
     "devName": "DEV_HORUBII",
     "id": 659,
     "forms": 1
   },
-  {
+  "660": {
     "devName": "DEV_HORUUDO",
     "id": 660,
     "forms": 1
   },
-  {
+  "661": {
     "devName": "DEV_YAYAKOMA",
     "id": 661,
     "forms": 1
   },
-  {
+  "662": {
     "devName": "DEV_HINOYAKOMA",
     "id": 662,
     "forms": 1
   },
-  {
+  "663": {
     "devName": "DEV_FAIAROO",
     "id": 663,
     "forms": 1
   },
-  {
+  "664": {
     "devName": "DEV_KOHUKIMUSI",
     "id": 664,
     "forms": 20
   },
-  {
+  "665": {
     "devName": "DEV_KOHUURAI",
     "id": 665,
     "forms": 20
   },
-  {
+  "666": {
     "devName": "DEV_BIBIYON",
     "id": 666,
     "forms": 20
   },
-  {
+  "667": {
     "devName": "DEV_SISIKO",
     "id": 667,
     "forms": 1
   },
-  {
+  "668": {
     "devName": "DEV_KAENZISI",
     "id": 668,
     "forms": 1
   },
-  {
+  "669": {
     "devName": "DEV_HURABEBE",
     "id": 669,
     "forms": 5
   },
-  {
+  "670": {
     "devName": "DEV_HURAETTE",
     "id": 670,
     "forms": 5
   },
-  {
+  "671": {
     "devName": "DEV_HURAAJESU",
     "id": 671,
     "forms": 5
   },
-  {
+  "672": {
     "devName": "DEV_MHEEKURU",
     "id": 672,
     "forms": 1
   },
-  {
+  "673": {
     "devName": "DEV_GOOGOOTO",
     "id": 673,
     "forms": 1
   },
-  {
+  "674": {
     "devName": "DEV_YANTYAMU",
     "id": 674,
     "forms": 1
   },
-  {
+  "675": {
     "devName": "DEV_GORONDA",
     "id": 675,
     "forms": 1
   },
-  {
+  "676": {
     "devName": "DEV_TORIMIAN",
     "id": 676,
     "forms": 1
   },
-  {
+  "677": {
     "devName": "DEV_NYASUPAA",
     "id": 677,
     "forms": 1
   },
-  {
+  "678": {
     "devName": "DEV_NYAONIKUSU",
     "id": 678,
     "forms": 1
   },
-  {
+  "679": {
     "devName": "DEV_HITOTUKI",
     "id": 679,
     "forms": 1
   },
-  {
+  "680": {
     "devName": "DEV_NIDANGIRU",
     "id": 680,
     "forms": 1
   },
-  {
+  "681": {
     "devName": "DEV_GIRUGARUDO",
     "id": 681,
     "forms": 1
   },
-  {
+  "682": {
     "devName": "DEV_SYUSYUPU",
     "id": 682,
     "forms": 1
   },
-  {
+  "683": {
     "devName": "DEV_HUREHUWAN",
     "id": 683,
     "forms": 1
   },
-  {
+  "684": {
     "devName": "DEV_PEROPPAHU",
     "id": 684,
     "forms": 1
   },
-  {
+  "685": {
     "devName": "DEV_PERORIIMU",
     "id": 685,
     "forms": 1
   },
-  {
+  "686": {
     "devName": "DEV_MAAIIKA",
     "id": 686,
     "forms": 1
   },
-  {
+  "687": {
     "devName": "DEV_KARAMANERO",
     "id": 687,
     "forms": 1
   },
-  {
+  "688": {
     "devName": "DEV_KAMETETE",
     "id": 688,
     "forms": 1
   },
-  {
+  "689": {
     "devName": "DEV_GAMENODESU",
     "id": 689,
     "forms": 1
   },
-  {
+  "690": {
     "devName": "DEV_KUZUMOO",
     "id": 690,
     "forms": 1
   },
-  {
+  "691": {
     "devName": "DEV_DORAMIDORO",
     "id": 691,
     "forms": 1
   },
-  {
+  "692": {
     "devName": "DEV_UDEPPOU",
     "id": 692,
     "forms": 1
   },
-  {
+  "693": {
     "devName": "DEV_BUROSUTAA",
     "id": 693,
     "forms": 1
   },
-  {
+  "694": {
     "devName": "DEV_ERIKITERU",
     "id": 694,
     "forms": 1
   },
-  {
+  "695": {
     "devName": "DEV_EREZAADO",
     "id": 695,
     "forms": 1
   },
-  {
+  "696": {
     "devName": "DEV_TIGORASU",
     "id": 696,
     "forms": 1
   },
-  {
+  "697": {
     "devName": "DEV_GATIGORASU",
     "id": 697,
     "forms": 1
   },
-  {
+  "698": {
     "devName": "DEV_AMARUSU",
     "id": 698,
     "forms": 1
   },
-  {
+  "699": {
     "devName": "DEV_AMARURUGA",
     "id": 699,
     "forms": 1
   },
-  {
+  "700": {
     "devName": "DEV_NINFIA",
     "id": 700,
     "forms": 1
   },
-  {
+  "701": {
     "devName": "DEV_RUTYABURU",
     "id": 701,
     "forms": 1
   },
-  {
+  "702": {
     "devName": "DEV_DEDENNE",
     "id": 702,
     "forms": 1
   },
-  {
+  "703": {
     "devName": "DEV_MERESII",
     "id": 703,
     "forms": 1
   },
-  {
+  "704": {
     "devName": "DEV_NUMERA",
     "id": 704,
     "forms": 1
   },
-  {
+  "705": {
     "devName": "DEV_NUMEIRU",
     "id": 705,
     "forms": 2
   },
-  {
+  "706": {
     "devName": "DEV_NUMERUGON",
     "id": 706,
     "forms": 2
   },
-  {
+  "707": {
     "devName": "DEV_KUREHFI",
     "id": 707,
     "forms": 1
   },
-  {
+  "708": {
     "devName": "DEV_BOKUREE",
     "id": 708,
     "forms": 1
   },
-  {
+  "709": {
     "devName": "DEV_OOROTTO",
     "id": 709,
     "forms": 1
   },
-  {
+  "710": {
     "devName": "DEV_BAKETTYA",
     "id": 710,
     "forms": 1
   },
-  {
+  "711": {
     "devName": "DEV_PANPUZIN",
     "id": 711,
     "forms": 1
   },
-  {
+  "712": {
     "devName": "DEV_KATIKOORU",
     "id": 712,
     "forms": 1
   },
-  {
+  "713": {
     "devName": "DEV_KUREBEESU",
     "id": 713,
     "forms": 2
   },
-  {
+  "714": {
     "devName": "DEV_ONBATTO",
     "id": 714,
     "forms": 1
   },
-  {
+  "715": {
     "devName": "DEV_ONBAAN",
     "id": 715,
     "forms": 1
   },
-  {
+  "716": {
     "devName": "DEV_ZERUNEASU",
     "id": 716,
     "forms": 1
   },
-  {
+  "717": {
     "devName": "DEV_IBERUTARU",
     "id": 717,
     "forms": 1
   },
-  {
+  "718": {
     "devName": "DEV_ZIGARUDE",
     "id": 718,
     "forms": 1
   },
-  {
+  "719": {
     "devName": "DEV_DHIANSII",
     "id": 719,
     "forms": 1
   },
-  {
+  "720": {
     "devName": "DEV_HUUPA",
     "id": 720,
     "forms": 2
   },
-  {
+  "721": {
     "devName": "DEV_BORUKENION",
     "id": 721,
     "forms": 1
   },
-  {
+  "722": {
     "devName": "DEV_MOKUROO",
     "id": 722,
     "forms": 1
   },
-  {
+  "723": {
     "devName": "DEV_HUKUSUROO",
     "id": 723,
     "forms": 1
   },
-  {
+  "724": {
     "devName": "DEV_ZYUNAIPAA",
     "id": 724,
     "forms": 2
   },
-  {
+  "725": {
     "devName": "DEV_NYABII",
     "id": 725,
     "forms": 1
   },
-  {
+  "726": {
     "devName": "DEV_NYAHIITO",
     "id": 726,
     "forms": 1
   },
-  {
+  "727": {
     "devName": "DEV_GAOGAEN",
     "id": 727,
     "forms": 1
   },
-  {
+  "728": {
     "devName": "DEV_ASIMARI",
     "id": 728,
     "forms": 1
   },
-  {
+  "729": {
     "devName": "DEV_OSYAMARI",
     "id": 729,
     "forms": 1
   },
-  {
+  "730": {
     "devName": "DEV_ASIREENU",
     "id": 730,
     "forms": 1
   },
-  {
+  "731": {
     "devName": "DEV_TUTUKERA",
     "id": 731,
     "forms": 1
   },
-  {
+  "732": {
     "devName": "DEV_KERARAPPA",
     "id": 732,
     "forms": 1
   },
-  {
+  "733": {
     "devName": "DEV_DODEKABASI",
     "id": 733,
     "forms": 1
   },
-  {
+  "734": {
     "devName": "DEV_YANGUUSU",
     "id": 734,
     "forms": 1
   },
-  {
+  "735": {
     "devName": "DEV_DEKAGUUSU",
     "id": 735,
     "forms": 1
   },
-  {
+  "736": {
     "devName": "DEV_AGOZIMUSI",
     "id": 736,
     "forms": 1
   },
-  {
+  "737": {
     "devName": "DEV_DENDIMUSI",
     "id": 737,
     "forms": 1
   },
-  {
+  "738": {
     "devName": "DEV_KUWAGANON",
     "id": 738,
     "forms": 1
   },
-  {
+  "739": {
     "devName": "DEV_MAKENKANI",
     "id": 739,
     "forms": 1
   },
-  {
+  "740": {
     "devName": "DEV_KEKENKANI",
     "id": 740,
     "forms": 1
   },
-  {
+  "741": {
     "devName": "DEV_ODORIDORI",
     "id": 741,
     "forms": 4
   },
-  {
+  "742": {
     "devName": "DEV_ABURII",
     "id": 742,
     "forms": 1
   },
-  {
+  "743": {
     "devName": "DEV_ABURIBON",
     "id": 743,
     "forms": 1
   },
-  {
+  "744": {
     "devName": "DEV_IWANKO",
     "id": 744,
     "forms": 2
   },
-  {
+  "745": {
     "devName": "DEV_RUGARUGAN",
     "id": 745,
     "forms": 3
   },
-  {
+  "746": {
     "devName": "DEV_YOWASI",
     "id": 746,
     "forms": 1
   },
-  {
+  "747": {
     "devName": "DEV_HIDOIDE",
     "id": 747,
     "forms": 1
   },
-  {
+  "748": {
     "devName": "DEV_DOHIDOIDE",
     "id": 748,
     "forms": 1
   },
-  {
+  "749": {
     "devName": "DEV_DOROBANKO",
     "id": 749,
     "forms": 1
   },
-  {
+  "750": {
     "devName": "DEV_BANBADORO",
     "id": 750,
     "forms": 1
   },
-  {
+  "751": {
     "devName": "DEV_SIZUKUMO",
     "id": 751,
     "forms": 1
   },
-  {
+  "752": {
     "devName": "DEV_ONISIZUKUMO",
     "id": 752,
     "forms": 1
   },
-  {
+  "753": {
     "devName": "DEV_KARIKIRI",
     "id": 753,
     "forms": 1
   },
-  {
+  "754": {
     "devName": "DEV_RARANTESU",
     "id": 754,
     "forms": 1
   },
-  {
+  "755": {
     "devName": "DEV_NEMASYU",
     "id": 755,
     "forms": 1
   },
-  {
+  "756": {
     "devName": "DEV_MASHEEDO",
     "id": 756,
     "forms": 1
   },
-  {
+  "757": {
     "devName": "DEV_YATOUMORI",
     "id": 757,
     "forms": 1
   },
-  {
+  "758": {
     "devName": "DEV_ENNYUUTO",
     "id": 758,
     "forms": 1
   },
-  {
+  "759": {
     "devName": "DEV_NUIKOGUMA",
     "id": 759,
     "forms": 1
   },
-  {
+  "760": {
     "devName": "DEV_KITERUGUMA",
     "id": 760,
     "forms": 1
   },
-  {
+  "761": {
     "devName": "DEV_AMAKAZI",
     "id": 761,
     "forms": 1
   },
-  {
+  "762": {
     "devName": "DEV_AMAMAIKO",
     "id": 762,
     "forms": 1
   },
-  {
+  "763": {
     "devName": "DEV_AMAAZYO",
     "id": 763,
     "forms": 1
   },
-  {
+  "764": {
     "devName": "DEV_KYUWAWAA",
     "id": 764,
     "forms": 1
   },
-  {
+  "765": {
     "devName": "DEV_YAREYUUTAN",
     "id": 765,
     "forms": 1
   },
-  {
+  "766": {
     "devName": "DEV_NAGETUKESARU",
     "id": 766,
     "forms": 1
   },
-  {
+  "767": {
     "devName": "DEV_KOSOKUMUSI",
     "id": 767,
     "forms": 1
   },
-  {
+  "768": {
     "devName": "DEV_GUSOKUMUSYA",
     "id": 768,
     "forms": 1
   },
-  {
+  "769": {
     "devName": "DEV_SUNABHA",
     "id": 769,
     "forms": 1
   },
-  {
+  "770": {
     "devName": "DEV_SIRODESUNA",
     "id": 770,
     "forms": 1
   },
-  {
+  "771": {
     "devName": "DEV_NAMAKOBUSI",
     "id": 771,
     "forms": 1
   },
-  {
+  "772": {
     "devName": "DEV_TAIPUNURU",
     "id": 772,
     "forms": 1
   },
-  {
+  "773": {
     "devName": "DEV_SIRUVHADHI",
     "id": 773,
     "forms": 1
   },
-  {
+  "774": {
     "devName": "DEV_METENO",
     "id": 774,
     "forms": 1
   },
-  {
+  "775": {
     "devName": "DEV_NEKKOARA",
     "id": 775,
     "forms": 1
   },
-  {
+  "776": {
     "devName": "DEV_BAKUGAMESU",
     "id": 776,
     "forms": 1
   },
-  {
+  "777": {
     "devName": "DEV_TOGEDEMARU",
     "id": 777,
     "forms": 1
   },
-  {
+  "778": {
     "devName": "DEV_MIMIKKYU",
     "id": 778,
     "forms": 2
   },
-  {
+  "779": {
     "devName": "DEV_HAGIGISIRI",
     "id": 779,
     "forms": 1
   },
-  {
+  "780": {
     "devName": "DEV_ZIZIIRON",
     "id": 780,
     "forms": 1
   },
-  {
+  "781": {
     "devName": "DEV_DADARIN",
     "id": 781,
     "forms": 1
   },
-  {
+  "782": {
     "devName": "DEV_ZYARAKO",
     "id": 782,
     "forms": 1
   },
-  {
+  "783": {
     "devName": "DEV_ZYARANGO",
     "id": 783,
     "forms": 1
   },
-  {
+  "784": {
     "devName": "DEV_ZYARARANGA",
     "id": 784,
     "forms": 1
   },
-  {
+  "785": {
     "devName": "DEV_KAPUKOKEKO",
     "id": 785,
     "forms": 1
   },
-  {
+  "786": {
     "devName": "DEV_KAPUTETEHU",
     "id": 786,
     "forms": 1
   },
-  {
+  "787": {
     "devName": "DEV_KAPUBURURU",
     "id": 787,
     "forms": 1
   },
-  {
+  "788": {
     "devName": "DEV_KAPUREHIRE",
     "id": 788,
     "forms": 1
   },
-  {
+  "789": {
     "devName": "DEV_KOSUMOGGU",
     "id": 789,
     "forms": 1
   },
-  {
+  "790": {
     "devName": "DEV_KOSUMOUMU",
     "id": 790,
     "forms": 1
   },
-  {
+  "791": {
     "devName": "DEV_SORUGAREO",
     "id": 791,
     "forms": 1
   },
-  {
+  "792": {
     "devName": "DEV_RUNAAARA",
     "id": 792,
     "forms": 1
   },
-  {
+  "793": {
     "devName": "DEV_UTUROIDO",
     "id": 793,
     "forms": 1
   },
-  {
+  "794": {
     "devName": "DEV_MASSIBUUN",
     "id": 794,
     "forms": 1
   },
-  {
+  "795": {
     "devName": "DEV_FEROOTHE",
     "id": 795,
     "forms": 1
   },
-  {
+  "796": {
     "devName": "DEV_DENZYUMOKU",
     "id": 796,
     "forms": 1
   },
-  {
+  "797": {
     "devName": "DEV_TEKKAGUYA",
     "id": 797,
     "forms": 1
   },
-  {
+  "798": {
     "devName": "DEV_KAMITURUGI",
     "id": 798,
     "forms": 1
   },
-  {
+  "799": {
     "devName": "DEV_AKUZIKINGU",
     "id": 799,
     "forms": 1
   },
-  {
+  "800": {
     "devName": "DEV_NEKUROZUMA",
     "id": 800,
     "forms": 1
   },
-  {
+  "801": {
     "devName": "DEV_MAGIANA",
     "id": 801,
     "forms": 2
   },
-  {
+  "802": {
     "devName": "DEV_MAASYADOO",
     "id": 802,
     "forms": 1
   },
-  {
+  "803": {
     "devName": "DEV_BEBENOMU",
     "id": 803,
     "forms": 1
   },
-  {
+  "804": {
     "devName": "DEV_AAGOYON",
     "id": 804,
     "forms": 1
   },
-  {
+  "805": {
     "devName": "DEV_TUNDETUNDE",
     "id": 805,
     "forms": 1
   },
-  {
+  "806": {
     "devName": "DEV_ZUGADOON",
     "id": 806,
     "forms": 1
   },
-  {
+  "807": {
     "devName": "DEV_ZERAORA",
     "id": 807,
     "forms": 1
   },
-  {
+  "808": {
     "devName": "DEV_MERUTAN",
     "id": 808,
     "forms": 1
   },
-  {
+  "809": {
     "devName": "DEV_MERUMETARU",
     "id": 809,
     "forms": 1
   },
-  {
+  "810": {
     "devName": "DEV_SARUNORI",
     "id": 810,
     "forms": 1
   },
-  {
+  "811": {
     "devName": "DEV_BATINKII",
     "id": 811,
     "forms": 1
   },
-  {
+  "812": {
     "devName": "DEV_GORIRANDAA",
     "id": 812,
     "forms": 1
   },
-  {
+  "813": {
     "devName": "DEV_HIBANII",
     "id": 813,
     "forms": 1
   },
-  {
+  "814": {
     "devName": "DEV_RABIHUTTO",
     "id": 814,
     "forms": 1
   },
-  {
+  "815": {
     "devName": "DEV_EESUBAAN",
     "id": 815,
     "forms": 1
   },
-  {
+  "816": {
     "devName": "DEV_MESSON",
     "id": 816,
     "forms": 1
   },
-  {
+  "817": {
     "devName": "DEV_ZIMEREON",
     "id": 817,
     "forms": 1
   },
-  {
+  "818": {
     "devName": "DEV_INTEREON",
     "id": 818,
     "forms": 1
   },
-  {
+  "819": {
     "devName": "DEV_HOSIGARISU",
     "id": 819,
     "forms": 1
   },
-  {
+  "820": {
     "devName": "DEV_YOKUBARISU",
     "id": 820,
     "forms": 1
   },
-  {
+  "821": {
     "devName": "DEV_KOKOGARA",
     "id": 821,
     "forms": 1
   },
-  {
+  "822": {
     "devName": "DEV_AOGARASU",
     "id": 822,
     "forms": 1
   },
-  {
+  "823": {
     "devName": "DEV_AAMAAGAA",
     "id": 823,
     "forms": 1
   },
-  {
+  "824": {
     "devName": "DEV_SATTIMUSI",
     "id": 824,
     "forms": 1
   },
-  {
+  "825": {
     "devName": "DEV_REDOOMUSI",
     "id": 825,
     "forms": 1
   },
-  {
+  "826": {
     "devName": "DEV_IORUBU",
     "id": 826,
     "forms": 1
   },
-  {
+  "827": {
     "devName": "DEV_KUSUNE",
     "id": 827,
     "forms": 1
   },
-  {
+  "828": {
     "devName": "DEV_FOKUSURAI",
     "id": 828,
     "forms": 1
   },
-  {
+  "829": {
     "devName": "DEV_HIMENKA",
     "id": 829,
     "forms": 1
   },
-  {
+  "830": {
     "devName": "DEV_WATASIRAGA",
     "id": 830,
     "forms": 1
   },
-  {
+  "831": {
     "devName": "DEV_UURUU",
     "id": 831,
     "forms": 1
   },
-  {
+  "832": {
     "devName": "DEV_BAIUURUU",
     "id": 832,
     "forms": 1
   },
-  {
+  "833": {
     "devName": "DEV_KAMUKAME",
     "id": 833,
     "forms": 1
   },
-  {
+  "834": {
     "devName": "DEV_KAZIRIGAME",
     "id": 834,
     "forms": 1
   },
-  {
+  "835": {
     "devName": "DEV_WANPATI",
     "id": 835,
     "forms": 1
   },
-  {
+  "836": {
     "devName": "DEV_PARUSUWAN",
     "id": 836,
     "forms": 1
   },
-  {
+  "837": {
     "devName": "DEV_TANDON",
     "id": 837,
     "forms": 1
   },
-  {
+  "838": {
     "devName": "DEV_TOROGGON",
     "id": 838,
     "forms": 1
   },
-  {
+  "839": {
     "devName": "DEV_SEKITANZAN",
     "id": 839,
     "forms": 1
   },
-  {
+  "840": {
     "devName": "DEV_KAZITTYU",
     "id": 840,
     "forms": 1
   },
-  {
+  "841": {
     "devName": "DEV_APPURYUU",
     "id": 841,
     "forms": 1
   },
-  {
+  "842": {
     "devName": "DEV_TARUPPURU",
     "id": 842,
     "forms": 1
   },
-  {
+  "843": {
     "devName": "DEV_SUNAHEBI",
     "id": 843,
     "forms": 1
   },
-  {
+  "844": {
     "devName": "DEV_SADAIZYA",
     "id": 844,
     "forms": 1
   },
-  {
+  "845": {
     "devName": "DEV_UUU",
     "id": 845,
     "forms": 1
   },
-  {
+  "846": {
     "devName": "DEV_SASIKAMASU",
     "id": 846,
     "forms": 1
   },
-  {
+  "847": {
     "devName": "DEV_KAMASUZYOO",
     "id": 847,
     "forms": 1
   },
-  {
+  "848": {
     "devName": "DEV_EREZUN",
     "id": 848,
     "forms": 1
   },
-  {
+  "849": {
     "devName": "DEV_SUTORINDAA",
     "id": 849,
     "forms": 2
   },
-  {
+  "850": {
     "devName": "DEV_YAKUDE",
     "id": 850,
     "forms": 1
   },
-  {
+  "851": {
     "devName": "DEV_MARUYAKUDE",
     "id": 851,
     "forms": 1
   },
-  {
+  "852": {
     "devName": "DEV_TATAKKO",
     "id": 852,
     "forms": 1
   },
-  {
+  "853": {
     "devName": "DEV_OTOSUPASU",
     "id": 853,
     "forms": 1
   },
-  {
+  "854": {
     "devName": "DEV_YABATYA",
     "id": 854,
     "forms": 2
   },
-  {
+  "855": {
     "devName": "DEV_POTTODESU",
     "id": 855,
     "forms": 2
   },
-  {
+  "856": {
     "devName": "DEV_MIBURIMU",
     "id": 856,
     "forms": 1
   },
-  {
+  "857": {
     "devName": "DEV_TEBURIMU",
     "id": 857,
     "forms": 1
   },
-  {
+  "858": {
     "devName": "DEV_BURIMUON",
     "id": 858,
     "forms": 1
   },
-  {
+  "859": {
     "devName": "DEV_BEROBAA",
     "id": 859,
     "forms": 1
   },
-  {
+  "860": {
     "devName": "DEV_GIMOO",
     "id": 860,
     "forms": 1
   },
-  {
+  "861": {
     "devName": "DEV_OORONGE",
     "id": 861,
     "forms": 1
   },
-  {
+  "862": {
     "devName": "DEV_TATIHUSAGUMA",
     "id": 862,
     "forms": 1
   },
-  {
+  "863": {
     "devName": "DEV_NYAIKINGU",
     "id": 863,
     "forms": 1
   },
-  {
+  "864": {
     "devName": "DEV_SANIGOON",
     "id": 864,
     "forms": 1
   },
-  {
+  "865": {
     "devName": "DEV_NEGIGANAITO",
     "id": 865,
     "forms": 1
   },
-  {
+  "866": {
     "devName": "DEV_BARIKOORU",
     "id": 866,
     "forms": 1
   },
-  {
+  "867": {
     "devName": "DEV_DESUBAAN",
     "id": 867,
     "forms": 1
   },
-  {
+  "868": {
     "devName": "DEV_MAHOMIRU",
     "id": 868,
     "forms": 1
   },
-  {
+  "869": {
     "devName": "DEV_MAHOIPPU",
     "id": 869,
     "forms": 1
   },
-  {
+  "870": {
     "devName": "DEV_TAIREETU",
     "id": 870,
     "forms": 1
   },
-  {
+  "871": {
     "devName": "DEV_BATINUNI",
     "id": 871,
     "forms": 1
   },
-  {
+  "872": {
     "devName": "DEV_YUKIHAMI",
     "id": 872,
     "forms": 1
   },
-  {
+  "873": {
     "devName": "DEV_MOSUNOU",
     "id": 873,
     "forms": 1
   },
-  {
+  "874": {
     "devName": "DEV_ISIHENZIN",
     "id": 874,
     "forms": 1
   },
-  {
+  "875": {
     "devName": "DEV_KOORIPPO",
     "id": 875,
     "forms": 2
   },
-  {
+  "876": {
     "devName": "DEV_IESSAN",
     "id": 876,
     "forms": 2
   },
-  {
+  "877": {
     "devName": "DEV_MORUPEKO",
     "id": 877,
     "forms": 1
   },
-  {
+  "878": {
     "devName": "DEV_ZOUDOU",
     "id": 878,
     "forms": 1
   },
-  {
+  "879": {
     "devName": "DEV_DAIOUDOU",
     "id": 879,
     "forms": 1
   },
-  {
+  "880": {
     "devName": "DEV_PATTIRAGON",
     "id": 880,
     "forms": 1
   },
-  {
+  "881": {
     "devName": "DEV_PATTIRUDON",
     "id": 881,
     "forms": 1
   },
-  {
+  "882": {
     "devName": "DEV_UONORAGON",
     "id": 882,
     "forms": 1
   },
-  {
+  "883": {
     "devName": "DEV_UOTIRUDON",
     "id": 883,
     "forms": 1
   },
-  {
+  "884": {
     "devName": "DEV_ZYURARUDON",
     "id": 884,
     "forms": 1
   },
-  {
+  "885": {
     "devName": "DEV_DORAMESIYA",
     "id": 885,
     "forms": 1
   },
-  {
+  "886": {
     "devName": "DEV_DORONTI",
     "id": 886,
     "forms": 1
   },
-  {
+  "887": {
     "devName": "DEV_DORAPARUTO",
     "id": 887,
     "forms": 1
   },
-  {
+  "888": {
     "devName": "DEV_ZASIAN",
     "id": 888,
     "forms": 2
   },
-  {
+  "889": {
     "devName": "DEV_ZAMAZENTA",
     "id": 889,
     "forms": 2
   },
-  {
+  "890": {
     "devName": "DEV_MUGENDAINA",
     "id": 890,
     "forms": 1
   },
-  {
+  "891": {
     "devName": "DEV_AAMAA1",
     "id": 891,
     "forms": 1
   },
-  {
+  "892": {
     "devName": "DEV_AAMAA2",
     "id": 892,
     "forms": 2
   },
-  {
+  "893": {
     "devName": "DEV_m23",
     "id": 893,
     "forms": 2
   },
-  {
+  "894": {
     "devName": "DEV_REDEN",
     "id": 894,
     "forms": 1
   },
-  {
+  "895": {
     "devName": "DEV_REDORA",
     "id": 895,
     "forms": 1
   },
-  {
+  "896": {
     "devName": "DEV_HAKUBA",
     "id": 896,
     "forms": 1
   },
-  {
+  "897": {
     "devName": "DEV_KOKUBA",
     "id": 897,
     "forms": 1
   },
-  {
+  "898": {
     "devName": "DEV_KURAUN",
     "id": 898,
     "forms": 3
   },
-  {
+  "899": {
     "devName": "DEV_ODOSISI2",
     "id": 899,
     "forms": 1
   },
-  {
+  "900": {
     "devName": "DEV_SUTORAIKU2",
     "id": 900,
     "forms": 1
   },
-  {
+  "901": {
     "devName": "DEV_HIMEGUMA3",
     "id": 901,
     "forms": 1
   },
-  {
+  "902": {
     "devName": "DEV_rBASURAO2",
     "id": 902,
     "forms": 2
   },
-  {
+  "903": {
     "devName": "DEV_rNYUURA2",
     "id": 903,
     "forms": 1
   },
-  {
+  "904": {
     "devName": "DEV_rHARISEN2",
     "id": 904,
     "forms": 1
   },
-  {
+  "905": {
     "devName": "DEV_FEATOROSU",
     "id": 905,
     "forms": 2
   },
-  {
+  "906": {
     "devName": "DEV_NEKO1",
     "id": 906,
     "forms": 1
   },
-  {
+  "907": {
     "devName": "DEV_NEKO2",
     "id": 907,
     "forms": 1
   },
-  {
+  "908": {
     "devName": "DEV_NEKO3",
     "id": 908,
     "forms": 1
   },
-  {
+  "909": {
     "devName": "DEV_WANI1",
     "id": 909,
     "forms": 1
   },
-  {
+  "910": {
     "devName": "DEV_WANI2",
     "id": 910,
     "forms": 1
   },
-  {
+  "911": {
     "devName": "DEV_WANI3",
     "id": 911,
     "forms": 1
   },
-  {
+  "912": {
     "devName": "DEV_KAMO1",
     "id": 912,
     "forms": 1
   },
-  {
+  "913": {
     "devName": "DEV_KAMO2",
     "id": 913,
     "forms": 1
   },
-  {
+  "914": {
     "devName": "DEV_KAMO3",
     "id": 914,
     "forms": 1
   },
-  {
+  "915": {
     "devName": "DEV_BUTA1",
     "id": 915,
     "forms": 1
   },
-  {
+  "916": {
     "devName": "DEV_BUTA2",
     "id": 916,
     "forms": 2
   },
-  {
+  "917": {
     "devName": "DEV_NOKOTTI2",
     "id": 917,
     "forms": 2
   },
-  {
+  "918": {
     "devName": "DEV_KUMO1",
     "id": 918,
     "forms": 1
   },
-  {
+  "919": {
     "devName": "DEV_KUMO2",
     "id": 919,
     "forms": 1
   },
-  {
+  "920": {
     "devName": "DEV_BATTA1",
     "id": 920,
     "forms": 1
   },
-  {
+  "921": {
     "devName": "DEV_BATTA2",
     "id": 921,
     "forms": 1
   },
-  {
+  "922": {
     "devName": "DEV_SUKARABE1",
     "id": 922,
     "forms": 1
   },
-  {
+  "923": {
     "devName": "DEV_SUKARABE2",
     "id": 923,
     "forms": 1
   },
-  {
+  "924": {
     "devName": "DEV_OBAKEINU1",
     "id": 924,
     "forms": 1
   },
-  {
+  "925": {
     "devName": "DEV_OBAKEINU2",
     "id": 925,
     "forms": 1
   },
-  {
+  "926": {
     "devName": "DEV_DATYOU1",
     "id": 926,
     "forms": 1
   },
-  {
+  "927": {
     "devName": "DEV_DATYOU2",
     "id": 927,
     "forms": 1
   },
-  {
+  "928": {
     "devName": "DEV_KIRINRIKI2",
     "id": 928,
     "forms": 1
   },
-  {
+  "929": {
     "devName": "DEV_UMIDHIGUDA",
     "id": 929,
     "forms": 1
   },
-  {
+  "930": {
     "devName": "DEV_UMITORIO",
     "id": 930,
     "forms": 1
   },
-  {
+  "931": {
     "devName": "DEV_OYAKATA",
     "id": 931,
     "forms": 1
   },
-  {
+  "932": {
     "devName": "DEV_MERURUUSA",
     "id": 932,
     "forms": 1
   },
-  {
+  "933": {
     "devName": "DEV_IRUKA1",
     "id": 933,
     "forms": 1
   },
-  {
+  "934": {
     "devName": "DEV_IRUKA2",
     "id": 934,
     "forms": 2
   },
-  {
+  "935": {
     "devName": "DEV_ORIIBU1",
     "id": 935,
     "forms": 1
   },
-  {
+  "936": {
     "devName": "DEV_ORIIBU2",
     "id": 936,
     "forms": 1
   },
-  {
+  "937": {
     "devName": "DEV_ORIIBU3",
     "id": 937,
     "forms": 1
   },
-  {
+  "938": {
     "devName": "DEV_HABANERO1",
     "id": 938,
     "forms": 1
   },
-  {
+  "939": {
     "devName": "DEV_HABANERO2",
     "id": 939,
     "forms": 1
   },
-  {
+  "940": {
     "devName": "DEV_KAERU1",
     "id": 940,
     "forms": 1
   },
-  {
+  "941": {
     "devName": "DEV_KAERU2",
     "id": 941,
     "forms": 1
   },
-  {
+  "942": {
     "devName": "DEV_ENZIN1",
     "id": 942,
     "forms": 1
   },
-  {
+  "943": {
     "devName": "DEV_ENZIN2",
     "id": 943,
     "forms": 1
   },
-  {
+  "944": {
     "devName": "DEV_MIMIZU",
     "id": 944,
     "forms": 1
   },
-  {
+  "945": {
     "devName": "DEV_NEZUMI1",
     "id": 945,
     "forms": 1
   },
-  {
+  "946": {
     "devName": "DEV_NEZUMI2",
     "id": 946,
     "forms": 2
   },
-  {
+  "947": {
     "devName": "DEV_OKAKUZIRA1",
     "id": 947,
     "forms": 1
   },
-  {
+  "948": {
     "devName": "DEV_OKAKUZIRA2",
     "id": 948,
     "forms": 1
   },
-  {
+  "949": {
     "devName": "DEV_KOORIDORA1",
     "id": 949,
     "forms": 1
   },
-  {
+  "950": {
     "devName": "DEV_KOORIDORA2",
     "id": 950,
     "forms": 1
   },
-  {
+  "951": {
     "devName": "DEV_KOORIDORA3",
     "id": 951,
     "forms": 1
   },
-  {
+  "952": {
     "devName": "DEV_SUSIDORA",
     "id": 952,
     "forms": 3
   },
-  {
+  "953": {
     "devName": "DEV_BAIKU",
     "id": 953,
     "forms": 1
   },
-  {
+  "954": {
     "devName": "DEV_MAAMOTTO1",
     "id": 954,
     "forms": 1
   },
-  {
+  "955": {
     "devName": "DEV_MAAMOTTO2",
     "id": 955,
     "forms": 1
   },
-  {
+  "956": {
     "devName": "DEV_MAAMOTTO3",
     "id": 956,
     "forms": 1
   },
-  {
+  "957": {
     "devName": "DEV_MIZUDORI1",
     "id": 957,
     "forms": 1
   },
-  {
+  "958": {
     "devName": "DEV_MIZUDORI2",
     "id": 958,
     "forms": 1
   },
-  {
+  "959": {
     "devName": "DEV_KOUNOTORI",
     "id": 959,
     "forms": 1
   },
-  {
+  "960": {
     "devName": "DEV_INKO",
     "id": 960,
     "forms": 4
   },
-  {
+  "961": {
     "devName": "DEV_HURAMINGO",
     "id": 961,
     "forms": 1
   },
-  {
+  "962": {
     "devName": "DEV_KEGANI",
     "id": 962,
     "forms": 1
   },
-  {
+  "963": {
     "devName": "DEV_GANEN1",
     "id": 963,
     "forms": 1
   },
-  {
+  "964": {
     "devName": "DEV_GANEN2",
     "id": 964,
     "forms": 1
   },
-  {
+  "965": {
     "devName": "DEV_GANEN3",
     "id": 965,
     "forms": 1
   },
-  {
+  "966": {
     "devName": "DEV_KARUKAN1",
     "id": 966,
     "forms": 1
   },
-  {
+  "967": {
     "devName": "DEV_KARUKAN2",
     "id": 967,
     "forms": 1
   },
-  {
+  "968": {
     "devName": "DEV_AIAI1",
     "id": 968,
     "forms": 1
   },
-  {
+  "969": {
     "devName": "DEV_AIAI2",
     "id": 969,
     "forms": 1
   },
-  {
+  "970": {
     "devName": "DEV_PANINU1",
     "id": 970,
     "forms": 1
   },
-  {
+  "971": {
     "devName": "DEV_PANINU2",
     "id": 971,
     "forms": 1
   },
-  {
+  "972": {
     "devName": "DEV_MASUTHIHU1",
     "id": 972,
     "forms": 1
   },
-  {
+  "973": {
     "devName": "DEV_MASUTHIHU2",
     "id": 973,
     "forms": 1
   },
-  {
+  "974": {
     "devName": "DEV_TANBURU1",
     "id": 974,
     "forms": 1
   },
-  {
+  "975": {
     "devName": "DEV_TANBURU2",
     "id": 975,
     "forms": 1
   },
-  {
+  "976": {
     "devName": "DEV_KOIN1",
     "id": 976,
     "forms": 2
   },
-  {
+  "977": {
     "devName": "DEV_KOIN2",
     "id": 977,
     "forms": 1
   },
-  {
+  "978": {
     "devName": "DEV_ADONFAN",
     "id": 978,
     "forms": 1
   },
-  {
+  "979": {
     "devName": "DEV_AMOROBARERU",
     "id": 979,
     "forms": 1
   },
-  {
+  "980": {
     "devName": "DEV_AKETUBAN",
     "id": 980,
     "forms": 1
   },
-  {
+  "981": {
     "devName": "DEV_AREAKOIRU",
     "id": 981,
     "forms": 1
   },
-  {
+  "982": {
     "devName": "DEV_APURIN",
     "id": 982,
     "forms": 1
   },
-  {
+  "983": {
     "devName": "DEV_AMUUMA",
     "id": 983,
     "forms": 1
   },
-  {
+  "984": {
     "devName": "DEV_AURUGAMOSU",
     "id": 984,
     "forms": 1
   },
-  {
+  "985": {
     "devName": "DEV_AAAAA",
     "id": 985,
     "forms": 1
   },
-  {
+  "986": {
     "devName": "DEV_BDONFAN",
     "id": 986,
     "forms": 1
   },
-  {
+  "987": {
     "devName": "DEV_BKETUBAN",
     "id": 987,
     "forms": 1
   },
-  {
+  "988": {
     "devName": "DEV_BURUGAMOSU",
     "id": 988,
     "forms": 1
   },
-  {
+  "989": {
     "devName": "DEV_BHARITEYAMA",
     "id": 989,
     "forms": 1
   },
-  {
+  "990": {
     "devName": "DEV_BSAZANDORA",
     "id": 990,
     "forms": 1
   },
-  {
+  "991": {
     "devName": "DEV_BBANGIRASU",
     "id": 991,
     "forms": 1
   },
-  {
+  "992": {
     "devName": "DEV_BKOORI",
     "id": 992,
     "forms": 1
   },
-  {
+  "993": {
     "devName": "DEV_BBBBB",
     "id": 993,
     "forms": 1
   },
-  {
+  "994": {
     "devName": "DEV_ZYUNDEN1",
     "id": 994,
     "forms": 1
   },
-  {
+  "995": {
     "devName": "DEV_ZYUNDEN2",
     "id": 995,
     "forms": 1
   },
-  {
+  "996": {
     "devName": "DEV_ZYUNDEN3",
     "id": 996,
     "forms": 1
   },
-  {
+  "997": {
     "devName": "DEV_ZYUNDEN4",
     "id": 997,
     "forms": 1
   },
-  {
+  "998": {
     "devName": "DEV_AIGUANA",
     "id": 998,
     "forms": 5
   },
-  {
+  "999": {
     "devName": "DEV_BIGUANA",
     "id": 999,
     "forms": 5
   },
-  {
+  "1000": {
     "devName": "DEV_FEARII1",
     "id": 1000,
     "forms": 1
   },
-  {
+  "1001": {
     "devName": "DEV_FEARII2",
     "id": 1001,
     "forms": 1
   },
-  {
+  "1002": {
     "devName": "DEV_FEARII3",
     "id": 1002,
     "forms": 1
   },
-  {
+  "1003": {
     "devName": "DEV_HINOKO1",
     "id": 1003,
     "forms": 1
   },
-  {
+  "1004": {
     "devName": "DEV_HINOKO2A",
     "id": 1004,
     "forms": 1
   },
-  {
+  "1005": {
     "devName": "DEV_HINOKO2B",
     "id": 1005,
     "forms": 1
   },
-  {
+  "1006": {
     "devName": "DEV_OKAKINGU",
     "id": 1006,
     "forms": 1
   },
-  {
+  "1007": {
     "devName": "DEV_OKAGYARADOSU",
     "id": 1007,
     "forms": 1
   },
-  {
+  "1008": {
     "devName": "DEV_KOMATANA3",
     "id": 1008,
     "forms": 1
   },
-  {
+  "1009": {
     "devName": "DEV_rUPAA2",
     "id": 1009,
     "forms": 1
   },
-  {
+  "1010": {
     "devName": "DEV_MANKII3",
     "id": 1010,
     "forms": 1
   }
-]
+}

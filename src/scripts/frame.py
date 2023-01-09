@@ -21,6 +21,8 @@ DANGER_COLOR = "#894103"
 
 ON_CLOSE = sg.WIN_CLOSED
 
+window = sg.Window(f"Randomizer {os.environ.get('VERSION')}", size=LAYOUT_SIZE, background_color=BG_COLOR)
+
 def getAreasLayout(optionsValues: dict):
   LAYOUT_HEADER = [[sg.Text("Areas/Spawn Options", font=HEADER_FONT, background_color=BG_COLOR)]]
 
@@ -149,6 +151,17 @@ def getAreasLayout(optionsValues: dict):
 def getPokemonLayout(optionsValues: dict):
   LAYOUT_HEADER = [[sg.Text("Individual Pokemon Options", font=HEADER_FONT, background_color=BG_COLOR)]]
 
+  INSTANT_HATCH_EGGS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Instant Eggs Hatching", key="instantHatchEgg", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["instantHatchEgg"]),
+    ],
+    # Description
+    [
+      sg.Text("Reduce the cycles to hatch any egg to 1", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+
   ABILITIES_CHECKBOX = [
     [
       # Input
@@ -212,7 +225,7 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX + BASE_STATS_CHECKBOX
+  layout = LAYOUT_HEADER + INSTANT_HATCH_EGGS_CHECKBOX + ABILITIES_CHECKBOX + TM_CHECKBOX + MOVES_CHECKBOX + BASE_STATS_CHECKBOX
 
   return layout
 
@@ -305,6 +318,10 @@ def getTrainersLayout(optionsValues: dict):
     ],
     [
       sg.Text("The new added pokemon will have levels based on a calculation, 3 will have the lowest level, 2 an intermediate level and 1 the highest level", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("If the trainer team is not randomized, this option will be ignored", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
     ]
   ]
 
@@ -417,21 +434,32 @@ def changeStep(window: sg.Window, stepId: str):
     else:
       window[item.key].update(visible=False)
 
+def toggleLayoutButtons():
+  window["spawnsStepButton"].update(disabled=(not window["spawnsStepButton"].Disabled))
+  window["pokemonStepButton"].update(disabled=(not window["pokemonStepButton"].Disabled))
+  window["trainerStepButton"].update(disabled=(not window["trainerStepButton"].Disabled))
+  window["finalStepButton"].update(disabled=(not window["finalStepButton"].Disabled))
+  window["randomizeButton"].update(disabled=(not window["randomizeButton"].Disabled))
+
+def updateProgress(value = 0, key='-PROGRESS_BAR-', title: str=""):
+  window["progressTitle"].update(title)
+  window[key].update(value)
+
 def getWindowFrame(optionsValues: dict):
   HEADER_TEXT = [sg.Text("Pokemon S/V Randomizer", font=TITLE_FONT, background_color=BG_COLOR)]
 
   LAYOUTS_BUTTONS = [
-    sg.Button("Step 1"),
-    sg.Button("Step 2"),
-    sg.Button("Step 3"),
-    sg.Button("Final Step"),
+    sg.Button("Spawns", key='spawnsStepButton'),
+    sg.Button("Pokemon", key='pokemonStepButton'),
+    sg.Button("Trainers", key='trainerStepButton'),
+    sg.Button("Final Step", key='finalStepButton'),
   ]
 
   DEVS_HELP = [
     [sg.Checkbox("Keep files generated (such as binaries and jsons)", key="keepFiles", default=optionsValues["keepFiles"], text_color=DANGER_COLOR, background_color=BG_COLOR)]
   ]
 
-  RANDOMIZE_BUTTON = [[sg.Button("Randomize!")]]
+  RANDOMIZE_BUTTON = [[sg.Button("Randomize!", key="randomizeButton")]]
 
   NOTES = [
     [sg.Text("You should consider:", font=TEXT_FONT, background_color=BG_COLOR, text_color=DANGER_COLOR)],
@@ -440,6 +468,11 @@ def getWindowFrame(optionsValues: dict):
     [sg.Text("* Can spawn eggs (Shiny Lv. 0) on the overworld, but you can't do anything with them (as far I know)", font=TEXT_FONT, background_color=BG_COLOR)],
     [sg.Text("* Maybe the randomizer try to put an invalid item, so you may encounter pokemon without item", font=TEXT_FONT, background_color=BG_COLOR)],
     [sg.Text("* The raids still remain the same", font=TEXT_FONT, background_color=BG_COLOR)],
+  ]
+
+  PROGRESS_BAR = [
+    [sg.Text("", key='progressTitle', font=TEXT_FONT, background_color=BG_COLOR, text_color=("Green"))],
+    [sg.ProgressBar(100, orientation='h', size=(35, 20), border_width=4, key='-PROGRESS_BAR-', bar_color=("Blue", "White"))]
   ]
 
   COPYRIGHT = [
@@ -455,16 +488,16 @@ def getWindowFrame(optionsValues: dict):
     HEADER_TEXT,
 
     [
-      sg.Column(areasLayout, key="step1", background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
-      sg.Column(pokemonLayout, key="step2", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE),
-      sg.Column(trainersLayout, key="step3", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
-      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES, key="finalStep", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
+      sg.Column(areasLayout, key="spawns", background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
+      sg.Column(pokemonLayout, key="pokemon", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE),
+      sg.Column(trainersLayout, key="trainers", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
+      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + PROGRESS_BAR, key="finalStep", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
     ],
     
     LAYOUTS_BUTTONS,
     COPYRIGHT
   ]
 
-  window = sg.Window(f"Randomizer {os.environ.get('VERSION')}", finalLayout, size=LAYOUT_SIZE, background_color=BG_COLOR)
+  window.layout(finalLayout)
 
   return window
