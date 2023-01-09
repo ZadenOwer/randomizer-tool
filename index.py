@@ -3,6 +3,9 @@ import os
 import shutil
 import json
 
+# Env Vars
+os.environ["VERSION"] = "1.1.3"
+
 from src.scripts.randomizer.pokemon import PokemonRandomizer
 from src.scripts.randomizer.trainers import TrainersRandomizer
 from src.scripts.randomizer.spawns import SpawnsRandomizer
@@ -11,9 +14,6 @@ from src.scripts import flatc as FlatC
 from src.scripts import frame as WindowFrame
 
 from src.scripts.logger import setup_custom_logger
-
-# Env Vars
-os.environ["VERSION"] = "1.1.3"
 
 logger = setup_custom_logger(os.environ.get('VERSION'))
 logger.info('STARTING LOGS')
