@@ -9,7 +9,8 @@ COLUMN_SIZE = (810, 600) # (WIDTH, HEIGHT)
 DEFAULT_FONT_FAMILY = ''
 
 TITLE_FONT = ('Courier', 24, 'bold')
-HEADER_FONT = ('', 18)
+SUB_TITLE_FONT = ('', 16, 'bold')
+HEADER_FONT = ('', 20)
 INPUT_FONT = (DEFAULT_FONT_FAMILY, 14, 'bold')
 TEXT_FONT = (DEFAULT_FONT_FAMILY, 12)
 COPYRIGHT_FONT = (DEFAULT_FONT_FAMILY, 12, 'italic')
@@ -143,8 +144,14 @@ def getAreasLayout(optionsValues: dict):
     ]
   ]
 
-  # layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + FULL_POKEDEX_CHECKBOX + SIMILAR_STATS_CHECKBOX + INITIALS_CHECKBOX + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
-  layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + SIMILAR_STATS_CHECKBOX + INITIALS_CHECKBOX + ITEMS_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX
+  # FULL_POKEDEX_CHECKBOX +\
+  layout = LAYOUT_HEADER +\
+    RANDOMIZE_CHECKBOX +\
+    SIMILAR_STATS_CHECKBOX +\
+    INITIALS_CHECKBOX +\
+    ITEMS_CHECKBOX +\
+    LEGENDARIES_CHECKBOX +\
+    PARADOX_CHECKBOX
 
   return layout
 
@@ -180,6 +187,10 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
+  MOVES_TITLE = [
+    [sg.Text("# Moves Options", font=SUB_TITLE_FONT, background_color=BG_COLOR, text_color=('Blue'))]
+  ]
+  
   TM_CHECKBOX = [
     [
       # Input
@@ -240,6 +251,107 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
+  EVOLUTIONS_TITLE = [
+    [sg.Text("# Evolutions Options", font=SUB_TITLE_FONT, background_color=BG_COLOR, text_color=('Blue'))]
+  ]
+
+  EVOLUTIONS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Random Evolutions", key="evolutions", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["evolutions"]),
+    ],
+    # Description
+    [
+      sg.Text("Randomize the evolutions of every pokemon", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: If isn't check, the evolutions checks below will be ignored", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+
+  EVOLUTION_STAGE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Keep Evolution Stage", key="keepEvoStage", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["keepEvoStage"]),
+    ],
+    # Description
+    [
+      sg.Text("Will mantain the evolution stage (second or final evolution)", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Ex: Gabite is a 2nd evo, so can be replaced with Fletchinder but not with Fletchling or Talonflame", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+
+  EVOLUTION_STATS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Evolution Stats", key="evoSameStats", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["evoSameStats"]),
+    ],
+    # Description
+    [
+      sg.Text("The randomized evolution will have similar stats to the original evolution", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: The tool will attempt 30 times to get one, if fails, will take the last random pokemon validated", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+  
+  EVOLUTION_GROWTH_RATE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Evolution Growth Rate", key="evoGrowthRate", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["evoGrowthRate"]),
+    ],
+    # Description
+    [
+      sg.Text("The randomized evolution will have the same growth rate as the original one", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+  
+  EVOLUTION_TYPE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Evolution Type", key="evoType", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["evoType"]),
+    ],
+    # Description
+    [
+      sg.Text("The randomized evolution will share almost one type with the original one", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+  
+  EVOLUTION_LEGENDARIES_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Legendary Evolutions", key="legendaryEvo", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["legendaryEvo"]),
+    ],
+    # Description
+    [
+      sg.Text("Legendaries can be placed as evolutions", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: Can only appear on final evolutions", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+
+  EVOLUTION_PARADOX_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Paradox Evolutions", key="paradoxEvo", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["paradoxEvo"]),
+    ],
+    # Description
+    [
+      sg.Text("Paradox forms can be placed as evolutions", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: Can only appear on final evolutions", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+  
   TYPES_CHECKBOX = [
     [
       # Input
@@ -266,7 +378,25 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + INSTANT_HATCH_EGGS_CHECKBOX + ABILITIES_CHECKBOX + TM_CHECKBOX + LEARNSET_CHECKBOX + MOVE_POWER_CHECKBOX + MOVE_TYPE_CHECKBOX + TYPES_CHECKBOX + BASE_STATS_CHECKBOX
+  layout = \
+    LAYOUT_HEADER +\
+    INSTANT_HATCH_EGGS_CHECKBOX +\
+    ABILITIES_CHECKBOX +\
+    TYPES_CHECKBOX +\
+    BASE_STATS_CHECKBOX +\
+    MOVES_TITLE +\
+    TM_CHECKBOX +\
+    LEARNSET_CHECKBOX +\
+    MOVE_POWER_CHECKBOX +\
+    MOVE_TYPE_CHECKBOX +\
+    EVOLUTIONS_TITLE +\
+    EVOLUTIONS_CHECKBOX +\
+    EVOLUTION_STAGE_CHECKBOX +\
+    EVOLUTION_STATS_CHECKBOX +\
+    EVOLUTION_GROWTH_RATE_CHECKBOX +\
+    EVOLUTION_TYPE_CHECKBOX +\
+    EVOLUTION_LEGENDARIES_CHECKBOX +\
+    EVOLUTION_PARADOX_CHECKBOX
 
   return layout
 
@@ -288,23 +418,8 @@ def getTrainersLayout(optionsValues: dict):
     ],
   ]
 
-  SIMILAR_STATS_CHECKBOX = [
-    [
-      # Input
-      sg.Check("Similar Stats", key="trainerSimilarStats", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["trainerSimilarStats"]),
-    ],
-    [
-      # Description
-      sg.Text("Each pokemon on the team will have similar base stats to the original one.", font=TEXT_FONT, background_color=BG_COLOR),
-    ],
-    [
-      # Sub description
-      sg.Text("If force full team is checked, the new added pokemon will have similar stats to the previous one", font=TEXT_FONT, background_color=BG_COLOR),
-    ],
-    [
-      # Sub description
-      sg.Text("Note: If the pokemon fails to get a random pokemon with similar stats, the pokemon will be completly random (be aware)", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
-    ]
+  TRAINER_TITLE = [
+    [sg.Text("# Trainer Options", font=SUB_TITLE_FONT, background_color=BG_COLOR, text_color=('Blue'))]
   ]
 
   TERACRISTALIZE_CHECKBOX = [
@@ -388,6 +503,29 @@ def getTrainersLayout(optionsValues: dict):
     ]
   ]
 
+  TRAINER_POKEMON_TITLE = [
+    [sg.Text("# Trainer Team Options", font=SUB_TITLE_FONT, background_color=BG_COLOR, text_color=('Blue'))]
+  ]
+
+  SIMILAR_STATS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Similar Stats", key="trainerSimilarStats", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["trainerSimilarStats"]),
+    ],
+    [
+      # Description
+      sg.Text("Each pokemon on the team will have similar base stats to the original one.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("If force full team is checked, the new added pokemon will have similar stats to the previous one", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: If the pokemon fails to get a random pokemon with similar stats, the pokemon will be completly random (be aware)", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+
   ITEMS_CHECKBOX = [
     [
       # Input
@@ -459,7 +597,23 @@ def getTrainersLayout(optionsValues: dict):
     ]
   ]
 
-  layout = LAYOUT_HEADER + RANDOMIZE_CHECKBOX + SIMILAR_STATS_CHECKBOX + TERACRISTALIZE_CHECKBOX + LEGENDARIES_CHECKBOX + PARADOX_CHECKBOX + FULL_TEAM_CHECKBOX + KEEP_RIVAL_INITIAL_CHECKBOX + KEEP_TYPE_CHECKBOX + ITEMS_CHECKBOX + COMPETITIVE_CHECKBOX + SHINY_INPUT + FORCE_EVOLUTION_CHECKBOX + EVOLUTION_CAP_INPUT
+  layout = \
+    LAYOUT_HEADER +\
+    RANDOMIZE_CHECKBOX +\
+    TRAINER_TITLE +\
+    TERACRISTALIZE_CHECKBOX +\
+    LEGENDARIES_CHECKBOX +\
+    PARADOX_CHECKBOX +\
+    FULL_TEAM_CHECKBOX +\
+    KEEP_RIVAL_INITIAL_CHECKBOX +\
+    KEEP_TYPE_CHECKBOX +\
+    TRAINER_POKEMON_TITLE +\
+    SIMILAR_STATS_CHECKBOX +\
+    ITEMS_CHECKBOX +\
+    COMPETITIVE_CHECKBOX +\
+    SHINY_INPUT +\
+    FORCE_EVOLUTION_CHECKBOX +\
+    EVOLUTION_CAP_INPUT
 
   return layout
 
@@ -530,7 +684,7 @@ def getWindowFrame(optionsValues: dict):
 
     [
       sg.Column(areasLayout, key="spawns", background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
-      sg.Column(pokemonLayout, key="pokemon", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE),
+      sg.Column(pokemonLayout, key="pokemon", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(trainersLayout, key="trainers", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + PROGRESS_BAR, key="finalStep", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
     ],

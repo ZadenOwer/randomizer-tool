@@ -112,6 +112,58 @@ class PokemonRandomizer(BaseRandomizer):
     typesIds = [typeId for typeId in list(range(18)) if typeId not in blacklist]
     return self.getRandomValue(items=typesIds)
 
+  def shareAType(self, oldPkmData: dict, newPkmdata: dict):
+    originalTypes = [newPkmdata["type_1"], newPkmdata["type_2"]]
+
+    if (oldPkmData["type_1"] in originalTypes):
+      return True
+    if (oldPkmData["type_2"] in originalTypes):
+      return True
+
+    return False
+
+  def getRandomEvolutions(self, evoStage: int, defaultEvolutions: list, options: dict):
+    randomizedEvolutions = []
+    
+    if options["keepEvoStage"]:
+      if evoStage == 1:
+        nextEvoStage = 2
+      else:
+        nextEvoStage = 3
+    
+      pokemonList = [pokemon for pokemon in self.personalData["entry"] if pokemon["evo_stage"] == nextEvoStage]
+    else:
+      pokemonList = self.personalData["entry"].copy()
+
+    if options["legendaryEvo"]:
+      pokemonList = [pokemon for pokemon in pokemonList if pokemon["species"]["model"] not in self.legendaryDex]
+
+    if options["paradoxEvo"]:
+      pokemonList = [pokemon for pokemon in pokemonList if pokemon["species"]["model"] not in self.paradoxDex]
+
+    for evolution in defaultEvolutions:
+      evolutionData = self.getPokemonPersonalData(dexId=evolution["species"])
+
+      if options["evoSameStats"]:
+        pokemonList = [pokemon for pokemon in pokemonList if self.hasSimilarStats(oldPkmId=evolution["species"], newPkmId=pokemon["species"]["model"])]
+
+      if options["evoGrowthRate"]:
+        pokemonList = [pokemon for pokemon in pokemonList if pokemon["xp_growth"] == evolutionData["xp_growth"]]
+
+      if options["evoType"]:
+        pokemonList = [pokemon for pokemon in pokemonList if self.shareAType(oldPkmData=evolutionData, newPkmdata=pokemon)]
+
+      randomEvolution = self.getRandomValue(items=pokemonList)
+      randomizedEvolutions.append({
+        **evolution,
+        "species": randomEvolution["species"]["model"]
+      })
+
+      self.logger.info(f'Old Evolution ID {evolution["species"]}')
+      self.logger.info(f'New Evolution ID {randomEvolution["species"]["model"]}')
+
+    return randomizedEvolutions
+
   def getRandomizedPokemonList(self, options: dict = None):
     self.logger.info('Starting logs for Pokemon Personal Data Randomizer')
 
@@ -171,6 +223,10 @@ class PokemonRandomizer(BaseRandomizer):
         else:
           randomType = self.getRandomType(blacklist=[randomizedPokemon["type_1"]])
           randomizedPokemon["type_2"] = randomType
+
+      if options["evolutions"]:
+        randomEvolution = self.getRandomEvolutions(evoStage=randomizedPokemon["evo_stage"], defaultEvolutions=randomizedPokemon["evo_data"], options=options)
+        randomizedPokemon["evo_data"] = randomEvolution
 
       randomizedPokemonList.append(randomizedPokemon)
       self.pokemonProgress = math.floor((len(randomizedPokemonList)/totalItems)*100)
