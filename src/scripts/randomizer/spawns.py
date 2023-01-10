@@ -10,13 +10,15 @@ class SpawnsRandomizer(BaseRandomizer):
   staticEventsProgress = 0
   areaProgress = 0
 
-  def __init__(self, data: dict) -> None:
-    super().__init__(data)
+  def __init__(self, data: dict, options: dict) -> None:
+    super().__init__(data=data, options=options)
 
   # ********* Add Pokemon Events Randomizer Start *********
 
-  def generateSpawnPokemon(self, oldPkmId:int, options: dict, blacklist: list = []):    
-    randomPokemon = self.generateRandomPokemon(oldPkmId=oldPkmId, options=options, blacklist=blacklist, similarStats=options["similarStats"])
+  def generateSpawnPokemon(self, oldPkmId:int, options: dict, blacklist: list = []):
+    self.preparePokemonFilteredList(options=options, blacklist=blacklist, oldPkmId=oldPkmId)
+
+    randomPokemon = self.getRandomPokemon(oldPkmId=oldPkmId, similarStats=options["similarStats"])
 
     form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
     self.logger.info(f'Random pokemon generated: ID: {randomPokemon["id"]} - NAME: {randomPokemon["devName"]} - FORM: {form}')

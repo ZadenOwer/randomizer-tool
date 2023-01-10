@@ -10,8 +10,8 @@ class PokemonRandomizer(BaseRandomizer):
   pokemonProgress = 0
   STATUS_MOVE = "STATUS"
 
-  def __init__(self, data: dict) -> None:
-    super().__init__(data)
+  def __init__(self, data: dict, options: dict) -> None:
+    super().__init__(data=data, options=options)
 
   def getRandomBaseStats(self, pkmPersonalData: dict):
     baseStats = list(pkmPersonalData["base_stats"].values())
@@ -92,19 +92,21 @@ class PokemonRandomizer(BaseRandomizer):
     if options["moveType"]:
       moveList = {id: move for id, move in moveList.items() if self.hasSimilarType(oldMoveType=moveData["type"], newMoveType=move["type"])}
 
+    if len(moveList) == 0:
+      # If for some reason all the filters clear the array, will ignore all the filters applied
+      moveList = self.moveList
+
     randomMove = self.getRandomValue(items=list(moveList.values()))
     return randomMove
 
   def getRandomizedLearnset(self, defaultLearnset: list, options: dict):
     randomizedLearnset = []
-    alreadyUsed = []
 
     for defaultMove in defaultLearnset:
-      randomMove = self.getRandomMove(defaultMove=defaultMove, options=options, blacklist=alreadyUsed)
+      randomMove = self.getRandomMove(defaultMove=defaultMove, options=options)
       self.logger.info(f'Old move: ID {defaultMove["move"]} - AT LEVEL {defaultMove["level"]}')
       self.logger.info(f'New move: ID {randomMove["id"]}')
       randomizedLearnset.append({**defaultMove, "move": randomMove["id"]})
-      alreadyUsed.append(randomMove["id"])
 
     return randomizedLearnset
 
@@ -145,7 +147,8 @@ class PokemonRandomizer(BaseRandomizer):
       if options["evoType"]:
         typesIds = [evolutionData["type_1"], evolutionData["type_2"]]
 
-      randomEvolution = self.generateRandomPokemon(oldPkmId=evolution["species"], options=evolutionOptions, similarStats=similarStats, keepType=(typesIds is not None), typesIds=typesIds, growthRate=growthRate, evoStage=nextEvoStage)
+      self.preparePokemonFilteredList(options=options, typesIds=typesIds, growthRate=growthRate, evoStage=nextEvoStage)
+      randomEvolution = self.getRandomPokemon(oldPkmId=evolution["species"], similarStats=similarStats)
 
       randomizedEvolutions.append({
         **evolution,
@@ -168,7 +171,7 @@ class PokemonRandomizer(BaseRandomizer):
         randomizedPokemonList.append(pokemon)
         continue
 
-      devPkm = self.getPokemonDev(dexId=pokemon["species"]["model"])
+      devPkm = self.getPokemonDev(dexId=pokemon["species"]["species"])
       self.logger.info(f'Randomizing data for pokemon: ID: {devPkm["id"]} - NAME: {devPkm["devName"]} - FORM: {pokemon["species"]["form"]}')
 
       randomizedPokemon = {

@@ -217,9 +217,9 @@ while True:
       "trainers": trainersFileName
     }
 
-    spawnsRandomizer = SpawnsRandomizer(data=staticData)
-    pokemonRandomizer = PokemonRandomizer(data=staticData)
-    trainersRandomizer = TrainersRandomizer(data=staticData)
+    spawnsRandomizer = SpawnsRandomizer(data=staticData, options=serializedAreaOptions)
+    pokemonRandomizer = PokemonRandomizer(data=staticData, options=serializedPokemonOptions)
+    trainersRandomizer = TrainersRandomizer(data=staticData, options=serializedTrainersOptions)
 
     spawnsRandomizer.addEventsProgress = 0
     spawnsRandomizer.staticEventsProgress = 0

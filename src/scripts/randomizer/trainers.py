@@ -11,37 +11,8 @@ class TrainersRandomizer(BaseRandomizer):
 
   trainerProgress = 0
 
-  def __init__(self, data: dict) -> None:
-    super().__init__(data)
-
-  def generateTrainerRandomPokemon(self, oldPkmId: int, trainerType: str, options: dict, blacklist: list = []):
-    randomPokemon = None
-
-    trainerOptions = options.copy()
-
-    if options["trainerLegendaries"]:
-      trainerOptions["legendaries"] = True
-
-    if options["trainerParadox"]:
-      trainerOptions["paradox"] = True
-
-    if options["keepGymType"]:
-      if self.isMonotypeTrainer(trainerTypeName=trainerType):
-        trainerTypeId = self.getTrainerTypeId(trainerTypeName=trainerType)
-        randomPokemon = self.generateRandomPokemon(oldPkmId=oldPkmId, options=trainerOptions, blacklist=blacklist, similarStats=options["trainerSimilarStats"], keepType=True, typeId=trainerTypeId)
-
-    if randomPokemon is None:
-      self.generateRandomPokemon(oldPkmId=oldPkmId, options=trainerOptions, blacklist=blacklist, similarStats=options["trainerSimilarStats"])
-
-    form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
-
-    self.logger.info(f'Random pokemon generated: ID: {randomPokemon["id"]} - NAME: {randomPokemon["devName"]} - FORM: {form}')
-
-    return {
-      **randomPokemon,
-      "form": form,
-      "sex": sex
-    }
+  def __init__(self, data: dict, options: dict) -> None:
+    super().__init__(data=data, options=options)
 
   def getPerfectIvs(self):
     # This was made in order to be optimum and not easy to read, but you can see the getRandomBaseStats on the pokemon.py to have a reference of what's going on
@@ -219,7 +190,6 @@ class TrainersRandomizer(BaseRandomizer):
       randomizedTrainer = {
         **trainer
       }
-      alreadyUsedId = []
 
       isRival = False
       rivalType = None
@@ -311,6 +281,20 @@ class TrainersRandomizer(BaseRandomizer):
           }
         }
 
+      trainerOptions = options.copy()
+
+      if options["trainerLegendaries"]:
+        trainerOptions["legendaries"] = True
+
+      if options["trainerParadox"]:
+        trainerOptions["paradox"] = True
+
+      if options["keepGymType"] and self.isMonotypeTrainer(trainerTypeName=randomizedTrainer["trainerType"]):
+        trainerTypeId = self.getTrainerTypeId(trainerTypeName=randomizedTrainer["trainerType"])
+        self.preparePokemonFilteredList(options=options, typesIds=[trainerTypeId])
+      else:
+        self.preparePokemonFilteredList(options=options)
+
       for pokeKey in pokemonKeys:
         if not options["forceFullTeam"] and randomizedTrainer[pokeKey]["devId"] == "DEV_NULL":
           continue
@@ -329,7 +313,6 @@ class TrainersRandomizer(BaseRandomizer):
             }
 
             self.logger.info(f'Rival stage {rivalParams[2]} starter changed for: {rivalPokemon["id"]} - {rivalPokemon["devName"]}')
-            alreadyUsedId.append(rivalPokemon["id"])
           else:
             pokeDevName = randomizedTrainer[pokeKey]["devId"]
             if pokeDevName == "DEV_NULL":
@@ -337,16 +320,18 @@ class TrainersRandomizer(BaseRandomizer):
               pokeDevName = randomizedTrainer[previousKey]["devId"]
 
             pkmDev = self.getPokemonDev(devName=pokeDevName)
+  
+            randomPokemon = self.getRandomPokemon(oldPkmId=pkmDev["id"], similarStats=options["trainerSimilarStats"])
 
-            randomPokemon = self.generateTrainerRandomPokemon(oldPkmId=pkmDev["id"], trainerType=randomizedTrainer["trainerType"], options=options, blacklist=alreadyUsedId)
+            form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
 
-            alreadyUsedId.append(randomPokemon["id"])
+            self.logger.info(f'Random pokemon generated: ID: {randomPokemon["id"]} - NAME: {randomPokemon["devName"]} - FORM: {form}')
 
             randomizedTrainer[pokeKey] = {
               **randomizedTrainer[pokeKey],
               "devId": randomPokemon["devName"],
-              "formId": randomPokemon["form"],
-              "sex": randomPokemon["sex"],
+              "formId": form,
+              "sex": sex,
               **self.trainerPokeTemplate()
             }
 

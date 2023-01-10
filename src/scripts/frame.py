@@ -687,7 +687,7 @@ def getWindowFrame(optionsValues: dict):
   ]
 
   DISCLAIMER = [
-    [sg.Text("If you checked too many options this process can be slow by all the validations needed", font=TEXT_FONT, background_color=BG_COLOR, text_color=DANGER_COLOR)],
+    [sg.Text("If you checked too many options this process can be slowed by all the validations needed", font=TEXT_FONT, background_color=BG_COLOR, text_color=DANGER_COLOR)],
   ]
 
   COPYRIGHT = [
