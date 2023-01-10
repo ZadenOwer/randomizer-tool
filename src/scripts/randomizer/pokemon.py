@@ -112,16 +112,6 @@ class PokemonRandomizer(BaseRandomizer):
     typesIds = [typeId for typeId in list(range(18)) if typeId not in blacklist]
     return self.getRandomValue(items=typesIds)
 
-  def shareAType(self, oldPkmData: dict, newPkmdata: dict):
-    originalTypes = [newPkmdata["type_1"], newPkmdata["type_2"]]
-
-    if (oldPkmData["type_1"] in originalTypes):
-      return True
-    if (oldPkmData["type_2"] in originalTypes):
-      return True
-
-    return False
-
   def getRandomEvolutions(self, evoStage: int, defaultEvolutions: list, options: dict):
     randomizedEvolutions = []
     
@@ -145,7 +135,7 @@ class PokemonRandomizer(BaseRandomizer):
       evolutionData = self.getPokemonPersonalData(dexId=evolution["species"])
 
       if options["evoSameStats"]:
-        pokemonList = [pokemon for pokemon in pokemonList if self.hasSimilarStats(oldPkmId=evolution["species"], newPkmId=pokemon["species"]["model"])]
+        pokemonList = self.listWithSimilarStats(pkmIdToCompare=evolution["species"], pokemonData=pokemonList)
 
       if options["evoGrowthRate"]:
         pokemonList = [pokemon for pokemon in pokemonList if pokemon["xp_growth"] == evolutionData["xp_growth"]]

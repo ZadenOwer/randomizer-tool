@@ -16,6 +16,8 @@ class BaseRandomizer:
     916: ['MALE', 'FEMALE']  # Oinkologne(916)
   }
 
+  STATS_RATES = [10,15,20,25]
+
   pokemonData = {
     "values": []
   }
@@ -64,25 +66,31 @@ class BaseRandomizer:
   def getRandomValue(self, items: list):
     return random.choice(items)
 
-  def generateRandomPokemon(self, options: dict = None, blacklist: list = []):
+  def generateRandomPokemon(self, oldPkmId: dict, options: dict = None, blacklist: list = [], similarStats = False, keepType = False, typeId = None):
     if options["fullPokeDex"]:
-      filteredList = self.pokemonList
+      pokemonList = self.pokemonList
     else:
       # Just Paldean Dex
-      filteredList = {id: pokemon for id, pokemon in self.pokemonList.items() if int(id) in self.paldeaDex}
+      pokemonList = {id: pokemon for id, pokemon in self.pokemonList.items() if int(id) in self.paldeaDex}
 
     if not options["legendaries"]:
       # No legendaries allowed
-      filteredList = {id: pokemon for id, pokemon in filteredList.items() if int(id) not in self.legendaryDex}
+      pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if int(id) not in self.legendaryDex}
 
     if not options["paradox"]:
       # No paradox allowed
-      filteredList = {id: pokemon for id, pokemon in filteredList.items() if int(id) not in self.paradoxDex}
+      pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if int(id) not in self.paradoxDex}
+
+    if keepType:
+      pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if self.shareAType(newPkmId=int(id), oldPkmId=oldPkmId, typeId=typeId)}
+
+    if similarStats:
+      pokemonList = self.listWithSimilarStats(pkmIdToCompare=oldPkmId, pokemonList=pokemonList)
 
     if len(blacklist) > 0:
-      filteredList = {id: pokemon for id, pokemon in filteredList.items() if int(id) not in blacklist}
+      pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if int(id) not in blacklist}
 
-    generatedPokemon = self.getRandomValue(items=list(filteredList.values()))
+    generatedPokemon = self.getRandomValue(items=list(pokemonList.values()))
     return generatedPokemon
 
   def generateRandomItem(self):
@@ -174,7 +182,29 @@ class BaseRandomizer:
 
     return total
 
-  def hasSimilarStats(self, newPkmId: int, oldPkmId: int = None, oldPkmDevName: str = None):
+  def listWithSimilarStats(self, pkmIdToCompare: int, pokemonList: dict = None, pokemonData: list = None):
+    filtered = None
+
+    for rate in self.STATS_RATES:
+      self.logger.info(f'Testing SimilarStats with Rate {rate}%')
+      
+      if pokemonList:
+        filtered = {id: pokemon for id, pokemon in pokemonList.items() if self.hasSimilarStats(oldPkmId=pkmIdToCompare, newPkmId=int(id), rate=rate)}
+      else:
+        filtered = [pokemon for pokemon in pokemonData if self.hasSimilarStats(oldPkmId=pkmIdToCompare, newPkmId=int(id), rate=rate)]
+
+      if (len(filtered) > 0):
+        break
+    
+    if filtered is not None and len(filtered) > 0:
+      return filtered
+
+    if pokemonList is not None:
+      return pokemonList
+    else:
+      return pokemonData
+
+  def hasSimilarStats(self, rate: int, newPkmId: int, oldPkmId: int = None, oldPkmDevName: str = None):
     if oldPkmId is None and oldPkmDevName is None:
       return True
 
@@ -197,8 +227,11 @@ class BaseRandomizer:
     oldPkmBST = self.getBaseStatsTotal(oldPkm)
     newPkmBST = self.getBaseStatsTotal(newPkm)
 
-    lowValue = (oldPkmBST * 10) / 11
-    highValue = (oldPkmBST * 11) / 10
+    percentageRate = rate / 100
+    diffRate = oldPkmBST * percentageRate
+
+    lowValue = oldPkmBST - diffRate
+    highValue = oldPkmBST + diffRate
 
     result = lowValue <= newPkmBST and highValue >= newPkmBST 
 
@@ -210,28 +243,24 @@ class BaseRandomizer:
 
     return result 
 
-  def checkEvoStats(self, oldPkmPersonalData: dict, newPkmPersonalData: dict):
-    self.logger.info(f'Checking evos stats for {newPkmPersonalData["species"]["model"]}')
+  def shareAType(self, typeId: int = None, oldPkmData: dict = None, newPkmdata: dict = None, oldPkmId: int = None, newPkmId: int = None):
 
-    if oldPkmPersonalData is None or newPkmPersonalData is None:
-      return None
+    if oldPkmId is not None:
+      oldPkmData = self.getPokemonPersonalData(dexId=oldPkmId)
+      
+    if newPkmId is not None:
+      newPkmdata = self.getPokemonPersonalData(dexId=newPkmId)
+    
+    if typeId is not None:
+      originalTypes = [typeId]
+    else:
+      originalTypes = [oldPkmData["type_1"], oldPkmData["type_2"]]
 
-    if len(newPkmPersonalData["evo_data"]) == 0:
-      self.logger.info('Is a pokemon without evolutions, ignored atm')
-      return None
+    if (newPkmdata["type_1"] in originalTypes):
+      return True
+    if (newPkmdata["type_2"] in originalTypes):
+      return True
 
-    evoStages = {
-      1: self.getPokemonDev(dexId=newPkmPersonalData["egg_hatch"]["species"]),
-      2: self.getNextEvolution(dexId=newPkmPersonalData["egg_hatch"]["species"]),
-      3: self.getFinalEvolution(dexId=newPkmPersonalData["egg_hatch"]["species"])
-    }
+    return False
 
-    for evoStage, evolution in evoStages.items():
-      if oldPkmPersonalData["evo_stage"] == evoStage:
-        if self.hasSimilarStats(oldPkmDevName=oldPkmPersonalData["species"]["model"], newPkmId=evolution["id"]):
-          self.logger.info(f'The {evoStage} evo from the random pkm match')
-          return evolution
-
-    self.logger.info('Not evo match was found')
-    return None
-
+  
