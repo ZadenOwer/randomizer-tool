@@ -1,3 +1,12 @@
+# 1.1.4 - 01/09/2023
+
+- Randomizer Script refactored to subdivide into classes
+- Reimplemented the generation of random pokemon
+- Reimplemented the calculation of similar stats
+- New Option for Random Types
+- New Option for Random Evolutions
+- New Option for randomize the learnset based on the power and the original type of the move
+
 # 1.1.3 - 01/08/2023
 
 - Improvements on performance
