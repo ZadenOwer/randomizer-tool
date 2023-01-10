@@ -8,9 +8,10 @@ from src.scripts.frame import updateProgress
 class PokemonRandomizer(BaseRandomizer):
 
   pokemonProgress = 0
+  STATUS_MOVE = "STATUS"
 
-  def __init__(self, data: dict) -> None:
-    super().__init__(data)
+  def __init__(self, data: dict, options: dict) -> None:
+    super().__init__(data=data, options=options)
 
   def getRandomBaseStats(self, pkmPersonalData: dict):
     baseStats = list(pkmPersonalData["base_stats"].values())
@@ -38,20 +39,126 @@ class PokemonRandomizer(BaseRandomizer):
 
     return randomizedTMList
 
-  def getRandomizedLearnset(self, defaultLearnset: list):
-    moveIds = [move["id"] for move in self.moveList]
+  def hasSimilarPower(self, oldMovePower: int, newMovePower: int | str):
+    if newMovePower == self.STATUS_MOVE:
+      # All the status move are possible choices for the random move
+      return True
+
+    if oldMovePower >= 200:
+      return (oldMovePower - 50 < newMovePower) and (newMovePower < oldMovePower + 50)
+    
+    if oldMovePower >= 100:
+      return (oldMovePower - 20 < newMovePower) and (newMovePower < oldMovePower + 20)
+
+    return (oldMovePower - 10 < newMovePower) and (newMovePower < oldMovePower + 10)
+
+  def hasSimilarType(self, oldMoveType: int, newMoveType: int):
+    if oldMoveType == newMoveType:
+      return True
+
+    return False
+  
+  def getRandomMove(self, defaultMove: dict, options: dict, blacklist: list = []):
+    moveList = {id: move for id, move in self.moveList.items() if move["id"] not in blacklist}
+    moveData = None
+    try:
+      moveData = self.moveList[str(defaultMove["move"])]
+    except:
+      # The old move isn't valid for the 9th gen, putting a default move based on the level
+      if defaultMove["level"] <= 10:
+        moveData = self.moveList["364"] # Feint - Normal - Power 30
+      elif defaultMove["level"] <= 30:
+        moveData = self.moveList["229"] # Rapid Spin - Normal - Power 50:
+      else:
+        moveData = self.moveList["5"] # Mega Punch - Normal - Power 100:
+
+    if options["movePower"]:
+      isStatus = True if moveData["power"] == self.STATUS_MOVE else False
+      
+      if isStatus:
+        # If the old move is a status one, a fake power will be calculated based on the level this move is learned
+        if defaultMove["level"] <= 10:
+          fakePower = 30
+        elif defaultMove["level"] <= 30:
+          fakePower = 50
+        else:
+          fakePower = 100
+
+        moveList = {id: move for id, move in moveList.items() if self.hasSimilarPower(oldMovePower=fakePower, newMovePower=move["power"])}
+
+      if not isStatus:
+        moveList = {id: move for id, move in moveList.items() if self.hasSimilarPower(oldMovePower=moveData["power"], newMovePower=move["power"])}
+
+    if options["moveType"]:
+      moveList = {id: move for id, move in moveList.items() if self.hasSimilarType(oldMoveType=moveData["type"], newMoveType=move["type"])}
+
+    if len(moveList) == 0:
+      # If for some reason all the filters clear the array, will ignore all the filters applied
+      moveList = self.moveList
+
+    randomMove = self.getRandomValue(items=list(moveList.values()))
+    return randomMove
+
+  def getRandomizedLearnset(self, defaultLearnset: list, options: dict):
     randomizedLearnset = []
 
     for defaultMove in defaultLearnset:
-      randomMoveId = self.getRandomValue(items=moveIds)
-      moveIds.remove(randomMoveId)
-      randomizedLearnset.append({**defaultMove, "move": randomMoveId})
+      randomMove = self.getRandomMove(defaultMove=defaultMove, options=options)
+      self.logger.info(f'Old move: ID {defaultMove["move"]} - AT LEVEL {defaultMove["level"]}')
+      self.logger.info(f'New move: ID {randomMove["id"]}')
+      randomizedLearnset.append({**defaultMove, "move": randomMove["id"]})
 
     return randomizedLearnset
 
   def getRandomType(self, blacklist: list = []):
     typesIds = [typeId for typeId in list(range(18)) if typeId not in blacklist]
     return self.getRandomValue(items=typesIds)
+
+  def getRandomEvolutions(self, evoStage: int, defaultEvolutions: list, options: dict):
+    randomizedEvolutions = []
+    
+    evolutionOptions = options.copy()
+    nextEvoStage = None
+
+    if options["keepEvoStage"]:
+      if evoStage == 1:
+        nextEvoStage = 2
+      else:
+        nextEvoStage = 3
+
+    if options["legendaryEvo"]:
+      evolutionOptions["legendary"] = True
+
+    if options["paradoxEvo"]:
+      evolutionOptions["paradox"] = True
+
+    for evolution in defaultEvolutions:
+      evolutionData = self.getPokemonPersonalData(dexId=evolution["species"])
+      similarStats = False
+      growthRate = None
+      typesIds = None
+
+      if options["evoSameStats"]:
+        similarStats = True
+
+      if options["evoGrowthRate"]:
+        growthRate= evolutionData["xp_growth"]
+
+      if options["evoType"]:
+        typesIds = [evolutionData["type_1"], evolutionData["type_2"]]
+
+      self.preparePokemonFilteredList(options=options, typesIds=typesIds, growthRate=growthRate, evoStage=nextEvoStage)
+      randomEvolution = self.getRandomPokemon(oldPkmId=evolution["species"], similarStats=similarStats)
+
+      randomizedEvolutions.append({
+        **evolution,
+        "species": randomEvolution["id"]
+      })
+
+      self.logger.info(f'Old Evolution ID {evolution["species"]}')
+      self.logger.info(f'New Evolution ID {randomEvolution["id"]}')
+
+    return randomizedEvolutions
 
   def getRandomizedPokemonList(self, options: dict = None):
     self.logger.info('Starting logs for Pokemon Personal Data Randomizer')
@@ -64,7 +171,7 @@ class PokemonRandomizer(BaseRandomizer):
         randomizedPokemonList.append(pokemon)
         continue
 
-      devPkm = self.getPokemonDev(dexId=pokemon["species"]["model"])
+      devPkm = self.getPokemonDev(dexId=pokemon["species"]["species"])
       self.logger.info(f'Randomizing data for pokemon: ID: {devPkm["id"]} - NAME: {devPkm["devName"]} - FORM: {pokemon["species"]["form"]}')
 
       randomizedPokemon = {
@@ -86,7 +193,9 @@ class PokemonRandomizer(BaseRandomizer):
 
       if options["learnset"]:
         # Randomizing Pool of moves the pokemon will learn by level
-        randomizedPokemon["levelup_moves"] = self.getRandomizedLearnset(randomizedPokemon["levelup_moves"])
+        self.logger.info(f'Randomizing Learnset')
+        randomizedPokemon["levelup_moves"] = self.getRandomizedLearnset(defaultLearnset=randomizedPokemon["levelup_moves"], options=options)
+        self.logger.info(f'Learnset randomized')
 
       if options["instantHatchEgg"]:
         # Egg Hatching just need 1 cycle
@@ -110,6 +219,10 @@ class PokemonRandomizer(BaseRandomizer):
         else:
           randomType = self.getRandomType(blacklist=[randomizedPokemon["type_1"]])
           randomizedPokemon["type_2"] = randomType
+
+      if options["evolutions"]:
+        randomEvolution = self.getRandomEvolutions(evoStage=randomizedPokemon["evo_stage"], defaultEvolutions=randomizedPokemon["evo_data"], options=options)
+        randomizedPokemon["evo_data"] = randomEvolution
 
       randomizedPokemonList.append(randomizedPokemon)
       self.pokemonProgress = math.floor((len(randomizedPokemonList)/totalItems)*100)

@@ -4,7 +4,7 @@ import shutil
 import json
 
 # Env Vars
-os.environ["VERSION"] = "1.1.3"
+os.environ["VERSION"] = "1.1.4"
 
 from src.scripts.randomizer.pokemon import PokemonRandomizer
 from src.scripts.randomizer.trainers import TrainersRandomizer
@@ -68,7 +68,7 @@ optionsValues = {
   "similarStats": True,
 
   ### Areas Options Start ###
-  "areasSpawnRandomized": True,
+  "areasSpawnRandomized": False,
   "items": True,
   ### Areas Options End ###
 
@@ -76,13 +76,22 @@ optionsValues = {
   "abilities": True,
   "tm": False,
   "learnset": False,
+  "movePower": False,
+  "moveType": False,
   "instantHatchEgg": False,
   "types": False,
   "randomBaseStats": False,
+  "evolutions": False,
+  "keepEvoStage": False,
+  "evoSameStats": False,
+  "legendaryEvo": False,
+  "paradoxEvo": False,
+  "evoGrowthRate": False,
+  "evoType": False,
   ### Pokemon Options End ###
 
   ### Trainers Options Start ###
-  "trainersRandomized": True,
+  "trainersRandomized": False,
   "trainerSimilarStats": True,
   "trainerTeracristalize": False,
   "trainerLegendaries": False,
@@ -144,9 +153,18 @@ while True:
     serializedPokemonOptions = {
       "tm": False if ("tm" not in values.keys() or values["tm"] is None or values["tm"] == False) else True,
       "learnset": False if ("learnset" not in values.keys() or values["learnset"] is None or values["learnset"] == False) else True,
+      "movePower": False if ("movePower" not in values.keys() or values["movePower"] is None or values["movePower"] == False) else True,
+      "moveType": False if ("moveType" not in values.keys() or values["moveType"] is None or values["moveType"] == False) else True,
       "instantHatchEgg": False if ("instantHatchEgg" not in values.keys() or values["instantHatchEgg"] is None or values["instantHatchEgg"] == False) else True,
       "types": False if ("types" not in values.keys() or values["types"] is None or values["types"] == False) else True,
       "randomBaseStats": False if ("randomBaseStats" not in values.keys() or values["randomBaseStats"] is None or values["randomBaseStats"] == False) else True,
+      "evolutions": False if ("evolutions" not in values.keys() or values["evolutions"] is None or values["evolutions"] == False) else True,
+      "keepEvoStage": False if ("keepEvoStage" not in values.keys() or values["keepEvoStage"] is None or values["keepEvoStage"] == False) else True,
+      "evoSameStats": False if ("evoSameStats" not in values.keys() or values["evoSameStats"] is None or values["evoSameStats"] == False) else True,
+      "evoGrowthRate": False if ("evoGrowthRate" not in values.keys() or values["evoGrowthRate"] is None or values["evoGrowthRate"] == False) else True,
+      "evoType": False if ("evoType" not in values.keys() or values["evoType"] is None or values["evoType"] == False) else True,
+      "legendaryEvo": False if ("legendaryEvo" not in values.keys() or values["legendaryEvo"] is None or values["legendaryEvo"] == False) else True,
+      "paradoxEvo": False if ("paradoxEvo" not in values.keys() or values["paradoxEvo"] is None or values["paradoxEvo"] == False) else True,
       **serializedGlobalOptions
     }
 
@@ -199,9 +217,9 @@ while True:
       "trainers": trainersFileName
     }
 
-    spawnsRandomizer = SpawnsRandomizer(data=staticData)
-    pokemonRandomizer = PokemonRandomizer(data=staticData)
-    trainersRandomizer = TrainersRandomizer(data=staticData)
+    spawnsRandomizer = SpawnsRandomizer(data=staticData, options=serializedAreaOptions)
+    pokemonRandomizer = PokemonRandomizer(data=staticData, options=serializedPokemonOptions)
+    trainersRandomizer = TrainersRandomizer(data=staticData, options=serializedTrainersOptions)
 
     spawnsRandomizer.addEventsProgress = 0
     spawnsRandomizer.staticEventsProgress = 0
