@@ -60,7 +60,11 @@ def getAreasLayout(optionsValues: dict):
     ],
     [
       # Sub description
-      sg.Text("Note: The tool will attempt 30 times to get one, if fails, will take the last random pokemon validated", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+      sg.Text("Note: The tool will try to get a pokemon with a difference of 10%, 15%, 20%, 25% on their stats", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ],
+    [
+      # Sub description
+      sg.Text("if this fails, the pokemon will be complete random, be aware", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
     ]
   ]
 
@@ -266,7 +270,7 @@ def getPokemonLayout(optionsValues: dict):
     ],
     [
       # Sub description
-      sg.Text("Note: If isn't check, the evolutions checks below will be ignored", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+      sg.Text("Note: If isn't check, the evolutions options below will be ignored", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
     ]
   ]
 
@@ -296,7 +300,11 @@ def getPokemonLayout(optionsValues: dict):
     ],
     [
       # Sub description
-      sg.Text("Note: The tool will attempt 30 times to get one, if fails, will take the last random pokemon validated", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+      sg.Text("Note: The tool will try to get a pokemon with a difference of 10%, 15%, 20%, 25% on their stats", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ],
+    [
+      # Sub description
+      sg.Text("if this fails, the pokemon will be complete random, be aware", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
     ]
   ]
   
@@ -319,6 +327,10 @@ def getPokemonLayout(optionsValues: dict):
     # Description
     [
       sg.Text("The randomized evolution will share almost one type with the original one", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: If you check the Random Types, the randomized evolution will use the randomized type", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
     ]
   ]
   
@@ -522,7 +534,11 @@ def getTrainersLayout(optionsValues: dict):
     ],
     [
       # Sub description
-      sg.Text("Note: If the pokemon fails to get a random pokemon with similar stats, the pokemon will be completly random (be aware)", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+      sg.Text("Note: The tool will try to get a pokemon with a difference of 10%, 15%, 20%, 25% on their stats", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ],
+    [
+      # Sub description
+      sg.Text("if this fails, the pokemon will be complete random, be aware", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
     ]
   ]
 
@@ -670,6 +686,10 @@ def getWindowFrame(optionsValues: dict):
     [sg.ProgressBar(100, orientation='h', size=(35, 20), border_width=4, key='-PROGRESS_BAR-', bar_color=("Blue", "White"))]
   ]
 
+  DISCLAIMER = [
+    [sg.Text("If you checked too many options this process can be slow by all the validations needed", font=TEXT_FONT, background_color=BG_COLOR, text_color=DANGER_COLOR)],
+  ]
+
   COPYRIGHT = [
     [sg.Text("Author: ZadenOwer", font=COPYRIGHT_FONT, background_color=BG_COLOR)],
     [sg.Text(f"Version: {os.environ.get('VERSION')}", font=COPYRIGHT_FONT, background_color=BG_COLOR)]
@@ -686,7 +706,7 @@ def getWindowFrame(optionsValues: dict):
       sg.Column(areasLayout, key="spawns", background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(pokemonLayout, key="pokemon", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(trainersLayout, key="trainers", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
-      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + PROGRESS_BAR, key="finalStep", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
+      sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + PROGRESS_BAR + DISCLAIMER, key="finalStep", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
     ],
     
     LAYOUTS_BUTTONS,

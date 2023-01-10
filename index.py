@@ -68,7 +68,7 @@ optionsValues = {
   "similarStats": True,
 
   ### Areas Options Start ###
-  "areasSpawnRandomized": True,
+  "areasSpawnRandomized": False,
   "items": True,
   ### Areas Options End ###
 
@@ -91,7 +91,7 @@ optionsValues = {
   ### Pokemon Options End ###
 
   ### Trainers Options Start ###
-  "trainersRandomized": True,
+  "trainersRandomized": False,
   "trainerSimilarStats": True,
   "trainerTeracristalize": False,
   "trainerLegendaries": False,

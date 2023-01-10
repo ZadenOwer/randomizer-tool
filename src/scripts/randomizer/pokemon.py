@@ -115,42 +115,45 @@ class PokemonRandomizer(BaseRandomizer):
   def getRandomEvolutions(self, evoStage: int, defaultEvolutions: list, options: dict):
     randomizedEvolutions = []
     
+    evolutionOptions = options.copy()
+    nextEvoStage = None
+
     if options["keepEvoStage"]:
       if evoStage == 1:
         nextEvoStage = 2
       else:
         nextEvoStage = 3
-    
-      pokemonList = [pokemon for pokemon in self.personalData["entry"] if pokemon["evo_stage"] == nextEvoStage]
-    else:
-      pokemonList = self.personalData["entry"].copy()
 
     if options["legendaryEvo"]:
-      pokemonList = [pokemon for pokemon in pokemonList if pokemon["species"]["model"] not in self.legendaryDex]
+      evolutionOptions["legendary"] = True
 
     if options["paradoxEvo"]:
-      pokemonList = [pokemon for pokemon in pokemonList if pokemon["species"]["model"] not in self.paradoxDex]
+      evolutionOptions["paradox"] = True
 
     for evolution in defaultEvolutions:
       evolutionData = self.getPokemonPersonalData(dexId=evolution["species"])
+      similarStats = False
+      growthRate = None
+      typesIds = None
 
       if options["evoSameStats"]:
-        pokemonList = self.listWithSimilarStats(pkmIdToCompare=evolution["species"], pokemonData=pokemonList)
+        similarStats = True
 
       if options["evoGrowthRate"]:
-        pokemonList = [pokemon for pokemon in pokemonList if pokemon["xp_growth"] == evolutionData["xp_growth"]]
+        growthRate= evolutionData["xp_growth"]
 
       if options["evoType"]:
-        pokemonList = [pokemon for pokemon in pokemonList if self.shareAType(oldPkmData=evolutionData, newPkmdata=pokemon)]
+        typesIds = [evolutionData["type_1"], evolutionData["type_2"]]
 
-      randomEvolution = self.getRandomValue(items=pokemonList)
+      randomEvolution = self.generateRandomPokemon(oldPkmId=evolution["species"], options=evolutionOptions, similarStats=similarStats, keepType=(typesIds is not None), typesIds=typesIds, growthRate=growthRate, evoStage=nextEvoStage)
+
       randomizedEvolutions.append({
         **evolution,
-        "species": randomEvolution["species"]["model"]
+        "species": randomEvolution["id"]
       })
 
       self.logger.info(f'Old Evolution ID {evolution["species"]}')
-      self.logger.info(f'New Evolution ID {randomEvolution["species"]["model"]}')
+      self.logger.info(f'New Evolution ID {randomEvolution["id"]}')
 
     return randomizedEvolutions
 

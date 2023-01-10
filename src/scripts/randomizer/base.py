@@ -8,12 +8,11 @@ from src.scripts.randomizer.items import ItemRandomizer
 
 class BaseRandomizer:
   logger = logging.getLogger(f'DEBUG{os.environ.get("VERSION")}')
-  MAX_SIMILIAR_STATS_TRIES = 30
 
   POKEMON_WITH_STATIC_FORM_BY_GENDER = {
-    876: ['MALE', 'FEMALE'], # Indeedee(876)
-    902: ['MALE', 'FEMALE'], # Basculegion(902)
-    916: ['MALE', 'FEMALE']  # Oinkologne(916)
+    876: ['MALE', 'FEMALE'], # Indeedee
+    902: ['MALE', 'FEMALE'], # Basculegion
+    916: ['MALE', 'FEMALE']  # Oinkologne
   }
 
   STATS_RATES = [10,15,20,25]
@@ -66,9 +65,9 @@ class BaseRandomizer:
   def getRandomValue(self, items: list):
     return random.choice(items)
 
-  def generateRandomPokemon(self, oldPkmId: dict, options: dict = None, blacklist: list = [], similarStats = False, keepType = False, typeId = None):
+  def generateRandomPokemon(self, oldPkmId: dict, options: dict = None, blacklist: list = [], similarStats = False, keepType = False, typesIds: list = None, growthRate: int = None, evoStage: int = None):
     if options["fullPokeDex"]:
-      pokemonList = self.pokemonList
+      pokemonList = {id: pokemon for id, pokemon in self.pokemonList.items() if int(id) in self.}
     else:
       # Just Paldean Dex
       pokemonList = {id: pokemon for id, pokemon in self.pokemonList.items() if int(id) in self.paldeaDex}
@@ -82,10 +81,16 @@ class BaseRandomizer:
       pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if int(id) not in self.paradoxDex}
 
     if keepType:
-      pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if self.shareAType(newPkmId=int(id), oldPkmId=oldPkmId, typeId=typeId)}
+      pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if self.shareAType(newPkmId=int(id), oldPkmId=oldPkmId, typesIds=typesIds)}
 
     if similarStats:
       pokemonList = self.listWithSimilarStats(pkmIdToCompare=oldPkmId, pokemonList=pokemonList)
+
+    if growthRate is not None:
+      pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if self.getPokemonPersonalData(dexId=int(id))["xp_growth"] == growthRate}
+
+    if evoStage is not None:
+      pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if self.getPokemonPersonalData(dexId=int(id))["evo_stage"] == evoStage}
 
     if len(blacklist) > 0:
       pokemonList = {id: pokemon for id, pokemon in pokemonList.items() if int(id) not in blacklist}
@@ -182,16 +187,13 @@ class BaseRandomizer:
 
     return total
 
-  def listWithSimilarStats(self, pkmIdToCompare: int, pokemonList: dict = None, pokemonData: list = None):
+  def listWithSimilarStats(self, pkmIdToCompare: int, pokemonList: dict = None):
     filtered = None
 
     for rate in self.STATS_RATES:
-      self.logger.info(f'Testing SimilarStats with Rate {rate}%')
+      self.logger.info(f'Testing SimilarStats with Rate {rate}% for pokemon ID {pkmIdToCompare}')
       
-      if pokemonList:
-        filtered = {id: pokemon for id, pokemon in pokemonList.items() if self.hasSimilarStats(oldPkmId=pkmIdToCompare, newPkmId=int(id), rate=rate)}
-      else:
-        filtered = [pokemon for pokemon in pokemonData if self.hasSimilarStats(oldPkmId=pkmIdToCompare, newPkmId=int(id), rate=rate)]
+      filtered = {id: pokemon for id, pokemon in pokemonList.items() if self.hasSimilarStats(oldPkmId=pkmIdToCompare, newPkmId=int(id), rate=rate)}
 
       if (len(filtered) > 0):
         break
@@ -199,10 +201,7 @@ class BaseRandomizer:
     if filtered is not None and len(filtered) > 0:
       return filtered
 
-    if pokemonList is not None:
-      return pokemonList
-    else:
-      return pokemonData
+    return pokemonList
 
   def hasSimilarStats(self, rate: int, newPkmId: int, oldPkmId: int = None, oldPkmDevName: str = None):
     if oldPkmId is None and oldPkmDevName is None:
@@ -243,7 +242,7 @@ class BaseRandomizer:
 
     return result 
 
-  def shareAType(self, typeId: int = None, oldPkmData: dict = None, newPkmdata: dict = None, oldPkmId: int = None, newPkmId: int = None):
+  def shareAType(self, typesIds: list = None, oldPkmData: dict = None, newPkmdata: dict = None, oldPkmId: int = None, newPkmId: int = None):
 
     if oldPkmId is not None:
       oldPkmData = self.getPokemonPersonalData(dexId=oldPkmId)
@@ -251,8 +250,8 @@ class BaseRandomizer:
     if newPkmId is not None:
       newPkmdata = self.getPokemonPersonalData(dexId=newPkmId)
     
-    if typeId is not None:
-      originalTypes = [typeId]
+    if typesIds is not None:
+      originalTypes = typesIds
     else:
       originalTypes = [oldPkmData["type_1"], oldPkmData["type_2"]]
 
