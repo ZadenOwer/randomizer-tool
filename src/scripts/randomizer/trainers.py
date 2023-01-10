@@ -11,58 +11,8 @@ class TrainersRandomizer(BaseRandomizer):
 
   trainerProgress = 0
 
-  def __init__(self, data: dict) -> None:
-    super().__init__(data)
-
-  def generateTrainerRandomPokemon(self, devName: str, trainerType: str, options: dict, blacklist: list = []):
-    randomPokemon = None
-    loopCtrl = 0
-    trainerOptions = {**options}
-
-    if options["trainerLegendaries"]:
-      trainerOptions["legendaries"] = True
-
-    if options["trainerParadox"]:
-      trainerOptions["paradox"] = True
-
-    while (randomPokemon is None):
-      randomPokemon = self.generateRandomPokemon(options=trainerOptions, blacklist=blacklist)
-
-      if options["trainerSimilarStats"] == True:
-        if not self.hasSimilarStats(oldPkmDevName=devName, newPkmId=randomPokemon["id"]):
-          randomPkmPersonal = self.getPokemonPersonalData(dexId=randomPokemon["id"])
-          oldPkmPersonal = self.getPokemonPersonalData(dexId=devName)              
-          checkedPkm = self.checkEvoStats(oldPkmPersonalData=oldPkmPersonal, newPkmPersonalData=randomPkmPersonal)
-
-          if checkedPkm is not None:
-            randomPokemon = checkedPkm
-          elif loopCtrl < self.MAX_SIMILIAR_STATS_TRIES:
-            # To avoid infinite loop
-            randomPokemon = None
-            loopCtrl += 1
-            continue
-
-      if options["keepGymType"]:
-        if self.isMonotypeTrainer(trainerTypeName=trainerType):
-          trainerTypeId = self.getTrainerTypeId(trainerTypeName=trainerType)
-          randomPokemonPersonal = self.getPokemonPersonalData(randomPokemon["id"])
-          
-          type1 = randomPokemonPersonal["type_1"]
-          type2 = randomPokemonPersonal["type_2"]
-
-          if (trainerTypeId not in [type1, type2]):
-            # Randomize again if any type not match with the trainerType
-            randomPokemon = None
-
-    form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
-
-    self.logger.info(f'Random pokemon generated: ID: {randomPokemon["id"]} - NAME: {randomPokemon["devName"]} - FORM: {form}')
-
-    return {
-      **randomPokemon,
-      "form": form,
-      "sex": sex
-    }
+  def __init__(self, data: dict, options: dict) -> None:
+    super().__init__(data=data, options=options)
 
   def getPerfectIvs(self):
     # This was made in order to be optimum and not easy to read, but you can see the getRandomBaseStats on the pokemon.py to have a reference of what's going on
@@ -113,16 +63,16 @@ class TrainersRandomizer(BaseRandomizer):
     if "normal" in trainerTypeName: #Normal (duh)
       return 0
 
-    if "kakutou" in trainerTypeName: #Fight
+    if "kakutou" in trainerTypeName: #Fighting
       return 1
 
-    if "hikou" in trainerTypeName: #Fly
+    if "hikou" in trainerTypeName: #Flying
       return 2
 
     if "doku" in trainerTypeName: #Poison
       return 3
 
-    if "jimen" in trainerTypeName: #Earth
+    if "jimen" in trainerTypeName: #Ground
       return 4
 
     if "iwa" in trainerTypeName: #Rock (still to confirm)
@@ -143,13 +93,13 @@ class TrainersRandomizer(BaseRandomizer):
     if "mizu" in trainerTypeName: #Water
       return 10
 
-    if "kusa" in trainerTypeName: #Plant
+    if "kusa" in trainerTypeName: #Grass
       return 11
 
     if "denki" in trainerTypeName: #Electric
       return 12
 
-    if "esper" in trainerTypeName: #Psiquic
+    if "esper" in trainerTypeName: #Psyquic
       return 13
 
     if "koori" in trainerTypeName: #Ice
@@ -240,7 +190,6 @@ class TrainersRandomizer(BaseRandomizer):
       randomizedTrainer = {
         **trainer
       }
-      alreadyUsedId = []
 
       isRival = False
       rivalType = None
@@ -332,6 +281,20 @@ class TrainersRandomizer(BaseRandomizer):
           }
         }
 
+      trainerOptions = options.copy()
+
+      if options["trainerLegendaries"]:
+        trainerOptions["legendaries"] = True
+
+      if options["trainerParadox"]:
+        trainerOptions["paradox"] = True
+
+      if options["keepGymType"] and self.isMonotypeTrainer(trainerTypeName=randomizedTrainer["trainerType"]):
+        trainerTypeId = self.getTrainerTypeId(trainerTypeName=randomizedTrainer["trainerType"])
+        self.preparePokemonFilteredList(options=options, typesIds=[trainerTypeId])
+      else:
+        self.preparePokemonFilteredList(options=options)
+
       for pokeKey in pokemonKeys:
         if not options["forceFullTeam"] and randomizedTrainer[pokeKey]["devId"] == "DEV_NULL":
           continue
@@ -350,22 +313,25 @@ class TrainersRandomizer(BaseRandomizer):
             }
 
             self.logger.info(f'Rival stage {rivalParams[2]} starter changed for: {rivalPokemon["id"]} - {rivalPokemon["devName"]}')
-            alreadyUsedId.append(rivalPokemon["id"])
           else:
             pokeDevName = randomizedTrainer[pokeKey]["devId"]
             if pokeDevName == "DEV_NULL":
               previousKey = pokemonKeys[pokemonKeys.index(pokeKey) - 1]
               pokeDevName = randomizedTrainer[previousKey]["devId"]
 
-            randomPokemon = self.generateTrainerRandomPokemon(devName=pokeDevName, trainerType=randomizedTrainer["trainerType"], options=options, blacklist=alreadyUsedId)
+            pkmDev = self.getPokemonDev(devName=pokeDevName)
+  
+            randomPokemon = self.getRandomPokemon(oldPkmId=pkmDev["id"], similarStats=options["trainerSimilarStats"])
 
-            alreadyUsedId.append(randomPokemon["id"])
+            form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
+
+            self.logger.info(f'Random pokemon generated: ID: {randomPokemon["id"]} - NAME: {randomPokemon["devName"]} - FORM: {form}')
 
             randomizedTrainer[pokeKey] = {
               **randomizedTrainer[pokeKey],
               "devId": randomPokemon["devName"],
-              "formId": randomPokemon["form"],
-              "sex": randomPokemon["sex"],
+              "formId": form,
+              "sex": sex,
               **self.trainerPokeTemplate()
             }
 
@@ -400,7 +366,6 @@ class TrainersRandomizer(BaseRandomizer):
         if options["forceFinalEvolution"]:
           if options["finalEvolutionCap"] > 0 and options["finalEvolutionCap"] < 100:
             if randomizedTrainer[pokeKey]["level"] >= options["finalEvolutionCap"]:
-              self.logger.info(f'devName: {randomizedTrainer[pokeKey]["devId"]}')
               pkmDev = self.getPokemonDev(devName=randomizedTrainer[pokeKey]["devId"])
               finalEvo = self.getFinalEvolution(dexId=pkmDev["id"])
 

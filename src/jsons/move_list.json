@@ -1,2530 +1,4426 @@
-[
-  {
+{
+  "1": {
     "devName": "WAZA_HATAKU",
-    "id": 1
+    "id": 1,
+    "name": "Pound",
+    "type": 0,
+    "power": 40
   },
-  {
+  "5": {
     "devName": "WAZA_MEGATONPANTI",
-    "id": 5
+    "id": 5,
+    "name": "Mega Punch",
+    "type": 0,
+    "power": 80
   },
-  {
+  "6": {
     "devName": "WAZA_NEKONIKOBAN",
-    "id": 6
+    "id": 6,
+    "name": "Pay Day",
+    "type": 0,
+    "power": 40
   },
-  {
+  "7": {
     "devName": "WAZA_HONOONOPANTI",
-    "id": 7
+    "id": 7,
+    "name": "Fire Punch",
+    "type": 9,
+    "power": 75
   },
-  {
+  "8": {
     "devName": "WAZA_REITOUPANTI",
-    "id": 8
+    "id": 8,
+    "name": "Ice Punch",
+    "type": 14,
+    "power": 75
   },
-  {
+  "9": {
     "devName": "WAZA_KAMINARIPANTI",
-    "id": 9
+    "id": 9,
+    "name": "Thunder Punch",
+    "type": 12,
+    "power": 75
   },
-  {
+  "10": {
     "devName": "WAZA_HIKKAKU",
-    "id": 10
+    "id": 10,
+    "name": "Scratch",
+    "type": 0,
+    "power": 40
   },
-  {
+  "11": {
     "devName": "WAZA_HASAMU",
-    "id": 11
+    "id": 11,
+    "name": "Vise Grip",
+    "type": 0,
+    "power": 55
   },
-  {
+  "12": {
     "devName": "WAZA_HASAMIGIROTIN",
-    "id": 12
+    "id": 12,
+    "name": "Guillotine",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "14": {
     "devName": "WAZA_TURUGINOMAI",
-    "id": 14
+    "id": 14,
+    "name": "Swords Dance",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "15": {
     "devName": "WAZA_IAIGIRI",
-    "id": 15
+    "id": 15,
+    "name": "Cut",
+    "type": 0,
+    "power": 50
   },
-  {
+  "16": {
     "devName": "WAZA_KAZEOKOSI",
-    "id": 16
+    "id": 16,
+    "name": "Gust",
+    "type": 2,
+    "power": 40
   },
-  {
+  "17": {
     "devName": "WAZA_TUBASADEUTU",
-    "id": 17
+    "id": 17,
+    "name": "Wing Attack",
+    "type": 2,
+    "power": 60
   },
-  {
+  "18": {
     "devName": "WAZA_HUKITOBASI",
-    "id": 18
+    "id": 18,
+    "name": "Whirlwind",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "19": {
     "devName": "WAZA_SORAWOTOBU",
-    "id": 19
+    "id": 19,
+    "name": "Fly",
+    "type": 2,
+    "power": 90
   },
-  {
+  "20": {
     "devName": "WAZA_SIMETUKERU",
-    "id": 20
+    "id": 20,
+    "name": "Bind",
+    "type": 0,
+    "power": 15
   },
-  {
+  "21": {
     "devName": "WAZA_TATAKITUKERU",
-    "id": 21
+    "id": 21,
+    "name": "Slam",
+    "type": 0,
+    "power": 80
   },
-  {
+  "22": {
     "devName": "WAZA_TURUNOMUTI",
-    "id": 22
+    "id": 22,
+    "name": "Vine Whip",
+    "type": 11,
+    "power": 45
   },
-  {
+  "23": {
     "devName": "WAZA_HUMITUKE",
-    "id": 23
+    "id": 23,
+    "name": "Stomp",
+    "type": 0,
+    "power": 65
   },
-  {
+  "24": {
     "devName": "WAZA_NIDOGERI",
-    "id": 24
+    "id": 24,
+    "name": "Double Kick",
+    "type": 1,
+    "power": 30
   },
-  {
+  "25": {
     "devName": "WAZA_MEGATONKIKKU",
-    "id": 25
+    "id": 25,
+    "name": "Mega Kick",
+    "type": 0,
+    "power": 120
   },
-  {
+  "28": {
     "devName": "WAZA_SUNAKAKE",
-    "id": 28
+    "id": 28,
+    "name": "Sand Attack",
+    "type": 4,
+    "power": "STATUS"
   },
-  {
+  "29": {
     "devName": "WAZA_ZUTUKI",
-    "id": 29
+    "id": 29,
+    "name": "Headbutt",
+    "type": 0,
+    "power": 70
   },
-  {
+  "30": {
     "devName": "WAZA_TUNODETUKU",
-    "id": 30
+    "id": 30,
+    "name": "Horn Attack",
+    "type": 0,
+    "power": 65
   },
-  {
+  "31": {
     "devName": "WAZA_MIDAREDUKI",
-    "id": 31
+    "id": 31,
+    "name": "Fury Attack",
+    "type": 0,
+    "power": 15
   },
-  {
+  "32": {
     "devName": "WAZA_TUNODORIRU",
-    "id": 32
+    "id": 32,
+    "name": "Horn Drill",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "33": {
     "devName": "WAZA_TAIATARI",
-    "id": 33
+    "id": 33,
+    "name": "Tackle",
+    "type": 0,
+    "power": 40
   },
-  {
+  "34": {
     "devName": "WAZA_NOSIKAKARI",
-    "id": 34
+    "id": 34,
+    "name": "Body Slam",
+    "type": 0,
+    "power": 85
   },
-  {
+  "35": {
     "devName": "WAZA_MAKITUKU",
-    "id": 35
+    "id": 35,
+    "name": "Wrap",
+    "type": 0,
+    "power": 15
   },
-  {
+  "36": {
     "devName": "WAZA_TOSSIN",
-    "id": 36
+    "id": 36,
+    "name": "Take Down",
+    "type": 0,
+    "power": 90
   },
-  {
+  "37": {
     "devName": "WAZA_ABARERU",
-    "id": 37
+    "id": 37,
+    "name": "Thrash",
+    "type": 0,
+    "power": 120
   },
-  {
+  "38": {
     "devName": "WAZA_SUTEMITAKKURU",
-    "id": 38
+    "id": 38,
+    "name": "Double-Edge",
+    "type": 0,
+    "power": 120
   },
-  {
+  "39": {
     "devName": "WAZA_SIPPOWOHURU",
-    "id": 39
+    "id": 39,
+    "name": "Tail Whip",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "40": {
     "devName": "WAZA_DOKUBARI",
-    "id": 40
+    "id": 40,
+    "name": "Poison Sting",
+    "type": 3,
+    "power": 15
   },
-  {
+  "42": {
     "devName": "WAZA_MISAIRUBARI",
-    "id": 42
+    "id": 42,
+    "name": "Pin Missile",
+    "type": 6,
+    "power": 25
   },
-  {
+  "43": {
     "devName": "WAZA_NIRAMITUKERU",
-    "id": 43
+    "id": 43,
+    "name": "Leer",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "44": {
     "devName": "WAZA_KAMITUKU",
-    "id": 44
+    "id": 44,
+    "name": "Bite",
+    "type": 16,
+    "power": 60
   },
-  {
+  "45": {
     "devName": "WAZA_NAKIGOE",
-    "id": 45
+    "id": 45,
+    "name": "Growl",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "46": {
     "devName": "WAZA_HOERU",
-    "id": 46
+    "id": 46,
+    "name": "Roar",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "47": {
     "devName": "WAZA_UTAU",
-    "id": 47
+    "id": 47,
+    "name": "Sing",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "48": {
     "devName": "WAZA_TYOUONPA",
-    "id": 48
+    "id": 48,
+    "name": "Supersonic",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "50": {
     "devName": "WAZA_KANASIBARI",
-    "id": 50
+    "id": 50,
+    "name": "Disable",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "51": {
     "devName": "WAZA_YOUKAIEKI",
-    "id": 51
+    "id": 51,
+    "name": "Acid",
+    "type": 3,
+    "power": 40
   },
-  {
+  "52": {
     "devName": "WAZA_HINOKO",
-    "id": 52
+    "id": 52,
+    "name": "Ember",
+    "type": 9,
+    "power": 40
   },
-  {
+  "53": {
     "devName": "WAZA_KAENHOUSYA",
-    "id": 53
+    "id": 53,
+    "name": "Flamethrower",
+    "type": 9,
+    "power": 90
   },
-  {
+  "54": {
     "devName": "WAZA_SIROIKIRI",
-    "id": 54
+    "id": 54,
+    "name": "Mist",
+    "type": 14,
+    "power": "STATUS"
   },
-  {
+  "55": {
     "devName": "WAZA_MIZUDEPPOU",
-    "id": 55
+    "id": 55,
+    "name": "Water Gun",
+    "type": 10,
+    "power": 40
   },
-  {
+  "56": {
     "devName": "WAZA_HAIDOROPONPU",
-    "id": 56
+    "id": 56,
+    "name": "Hydro Pump",
+    "type": 10,
+    "power": 110
   },
-  {
+  "57": {
     "devName": "WAZA_NAMINORI",
-    "id": 57
+    "id": 57,
+    "name": "Surf",
+    "type": 10,
+    "power": 90
   },
-  {
+  "58": {
     "devName": "WAZA_REITOUBIIMU",
-    "id": 58
+    "id": 58,
+    "name": "Ice Beam",
+    "type": 14,
+    "power": 90
   },
-  {
+  "59": {
     "devName": "WAZA_HUBUKI",
-    "id": 59
+    "id": 59,
+    "name": "Blizzard",
+    "type": 14,
+    "power": 110
   },
-  {
+  "60": {
     "devName": "WAZA_SAIKEKOUSEN",
-    "id": 60
+    "id": 60,
+    "name": "Psybeam",
+    "type": 13,
+    "power": 65
   },
-  {
+  "61": {
     "devName": "WAZA_BABURUKOUSEN",
-    "id": 61
+    "id": 61,
+    "name": "Bubble Beam",
+    "type": 10,
+    "power": 65
   },
-  {
+  "62": {
     "devName": "WAZA_OORORABIIMU",
-    "id": 62
+    "id": 62,
+    "name": "Aurora Beam",
+    "type": 14,
+    "power": 65
   },
-  {
+  "63": {
     "devName": "WAZA_HAKAIKOUSEN",
-    "id": 63
+    "id": 63,
+    "name": "Hyper Beam",
+    "type": 0,
+    "power": 150
   },
-  {
+  "64": {
     "devName": "WAZA_TUTUKU",
-    "id": 64
+    "id": 64,
+    "name": "Peck",
+    "type": 2,
+    "power": 35
   },
-  {
+  "65": {
     "devName": "WAZA_DORIRUKUTIBASI",
-    "id": 65
+    "id": 65,
+    "name": "Drill Peck",
+    "type": 2,
+    "power": 80
   },
-  {
+  "67": {
     "devName": "WAZA_KETAGURI",
-    "id": 67
+    "id": 67,
+    "name": "Low Kick",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "68": {
     "devName": "WAZA_KAUNTAA",
-    "id": 68
+    "id": 68,
+    "name": "Counter",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "69": {
     "devName": "WAZA_TIKYUUNAGE",
-    "id": 69
+    "id": 69,
+    "name": "Seismic Toss",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "70": {
     "devName": "WAZA_KAIRIKI",
-    "id": 70
+    "id": 70,
+    "name": "Strength",
+    "type": 0,
+    "power": 80
   },
-  {
+  "71": {
     "devName": "WAZA_SUITORU",
-    "id": 71
+    "id": 71,
+    "name": "Absorb",
+    "type": 11,
+    "power": 20
   },
-  {
+  "72": {
     "devName": "WAZA_MEGADOREIN",
-    "id": 72
+    "id": 72,
+    "name": "Mega Drain",
+    "type": 11,
+    "power": 40
   },
-  {
+  "73": {
     "devName": "WAZA_YADORIGINOTANE",
-    "id": 73
+    "id": 73,
+    "name": "Leech Seed",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "74": {
     "devName": "WAZA_SEITYOU",
-    "id": 74
+    "id": 74,
+    "name": "Growth",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "75": {
     "devName": "WAZA_HAPPAKATTAA",
-    "id": 75
+    "id": 75,
+    "name": "Razor Leaf",
+    "type": 11,
+    "power": 55
   },
-  {
+  "76": {
     "devName": "WAZA_SOORAABIIMU",
-    "id": 76
+    "id": 76,
+    "name": "Solar Beam",
+    "type": 11,
+    "power": 120
   },
-  {
+  "77": {
     "devName": "WAZA_DOKUNOKONA",
-    "id": 77
+    "id": 77,
+    "name": "Poison Powder",
+    "type": 3,
+    "power": "STATUS"
   },
-  {
+  "78": {
     "devName": "WAZA_SIBIREGONA",
-    "id": 78
+    "id": 78,
+    "name": "Stun Spore",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "79": {
     "devName": "WAZA_NEMURIGONA",
-    "id": 79
+    "id": 79,
+    "name": "Sleep Powder",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "80": {
     "devName": "WAZA_HANABIRANOMAI",
-    "id": 80
+    "id": 80,
+    "name": "Petal Dance",
+    "type": 11,
+    "power": 120
   },
-  {
+  "81": {
     "devName": "WAZA_ITOWOHAKU",
-    "id": 81
+    "id": 81,
+    "name": "String Shot",
+    "type": 6,
+    "power": "STATUS"
   },
-  {
+  "83": {
     "devName": "WAZA_HONOONOUZU",
-    "id": 83
+    "id": 83,
+    "name": "Fire Spin",
+    "type": 9,
+    "power": 35
   },
-  {
+  "84": {
     "devName": "WAZA_DENKISYOKKU",
-    "id": 84
+    "id": 84,
+    "name": "Thunder Shock",
+    "type": 12,
+    "power": 40
   },
-  {
+  "85": {
     "devName": "WAZA_10MANBORUTO",
-    "id": 85
+    "id": 85,
+    "name": "Thunderbolt",
+    "type": 12,
+    "power": 90
   },
-  {
+  "86": {
     "devName": "WAZA_DENZIHA",
-    "id": 86
+    "id": 86,
+    "name": "Thunder Wave",
+    "type": 12,
+    "power": "STATUS"
   },
-  {
+  "87": {
     "devName": "WAZA_KAMINARI",
-    "id": 87
+    "id": 87,
+    "name": "Thunder",
+    "type": 12,
+    "power": 110
   },
-  {
+  "88": {
     "devName": "WAZA_IWAOTOSI",
-    "id": 88
+    "id": 88,
+    "name": "Rock Throw",
+    "type": 5,
+    "power": 50
   },
-  {
+  "89": {
     "devName": "WAZA_ZISIN",
-    "id": 89
+    "id": 89,
+    "name": "Earthquake",
+    "type": 4,
+    "power": 100
   },
-  {
+  "90": {
     "devName": "WAZA_ZIWARE",
-    "id": 90
+    "id": 90,
+    "name": "Fissure",
+    "type": 4,
+    "power": "STATUS"
   },
-  {
+  "91": {
     "devName": "WAZA_ANAWOHORU",
-    "id": 91
+    "id": 91,
+    "name": "Dig",
+    "type": 4,
+    "power": 80
   },
-  {
+  "92": {
     "devName": "WAZA_DOKUDOKU",
-    "id": 92
+    "id": 92,
+    "name": "Toxic",
+    "type": 3,
+    "power": "STATUS"
   },
-  {
+  "93": {
     "devName": "WAZA_NENRIKI",
-    "id": 93
+    "id": 93,
+    "name": "Confusion",
+    "type": 13,
+    "power": 50
   },
-  {
+  "94": {
     "devName": "WAZA_SAIKOKINESISU",
-    "id": 94
+    "id": 94,
+    "name": 13,
+    "type": 13,
+    "power": 90
   },
-  {
+  "95": {
     "devName": "WAZA_SAIMINZYUTU",
-    "id": 95
+    "id": 95,
+    "name": "Hypnosis",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "97": {
     "devName": "WAZA_KOUSOKUIDOU",
-    "id": 97
+    "id": 97,
+    "name": "Agility",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "98": {
     "devName": "WAZA_DENKOUSEKKA",
-    "id": 98
+    "id": 98,
+    "name": "Quick Attack",
+    "type": 0,
+    "power": 40
   },
-  {
+  "100": {
     "devName": "WAZA_TEREPOOTO",
-    "id": 100
+    "id": 100,
+    "name": "Teleport",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "101": {
     "devName": "WAZA_NAITOHEDDO",
-    "id": 101
+    "id": 101,
+    "name": "Night Shade",
+    "type": 7,
+    "power": "STATUS"
   },
-  {
+  "102": {
     "devName": "WAZA_MONOMANE",
-    "id": 102
+    "id": 102,
+    "name": "Mimic",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "103": {
     "devName": "WAZA_IYANAOTO",
-    "id": 103
+    "id": 103,
+    "name": "Screech",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "104": {
     "devName": "WAZA_KAGEBUNSIN",
-    "id": 104
+    "id": 104,
+    "name": "Double Team",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "105": {
     "devName": "WAZA_ZIKOSAISEI",
-    "id": 105
+    "id": 105,
+    "name": "Recover",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "106": {
     "devName": "WAZA_KATAKUNARU",
-    "id": 106
+    "id": 106,
+    "name": "Harden",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "107": {
     "devName": "WAZA_TIISAKUNARU",
-    "id": 107
+    "id": 107,
+    "name": "Minimize",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "108": {
     "devName": "WAZA_ENMAKU",
-    "id": 108
+    "id": 108,
+    "name": "Smokescreen",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "109": {
     "devName": "WAZA_AYASIIHIKARI",
-    "id": 109
+    "id": 109,
+    "name": "Confuse Ray",
+    "type": 7,
+    "power": "STATUS"
   },
-  {
+  "110": {
     "devName": "WAZA_KARANIKOMORU",
-    "id": 110
+    "id": 110,
+    "name": "Withdraw",
+    "type": 10,
+    "power": "STATUS"
   },
-  {
+  "111": {
     "devName": "WAZA_MARUKUNARU",
-    "id": 111
+    "id": 111,
+    "name": "Defense Curl",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "113": {
     "devName": "WAZA_HIKARINOKABE",
-    "id": 113
+    "id": 113,
+    "name": "Light Screen",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "114": {
     "devName": "WAZA_KUROIKIRI",
-    "id": 114
+    "id": 114,
+    "name": "Haze",
+    "type": 14,
+    "power": "STATUS"
   },
-  {
+  "115": {
     "devName": "WAZA_RIHUREKUTAA",
-    "id": 115
+    "id": 115,
+    "name": "Reflect",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "116": {
     "devName": "WAZA_KIAIDAME",
-    "id": 116
+    "id": 116,
+    "name": "Focus Energy",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "118": {
     "devName": "WAZA_YUBIWOHURU",
-    "id": 118
+    "id": 118,
+    "name": "Metronome",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "120": {
     "devName": "WAZA_ZIBAKU",
-    "id": 120
+    "id": 120,
+    "name": "Self-Destruct",
+    "type": 0,
+    "power": 200
   },
-  {
+  "122": {
     "devName": "WAZA_SITADENAMERU",
-    "id": 122
+    "id": 122,
+    "name": "Lick",
+    "type": 7,
+    "power": 30
   },
-  {
+  "123": {
     "devName": "WAZA_SUMOGGU",
-    "id": 123
+    "id": 123,
+    "name": "Smog",
+    "type": 3,
+    "power": 30
   },
-  {
+  "124": {
     "devName": "WAZA_HEDOROKOUGEKI",
-    "id": 124
+    "id": 124,
+    "name": "Sludge",
+    "type": 3,
+    "power": 65
   },
-  {
+  "126": {
     "devName": "WAZA_DAIMONZI",
-    "id": 126
+    "id": 126,
+    "name": "Fire Blast",
+    "type": 9,
+    "power": 110
   },
-  {
+  "127": {
     "devName": "WAZA_TAKINOBORI",
-    "id": 127
+    "id": 127,
+    "name": "Waterfall",
+    "type": 10,
+    "power": 80
   },
-  {
+  "129": {
     "devName": "WAZA_SUPIIDOSUTAA",
-    "id": 129
+    "id": 129,
+    "name": "Swift",
+    "type": 0,
+    "power": 60
   },
-  {
+  "133": {
     "devName": "WAZA_DOWASURE",
-    "id": 133
+    "id": 133,
+    "name": "Amnesia",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "135": {
     "devName": "WAZA_TAMAGOUMI",
-    "id": 135
+    "id": 135,
+    "name": "Soft-Boiled",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "136": {
     "devName": "WAZA_TOBIHIZAGERI",
-    "id": 136
+    "id": 136,
+    "name": "High Jump Kick",
+    "type": 1,
+    "power": 130
   },
-  {
+  "137": {
     "devName": "WAZA_HEBINIRAMI",
-    "id": 137
+    "id": 137,
+    "name": "Glare",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "138": {
     "devName": "WAZA_YUMEKUI",
-    "id": 138
+    "id": 138,
+    "name": "Dream Eater",
+    "type": 13,
+    "power": 100
   },
-  {
+  "139": {
     "devName": "WAZA_DOKUGASU",
-    "id": 139
+    "id": 139,
+    "name": "Poison Gas",
+    "type": 3,
+    "power": "STATUS"
   },
-  {
+  "141": {
     "devName": "WAZA_KYUUKETU",
-    "id": 141
+    "id": 141,
+    "name": "Leech Life",
+    "type": 6,
+    "power": 80
   },
-  {
+  "143": {
     "devName": "WAZA_GODDOBAADO",
-    "id": 143
+    "id": 143,
+    "name": "Sky Attack",
+    "type": 2,
+    "power": 140
   },
-  {
+  "144": {
     "devName": "WAZA_HENSIN",
-    "id": 144
+    "id": 144,
+    "name": "Transform",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "147": {
     "devName": "WAZA_KINOKONOHOUSI",
-    "id": 147
+    "id": 147,
+    "name": "Spore",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "150": {
     "devName": "WAZA_HANERU",
-    "id": 150
+    "id": 150,
+    "name": "Splash",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "151": {
     "devName": "WAZA_TOKERU",
-    "id": 151
+    "id": 151,
+    "name": "Acid Armor",
+    "type": 3,
+    "power": "STATUS"
   },
-  {
+  "152": {
     "devName": "WAZA_KURABUHANMAA",
-    "id": 152
+    "id": 152,
+    "name": "Crabhammer",
+    "type": 10,
+    "power": 100
   },
-  {
+  "153": {
     "devName": "WAZA_DAIBAKUHATU",
-    "id": 153
+    "id": 153,
+    "name": "Explosion",
+    "type": 0,
+    "power": 250
   },
-  {
+  "154": {
     "devName": "WAZA_MIDAREHIKKAKI",
-    "id": 154
+    "id": 154,
+    "name": "Fury Swipes",
+    "type": 0,
+    "power": 18
   },
-  {
+  "156": {
     "devName": "WAZA_NEMURU",
-    "id": 156
+    "id": 156,
+    "name": "Rest",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "157": {
     "devName": "WAZA_IWANADARE",
-    "id": 157
+    "id": 157,
+    "name": "Rock Slide",
+    "type": 5,
+    "power": 75
   },
-  {
+  "161": {
     "devName": "WAZA_TORAIATAKKU",
-    "id": 161
+    "id": 161,
+    "name": "Tri Attack",
+    "type": 0,
+    "power": 80
   },
-  {
+  "162": {
     "devName": "WAZA_IKARINOMAEBA",
-    "id": 162
+    "id": 162,
+    "name": "Super Fang",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "163": {
     "devName": "WAZA_KIRISAKU",
-    "id": 163
+    "id": 163,
+    "name": "Slash",
+    "type": 0,
+    "power": 70
   },
-  {
+  "164": {
     "devName": "WAZA_MIGAWARI",
-    "id": 164
+    "id": 164,
+    "name": "Substitute",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "165": {
     "devName": "WAZA_WARUAGAKI",
-    "id": 165
+    "id": 165,
+    "name": "Struggle",
+    "type": 0,
+    "power": 50
   },
-  {
+  "168": {
     "devName": "WAZA_DOROBOU",
-    "id": 168
+    "id": 168,
+    "name": "Thief",
+    "type": 16,
+    "power": 60
   },
-  {
+  "172": {
     "devName": "WAZA_KAENGURUMA",
-    "id": 172
+    "id": 172,
+    "name": "Flame Wheel",
+    "type": 9,
+    "power": 60
   },
-  {
+  "173": {
     "devName": "WAZA_IBIKI",
-    "id": 173
+    "id": 173,
+    "name": "Snore",
+    "type": 0,
+    "power": 50
   },
-  {
+  "174": {
     "devName": "WAZA_NOROI",
-    "id": 174
+    "id": 174,
+    "name": "Curse",
+    "type": 7,
+    "power": "STATUS"
   },
-  {
+  "175": {
     "devName": "WAZA_ZITABATA",
-    "id": 175
+    "id": 175,
+    "name": "Flail",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "178": {
     "devName": "WAZA_WATAHOUSI",
-    "id": 178
+    "id": 178,
+    "name": "Cotton Spore",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "179": {
     "devName": "WAZA_KISIKAISEI",
-    "id": 179
+    "id": 179,
+    "name": "Reversal",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "180": {
     "devName": "WAZA_URAMI",
-    "id": 180
+    "id": 180,
+    "name": "Spite",
+    "type": 7,
+    "power": "STATUS"
   },
-  {
+  "181": {
     "devName": "WAZA_KONAYUKI",
-    "id": 181
+    "id": 181,
+    "name": "Powder Snow",
+    "type": 14,
+    "power": 40
   },
-  {
+  "182": {
     "devName": "WAZA_MAMORU",
-    "id": 182
+    "id": 182,
+    "name": "Protect",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "183": {
     "devName": "WAZA_MAHHAPANTI",
-    "id": 183
+    "id": 183,
+    "name": "Mach Punch",
+    "type": 1,
+    "power": 40
   },
-  {
+  "184": {
     "devName": "WAZA_KOWAIKAO",
-    "id": 184
+    "id": 184,
+    "name": "Scary Face",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "186": {
     "devName": "WAZA_TENSINOKISSU",
-    "id": 186
+    "id": 186,
+    "name": "Sweet Kiss",
+    "type": 17,
+    "power": "STATUS"
   },
-  {
+  "187": {
     "devName": "WAZA_HARADAIKO",
-    "id": 187
+    "id": 187,
+    "name": "Belly Drum",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "188": {
     "devName": "WAZA_HEDOROBAKUDAN",
-    "id": 188
+    "id": 188,
+    "name": "Sludge Bomb",
+    "type": 3,
+    "power": 90
   },
-  {
+  "189": {
     "devName": "WAZA_DOROKAKE",
-    "id": 189
+    "id": 189,
+    "name": "Mud-Slap",
+    "type": 4,
+    "power": 20
   },
-  {
+  "191": {
     "devName": "WAZA_MAKIBISI",
-    "id": 191
+    "id": 191,
+    "name": "Spikes",
+    "type": 4,
+    "power": "STATUS"
   },
-  {
+  "192": {
     "devName": "WAZA_DENZIHOU",
-    "id": 192
+    "id": 192,
+    "name": "Zap Cannon",
+    "type": 12,
+    "power": 120
   },
-  {
+  "194": {
     "devName": "WAZA_MITIDURE",
-    "id": 194
+    "id": 194,
+    "name": "Destiny Bond",
+    "type": 7,
+    "power": "STATUS"
   },
-  {
+  "195": {
     "devName": "WAZA_HOROBINOUTA",
-    "id": 195
+    "id": 195,
+    "name": "Perish Song",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "196": {
     "devName": "WAZA_KOGOERUKAZE",
-    "id": 196
+    "id": 196,
+    "name": "Icy Wind",
+    "type": 14,
+    "power": 55
   },
-  {
+  "197": {
     "devName": "WAZA_MIKIRI",
-    "id": 197
+    "id": 197,
+    "name": "Detect",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "198": {
     "devName": "WAZA_BOONRASSYU",
-    "id": 198
+    "id": 198,
+    "name": "Bone Rush",
+    "type": 4,
+    "power": 25
   },
-  {
+  "199": {
     "devName": "WAZA_ROKKUON",
-    "id": 199
+    "id": 199,
+    "name": "Lock-On",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "200": {
     "devName": "WAZA_GEKIRIN",
-    "id": 200
+    "id": 200,
+    "name": "Outrage",
+    "type": 15,
+    "power": 120
   },
-  {
+  "201": {
     "devName": "WAZA_SUNAARASI",
-    "id": 201
+    "id": 201,
+    "name": "Sandstorm",
+    "type": 5,
+    "power": "STATUS"
   },
-  {
+  "202": {
     "devName": "WAZA_GIGADOREIN",
-    "id": 202
+    "id": 202,
+    "name": "Giga Drain",
+    "type": 11,
+    "power": 75
   },
-  {
+  "203": {
     "devName": "WAZA_KORAERU",
-    "id": 203
+    "id": 203,
+    "name": "Endure",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "204": {
     "devName": "WAZA_AMAERU",
-    "id": 204
+    "id": 204,
+    "name": "Charm",
+    "type": 17,
+    "power": "STATUS"
   },
-  {
+  "205": {
     "devName": "WAZA_KOROGARU",
-    "id": 205
+    "id": 205,
+    "name": "Rollout",
+    "type": 5,
+    "power": 30
   },
-  {
+  "206": {
     "devName": "WAZA_MINEUTI",
-    "id": 206
+    "id": 206,
+    "name": "False Swipe",
+    "type": 0,
+    "power": 40
   },
-  {
+  "207": {
     "devName": "WAZA_IBARU",
-    "id": 207
+    "id": 207,
+    "name": "Swagger",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "208": {
     "devName": "WAZA_MIRUKUNOMI",
-    "id": 208
+    "id": 208,
+    "name": "Milk Drink",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "209": {
     "devName": "WAZA_SUPAAKU",
-    "id": 209
+    "id": 209,
+    "name": "Spark",
+    "type": 12,
+    "power": 65
   },
-  {
+  "210": {
     "devName": "WAZA_RENZOKUGIRI",
-    "id": 210
+    "id": 210,
+    "name": "Fury Cutter",
+    "type": 6,
+    "power": 40
   },
-  {
+  "211": {
     "devName": "WAZA_HAGANENOTUBASA",
-    "id": 211
+    "id": 211,
+    "name": "Steel Wing",
+    "type": 8,
+    "power": 70
   },
-  {
+  "212": {
     "devName": "WAZA_KUROIMANAZASI",
-    "id": 212
+    "id": 212,
+    "name": "Mean Look",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "213": {
     "devName": "WAZA_MEROMERO",
-    "id": 213
+    "id": 213,
+    "name": "Attract",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "214": {
     "devName": "WAZA_NEGOTO",
-    "id": 214
+    "id": 214,
+    "name": "Sleep Talk",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "215": {
     "devName": "WAZA_IYASINOSUZU",
-    "id": 215
+    "id": 215,
+    "name": "Heal Bell",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "217": {
     "devName": "WAZA_PUREZENTO",
-    "id": 217
+    "id": 217,
+    "name": "Present",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "219": {
     "devName": "WAZA_SINPINOMAMORI",
-    "id": 219
+    "id": 219,
+    "name": "Safeguard",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "220": {
     "devName": "WAZA_ITAMIWAKE",
-    "id": 220
+    "id": 220,
+    "name": "Pain Split",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "223": {
     "devName": "WAZA_BAKURETUPANTI",
-    "id": 223
+    "id": 223,
+    "name": "Dynamic Punch",
+    "type": 1,
+    "power": 100
   },
-  {
+  "224": {
     "devName": "WAZA_MEGAHOON",
-    "id": 224
+    "id": 224,
+    "name": "Megahorn",
+    "type": 6,
+    "power": 120
   },
-  {
+  "225": {
     "devName": "WAZA_RYUUNOIBUKI",
-    "id": 225
+    "id": 225,
+    "name": "Dragon Breath",
+    "type": 15,
+    "power": 60
   },
-  {
+  "226": {
     "devName": "WAZA_BATONTATTI",
-    "id": 226
+    "id": 226,
+    "name": "Baton Pass",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "227": {
     "devName": "WAZA_ANKOORU",
-    "id": 227
+    "id": 227,
+    "name": "Encore",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "229": {
     "devName": "WAZA_KOUSOKUSUPIN",
-    "id": 229
+    "id": 229,
+    "name": "Rapid Spin",
+    "type": 0,
+    "power": 50
   },
-  {
+  "230": {
     "devName": "WAZA_AMAIKAORI",
-    "id": 230
+    "id": 230,
+    "name": "Sweet Scent",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "231": {
     "devName": "WAZA_AIANTEERU",
-    "id": 231
+    "id": 231,
+    "name": "Iron Tail",
+    "type": 8,
+    "power": 100
   },
-  {
+  "232": {
     "devName": "WAZA_METARUKUROO",
-    "id": 232
+    "id": 232,
+    "name": "Metal Claw",
+    "type": 8,
+    "power": 50
   },
-  {
+  "234": {
     "devName": "WAZA_ASANOHIZASI",
-    "id": 234
+    "id": 234,
+    "name": "Morning Sun",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "235": {
     "devName": "WAZA_KOUGOUSEI",
-    "id": 235
+    "id": 235,
+    "name": "Synthesis",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "236": {
     "devName": "WAZA_TUKINOHIKARI",
-    "id": 236
+    "id": 236,
+    "name": "Moonlight",
+    "type": 17,
+    "power": "STATUS"
   },
-  {
+  "238": {
     "devName": "WAZA_KUROSUTYOPPU",
-    "id": 238
+    "id": 238,
+    "name": "Cross Chop",
+    "type": 1,
+    "power": 100
   },
-  {
+  "239": {
     "devName": "WAZA_TATUMAKI",
-    "id": 239
+    "id": 239,
+    "name": "Twister",
+    "type": 15,
+    "power": 40
   },
-  {
+  "240": {
     "devName": "WAZA_AMAGOI",
-    "id": 240
+    "id": 240,
+    "name": "Rain Dance",
+    "type": 10,
+    "power": "STATUS"
   },
-  {
+  "241": {
     "devName": "WAZA_NIHONBARE",
-    "id": 241
+    "id": 241,
+    "name": "Sunny Day",
+    "type": 9,
+    "power": "STATUS"
   },
-  {
+  "242": {
     "devName": "WAZA_KAMIKUDAKU",
-    "id": 242
+    "id": 242,
+    "name": "Crunch",
+    "type": 16,
+    "power": 80
   },
-  {
+  "243": {
     "devName": "WAZA_MIRAAKOOTO",
-    "id": 243
+    "id": 243,
+    "name": "Mirror Coat",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "244": {
     "devName": "WAZA_ZIKOANZI",
-    "id": 244
+    "id": 244,
+    "name": "Psych Up",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "245": {
     "devName": "WAZA_SINSOKU",
-    "id": 245
+    "id": 245,
+    "name": "Extreme Speed",
+    "type": 0,
+    "power": 80
   },
-  {
+  "246": {
     "devName": "WAZA_GENSINOTIKARA",
-    "id": 246
+    "id": 246,
+    "name": "Ancient Power",
+    "type": 5,
+    "power": 60
   },
-  {
+  "247": {
     "devName": "WAZA_SYADOOBOORU",
-    "id": 247
+    "id": 247,
+    "name": "Shadow Ball",
+    "type": 7,
+    "power": 80
   },
-  {
+  "248": {
     "devName": "WAZA_MIRAIYOTI",
-    "id": 248
+    "id": 248,
+    "name": "Future Sight",
+    "type": 13,
+    "power": 120
   },
-  {
+  "249": {
     "devName": "WAZA_IWAKUDAKI",
-    "id": 249
+    "id": 249,
+    "name": "Rock Smash",
+    "type": 1,
+    "power": 40
   },
-  {
+  "250": {
     "devName": "WAZA_UZUSIO",
-    "id": 250
+    "id": 250,
+    "name": "Whirlpool",
+    "type": 10,
+    "power": 35
   },
-  {
+  "251": {
     "devName": "WAZA_HUKURODATAKI",
-    "id": 251
+    "id": 251,
+    "name": "Beat Up",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "252": {
     "devName": "WAZA_NEKODAMASI",
-    "id": 252
+    "id": 252,
+    "name": "Fake Out",
+    "type": 0,
+    "power": 40
   },
-  {
+  "253": {
     "devName": "WAZA_SAWAGU",
-    "id": 253
+    "id": 253,
+    "name": "Uproar",
+    "type": 0,
+    "power": 90
   },
-  {
+  "254": {
     "devName": "WAZA_TAKUWAERU",
-    "id": 254
+    "id": 254,
+    "name": "Stockpile",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "255": {
     "devName": "WAZA_HAKIDASU",
-    "id": 255
+    "id": 255,
+    "name": "Spit Up",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "256": {
     "devName": "WAZA_NOMIKOMU",
-    "id": 256
+    "id": 256,
+    "name": "Swallow",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "257": {
     "devName": "WAZA_NEPPUU",
-    "id": 257
+    "id": 257,
+    "name": "Heat Wave",
+    "type": 9,
+    "power": 95
   },
-  {
+  "259": {
     "devName": "WAZA_ITYAMON",
-    "id": 259
+    "id": 259,
+    "name": "Torment",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "260": {
     "devName": "WAZA_ODATERU",
-    "id": 260
+    "id": 260,
+    "name": "Flatter",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "261": {
     "devName": "WAZA_ONIBI",
-    "id": 261
+    "id": 261,
+    "name": "Will-O-Wisp",
+    "type": 9,
+    "power": "STATUS"
   },
-  {
+  "262": {
     "devName": "WAZA_OKIMIYAGE",
-    "id": 262
+    "id": 262,
+    "name": "Memento",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "263": {
     "devName": "WAZA_KARAGENKI",
-    "id": 263
+    "id": 263,
+    "name": "Facade",
+    "type": 0,
+    "power": 70
   },
-  {
+  "264": {
     "devName": "WAZA_KIAIPANTI",
-    "id": 264
+    "id": 264,
+    "name": "Focus Punch",
+    "type": 1,
+    "power": 150
   },
-  {
+  "266": {
     "devName": "WAZA_KONOYUBITOMARE",
-    "id": 266
+    "id": 266,
+    "name": "Follow Me",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "268": {
     "devName": "WAZA_ZYUUDEN",
-    "id": 268
+    "id": 268,
+    "name": "Charge",
+    "type": 12,
+    "power": "STATUS"
   },
-  {
+  "269": {
     "devName": "WAZA_TYOUHATU",
-    "id": 269
+    "id": 269,
+    "name": "Taunt",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "270": {
     "devName": "WAZA_TEDASUKE",
-    "id": 270
+    "id": 270,
+    "name": "Helping Hand",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "271": {
     "devName": "WAZA_TORIKKU",
-    "id": 271
+    "id": 271,
+    "name": "Trick",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "272": {
     "devName": "WAZA_NARIKIRI",
-    "id": 272
+    "id": 272,
+    "name": "Role Play",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "273": {
     "devName": "WAZA_NEGAIGOTO",
-    "id": 273
+    "id": 273,
+    "name": "Wish",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "275": {
     "devName": "WAZA_NEWOHARU",
-    "id": 275
+    "id": 275,
+    "name": "Ingrain",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "276": {
     "devName": "WAZA_BAKADIKARA",
-    "id": 276
+    "id": 276,
+    "name": "Superpower",
+    "type": 1,
+    "power": 120
   },
-  {
+  "278": {
     "devName": "WAZA_RISAIKURU",
-    "id": 278
+    "id": 278,
+    "name": "Recycle",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "280": {
     "devName": "WAZA_KAWARAWARI",
-    "id": 280
+    "id": 280,
+    "name": "Brick Break",
+    "type": 1,
+    "power": 75
   },
-  {
+  "281": {
     "devName": "WAZA_AKUBI",
-    "id": 281
+    "id": 281,
+    "name": "Yawn",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "282": {
     "devName": "WAZA_HATAKIOTOSU",
-    "id": 282
+    "id": 282,
+    "name": "Knock Off",
+    "type": 16,
+    "power": 65
   },
-  {
+  "283": {
     "devName": "WAZA_GAMUSYARA",
-    "id": 283
+    "id": 283,
+    "name": "Endeavor",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "284": {
     "devName": "WAZA_HUNKA",
-    "id": 284
+    "id": 284,
+    "name": "Eruption",
+    "type": 9,
+    "power": 150
   },
-  {
+  "285": {
     "devName": "WAZA_SUKIRUSUWAPPU",
-    "id": 285
+    "id": 285,
+    "name": "Skill Swap",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "286": {
     "devName": "WAZA_HUUIN",
-    "id": 286
+    "id": 286,
+    "name": "Imprison",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "291": {
     "devName": "WAZA_DAIBINGU",
-    "id": 291
+    "id": 291,
+    "name": "Dive",
+    "type": 10,
+    "power": 80
   },
-  {
+  "292": {
     "devName": "WAZA_TUPPARI",
-    "id": 292
+    "id": 292,
+    "name": "Arm Thrust",
+    "type": 1,
+    "power": 15
   },
-  {
+  "297": {
     "devName": "WAZA_FEZAADANSU",
-    "id": 297
+    "id": 297,
+    "name": "Feather Dance",
+    "type": 2,
+    "power": "STATUS"
   },
-  {
+  "298": {
     "devName": "WAZA_HURAHURADANSU",
-    "id": 298
+    "id": 298,
+    "name": "Teeter Dance",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "299": {
     "devName": "WAZA_BUREIZUKIKKU",
-    "id": 299
+    "id": 299,
+    "name": "Blaze Kick",
+    "type": 9,
+    "power": 85
   },
-  {
+  "303": {
     "devName": "WAZA_NAMAKERU",
-    "id": 303
+    "id": 303,
+    "name": "Slack Off",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "304": {
     "devName": "WAZA_HAIPAABOISU",
-    "id": 304
+    "id": 304,
+    "name": "Hyper Voice",
+    "type": 0,
+    "power": 90
   },
-  {
+  "305": {
     "devName": "WAZA_DOKUDOKUNOKIBA",
-    "id": 305
+    "id": 305,
+    "name": "Poison Fang",
+    "type": 3,
+    "power": 50
   },
-  {
+  "306": {
     "devName": "WAZA_BUREIKUKUROO",
-    "id": 306
+    "id": 306,
+    "name": "Crush Claw",
+    "type": 0,
+    "power": 75
   },
-  {
+  "307": {
     "devName": "WAZA_BURASUTOBAAN",
-    "id": 307
+    "id": 307,
+    "name": "Blast Burn",
+    "type": 9,
+    "power": 150
   },
-  {
+  "308": {
     "devName": "WAZA_HAIDOROKANON",
-    "id": 308
+    "id": 308,
+    "name": "Hydro Cannon",
+    "type": 10,
+    "power": 150
   },
-  {
+  "309": {
     "devName": "WAZA_KOMETTOPANTI",
-    "id": 309
+    "id": 309,
+    "name": "Meteor Mash",
+    "type": 8,
+    "power": 90
   },
-  {
+  "310": {
     "devName": "WAZA_ODOROKASU",
-    "id": 310
+    "id": 310,
+    "name": "Astonish",
+    "type": 7,
+    "power": 30
   },
-  {
+  "311": {
     "devName": "WAZA_WHEZAABOORU",
-    "id": 311
+    "id": 311,
+    "name": "Weather Ball",
+    "type": 0,
+    "power": 50
   },
-  {
+  "313": {
     "devName": "WAZA_USONAKI",
-    "id": 313
+    "id": 313,
+    "name": "Fake Tears",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "314": {
     "devName": "WAZA_EAKATTAA",
-    "id": 314
+    "id": 314,
+    "name": "Air Cutter",
+    "type": 2,
+    "power": 60
   },
-  {
+  "315": {
     "devName": "WAZA_OOBAAHIITO",
-    "id": 315
+    "id": 315,
+    "name": "Overheat",
+    "type": 9,
+    "power": 130
   },
-  {
+  "317": {
     "devName": "WAZA_GANSEKIHUUZI",
-    "id": 317
+    "id": 317,
+    "name": "Rock Tomb",
+    "type": 5,
+    "power": 60
   },
-  {
+  "319": {
     "devName": "WAZA_KINZOKUON",
-    "id": 319
+    "id": 319,
+    "name": "Metal Sound",
+    "type": 8,
+    "power": "STATUS"
   },
-  {
+  "321": {
     "devName": "WAZA_KUSUGURU",
-    "id": 321
+    "id": 321,
+    "name": "Tickle",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "322": {
     "devName": "WAZA_KOSUMOPAWAA",
-    "id": 322
+    "id": 322,
+    "name": "Cosmic Power",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "323": {
     "devName": "WAZA_SIOHUKI",
-    "id": 323
+    "id": 323,
+    "name": "Water Spout",
+    "type": 10,
+    "power": 150
   },
-  {
+  "325": {
     "devName": "WAZA_SYADOOPANTI",
-    "id": 325
+    "id": 325,
+    "name": "Shadow Punch",
+    "type": 7,
+    "power": 60
   },
-  {
+  "326": {
     "devName": "WAZA_ZINTUURIKI",
-    "id": 326
+    "id": 326,
+    "name": "Extrasensory",
+    "type": 13,
+    "power": 80
   },
-  {
+  "328": {
     "devName": "WAZA_SUNAZIGOKU",
-    "id": 328
+    "id": 328,
+    "name": "Sand Tomb",
+    "type": 4,
+    "power": 35
   },
-  {
+  "329": {
     "devName": "WAZA_ZETTAIREIDO",
-    "id": 329
+    "id": 329,
+    "name": "Sheer Cold",
+    "type": 14,
+    "power": "STATUS"
   },
-  {
+  "330": {
     "devName": "WAZA_DAKURYUU",
-    "id": 330
+    "id": 330,
+    "name": "Muddy Water",
+    "type": 10,
+    "power": 90
   },
-  {
+  "331": {
     "devName": "WAZA_TANEMASINGAN",
-    "id": 331
+    "id": 331,
+    "name": "Bullet Seed",
+    "type": 11,
+    "power": 25
   },
-  {
+  "332": {
     "devName": "WAZA_TUBAMEGAESI",
-    "id": 332
+    "id": 332,
+    "name": "Aerial Ace",
+    "type": 2,
+    "power": 60
   },
-  {
+  "333": {
     "devName": "WAZA_TURARABARI",
-    "id": 333
+    "id": 333,
+    "name": "Icicle Spear",
+    "type": 14,
+    "power": 25
   },
-  {
+  "334": {
     "devName": "WAZA_TEPPEKI",
-    "id": 334
+    "id": 334,
+    "name": "Iron Defense",
+    "type": 8,
+    "power": "STATUS"
   },
-  {
+  "335": {
     "devName": "WAZA_TOOSENBOU",
-    "id": 335
+    "id": 335,
+    "name": "Block",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "336": {
     "devName": "WAZA_TOOBOE",
-    "id": 336
+    "id": 336,
+    "name": "Howl",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "337": {
     "devName": "WAZA_DORAGONKUROO",
-    "id": 337
+    "id": 337,
+    "name": "Dragon Claw",
+    "type": 15,
+    "power": 80
   },
-  {
+  "338": {
     "devName": "WAZA_HAADOPURANTO",
-    "id": 338
+    "id": 338,
+    "name": "Frenzy Plant",
+    "type": 11,
+    "power": 150
   },
-  {
+  "339": {
     "devName": "WAZA_BIRUDOAPPU",
-    "id": 339
+    "id": 339,
+    "name": "Bulk Up",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "340": {
     "devName": "WAZA_TOBIHANERU",
-    "id": 340
+    "id": 340,
+    "name": "Bounce",
+    "type": 2,
+    "power": 85
   },
-  {
+  "341": {
     "devName": "WAZA_MADDOSYOTTO",
-    "id": 341
+    "id": 341,
+    "name": "Mud Shot",
+    "type": 4,
+    "power": 55
   },
-  {
+  "342": {
     "devName": "WAZA_POIZUNTEERU",
-    "id": 342
+    "id": 342,
+    "name": "Poison Tail",
+    "type": 3,
+    "power": 50
   },
-  {
+  "343": {
     "devName": "WAZA_HOSIGARU",
-    "id": 343
+    "id": 343,
+    "name": "Covet",
+    "type": 0,
+    "power": 60
   },
-  {
+  "344": {
     "devName": "WAZA_BORUTEKKAA",
-    "id": 344
+    "id": 344,
+    "name": "Volt Tackle",
+    "type": 12,
+    "power": 120
   },
-  {
+  "345": {
     "devName": "WAZA_MAZIKARURIIHU",
-    "id": 345
+    "id": 345,
+    "name": "Magical Leaf",
+    "type": 11,
+    "power": 60
   },
-  {
+  "347": {
     "devName": "WAZA_MEISOU",
-    "id": 347
+    "id": 347,
+    "name": "Calm Mind",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "348": {
     "devName": "WAZA_RIIHUBUREEDO",
-    "id": 348
+    "id": 348,
+    "name": "Leaf Blade",
+    "type": 11,
+    "power": 90
   },
-  {
+  "349": {
     "devName": "WAZA_RYUUNOMAI",
-    "id": 349
+    "id": 349,
+    "name": "Dragon Dance",
+    "type": 15,
+    "power": "STATUS"
   },
-  {
+  "350": {
     "devName": "WAZA_ROKKUBURASUTO",
-    "id": 350
+    "id": 350,
+    "name": "Rock Blast",
+    "type": 5,
+    "power": 25
   },
-  {
+  "351": {
     "devName": "WAZA_DENGEKIHA",
-    "id": 351
+    "id": 351,
+    "name": "Shock Wave",
+    "type": 12,
+    "power": 60
   },
-  {
+  "352": {
     "devName": "WAZA_MIZUNOHADOU",
-    "id": 352
+    "id": 352,
+    "name": "Water Pulse",
+    "type": 10,
+    "power": 60
   },
-  {
+  "355": {
     "devName": "WAZA_HANEYASUME",
-    "id": 355
+    "id": 355,
+    "name": "Roost",
+    "type": 2,
+    "power": "STATUS"
   },
-  {
+  "356": {
     "devName": "WAZA_ZYUURYOKU",
-    "id": 356
+    "id": 356,
+    "name": "Gravity",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "359": {
     "devName": "WAZA_AAMUHANMAA",
-    "id": 359
+    "id": 359,
+    "name": "Hammer Arm",
+    "type": 1,
+    "power": 100
   },
-  {
+  "360": {
     "devName": "WAZA_ZYAIROBOORU",
-    "id": 360
+    "id": 360,
+    "name": "Gyro Ball",
+    "type": 8,
+    "power": "STATUS"
   },
-  {
+  "361": {
     "devName": "WAZA_IYASINONEGAI",
-    "id": 361
+    "id": 361,
+    "name": "Healing Wish",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "362": {
     "devName": "WAZA_SIOMIZU",
-    "id": 362
+    "id": 362,
+    "name": "Brine",
+    "type": 10,
+    "power": 65
   },
-  {
+  "364": {
     "devName": "WAZA_FEINTO",
-    "id": 364
+    "id": 364,
+    "name": "Feint",
+    "type": 0,
+    "power": 30
   },
-  {
+  "365": {
     "devName": "WAZA_TUIBAMU",
-    "id": 365
+    "id": 365,
+    "name": "Pluck",
+    "type": 2,
+    "power": 60
   },
-  {
+  "366": {
     "devName": "WAZA_OIKAZE",
-    "id": 366
+    "id": 366,
+    "name": "Tailwind",
+    "type": 2,
+    "power": "STATUS"
   },
-  {
+  "367": {
     "devName": "WAZA_TUBOWOTUKU",
-    "id": 367
+    "id": 367,
+    "name": "Acupressure",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "368": {
     "devName": "WAZA_METARUBAASUTO",
-    "id": 368
+    "id": 368,
+    "name": "Metal Burst",
+    "type": 8,
+    "power": "STATUS"
   },
-  {
+  "369": {
     "devName": "WAZA_TONBOGAERI",
-    "id": 369
+    "id": 369,
+    "name": "U-turn",
+    "type": 6,
+    "power": 70
   },
-  {
+  "370": {
     "devName": "WAZA_INFAITO",
-    "id": 370
+    "id": 370,
+    "name": "Close Combat",
+    "type": 1,
+    "power": 120
   },
-  {
+  "371": {
     "devName": "WAZA_SIPPEGAESI",
-    "id": 371
+    "id": 371,
+    "name": "Payback",
+    "type": 16,
+    "power": 50
   },
-  {
+  "372": {
     "devName": "WAZA_DAMEOSI",
-    "id": 372
+    "id": 372,
+    "name": "Assurance",
+    "type": 16,
+    "power": 60
   },
-  {
+  "374": {
     "devName": "WAZA_NAGETUKERU",
-    "id": 374
+    "id": 374,
+    "name": "Fling",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "379": {
     "devName": "WAZA_PAWAATORIKKU",
-    "id": 379
+    "id": 379,
+    "name": "Power Trick",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "380": {
     "devName": "WAZA_IEKI",
-    "id": 380
+    "id": 380,
+    "name": "Gastro Acid",
+    "type": 3,
+    "power": "STATUS"
   },
-  {
+  "383": {
     "devName": "WAZA_MANEKKO",
-    "id": 383
+    "id": 383,
+    "name": "Copycat",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "384": {
     "devName": "WAZA_PAWAASUWAPPU",
-    "id": 384
+    "id": 384,
+    "name": "Power Swap",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "385": {
     "devName": "WAZA_GAADOSUWAPPU",
-    "id": 385
+    "id": 385,
+    "name": "Guard Swap",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "387": {
     "devName": "WAZA_TOTTEOKI",
-    "id": 387
+    "id": 387,
+    "name": "Last Resort",
+    "type": 0,
+    "power": 140
   },
-  {
+  "388": {
     "devName": "WAZA_NAYAMINOTANE",
-    "id": 388
+    "id": 388,
+    "name": "Worry Seed",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "389": {
     "devName": "WAZA_HUIUTI",
-    "id": 389
+    "id": 389,
+    "name": "Sucker Punch",
+    "type": 16,
+    "power": 70
   },
-  {
+  "390": {
     "devName": "WAZA_DOKUBISI",
-    "id": 390
+    "id": 390,
+    "name": "Toxic Spikes",
+    "type": 3,
+    "power": "STATUS"
   },
-  {
+  "392": {
     "devName": "WAZA_AKUARINGU",
-    "id": 392
+    "id": 392,
+    "name": "Aqua Ring",
+    "type": 10,
+    "power": "STATUS"
   },
-  {
+  "393": {
     "devName": "WAZA_DENZIHUYUU",
-    "id": 393
+    "id": 393,
+    "name": "Magnet Rise",
+    "type": 12,
+    "power": "STATUS"
   },
-  {
+  "394": {
     "devName": "WAZA_HUREADORAIBU",
-    "id": 394
+    "id": 394,
+    "name": "Flare Blitz",
+    "type": 9,
+    "power": 120
   },
-  {
+  "395": {
     "devName": "WAZA_HAKKEI",
-    "id": 395
+    "id": 395,
+    "name": "Force Palm",
+    "type": 1,
+    "power": 60
   },
-  {
+  "396": {
     "devName": "WAZA_HADOUDAN",
-    "id": 396
+    "id": 396,
+    "name": "Aura Sphere",
+    "type": 1,
+    "power": 80
   },
-  {
+  "397": {
     "devName": "WAZA_ROKKUKATTO",
-    "id": 397
+    "id": 397,
+    "name": "Rock Polish",
+    "type": 5,
+    "power": "STATUS"
   },
-  {
+  "398": {
     "devName": "WAZA_DOKUDUKI",
-    "id": 398
+    "id": 398,
+    "name": "Poison Jab",
+    "type": 3,
+    "power": 80
   },
-  {
+  "399": {
     "devName": "WAZA_AKUNOHADOU",
-    "id": 399
+    "id": 399,
+    "name": "Dark Pulse",
+    "type": 16,
+    "power": 80
   },
-  {
+  "400": {
     "devName": "WAZA_TUZIGIRI",
-    "id": 400
+    "id": 400,
+    "name": "Night Slash",
+    "type": 16,
+    "power": 70
   },
-  {
+  "401": {
     "devName": "WAZA_AKUATEERU",
-    "id": 401
+    "id": 401,
+    "name": "Aqua Tail",
+    "type": 10,
+    "power": 90
   },
-  {
+  "402": {
     "devName": "WAZA_TANEBAKUDAN",
-    "id": 402
+    "id": 402,
+    "name": "Seed Bomb",
+    "type": 11,
+    "power": 80
   },
-  {
+  "403": {
     "devName": "WAZA_EASURASSYU",
-    "id": 403
+    "id": 403,
+    "name": "Air Slash",
+    "type": 2,
+    "power": 75
   },
-  {
+  "404": {
     "devName": "WAZA_SIZAAKUROSU",
-    "id": 404
+    "id": 404,
+    "name": "X-Scissor",
+    "type": 6,
+    "power": 80
   },
-  {
+  "405": {
     "devName": "WAZA_MUSINOSAZAMEKI",
-    "id": 405
+    "id": 405,
+    "name": "Bug Buzz",
+    "type": 6,
+    "power": 90
   },
-  {
+  "406": {
     "devName": "WAZA_RYUUNOHADOU",
-    "id": 406
+    "id": 406,
+    "name": "Dragon Pulse",
+    "type": 15,
+    "power": 85
   },
-  {
+  "407": {
     "devName": "WAZA_DORAGONDAIBU",
-    "id": 407
+    "id": 407,
+    "name": "Dragon Rush",
+    "type": 15,
+    "power": 100
   },
-  {
+  "408": {
     "devName": "WAZA_PAWAAJEMU",
-    "id": 408
+    "id": 408,
+    "name": "Power Gem",
+    "type": 5,
+    "power": 80
   },
-  {
+  "409": {
     "devName": "WAZA_DOREINPANTI",
-    "id": 409
+    "id": 409,
+    "name": "Drain Punch",
+    "type": 1,
+    "power": 75
   },
-  {
+  "410": {
     "devName": "WAZA_SINKUUHA",
-    "id": 410
+    "id": 410,
+    "name": "Vacuum Wave",
+    "type": 1,
+    "power": 40
   },
-  {
+  "411": {
     "devName": "WAZA_KIAIDAMA",
-    "id": 411
+    "id": 411,
+    "name": "Focus Blast",
+    "type": 1,
+    "power": 120
   },
-  {
+  "412": {
     "devName": "WAZA_ENAZIIBOORU",
-    "id": 412
+    "id": 412,
+    "name": "Energy Ball",
+    "type": 11,
+    "power": 90
   },
-  {
+  "413": {
     "devName": "WAZA_BUREIBUBAADO",
-    "id": 413
+    "id": 413,
+    "name": "Brave Bird",
+    "type": 2,
+    "power": 120
   },
-  {
+  "414": {
     "devName": "WAZA_DAITINOTIKARA",
-    "id": 414
+    "id": 414,
+    "name": "Earth Power",
+    "type": 4,
+    "power": 90
   },
-  {
+  "415": {
     "devName": "WAZA_SURIKAE",
-    "id": 415
+    "id": 415,
+    "name": "Switcheroo",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "416": {
     "devName": "WAZA_GIGAINPAKUTO",
-    "id": 416
+    "id": 416,
+    "name": "Giga Impact",
+    "type": 0,
+    "power": 150
   },
-  {
+  "417": {
     "devName": "WAZA_WARUDAKUMI",
-    "id": 417
+    "id": 417,
+    "name": "Nasty Plot",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "418": {
     "devName": "WAZA_BARETTOPANTI",
-    "id": 418
+    "id": 418,
+    "name": "Bullet Punch",
+    "type": 8,
+    "power": 40
   },
-  {
+  "419": {
     "devName": "WAZA_YUKINADARE",
-    "id": 419
+    "id": 419,
+    "name": "Avalanche",
+    "type": 14,
+    "power": 60
   },
-  {
+  "420": {
     "devName": "WAZA_KOORINOTUBUTE",
-    "id": 420
+    "id": 420,
+    "name": "Ice Shard",
+    "type": 14,
+    "power": 40
   },
-  {
+  "421": {
     "devName": "WAZA_SYADOOKUROO",
-    "id": 421
+    "id": 421,
+    "name": "Shadow Claw",
+    "type": 7,
+    "power": 70
   },
-  {
+  "422": {
     "devName": "WAZA_KAMINARINOKIBA",
-    "id": 422
+    "id": 422,
+    "name": "Thunder Fang",
+    "type": 12,
+    "power": 65
   },
-  {
+  "423": {
     "devName": "WAZA_KOORINOKIBA",
-    "id": 423
+    "id": 423,
+    "name": "Ice Fang",
+    "type": 14,
+    "power": 65
   },
-  {
+  "424": {
     "devName": "WAZA_HONOONOKIBA",
-    "id": 424
+    "id": 424,
+    "name": "Fire Fang",
+    "type": 9,
+    "power": 65
   },
-  {
+  "425": {
     "devName": "WAZA_KAGEUTI",
-    "id": 425
+    "id": 425,
+    "name": "Shadow Sneak",
+    "type": 7,
+    "power": 40
   },
-  {
+  "427": {
     "devName": "WAZA_SAIKOKATTAA",
-    "id": 427
+    "id": 427,
+    "name": "Psycho Cut",
+    "type": 13,
+    "power": 70
   },
-  {
+  "428": {
     "devName": "WAZA_SINENNOZUTUKI",
-    "id": 428
+    "id": 428,
+    "name": "Zen Headbutt",
+    "type": 13,
+    "power": 80
   },
-  {
+  "430": {
     "devName": "WAZA_RASUTAAKANON",
-    "id": 430
+    "id": 430,
+    "name": "Flash Cannon",
+    "type": 8,
+    "power": 80
   },
-  {
+  "432": {
     "devName": "WAZA_KIRIBARAI",
-    "id": 432
+    "id": 432,
+    "name": "Defog",
+    "type": 2,
+    "power": "STATUS"
   },
-  {
+  "433": {
     "devName": "WAZA_TORIKKURUUMU",
-    "id": 433
+    "id": 433,
+    "name": "Trick Room",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "434": {
     "devName": "WAZA_RYUUSEIGUN",
-    "id": 434
+    "id": 434,
+    "name": "Draco Meteor",
+    "type": 15,
+    "power": 130
   },
-  {
+  "435": {
     "devName": "WAZA_HOUDEN",
-    "id": 435
+    "id": 435,
+    "name": "Discharge",
+    "type": 12,
+    "power": 80
   },
-  {
+  "436": {
     "devName": "WAZA_HUNEN",
-    "id": 436
+    "id": 436,
+    "name": "Lava Plume",
+    "type": 9,
+    "power": 80
   },
-  {
+  "437": {
     "devName": "WAZA_RIIHUSUTOOMU",
-    "id": 437
+    "id": 437,
+    "name": "Leaf Storm",
+    "type": 11,
+    "power": 130
   },
-  {
+  "438": {
     "devName": "WAZA_PAWAAWHIPPU",
-    "id": 438
+    "id": 438,
+    "name": "Power Whip",
+    "type": 11,
+    "power": 120
   },
-  {
+  "440": {
     "devName": "WAZA_KUROSUPOIZUN",
-    "id": 440
+    "id": 440,
+    "name": "Cross Poison",
+    "type": 3,
+    "power": 70
   },
-  {
+  "441": {
     "devName": "WAZA_DASUTOSYUUTO",
-    "id": 441
+    "id": 441,
+    "name": "Gunk Shot",
+    "type": 3,
+    "power": 120
   },
-  {
+  "442": {
     "devName": "WAZA_AIANHEDDO",
-    "id": 442
+    "id": 442,
+    "name": "Iron Head",
+    "type": 8,
+    "power": 80
   },
-  {
+  "444": {
     "devName": "WAZA_SUTOONEZZI",
-    "id": 444
+    "id": 444,
+    "name": "Stone Edge",
+    "type": 5,
+    "power": 100
   },
-  {
+  "446": {
     "devName": "WAZA_SUTERUSUROKKU",
-    "id": 446
+    "id": 446,
+    "name": "Stealth Rock",
+    "type": 5,
+    "power": "STATUS"
   },
-  {
+  "447": {
     "devName": "WAZA_KUSAMUSUBI",
-    "id": 447
+    "id": 447,
+    "name": "Grass Knot",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "449": {
     "devName": "WAZA_SABAKINOTUBUTE",
-    "id": 449
+    "id": 449,
+    "name": "Judgment",
+    "type": 0,
+    "power": 100
   },
-  {
+  "450": {
     "devName": "WAZA_MUSIKUI",
-    "id": 450
+    "id": 450,
+    "name": "Bug Bite",
+    "type": 6,
+    "power": 60
   },
-  {
+  "451": {
     "devName": "WAZA_TYAAZIBIIMU",
-    "id": 451
+    "id": 451,
+    "name": "Charge Beam",
+    "type": 12,
+    "power": 50
   },
-  {
+  "452": {
     "devName": "WAZA_UDDOHANMAA",
-    "id": 452
+    "id": 452,
+    "name": "Wood Hammer",
+    "type": 11,
+    "power": 120
   },
-  {
+  "453": {
     "devName": "WAZA_AKUAJETTO",
-    "id": 453
+    "id": 453,
+    "name": "Aqua Jet",
+    "type": 10,
+    "power": 40
   },
-  {
+  "454": {
     "devName": "WAZA_KOUGEKISIREI",
-    "id": 454
+    "id": 454,
+    "name": "Attack Order",
+    "type": 6,
+    "power": 90
   },
-  {
+  "455": {
     "devName": "WAZA_BOUGYOSIREI",
-    "id": 455
+    "id": 455,
+    "name": "Defend Order",
+    "type": 6,
+    "power": "STATUS"
   },
-  {
+  "457": {
     "devName": "WAZA_MOROHANOZUTUKI",
-    "id": 457
+    "id": 457,
+    "name": "Head Smash",
+    "type": 5,
+    "power": 150
   },
-  {
+  "458": {
     "devName": "WAZA_DABURUATAKKU",
-    "id": 458
+    "id": 458,
+    "name": "Double Hit",
+    "type": 0,
+    "power": 35
   },
-  {
+  "459": {
     "devName": "WAZA_TOKINOHOUKOU",
-    "id": 459
+    "id": 459,
+    "name": "Roar of Time",
+    "type": 15,
+    "power": 150
   },
-  {
+  "460": {
     "devName": "WAZA_AKUUSETUDAN",
-    "id": 460
+    "id": 460,
+    "name": "Spacial Rend",
+    "type": 15,
+    "power": 100
   },
-  {
+  "461": {
     "devName": "WAZA_MIKADUKINOMAI",
-    "id": 461
+    "id": 461,
+    "name": "Lunar Dance",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "463": {
     "devName": "WAZA_MAGUMASUTOOMU",
-    "id": 463
+    "id": 463,
+    "name": "Magma Storm",
+    "type": 9,
+    "power": 100
   },
-  {
+  "467": {
     "devName": "WAZA_SYADOODAIBU",
-    "id": 467
+    "id": 467,
+    "name": "Shadow Force",
+    "type": 7,
+    "power": 120
   },
-  {
+  "468": {
     "devName": "WAZA_TUMETOGI",
-    "id": 468
+    "id": 468,
+    "name": "Hone Claws",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "469": {
     "devName": "WAZA_WAIDOGAADO",
-    "id": 469
+    "id": 469,
+    "name": "Wide Guard",
+    "type": 5,
+    "power": "STATUS"
   },
-  {
+  "470": {
     "devName": "WAZA_GAADOSHEA",
-    "id": 470
+    "id": 470,
+    "name": "Guard Split",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "471": {
     "devName": "WAZA_PAWAASHEA",
-    "id": 471
+    "id": 471,
+    "name": "Power Split",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "472": {
     "devName": "WAZA_WANDAARUUMU",
-    "id": 472
+    "id": 472,
+    "name": "Wonder Room",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "473": {
     "devName": "WAZA_SAIKOSYOKKU",
-    "id": 473
+    "id": 473,
+    "name": "Psyshock",
+    "type": 13,
+    "power": 80
   },
-  {
+  "474": {
     "devName": "WAZA_BENOMUSYOKKU",
-    "id": 474
+    "id": 474,
+    "name": "Venoshock",
+    "type": 3,
+    "power": 65
   },
-  {
+  "476": {
     "devName": "WAZA_IKARINOKONA",
-    "id": 476
+    "id": 476,
+    "name": "Rage Powder",
+    "type": 6,
+    "power": "STATUS"
   },
-  {
+  "478": {
     "devName": "WAZA_MAZIKKURUUMU",
-    "id": 478
+    "id": 478,
+    "name": "Magic Room",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "479": {
     "devName": "WAZA_UTIOTOSU",
-    "id": 479
+    "id": 479,
+    "name": "Smack Down",
+    "type": 5,
+    "power": 50
   },
-  {
+  "482": {
     "devName": "WAZA_HEDOROWHEEBU",
-    "id": 482
+    "id": 482,
+    "name": "Sludge Wave",
+    "type": 3,
+    "power": 95
   },
-  {
+  "483": {
     "devName": "WAZA_TYOUNOMAI",
-    "id": 483
+    "id": 483,
+    "name": "Quiver Dance",
+    "type": 6,
+    "power": "STATUS"
   },
-  {
+  "484": {
     "devName": "WAZA_HEBIIBONBAA",
-    "id": 484
+    "id": 484,
+    "name": "Heavy Slam",
+    "type": 8,
+    "power": "STATUS"
   },
-  {
+  "486": {
     "devName": "WAZA_EREKIBOORU",
-    "id": 486
+    "id": 486,
+    "name": "Electro Ball",
+    "type": 12,
+    "power": "STATUS"
   },
-  {
+  "487": {
     "devName": "WAZA_MIZUBITASI",
-    "id": 487
+    "id": 487,
+    "name": "Soak",
+    "type": 10,
+    "power": "STATUS"
   },
-  {
+  "488": {
     "devName": "WAZA_NITOROTYAAZI",
-    "id": 488
+    "id": 488,
+    "name": "Flame Charge",
+    "type": 9,
+    "power": 50
   },
-  {
+  "489": {
     "devName": "WAZA_TOGUROWOMAKU",
-    "id": 489
+    "id": 489,
+    "name": "Coil",
+    "type": 3,
+    "power": "STATUS"
   },
-  {
+  "490": {
     "devName": "WAZA_ROOKIKKU",
-    "id": 490
+    "id": 490,
+    "name": "Low Sweep",
+    "type": 1,
+    "power": 65
   },
-  {
+  "491": {
     "devName": "WAZA_ASIDDOBOMU",
-    "id": 491
+    "id": 491,
+    "name": "Acid Spray",
+    "type": 3,
+    "power": 40
   },
-  {
+  "492": {
     "devName": "WAZA_IKASAMA",
-    "id": 492
+    "id": 492,
+    "name": "Foul Play",
+    "type": 16,
+    "power": 95
   },
-  {
+  "493": {
     "devName": "WAZA_SINPURUBIIMU",
-    "id": 493
+    "id": 493,
+    "name": "Simple Beam",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "494": {
     "devName": "WAZA_NAKAMADUKURI",
-    "id": 494
+    "id": 494,
+    "name": "Entrainment",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "495": {
     "devName": "WAZA_OSAKINIDOUZO",
-    "id": 495
+    "id": 495,
+    "name": "After You",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "496": {
     "devName": "WAZA_RINSYOU",
-    "id": 496
+    "id": 496,
+    "name": "Round",
+    "type": 0,
+    "power": 60
   },
-  {
+  "497": {
     "devName": "WAZA_EKOOBOISU",
-    "id": 497
+    "id": 497,
+    "name": "Echoed Voice",
+    "type": 0,
+    "power": 40
   },
-  {
+  "499": {
     "devName": "WAZA_KURIASUMOGGU",
-    "id": 499
+    "id": 499,
+    "name": "Clear Smog",
+    "type": 3,
+    "power": 50
   },
-  {
+  "500": {
     "devName": "WAZA_ASISUTOPAWAA",
-    "id": 500
+    "id": 500,
+    "name": "Stored Power",
+    "type": 13,
+    "power": 20
   },
-  {
+  "501": {
     "devName": "WAZA_FASUTOGAADO",
-    "id": 501
+    "id": 501,
+    "name": "Quick Guard",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "502": {
     "devName": "WAZA_SAIDOTHENZI",
-    "id": 502
+    "id": 502,
+    "name": "Ally Switch",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "503": {
     "devName": "WAZA_NETTOU",
-    "id": 503
+    "id": 503,
+    "name": "Scald",
+    "type": 10,
+    "power": 80
   },
-  {
+  "504": {
     "devName": "WAZA_KARAWOYABURU",
-    "id": 504
+    "id": 504,
+    "name": "Shell Smash",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "505": {
     "devName": "WAZA_IYASINOHADOU",
-    "id": 505
+    "id": 505,
+    "name": "Heal Pulse",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "506": {
     "devName": "WAZA_TATARIME",
-    "id": 506
+    "id": 506,
+    "name": "Hex",
+    "type": 7,
+    "power": 65
   },
-  {
+  "508": {
     "devName": "WAZA_GIATHENZI",
-    "id": 508
+    "id": 508,
+    "name": "Shift Gear",
+    "type": 8,
+    "power": "STATUS"
   },
-  {
+  "509": {
     "devName": "WAZA_TOMOENAGE",
-    "id": 509
+    "id": 509,
+    "name": "Circle Throw",
+    "type": 1,
+    "power": 60
   },
-  {
+  "510": {
     "devName": "WAZA_YAKITUKUSU",
-    "id": 510
+    "id": 510,
+    "name": "Incinerate",
+    "type": 9,
+    "power": 60
   },
-  {
+  "511": {
     "devName": "WAZA_SAKIOKURI",
-    "id": 511
+    "id": 511,
+    "name": "Quash",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "512": {
     "devName": "WAZA_AKUROBATTO",
-    "id": 512
+    "id": 512,
+    "name": "Acrobatics",
+    "type": 2,
+    "power": 55
   },
-  {
+  "513": {
     "devName": "WAZA_MIRAATAIPU",
-    "id": 513
+    "id": 513,
+    "name": "Reflect Type",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "514": {
     "devName": "WAZA_KATAKIUTI",
-    "id": 514
+    "id": 514,
+    "name": "Retaliate",
+    "type": 0,
+    "power": 70
   },
-  {
+  "515": {
     "devName": "WAZA_INOTIGAKE",
-    "id": 515
+    "id": 515,
+    "name": "Final Gambit",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "517": {
     "devName": "WAZA_RENGOKU",
-    "id": 517
+    "id": 517,
+    "name": "Inferno",
+    "type": 9,
+    "power": 100
   },
-  {
+  "518": {
     "devName": "WAZA_MIZUNOTIKAI",
-    "id": 518
+    "id": 518,
+    "name": "Water Pledge",
+    "type": 10,
+    "power": 80
   },
-  {
+  "519": {
     "devName": "WAZA_HONOONOTIKAI",
-    "id": 519
+    "id": 519,
+    "name": "Fire Pledge",
+    "type": 9,
+    "power": 80
   },
-  {
+  "520": {
     "devName": "WAZA_KUSANOTIKAI",
-    "id": 520
+    "id": 520,
+    "name": "Grass Pledge",
+    "type": 11,
+    "power": 80
   },
-  {
+  "521": {
     "devName": "WAZA_BORUTOTHENZI",
-    "id": 521
+    "id": 521,
+    "name": "Volt Switch",
+    "type": 12,
+    "power": 70
   },
-  {
+  "522": {
     "devName": "WAZA_MUSINOTEIKOU",
-    "id": 522
+    "id": 522,
+    "name": "Struggle Bug",
+    "type": 6,
+    "power": 50
   },
-  {
+  "523": {
     "devName": "WAZA_ZINARASI",
-    "id": 523
+    "id": 523,
+    "name": "Bulldoze",
+    "type": 4,
+    "power": 60
   },
-  {
+  "524": {
     "devName": "WAZA_KOORINOIBUKI",
-    "id": 524
+    "id": 524,
+    "name": "Frost Breath",
+    "type": 14,
+    "power": 60
   },
-  {
+  "525": {
     "devName": "WAZA_DORAGONTEERU",
-    "id": 525
+    "id": 525,
+    "name": "Dragon Tail",
+    "type": 15,
+    "power": 60
   },
-  {
+  "526": {
     "devName": "WAZA_HURUITATERU",
-    "id": 526
+    "id": 526,
+    "name": "Work Up",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "527": {
     "devName": "WAZA_EREKINETTO",
-    "id": 527
+    "id": 527,
+    "name": "Electroweb",
+    "type": 12,
+    "power": 55
   },
-  {
+  "528": {
     "devName": "WAZA_WAIRUDOBORUTO",
-    "id": 528
+    "id": 528,
+    "name": "Wild Charge",
+    "type": 12,
+    "power": 90
   },
-  {
+  "529": {
     "devName": "WAZA_DORIRURAINAA",
-    "id": 529
+    "id": 529,
+    "name": "Drill Run",
+    "type": 4,
+    "power": 80
   },
-  {
+  "532": {
     "devName": "WAZA_UDDOHOON",
-    "id": 532
+    "id": 532,
+    "name": "Horn Leech",
+    "type": 11,
+    "power": 75
   },
-  {
+  "533": {
     "devName": "WAZA_SEINARUTURUGI",
-    "id": 533
+    "id": 533,
+    "name": "Sacred Sword",
+    "type": 1,
+    "power": 90
   },
-  {
+  "534": {
     "devName": "WAZA_SHERUBUREEDO",
-    "id": 534
+    "id": 534,
+    "name": "Razor Shell",
+    "type": 10,
+    "power": 75
   },
-  {
+  "535": {
     "devName": "WAZA_HIITOSUTANPU",
-    "id": 535
+    "id": 535,
+    "name": "Heat Crash",
+    "type": 9,
+    "power": "STATUS"
   },
-  {
+  "538": {
     "devName": "WAZA_KOTTONGAADO",
-    "id": 538
+    "id": 538,
+    "name": "Cotton Guard",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "539": {
     "devName": "WAZA_NAITOBAASUTO",
-    "id": 539
+    "id": 539,
+    "name": "Night Daze",
+    "type": 16,
+    "power": 85
   },
-  {
+  "540": {
     "devName": "WAZA_SAIKOBUREIKU",
-    "id": 540
+    "id": 540,
+    "name": "Psystrike",
+    "type": 13,
+    "power": 100
   },
-  {
+  "541": {
     "devName": "WAZA_SUIIPUBINTA",
-    "id": 541
+    "id": 541,
+    "name": "Tail Slap",
+    "type": 0,
+    "power": 25
   },
-  {
+  "542": {
     "devName": "WAZA_BOUHUU",
-    "id": 542
+    "id": 542,
+    "name": "Hurricane",
+    "type": 2,
+    "power": 110
   },
-  {
+  "547": {
     "devName": "WAZA_INISIENOUTA",
-    "id": 547
+    "id": 547,
+    "name": "Relic Song",
+    "type": 0,
+    "power": 75
   },
-  {
+  "552": {
     "devName": "WAZA_HONOONOMAI",
-    "id": 552
+    "id": 552,
+    "name": "Fiery Dance",
+    "type": 9,
+    "power": 80
   },
-  {
+  "555": {
     "devName": "WAZA_BAAKUAUTO",
-    "id": 555
+    "id": 555,
+    "name": "Snarl",
+    "type": 16,
+    "power": 55
   },
-  {
+  "556": {
     "devName": "WAZA_TURARAOTOSI",
-    "id": 556
+    "id": 556,
+    "name": "Icicle Crash",
+    "type": 14,
+    "power": 85
   },
-  {
+  "557": {
     "devName": "WAZA_vJENEREETO",
-    "id": 557
+    "id": 557,
+    "name": "V-create",
+    "type": 9,
+    "power": 180
   },
-  {
+  "560": {
     "devName": "WAZA_HURAINGUPURESU",
-    "id": 560
+    "id": 560,
+    "name": "Flying Press",
+    "type": 1,
+    "power": 100
   },
-  {
+  "562": {
     "devName": "WAZA_GEPPU",
-    "id": 562
+    "id": 562,
+    "name": "Belch",
+    "type": 3,
+    "power": 120
   },
-  {
+  "564": {
     "devName": "WAZA_NEBANEBANETTO",
-    "id": 564
+    "id": 564,
+    "name": "Sticky Web",
+    "type": 6,
+    "power": "STATUS"
   },
-  {
+  "565": {
     "devName": "WAZA_TODOMEBARI",
-    "id": 565
+    "id": 565,
+    "name": "Fell Stinger",
+    "type": 6,
+    "power": 50
   },
-  {
+  "566": {
     "devName": "WAZA_GOOSUTODAIBU",
-    "id": 566
+    "id": 566,
+    "name": "Phantom Force",
+    "type": 7,
+    "power": 90
   },
-  {
+  "568": {
     "devName": "WAZA_OTAKEBI",
-    "id": 568
+    "id": 568,
+    "name": "Noble Roar",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "570": {
     "devName": "WAZA_PARABORATYAAZI",
-    "id": 570
+    "id": 570,
+    "name": "Parabolic Charge",
+    "type": 12,
+    "power": 65
   },
-  {
+  "572": {
     "devName": "WAZA_HANAHUBUKI",
-    "id": 572
+    "id": 572,
+    "name": "Petal Blizzard",
+    "type": 11,
+    "power": 90
   },
-  {
+  "573": {
     "devName": "WAZA_HURIIZUDORAI",
-    "id": 573
+    "id": 573,
+    "name": "Freeze-Dry",
+    "type": 14,
+    "power": 70
   },
-  {
+  "574": {
     "devName": "WAZA_TYAAMUBOISU",
-    "id": 574
+    "id": 574,
+    "name": "Disarming Voice",
+    "type": 17,
+    "power": 40
   },
-  {
+  "575": {
     "devName": "WAZA_SUTEZERIHU",
-    "id": 575
+    "id": 575,
+    "name": "Parting Shot",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "577": {
     "devName": "WAZA_DOREINKISSU",
-    "id": 577
+    "id": 577,
+    "name": "Draining Kiss",
+    "type": 17,
+    "power": 50
   },
-  {
+  "580": {
     "devName": "WAZA_GURASUFIIRUDO",
-    "id": 580
+    "id": 580,
+    "name": "Grassy Terrain",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "581": {
     "devName": "WAZA_MISUTOFIIRUDO",
-    "id": 581
+    "id": 581,
+    "name": "Misty Terrain",
+    "type": 17,
+    "power": "STATUS"
   },
-  {
+  "583": {
     "devName": "WAZA_ZYARETUKU",
-    "id": 583
+    "id": 583,
+    "name": "Play Rough",
+    "type": 17,
+    "power": 90
   },
-  {
+  "584": {
     "devName": "WAZA_YOUSEINOKAZE",
-    "id": 584
+    "id": 584,
+    "name": "Fairy Wind",
+    "type": 17,
+    "power": 40
   },
-  {
+  "585": {
     "devName": "WAZA_MUUNFOOSU",
-    "id": 585
+    "id": 585,
+    "name": "Moonblast",
+    "type": 17,
+    "power": 95
   },
-  {
+  "586": {
     "devName": "WAZA_BAKUONPA",
-    "id": 586
+    "id": 586,
+    "name": "Boomburst",
+    "type": 0,
+    "power": 140
   },
-  {
+  "587": {
     "devName": "WAZA_FEARIIROKKU",
-    "id": 587
+    "id": 587,
+    "name": "Fairy Lock",
+    "type": 17,
+    "power": "STATUS"
   },
-  {
+  "589": {
     "devName": "WAZA_NAKAYOKUSURU",
-    "id": 589
+    "id": 589,
+    "name": "Play Nice",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "590": {
     "devName": "WAZA_NAISYOBANASI",
-    "id": 590
+    "id": 590,
+    "name": "Confide",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "591": {
     "devName": "WAZA_DAIYASUTOOMU",
-    "id": 591
+    "id": 591,
+    "name": "Diamond Storm",
+    "type": 5,
+    "power": 100
   },
-  {
+  "592": {
     "devName": "WAZA_SUTIIMUBAASUTO",
-    "id": 592
+    "id": 592,
+    "name": "Steam Eruption",
+    "type": 10,
+    "power": 110
   },
-  {
+  "593": {
     "devName": "WAZA_IZIGENHOORU",
-    "id": 593
+    "id": 593,
+    "name": "Hyperspace Hole",
+    "type": 13,
+    "power": 80
   },
-  {
+  "594": {
     "devName": "WAZA_MIZUSYURIKEN",
-    "id": 594
+    "id": 594,
+    "name": "Water Shuriken",
+    "type": 10,
+    "power": 15
   },
-  {
+  "595": {
     "devName": "WAZA_MAZIKARUHUREIMU",
-    "id": 595
+    "id": 595,
+    "name": "Mystical Fire",
+    "type": 9,
+    "power": 75
   },
-  {
+  "596": {
     "devName": "WAZA_NIIDORUGAADO",
-    "id": 596
+    "id": 596,
+    "name": "Spiky Shield",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "597": {
     "devName": "WAZA_AROMAMISUTO",
-    "id": 597
+    "id": 597,
+    "name": "Aromatic Mist",
+    "type": 17,
+    "power": "STATUS"
   },
-  {
+  "598": {
     "devName": "WAZA_KAIDENPA",
-    "id": 598
+    "id": 598,
+    "name": "Eerie Impulse",
+    "type": 12,
+    "power": "STATUS"
   },
-  {
+  "602": {
     "devName": "WAZA_ZIBASOUSA",
-    "id": 602
+    "id": 602,
+    "name": "Magnetic Flux",
+    "type": 12,
+    "power": "STATUS"
   },
-  {
+  "603": {
     "devName": "WAZA_HAPPIITAIMU",
-    "id": 603
+    "id": 603,
+    "name": "Happy Hour",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "604": {
     "devName": "WAZA_EREKIFIIRUDO",
-    "id": 604
+    "id": 604,
+    "name": "Electric Terrain",
+    "type": 12,
+    "power": "STATUS"
   },
-  {
+  "605": {
     "devName": "WAZA_MAZIKARUSYAIN",
-    "id": 605
+    "id": 605,
+    "name": "Dazzling Gleam",
+    "type": 17,
+    "power": 80
   },
-  {
+  "606": {
     "devName": "WAZA_OIWAI",
-    "id": 606
+    "id": 606,
+    "name": "Celebrate",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "607": {
     "devName": "WAZA_TEWOTUNAGU",
-    "id": 607
+    "id": 607,
+    "name": "Hold Hands",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "608": {
     "devName": "WAZA_TUBURANAHITOMI",
-    "id": 608
+    "id": 608,
+    "name": "Baby-Doll Eyes",
+    "type": 17,
+    "power": "STATUS"
   },
-  {
+  "609": {
     "devName": "WAZA_HOPPESURISURI",
-    "id": 609
+    "id": 609,
+    "name": "Nuzzle",
+    "type": 12,
+    "power": 20
   },
-  {
+  "610": {
     "devName": "WAZA_TEKAGEN",
-    "id": 610
+    "id": 610,
+    "name": "Hold Back",
+    "type": 0,
+    "power": 40
   },
-  {
+  "611": {
     "devName": "WAZA_MATOWARITUKU",
-    "id": 611
+    "id": 611,
+    "name": "Infestation",
+    "type": 6,
+    "power": 20
   },
-  {
+  "618": {
     "devName": "WAZA_KONGENNOHADOU",
-    "id": 618
+    "id": 618,
+    "name": "Origin Pulse",
+    "type": 10,
+    "power": 110
   },
-  {
+  "619": {
     "devName": "WAZA_DANGAINOTURUGI",
-    "id": 619
+    "id": 619,
+    "name": "Precipice Blades",
+    "type": 4,
+    "power": 120
   },
-  {
+  "620": {
     "devName": "WAZA_GARYOUTENSEI",
-    "id": 620
+    "id": 620,
+    "name": "Dragon Ascent",
+    "type": 2,
+    "power": 120
   },
-  {
+  "621": {
     "devName": "WAZA_IZIGENRASSYU",
-    "id": 621
+    "id": 621,
+    "name": "Hyperspace Fury",
+    "type": 16,
+    "power": 100
   },
-  {
+  "659": {
     "devName": "WAZA_SUNAATUME",
-    "id": 659
+    "id": 659,
+    "name": "Shore Up",
+    "type": 4,
+    "power": "STATUS"
   },
-  {
+  "660": {
     "devName": "WAZA_DEAIGASIRA",
-    "id": 660
+    "id": 660,
+    "name": "First Impression",
+    "type": 6,
+    "power": 90
   },
-  {
+  "661": {
     "devName": "WAZA_TOOTIKA",
-    "id": 661
+    "id": 661,
+    "name": "Baneful Bunker",
+    "type": 3,
+    "power": "STATUS"
   },
-  {
+  "662": {
     "devName": "WAZA_KAGENUI",
-    "id": 662
+    "id": 662,
+    "name": "Spirit Shackle",
+    "type": 7,
+    "power": 80
   },
-  {
+  "663": {
     "devName": "WAZA_ddRARIATTO",
-    "id": 663
+    "id": 663,
+    "name": "Darkest Lariat",
+    "type": 16,
+    "power": 85
   },
-  {
+  "665": {
     "devName": "WAZA_AISUHANMAA",
-    "id": 665
+    "id": 665,
+    "name": "Ice Hammer",
+    "type": 14,
+    "power": 100
   },
-  {
+  "667": {
     "devName": "WAZA_10MANBARIKI",
-    "id": 667
+    "id": 667,
+    "name": "High Horsepower",
+    "type": 4,
+    "power": 95
   },
-  {
+  "668": {
     "devName": "WAZA_TIKARAWOSUITORU",
-    "id": 668
+    "id": 668,
+    "name": "Strength Sap",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "669": {
     "devName": "WAZA_SOORAABUREEDO",
-    "id": 669
+    "id": 669,
+    "name": "Solar Blade",
+    "type": 11,
+    "power": 125
   },
-  {
+  "670": {
     "devName": "WAZA_KONOHA",
-    "id": 670
+    "id": 670,
+    "name": "Leafage",
+    "type": 11,
+    "power": 40
   },
-  {
+  "675": {
     "devName": "WAZA_ZIGOKUDUKI",
-    "id": 675
+    "id": 675,
+    "name": "Throat Chop",
+    "type": 16,
+    "power": 80
   },
-  {
+  "676": {
     "devName": "WAZA_KAHUNDANGO",
-    "id": 676
+    "id": 676,
+    "name": "Pollen Puff",
+    "type": 6,
+    "power": 90
   },
-  {
+  "678": {
     "devName": "WAZA_SAIKOFIIRUDO",
-    "id": 678
+    "id": 678,
+    "name": "Psychic Terrain",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "679": {
     "devName": "WAZA_TOBIKAKARU",
-    "id": 679
+    "id": 679,
+    "name": "Lunge",
+    "type": 6,
+    "power": 80
   },
-  {
+  "680": {
     "devName": "WAZA_HONOONOMUTI",
-    "id": 680
+    "id": 680,
+    "name": "Fire Lash",
+    "type": 9,
+    "power": 80
   },
-  {
+  "681": {
     "devName": "WAZA_TUKEAGARU",
-    "id": 681
+    "id": 681,
+    "name": "Power Trip",
+    "type": 16,
+    "power": 20
   },
-  {
+  "682": {
     "devName": "WAZA_MOETUKIRU",
-    "id": 682
+    "id": 682,
+    "name": "Burn Up",
+    "type": 9,
+    "power": 130
   },
-  {
+  "683": {
     "devName": "WAZA_SUPIIDOSUWAPPU",
-    "id": 683
+    "id": 683,
+    "name": "Speed Swap",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "684": {
     "devName": "WAZA_SUMAATOHOON",
-    "id": 684
+    "id": 684,
+    "name": "Smart Strike",
+    "type": 8,
+    "power": 70
   },
-  {
+  "686": {
     "devName": "WAZA_MEZAMERUDANSU",
-    "id": 686
+    "id": 686,
+    "name": "Revelation Dance",
+    "type": 0,
+    "power": 90
   },
-  {
+  "688": {
     "devName": "WAZA_TOROPIKARUKIKKU",
-    "id": 688
+    "id": 688,
+    "name": "Trop Kick",
+    "type": 11,
+    "power": 70
   },
-  {
+  "689": {
     "devName": "WAZA_SAIHAI",
-    "id": 689
+    "id": 689,
+    "name": "Instruct",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "693": {
     "devName": "WAZA_BUNMAWASU",
-    "id": 693
+    "id": 693,
+    "name": "Brutal Swing",
+    "type": 16,
+    "power": 60
   },
-  {
+  "694": {
     "devName": "WAZA_OORORABEERU",
-    "id": 694
+    "id": 694,
+    "name": "Aurora Veil",
+    "type": 14,
+    "power": "STATUS"
   },
-  {
+  "705": {
     "devName": "WAZA_HURUURUKANON",
-    "id": 705
+    "id": 705,
+    "name": "Fleur Cannon",
+    "type": 17,
+    "power": 130
   },
-  {
+  "706": {
     "devName": "WAZA_SAIKOFANGU",
-    "id": 706
+    "id": 706,
+    "name": "Psychic Fangs",
+    "type": 13,
+    "power": 85
   },
-  {
+  "707": {
     "devName": "WAZA_ZIDANDA",
-    "id": 707
+    "id": 707,
+    "name": "Stomping Tantrum",
+    "type": 4,
+    "power": 75
   },
-  {
+  "709": {
     "devName": "WAZA_AKUSERUROKKU",
-    "id": 709
+    "id": 709,
+    "name": "Accelerock",
+    "type": 5,
+    "power": 40
   },
-  {
+  "710": {
     "devName": "WAZA_AKUABUREIKU",
-    "id": 710
+    "id": 710,
+    "name": "Liquidation",
+    "type": 10,
+    "power": 85
   },
-  {
+  "715": {
     "devName": "WAZA_NAMIDAME",
-    "id": 715
+    "id": 715,
+    "name": "Tearful Look",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "716": {
     "devName": "WAZA_BIRIBIRITIKUTIKU",
-    "id": 716
+    "id": 716,
+    "name": "Zing Zap",
+    "type": 12,
+    "power": 80
   },
-  {
+  "744": {
     "devName": "WAZA_DAIMAKKUSUHOU",
-    "id": 744
+    "id": 744,
+    "name": "Dynamax Cannon",
+    "type": 15,
+    "power": 100
   },
-  {
+  "745": {
     "devName": "WAZA_NERAIUTI",
-    "id": 745
+    "id": 745,
+    "name": "Snipe Shot",
+    "type": 10,
+    "power": 80
   },
-  {
+  "746": {
     "devName": "WAZA_KURAITUKU",
-    "id": 746
+    "id": 746,
+    "name": "Jaw Lock",
+    "type": 16,
+    "power": 80
   },
-  {
+  "747": {
     "devName": "WAZA_HOOBARU",
-    "id": 747
+    "id": 747,
+    "name": "Stuff Cheeks",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "748": {
     "devName": "WAZA_HAISUINOZIN",
-    "id": 748
+    "id": 748,
+    "name": "No Retreat",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "749": {
     "devName": "WAZA_TAARUSYOTTO",
-    "id": 749
+    "id": 749,
+    "name": "Tar Shot",
+    "type": 5,
+    "power": "STATUS"
   },
-  {
+  "750": {
     "devName": "WAZA_MAHOUNOKONA",
-    "id": 750
+    "id": 750,
+    "name": "Magic Powder",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "751": {
     "devName": "WAZA_DORAGONAROO",
-    "id": 751
+    "id": 751,
+    "name": "Dragon Darts",
+    "type": 15,
+    "power": 50
   },
-  {
+  "752": {
     "devName": "WAZA_OTYAKAI",
-    "id": 752
+    "id": 752,
+    "name": "Teatime",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "756": {
     "devName": "WAZA_KOOTOTHENZI",
-    "id": 756
+    "id": 756,
+    "name": "Court Change",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "776": {
     "devName": "WAZA_BODHIPURESU",
-    "id": 776
+    "id": 776,
+    "name": "Body Press",
+    "type": 1,
+    "power": 80
   },
-  {
+  "778": {
     "devName": "WAZA_DORAMUATAKKU",
-    "id": 778
+    "id": 778,
+    "name": "Drum Beating",
+    "type": 11,
+    "power": 80
   },
-  {
+  "780": {
     "devName": "WAZA_KAENBOORU",
-    "id": 780
+    "id": 780,
+    "name": "Pyro Ball",
+    "type": 9,
+    "power": 120
   },
-  {
+  "781": {
     "devName": "WAZA_KYOZYUUZAN",
-    "id": 781
+    "id": 781,
+    "name": "Behemoth Blade",
+    "type": 8,
+    "power": 100
   },
-  {
+  "782": {
     "devName": "WAZA_KYOZYUUDAN",
-    "id": 782
+    "id": 782,
+    "name": "Behemoth Bash",
+    "type": 8,
+    "power": 100
   },
-  {
+  "784": {
     "devName": "WAZA_WAIDOBUREIKAA",
-    "id": 784
+    "id": 784,
+    "name": "Breaking Swipe",
+    "type": 15,
+    "power": 60
   },
-  {
+  "785": {
     "devName": "WAZA_EDADUKI",
-    "id": 785
+    "id": 785,
+    "name": "Branch Poke",
+    "type": 11,
+    "power": 40
   },
-  {
+  "786": {
     "devName": "WAZA_OOBAADORAIBU",
-    "id": 786
+    "id": 786,
+    "name": "Overdrive",
+    "type": 12,
+    "power": 80
   },
-  {
+  "787": {
     "devName": "WAZA_RINGOSAN",
-    "id": 787
+    "id": 787,
+    "name": "Apple Acid",
+    "type": 11,
+    "power": 80
   },
-  {
+  "788": {
     "devName": "WAZA_NYUUTON",
-    "id": 788
+    "id": 788,
+    "name": "Grav Apple",
+    "type": 11,
+    "power": 80
   },
-  {
+  "789": {
     "devName": "WAZA_SOURUKURASSYU",
-    "id": 789
+    "id": 789,
+    "name": "Spirit Break",
+    "type": 17,
+    "power": 75
   },
-  {
+  "791": {
     "devName": "WAZA_INOTINOSIZUKU",
-    "id": 791
+    "id": 791,
+    "name": "Life Dew",
+    "type": 10,
+    "power": "STATUS"
   },
-  {
+  "793": {
     "devName": "WAZA_DOGEZATUKI",
-    "id": 793
+    "id": 793,
+    "name": "False Surrender",
+    "type": 16,
+    "power": 80
   },
-  {
+  "796": {
     "devName": "WAZA_TETTEIKOUSEN",
-    "id": 796
+    "id": 796,
+    "name": "Steel Beam",
+    "type": 8,
+    "power": 140
   },
-  {
+  "797": {
     "devName": "WAZA_WAIDOFOOSU",
-    "id": 797
+    "id": 797,
+    "name": "Expanding Force",
+    "type": 13,
+    "power": 80
   },
-  {
+  "798": {
     "devName": "WAZA_AIANROORAA",
-    "id": 798
+    "id": 798,
+    "name": "Steel Roller",
+    "type": 8,
+    "power": 130
   },
-  {
+  "799": {
     "devName": "WAZA_SUKEIRUSYOTTO",
-    "id": 799
+    "id": 799,
+    "name": "Scale Shot",
+    "type": 15,
+    "power": 25
   },
-  {
+  "800": {
     "devName": "WAZA_METEOBIIMU",
-    "id": 800
+    "id": 800,
+    "name": "Meteor Beam",
+    "type": 5,
+    "power": 120
   },
-  {
+  "801": {
     "devName": "WAZA_SHERUAAMUZU",
-    "id": 801
+    "id": 801,
+    "name": "Shell Side Arm",
+    "type": 3,
+    "power": 90
   },
-  {
+  "802": {
     "devName": "WAZA_MISUTOBAASUTO",
-    "id": 802
+    "id": 802,
+    "name": "Misty Explosion",
+    "type": 17,
+    "power": 100
   },
-  {
+  "803": {
     "devName": "WAZA_GURASUSURAIDAA",
-    "id": 803
+    "id": 803,
+    "name": "Grassy Glide",
+    "type": 11,
+    "power": 70
   },
-  {
+  "804": {
     "devName": "WAZA_RAIZINGUBORUTO",
-    "id": 804
+    "id": 804,
+    "name": "Rising Voltage",
+    "type": 12,
+    "power": 70
   },
-  {
+  "805": {
     "devName": "WAZA_DAITINOHADOU",
-    "id": 805
+    "id": 805,
+    "name": "Terrain Pulse",
+    "type": 0,
+    "power": 50
   },
-  {
+  "806": {
     "devName": "WAZA_HAIYORUITIGEKI",
-    "id": 806
+    "id": 806,
+    "name": "Skitter Smack",
+    "type": 6,
+    "power": 70
   },
-  {
+  "807": {
     "devName": "WAZA_SITTONOHONOO",
-    "id": 807
+    "id": 807,
+    "name": "Burning Jealousy",
+    "type": 9,
+    "power": 70
   },
-  {
+  "808": {
     "devName": "WAZA_UPPUNBARASI",
-    "id": 808
+    "id": 808,
+    "name": "Lash Out",
+    "type": 16,
+    "power": 75
   },
-  {
+  "809": {
     "devName": "WAZA_PORUTAAGAISUTO",
-    "id": 809
+    "id": 809,
+    "name": "Poltergeist",
+    "type": 7,
+    "power": 110
   },
-  {
+  "810": {
     "devName": "WAZA_HUSYOKUGASU",
-    "id": 810
+    "id": 810,
+    "name": "Corrosive Gas",
+    "type": 3,
+    "power": "STATUS"
   },
-  {
+  "811": {
     "devName": "WAZA_KOOTINGU",
-    "id": 811
+    "id": 811,
+    "name": "Coaching",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "812": {
     "devName": "WAZA_KUIKKUTAAN",
-    "id": 812
+    "id": 812,
+    "name": "Flip Turn",
+    "type": 10,
+    "power": 60
   },
-  {
+  "813": {
     "devName": "WAZA_TORIPURUAKUSERU",
-    "id": 813
+    "id": 813,
+    "name": "Triple Axel",
+    "type": 14,
+    "power": 20
   },
-  {
+  "814": {
     "devName": "WAZA_DABURUUINGU",
-    "id": 814
+    "id": 814,
+    "name": "Dual Wingbeat",
+    "type": 2,
+    "power": 40
   },
-  {
+  "815": {
     "devName": "WAZA_NESSANODAITI",
-    "id": 815
+    "id": 815,
+    "name": "Scorching Sands",
+    "type": 4,
+    "power": 70
   },
-  {
+  "816": {
     "devName": "WAZA_ZYANGURUHIIRU",
-    "id": 816
+    "id": 816,
+    "name": "Jungle Healing",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "817": {
     "devName": "WAZA_ANKOKUKYOUDA",
-    "id": 817
+    "id": 817,
+    "name": "Wicked Blow",
+    "type": 16,
+    "power": 80
   },
-  {
+  "818": {
     "devName": "WAZA_SUIRYUURENDA",
-    "id": 818
+    "id": 818,
+    "name": "Surging Strikes",
+    "type": 10,
+    "power": 25
   },
-  {
+  "819": {
     "devName": "WAZA_SANDAAPURIZUN",
-    "id": 819
+    "id": 819,
+    "name": "Thunder Cage",
+    "type": 12,
+    "power": 80
   },
-  {
+  "820": {
     "devName": "WAZA_DORAGONENAZII",
-    "id": 820
+    "id": 820,
+    "name": "Dragon Energy",
+    "type": 15,
+    "power": 150
   },
-  {
+  "821": {
     "devName": "WAZA_ITETUKUSISEN",
-    "id": 821
+    "id": 821,
+    "name": "Freezing Glare",
+    "type": 13,
+    "power": 90
   },
-  {
+  "822": {
     "devName": "WAZA_MOEAGARUIKARI",
-    "id": 822
+    "id": 822,
+    "name": "Fiery Wrath",
+    "type": 16,
+    "power": 90
   },
-  {
+  "823": {
     "devName": "WAZA_RAIMEIGERI",
-    "id": 823
+    "id": 823,
+    "name": "Thunderous Kick",
+    "type": 1,
+    "power": 90
   },
-  {
+  "824": {
     "devName": "WAZA_BURIZAADORANSU",
-    "id": 824
+    "id": 824,
+    "name": "Glacial Lance",
+    "type": 14,
+    "power": 130
   },
-  {
+  "825": {
     "devName": "WAZA_ASUTORARUBITTO",
-    "id": 825
+    "id": 825,
+    "name": "Astral Barrage",
+    "type": 7,
+    "power": 120
   },
-  {
+  "826": {
     "devName": "WAZA_BUKIMINAZYUMON",
-    "id": 826
+    "id": 826,
+    "name": "Eerie Spell",
+    "type": 13,
+    "power": 80
   },
-  {
+  "827": {
     "devName": "WAZA_FEITARUKUROO",
-    "id": 827
+    "id": 827,
+    "name": "Dire Claw",
+    "type": 3,
+    "power": 60
   },
-  {
+  "828": {
     "devName": "WAZA_BARIAARASSYU",
-    "id": 828
+    "id": 828,
+    "name": "Psyshield Bash",
+    "type": 13,
+    "power": 70
   },
-  {
+  "829": {
     "devName": "WAZA_PAWAASIHUTO",
-    "id": 829
+    "id": 829,
+    "name": "Power Shift",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "830": {
     "devName": "WAZA_GANSEKIAKKUSU",
-    "id": 830
+    "id": 830,
+    "name": "Stone Axe",
+    "type": 5,
+    "power": 65
   },
-  {
+  "831": {
     "devName": "WAZA_HARUNOARASI",
-    "id": 831
+    "id": 831,
+    "name": "Springtide Storm",
+    "type": 17,
+    "power": 95
   },
-  {
+  "832": {
     "devName": "WAZA_SINPINOTIKARA",
-    "id": 832
+    "id": 832,
+    "name": "Mystical Power",
+    "type": 13,
+    "power": 70
   },
-  {
+  "833": {
     "devName": "WAZA_DAIHUNGEKI",
-    "id": 833
+    "id": 833,
+    "name": "Raging Fury",
+    "type": 9,
+    "power": 90
   },
-  {
+  "834": {
     "devName": "WAZA_WHEEBUTAKKURU",
-    "id": 834
+    "id": 834,
+    "name": "Wave Crash",
+    "type": 10,
+    "power": 75
   },
-  {
+  "835": {
     "devName": "WAZA_KUROROBURASUTO",
-    "id": 835
+    "id": 835,
+    "name": "Chloroblast",
+    "type": 11,
+    "power": 120
   },
-  {
+  "836": {
     "devName": "WAZA_HYOUZANOROSI",
-    "id": 836
+    "id": 836,
+    "name": "Mountain Gale",
+    "type": 14,
+    "power": 100
   },
-  {
+  "837": {
     "devName": "WAZA_SYOURINOMAI",
-    "id": 837
+    "id": 837,
+    "name": "Victory Dance",
+    "type": 1,
+    "power": "STATUS"
   },
-  {
+  "838": {
     "devName": "WAZA_BUTIKAMASI",
-    "id": 838
+    "id": 838,
+    "name": "Headlong Rush",
+    "type": 4,
+    "power": 100
   },
-  {
+  "839": {
     "devName": "WAZA_DOKUBARISENBON",
-    "id": 839
+    "id": 839,
+    "name": "Barb Barrage",
+    "type": 3,
+    "power": 60
   },
-  {
+  "840": {
     "devName": "WAZA_OORAUINGU",
-    "id": 840
+    "id": 840,
+    "name": "Esper Wing",
+    "type": 13,
+    "power": 75
   },
-  {
+  "841": {
     "devName": "WAZA_URAMITURAMI",
-    "id": 841
+    "id": 841,
+    "name": "Bitter Malice",
+    "type": 7,
+    "power": 60
   },
-  {
+  "842": {
     "devName": "WAZA_TATEKOMORU",
-    "id": 842
+    "id": 842,
+    "name": "Shelter",
+    "type": 8,
+    "power": "STATUS"
   },
-  {
+  "843": {
     "devName": "WAZA_3BONNOYA",
-    "id": 843
+    "id": 843,
+    "name": "Triple Arrows",
+    "type": 1,
+    "power": 50
   },
-  {
+  "844": {
     "devName": "WAZA_HYAKKIYAKOU",
-    "id": 844
+    "id": 844,
+    "name": "Infernal Parade",
+    "type": 7,
+    "power": 60
   },
-  {
+  "845": {
     "devName": "WAZA_HIKENTIENAMI",
-    "id": 845
+    "id": 845,
+    "name": "Ceaseless Edge",
+    "type": 16,
+    "power": 65
   },
-  {
+  "846": {
     "devName": "WAZA_KOGARASIARASI",
-    "id": 846
+    "id": 846,
+    "name": "Bleakwind Storm",
+    "type": 2,
+    "power": 95
   },
-  {
+  "847": {
     "devName": "WAZA_KAMINARIARASI",
-    "id": 847
+    "id": 847,
+    "name": "Wildbolt Storm",
+    "type": 12,
+    "power": 95
   },
-  {
+  "848": {
     "devName": "WAZA_NESSANOARASI",
-    "id": 848
+    "id": 848,
+    "name": "Sandsear Storm",
+    "type": 4,
+    "power": 95
   },
-  {
+  "849": {
     "devName": "WAZA_MIKADUKINOINORI",
-    "id": 849
+    "id": 849,
+    "name": "Lunar Blessing",
+    "type": 13,
+    "power": "STATUS"
   },
-  {
+  "851": {
     "devName": "WAZA_TERABAASUTO",
-    "id": 851
+    "id": 851,
+    "name": "Tera Blast",
+    "type": 0,
+    "power": 80
   },
-  {
+  "852": {
     "devName": "WAZA_SUREDDOTORAPPU",
-    "id": 852
+    "id": 852,
+    "name": "Silk Trap",
+    "type": 6,
+    "power": "STATUS"
   },
-  {
+  "853": {
     "devName": "WAZA_KAKATOOTOSI",
-    "id": 853
+    "id": 853,
+    "name": "Axe Kick",
+    "type": 1,
+    "power": 120
   },
-  {
+  "854": {
     "devName": "WAZA_OHAKAMAIRI",
-    "id": 854
+    "id": 854,
+    "name": "Last Respects",
+    "type": 7,
+    "power": 50
   },
-  {
+  "855": {
     "devName": "WAZA_RUMINAKORIZYON",
-    "id": 855
+    "id": 855,
+    "name": "Lumina Crash",
+    "type": 13,
+    "power": 80
   },
-  {
+  "856": {
     "devName": "WAZA_ITTYOUAGARI",
-    "id": 856
+    "id": 856,
+    "name": "Order Up",
+    "type": 15,
+    "power": 80
   },
-  {
+  "857": {
     "devName": "WAZA_JETTOPANTI",
-    "id": 857
+    "id": 857,
+    "name": "Jet Punch",
+    "type": 10,
+    "power": 60
   },
-  {
+  "858": {
     "devName": "WAZA_HABANEROEKISU",
-    "id": 858
+    "id": 858,
+    "name": "Spicy Extract",
+    "type": 11,
+    "power": "STATUS"
   },
-  {
+  "859": {
     "devName": "WAZA_HOIIRUSUPIN",
-    "id": 859
+    "id": 859,
+    "name": "Spin Out",
+    "type": 8,
+    "power": 100
   },
-  {
+  "860": {
     "devName": "WAZA_NEZUMIZAN",
-    "id": 860
+    "id": 860,
+    "name": "Population Bomb",
+    "type": 0,
+    "power": 20
   },
-  {
+  "861": {
     "devName": "WAZA_AISUSUPINAA",
-    "id": 861
+    "id": 861,
+    "name": "Ice Spinner",
+    "type": 14,
+    "power": 80
   },
-  {
+  "862": {
     "devName": "WAZA_KYOKENTOTUGEKI",
-    "id": 862
+    "id": 862,
+    "name": "Glaive Rush",
+    "type": 15,
+    "power": 120
   },
-  {
+  "863": {
     "devName": "WAZA_SAIKINOINORI",
-    "id": 863
+    "id": 863,
+    "name": "Revival Blessing",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "864": {
     "devName": "WAZA_SIODUKE",
-    "id": 864
+    "id": 864,
+    "name": "Salt Cure",
+    "type": 5,
+    "power": 40
   },
-  {
+  "865": {
     "devName": "WAZA_TORIPURUDAIBU",
-    "id": 865
+    "id": 865,
+    "name": "Triple Dive",
+    "type": 10,
+    "power": 30
   },
-  {
+  "866": {
     "devName": "WAZA_KARUKANSUPIN",
-    "id": 866
+    "id": 866,
+    "name": "Mortal Spin",
+    "type": 3,
+    "power": 30
   },
-  {
+  "867": {
     "devName": "WAZA_UTUSIE",
-    "id": 867
+    "id": 867,
+    "name": "Doodle",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "868": {
     "devName": "WAZA_MIWOKEZURU",
-    "id": 868
+    "id": 868,
+    "name": "Fillet Away",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "869": {
     "devName": "WAZA_DOGEZAN",
-    "id": 869
+    "id": 869,
+    "name": "Kowtow Cleave",
+    "type": 16,
+    "power": 85
   },
-  {
+  "870": {
     "devName": "WAZA_TORIKKUHURAWAA",
-    "id": 870
+    "id": 870,
+    "name": "Flower Trick",
+    "type": 11,
+    "power": 70
   },
-  {
+  "871": {
     "devName": "WAZA_HUREASONGU",
-    "id": 871
+    "id": 871,
+    "name": "Torch Song",
+    "type": 9,
+    "power": 80
   },
-  {
+  "872": {
     "devName": "WAZA_AKUASUTEPPU",
-    "id": 872
+    "id": 872,
+    "name": "Aqua Step",
+    "type": 10,
+    "power": 80
   },
-  {
+  "873": {
     "devName": "WAZA_REIZINGUBURU",
-    "id": 873
+    "id": 873,
+    "name": "Raging Bull",
+    "type": 0,
+    "power": 90
   },
-  {
+  "874": {
     "devName": "WAZA_GOORUDORASSYU",
-    "id": 874
+    "id": 874,
+    "name": "Make It Rain",
+    "type": 8,
+    "power": 120
   },
-  {
+  "875": {
     "devName": "WAZA_SAIKOBUREIDO",
-    "id": 875
+    "id": 875,
+    "name": "Pound",
+    "type": 0,
+    "power": 40
   },
-  {
+  "876": {
     "devName": "WAZA_HAIDOROSUTIIMU",
-    "id": 876
+    "id": 876,
+    "name": "Pound",
+    "type": 0,
+    "power": 40
   },
-  {
+  "877": {
     "devName": "WAZA_KATASUTOROFII",
-    "id": 877
+    "id": 877,
+    "name": "Ruination",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "878": {
     "devName": "WAZA_AKUSERUBUREIKU",
-    "id": 878
+    "id": 878,
+    "name": "Collision Course",
+    "type": 1,
+    "power": 100
   },
-  {
+  "879": {
     "devName": "WAZA_INAZUMADORAIBU",
-    "id": 879
+    "id": 879,
+    "name": "Electro Drift",
+    "type": 12,
+    "power": 100
   },
-  {
+  "880": {
     "devName": "WAZA_SIPPOKIRI",
-    "id": 880
+    "id": 880,
+    "name": "Shed Tail",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "881": {
     "devName": "WAZA_SAMUIGYAGU",
-    "id": 881
+    "id": 881,
+    "name": "Chilly Reception",
+    "type": 14,
+    "power": "STATUS"
   },
-  {
+  "882": {
     "devName": "WAZA_OKATADUKE",
-    "id": 882
+    "id": 882,
+    "name": "Tidy Up",
+    "type": 0,
+    "power": "STATUS"
   },
-  {
+  "883": {
     "devName": "WAZA_YUKIGESIKI",
-    "id": 883
+    "id": 883,
+    "name": "Snowscape",
+    "type": 14,
+    "power": "STATUS"
   },
-  {
+  "884": {
     "devName": "WAZA_TOBITUKU",
-    "id": 884
+    "id": 884,
+    "name": "Pounce",
+    "type": 6,
+    "power": 50
   },
-  {
+  "885": {
     "devName": "WAZA_KUSAWAKE",
-    "id": 885
+    "id": 885,
+    "name": "Trailblaze",
+    "type": 11,
+    "power": 50
   },
-  {
+  "886": {
     "devName": "WAZA_HIYAMIZU",
-    "id": 886
+    "id": 886,
+    "name": "Chilling Water",
+    "type": 10,
+    "power": 50
   },
-  {
+  "887": {
     "devName": "WAZA_HAIPAADORIRU",
-    "id": 887
+    "id": 887,
+    "name": "Hyper Drill",
+    "type": 0,
+    "power": 100
   },
-  {
+  "888": {
     "devName": "WAZA_TUINBIIMU",
-    "id": 888
+    "id": 888,
+    "name": "Twin Beam",
+    "type": 13,
+    "power": 40
   },
-  {
+  "889": {
     "devName": "WAZA_HUNDONOKOBUSI",
-    "id": 889
+    "id": 889,
+    "name": "Rage Fist",
+    "type": 7,
+    "power": 50
   },
-  {
+  "890": {
     "devName": "WAZA_AAMAAKYANON",
-    "id": 890
+    "id": 890,
+    "name": "Armor Cannon",
+    "type": 9,
+    "power": 120
   },
-  {
+  "891": {
     "devName": "WAZA_MUNENNOTURUGI",
-    "id": 891
+    "id": 891,
+    "name": "Bitter Blade",
+    "type": 9,
+    "power": 90
   },
-  {
+  "892": {
     "devName": "WAZA_DENKOUSOUGEKI",
-    "id": 892
+    "id": 892,
+    "name": "Double Shock",
+    "type": 12,
+    "power": 120
   },
-  {
+  "893": {
     "devName": "WAZA_GIGAHANMAA",
-    "id": 893
+    "id": 893,
+    "name": "Gigaton Hammer",
+    "type": 8,
+    "power": 160
   },
-  {
+  "894": {
     "devName": "WAZA_HOUHUKU",
-    "id": 894
+    "id": 894,
+    "name": "Comeuppance",
+    "type": 16,
+    "power": "STATUS"
   },
-  {
+  "895": {
     "devName": "WAZA_AKUAKATTAA",
-    "id": 895
+    "id": 895,
+    "name": "Aqua Cutter",
+    "type": 10,
+    "power": 70
   }
-]
+}
