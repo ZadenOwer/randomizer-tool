@@ -223,11 +223,11 @@ class TrainersRandomizer(BaseRandomizer):
             randomStarters = json.load(startersJson)
 
             if rivalType == 9: # Player choice Fire
-              rivalPokemon = self.getPokemonDev(dexId=randomStarters["grass"])
+              rivalPokemon = self.getPokemonDev(dexId=randomStarters["grass"]["dexId"])
             if rivalType == 10: # Player choice Water
-              rivalPokemon = self.getPokemonDev(dexId=randomStarters["fire"])
+              rivalPokemon = self.getPokemonDev(dexId=randomStarters["fire"]["dexId"])
             if rivalType == 11: # Player choice Plant
-              rivalPokemon = self.getPokemonDev(dexId=randomStarters["water"])
+              rivalPokemon = self.getPokemonDev(dexId=randomStarters["water"]["dexId"])
             
             rivalStarterName = rivalPokemon["devName"]
 
@@ -312,7 +312,7 @@ class TrainersRandomizer(BaseRandomizer):
               **self.trainerPokeTemplate()
             }
 
-            self.logger.info(f'Rival stage {rivalParams[2]} starter changed for: {rivalPokemon["id"]} - {rivalPokemon["devName"]}')
+            self.logger.info(f'Rival stage {rivalParams[2]} starter changed for: {rivalPokemon["name"]}')
           else:
             pokeDevName = randomizedTrainer[pokeKey]["devId"]
             if pokeDevName == "DEV_NULL":
@@ -321,11 +321,11 @@ class TrainersRandomizer(BaseRandomizer):
 
             pkmDev = self.getPokemonDev(devName=pokeDevName)
   
-            randomPokemon = self.getRandomPokemon(oldPkmId=pkmDev["id"], similarStats=options["trainerSimilarStats"])
+            randomPokemon = self.getRandomPokemon(oldPkmId=pkmDev["dexId"], similarStats=options["trainerSimilarStats"])
 
-            form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
+            form, sex = self.getRandomForm(randomPokemon["dexId"], randomPokemon["forms"])
 
-            self.logger.info(f'Random pokemon generated: ID: {randomPokemon["id"]} - NAME: {randomPokemon["devName"]} - FORM: {form}')
+            self.logger.info(f'Random pokemon generated: ID: {randomPokemon["dexId"]} - NAME: {randomPokemon["name"]} - FORM: {form}')
 
             randomizedTrainer[pokeKey] = {
               **randomizedTrainer[pokeKey],
@@ -367,7 +367,7 @@ class TrainersRandomizer(BaseRandomizer):
           if options["finalEvolutionCap"] > 0 and options["finalEvolutionCap"] < 100:
             if randomizedTrainer[pokeKey]["level"] >= options["finalEvolutionCap"]:
               pkmDev = self.getPokemonDev(devName=randomizedTrainer[pokeKey]["devId"])
-              finalEvo = self.getFinalEvolution(dexId=pkmDev["id"])
+              finalEvo = self.getFinalEvolution(dexId=pkmDev["dexId"])
 
               if finalEvo is not None:
                 randomizedTrainer[pokeKey]["devId"] = finalEvo["devName"]

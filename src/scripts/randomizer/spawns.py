@@ -20,11 +20,11 @@ class SpawnsRandomizer(BaseRandomizer):
 
     randomPokemon = self.getRandomPokemon(oldPkmId=oldPkmId, similarStats=options["similarStats"])
 
-    form, sex = self.getRandomForm(randomPokemon["id"], randomPokemon["forms"])
-    self.logger.info(f'Random pokemon generated: ID: {randomPokemon["id"]} - NAME: {randomPokemon["devName"]} - FORM: {form}')
+    form, sex = self.getRandomForm(randomPokemon["dexId"], randomPokemon["forms"])
+    self.logger.info(f'Random pokemon generated: ID: {randomPokemon["dexId"]} - NAME: {randomPokemon["name"]} - FORM: {form}')
 
     return {
-      **randomPokemon, # {devName, id}
+      **randomPokemon, # {devName, dexId}
       "form": form,
       "sex": sex
     }
@@ -42,9 +42,9 @@ class SpawnsRandomizer(BaseRandomizer):
 
       if options["initials"] or options["areasSpawnRandomized"]:
         if isStarter and options["initials"]:
-          randomPokemon = self.generateSpawnPokemon(oldPkmId=pkmDev["id"], options=options, blacklist=list(starters.values())+alreadyUsed)        
+          randomPokemon = self.generateSpawnPokemon(oldPkmId=pkmDev["dexId"], options=options, blacklist=list(starters.values())+alreadyUsed)        
         elif not isStarter and options["areasSpawnRandomized"]:
-          randomPokemon = self.generateSpawnPokemon(oldPkmId=pkmDev["id"], options=options, blacklist=alreadyUsed)
+          randomPokemon = self.generateSpawnPokemon(oldPkmId=pkmDev["dexId"], options=options, blacklist=alreadyUsed)
         else:
           randomPokemon = None
 
@@ -52,22 +52,31 @@ class SpawnsRandomizer(BaseRandomizer):
           event["pokeData"]["devId"] = randomPokemon["devName"]
           event["pokeData"]["formId"] = randomPokemon["form"]
           event["pokeData"]["sex"] = randomPokemon["sex"]
-          alreadyUsed.append(randomPokemon["id"])
+          alreadyUsed.append(randomPokemon["dexId"])
 
       if isStarter and options["initials"]:
-        starterId = self.getPokemonDev(devName=event["pokeData"]["devId"])["id"]
+        starter = self.getPokemonDev(devName=event["pokeData"]["devId"])
 
         if "hono" in event["label"]:
           # Fire starter
-          starters["fire"] = starterId
+          starters["fire"] = {
+            "dexId": starter["dexId"],
+            "name": starter["name"]
+          }
 
         if "kusa" in event["label"]:
           # Plant starter
-          starters["grass"] = starterId
+          starters["grass"] = {
+            "dexId": starter["dexId"],
+            "name": starter["name"]
+          }
 
         if "mizu" in event["label"]:
           # Water starter
-          starters["water"] = starterId
+          starters["water"] = {
+            "dexId": starter["dexId"],
+            "name": starter["name"]
+          }
         
       if options["abilities"]:
         event["pokeData"]["tokusei"] = "RANDOM_123"
@@ -97,7 +106,7 @@ class SpawnsRandomizer(BaseRandomizer):
       if options["areasSpawnRandomized"]:
         pkmDev = self.getPokemonDev(devName=event["pokeDataSymbol"]["devId"])
 
-        randomPokemon = self.generateSpawnPokemon(oldPkmId=pkmDev["id"], options=options)
+        randomPokemon = self.generateSpawnPokemon(oldPkmId=pkmDev["dexId"], options=options)
 
         event["pokeDataSymbol"]["devId"] = randomPokemon["devName"]
         event["pokeDataSymbol"]["formId"] = randomPokemon["form"]
@@ -128,7 +137,7 @@ class SpawnsRandomizer(BaseRandomizer):
       if options["areasSpawnRandomized"]:
         pkmDev = self.getPokemonDev(devName=pokemon["devid"])
 
-        randomPokemon = self.generateSpawnPokemon(oldPkmId=pkmDev["id"], options=options)
+        randomPokemon = self.generateSpawnPokemon(oldPkmId=pkmDev["dexId"], options=options)
 
         pokemon["devid"] = randomPokemon["devName"]
         pokemon["formno"] = randomPokemon["form"]

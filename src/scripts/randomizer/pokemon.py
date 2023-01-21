@@ -39,8 +39,12 @@ class PokemonRandomizer(BaseRandomizer):
 
     return randomizedTMList
 
-  def hasSimilarPower(self, oldMovePower: int, newMovePower: int | str):
+  def hasSimilarPower(self, oldMovePower: int, newMovePower: int | str, atLevel: int):
     if newMovePower == self.STATUS_MOVE:
+      if (atLevel < 20):
+        # Avoid learning status moves at lower levels for a better experience and progression
+        return True
+
       # All the status move are possible choices for the random move
       return True
 
@@ -84,10 +88,10 @@ class PokemonRandomizer(BaseRandomizer):
         else:
           fakePower = 100
 
-        moveList = {id: move for id, move in moveList.items() if self.hasSimilarPower(oldMovePower=fakePower, newMovePower=move["power"])}
+        moveList = {id: move for id, move in moveList.items() if self.hasSimilarPower(oldMovePower=fakePower, newMovePower=move["power"], atLevel=defaultMove["level"])}
 
       if not isStatus:
-        moveList = {id: move for id, move in moveList.items() if self.hasSimilarPower(oldMovePower=moveData["power"], newMovePower=move["power"])}
+        moveList = {id: move for id, move in moveList.items() if self.hasSimilarPower(oldMovePower=moveData["power"], newMovePower=move["power"], atLevel=defaultMove["level"])}
 
     if options["moveType"]:
       moveList = {id: move for id, move in moveList.items() if self.hasSimilarType(oldMoveType=moveData["type"], newMoveType=move["type"])}
@@ -133,7 +137,7 @@ class PokemonRandomizer(BaseRandomizer):
       evolutionOptions["paradox"] = True
 
     for evolution in defaultEvolutions:
-      evolutionData = self.getPokemonPersonalData(dexId=evolution["species"])
+      evolutionData = self.getPokemonPersonalData(devId=evolution["species"])
       similarStats = False
       growthRate = None
       typesIds = None
@@ -148,15 +152,15 @@ class PokemonRandomizer(BaseRandomizer):
         typesIds = [evolutionData["type_1"], evolutionData["type_2"]]
 
       self.preparePokemonFilteredList(options=options, typesIds=typesIds, growthRate=growthRate, evoStage=nextEvoStage)
-      randomEvolution = self.getRandomPokemon(oldPkmId=evolution["species"], similarStats=similarStats)
+      randomEvolution = self.getRandomPokemon(oldPkmId=evolutionData["species"]["model"], similarStats=similarStats)
 
       randomizedEvolutions.append({
         **evolution,
-        "species": randomEvolution["id"]
+        "species": randomEvolution["dexId"]
       })
 
-      self.logger.info(f'Old Evolution ID {evolution["species"]}')
-      self.logger.info(f'New Evolution ID {randomEvolution["id"]}')
+      self.logger.info(f'Old Evolution ID {evolutionData["species"]["model"]}')
+      self.logger.info(f'New Evolution ID {randomEvolution["dexId"]}')
 
     return randomizedEvolutions
 
@@ -171,8 +175,8 @@ class PokemonRandomizer(BaseRandomizer):
         randomizedPokemonList.append(pokemon)
         continue
 
-      devPkm = self.getPokemonDev(dexId=pokemon["species"]["species"])
-      self.logger.info(f'Randomizing data for pokemon: ID: {devPkm["id"]} - NAME: {devPkm["devName"]} - FORM: {pokemon["species"]["form"]}')
+      devPkm = self.getPokemonDev(dexId=pokemon["species"]["model"])
+      self.logger.info(f'Randomizing data for pokemon: ID: {devPkm["dexId"]} - NAME: {devPkm["name"]} - FORM: {pokemon["species"]["form"]}')
 
       randomizedPokemon = {
         **pokemon

@@ -71,27 +71,27 @@ class BaseRandomizer:
       pokemonList = self.pokemonList.copy()
     else:
       # Just Paldean Dex
-      pokemonList = {id: pokemon for id, pokemon in self.pokemonList.items() if int(id) in self.paldeaDex}
+      pokemonList = {dexId: pokemon for dexId, pokemon in self.pokemonList.items() if int(dexId) in self.paldeaDex}
 
     filtered = {}
 
-    for id, pokemon in pokemonList.items():
-      if int(id) in blacklist:
+    for dexId, pokemon in pokemonList.items():
+      if int(dexId) in blacklist:
         continue
 
-      if oldPkmId is not None and int(id) == oldPkmId:
+      if oldPkmId is not None and int(dexId) == oldPkmId:
         continue
 
-      if not options["legendaries"] and int(id) in self.legendaryDex:
+      if not options["legendaries"] and int(dexId) in self.legendaryDex:
         # No legendaries allowed
         continue
 
-      if not options["paradox"] and int(id) in self.paradoxDex:
+      if not options["paradox"] and int(dexId) in self.paradoxDex:
         # No paradox allowed
         continue
 
       if growthRate is not None and evoStage is not None and typesIds is not None:
-        pkmData = self.getPokemonPersonalData(dexId=int(id))
+        pkmData = self.getPokemonPersonalData(dexId=int(dexId))
         if growthRate is not None and pkmData["xp_growth"] != growthRate:
           # Not same growth rate
           continue
@@ -100,11 +100,11 @@ class BaseRandomizer:
           # Not same evo stage
           continue
 
-        if typesIds is not None and not self.shareAType(newPkmId=int(id), oldPkmId=oldPkmId, typesIds=typesIds):
+        if typesIds is not None and not self.shareAType(newPkmId=int(dexId), oldPkmId=oldPkmId, typesIds=typesIds):
           # Not the same type needed
           continue
 
-      filtered[id] = pokemon
+      filtered[dexId] = pokemon
 
     self.pokemonFilteredList = pokemonList
 
@@ -115,7 +115,7 @@ class BaseRandomizer:
       randomOptions = [self.getRandomValue(list(self.pokemonFilteredList.values())) for _ in range(30)]
 
       for rate in self.STATS_RATES:
-        filteredByStatsRate = [pokemon for pokemon in randomOptions if self.hasSimilarStats(newPkmId=pokemon["id"], oldPkmId=oldPkmId, rate=rate)]
+        filteredByStatsRate = [pokemon for pokemon in randomOptions if self.hasSimilarStats(newPkmId=pokemon["dexId"], oldPkmId=oldPkmId, rate=rate)]
 
         if len(filteredByStatsRate) > 0:
           randomPokemon = self.getRandomValue(items=filteredByStatsRate)
@@ -134,8 +134,11 @@ class BaseRandomizer:
 
     return itemRandomizer.getRandomItem()
 
-  def getPokemonPersonalData(self, dexId: int):
-    return next((pokemon for pokemon in self.personalData["entry"] if pokemon["species"]["species"] == dexId), None)
+  def getPokemonPersonalData(self, dexId: int = None, devId: int = None):
+    if devId is not None:
+      return next((pokemon for pokemon in self.personalData["entry"] if pokemon["species"]["species"] == devId), None)
+
+    return next((pokemon for pokemon in self.personalData["entry"] if pokemon["species"]["model"] == dexId), None)
 
   def getPokemonDev(self, dexId: int = None, devName: str = None):
     if dexId is not None:
@@ -154,7 +157,7 @@ class BaseRandomizer:
 
     if devName is not None:
       pkmDev = self.getPokemonDev(devName=devName)
-      pokemon = self.getPokemonPersonalData(pkmDev["id"])
+      pokemon = self.getPokemonPersonalData(pkmDev["dexId"])
     
     if pokemon == None:
       return None
@@ -163,23 +166,23 @@ class BaseRandomizer:
       return None
     
     randomPossibleEvo = self.getRandomValue(items=pokemon["evo_data"])
-    pokemon = self.getPokemonPersonalData(dexId=randomPossibleEvo["species"])
+    pokemon = self.getPokemonPersonalData(devId=randomPossibleEvo["species"])
     
     if pokemon == None:
       return None
 
-    return self.getPokemonDev(pokemon["species"]["species"])
+    return self.getPokemonDev(dexId=pokemon["species"]["model"])
 
   def getFinalEvolution(self, dexId: int = None, devName: str = None):
     if dexId == 0 or (dexId is None and devName is None) or devName == "DEV_NULL":
-      return {"devName": "DEV_NULL", "id": 0}
+      return {"devName": "DEV_NULL", "dexId": 0}
 
     if devName is not None:
       pkmDev = self.getPokemonDev(devName=devName)
       if pkmDev is None:
         return None
 
-      dexId = pkmDev["id"]
+      dexId = pkmDev["dexId"]
     
     pokemon = self.getPokemonPersonalData(dexId=dexId)
 
@@ -191,12 +194,12 @@ class BaseRandomizer:
       if len(pokemon["evo_data"]) > 1:
         evoData = self.getRandomValue(items=pokemon["evo_data"])
 
-      pokemon = self.getPokemonPersonalData(dexId=evoData["species"])
+      pokemon = self.getPokemonPersonalData(devId=evoData["species"])
     
     if pokemon is None:
       return None
 
-    return self.getPokemonDev(pokemon["species"]["species"])
+    return self.getPokemonDev(dexId=pokemon["species"]["model"])
 
   def getRandomForm(self, dexId: int, forms: int):
     # Randomize the forms of the pokemon
