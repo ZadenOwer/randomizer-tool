@@ -2,6 +2,7 @@
 
 - Name of each pokemon added to the pokemon list
 - Fixed relationship between dexID and devID (for personal data)
+- Equalized Catch Rate implemented
 
 # 1.1.4 - 01/09/2023
 
