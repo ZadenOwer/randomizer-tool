@@ -164,11 +164,36 @@ class PokemonRandomizer(BaseRandomizer):
 
     return randomizedEvolutions
 
+  def getEqualizedCatchRateValue(self, options: dict):
+    maxCatchRate = 255 # 100% catch rate
+    minCatchRate = 3 # Beldum family
+
+    rateValue = options["equalizedCatchRateValue"]
+
+    if (rateValue > 100):
+      rateValue = 100
+    if (rateValue < 0):
+      rateValue = 0
+
+    generalCatchRate = math.floor(maxCatchRate * (rateValue/100))
+
+    if (generalCatchRate < minCatchRate):
+      generalCatchRate = minCatchRate
+
+    return generalCatchRate
+
   def getRandomizedPokemonList(self, options: dict = None):
     self.logger.info('Starting logs for Pokemon Personal Data Randomizer')
 
     randomizedPokemonList = []
     totalItems = len(self.personalData["entry"])
+    equalizedCatchRate = 0
+
+    if options["equalizedCatchRate"]:
+      if not isinstance(options["equalizedCatchRateValue"], int):
+        options["equalizedCatchRate"] = False
+      else:
+        equalizedCatchRate = self.getEqualizedCatchRateValue(options=options)
 
     for pokemon in self.personalData["entry"]:
       if not options["fullPokeDex"] and not pokemon["is_present"]:
@@ -227,6 +252,9 @@ class PokemonRandomizer(BaseRandomizer):
       if options["evolutions"]:
         randomEvolution = self.getRandomEvolutions(evoStage=randomizedPokemon["evo_stage"], defaultEvolutions=randomizedPokemon["evo_data"], options=options)
         randomizedPokemon["evo_data"] = randomEvolution
+
+      if options["equalizedCatchRate"]:
+        pokemon["catch_rate"] = equalizedCatchRate
 
       randomizedPokemonList.append(randomizedPokemon)
       self.pokemonProgress = math.floor((len(randomizedPokemonList)/totalItems)*100)

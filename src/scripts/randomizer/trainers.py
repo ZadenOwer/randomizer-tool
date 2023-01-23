@@ -175,9 +175,13 @@ class TrainersRandomizer(BaseRandomizer):
     pokemonKeys = ["poke1","poke2","poke3","poke4","poke5","poke6"]
     originalStarters = ["DEV_NEKO", "DEV_WANI", "DEV_KAMO"]
     
-    shinyValues = ["NO_RARE", "RARE"]
+    shinyValues = ["NO_RARE", "RARE", "DEFAULT"]
     rateValue = options["trainerShiniesRate"]
-    shiny = self.isShiny(rateValue=rateValue)
+
+    if not isinstance(rateValue, int):
+      shiny = 2
+    else:
+      shiny = self.isShiny(rateValue=rateValue)
 
     rivalInitialShiny = shinyValues[shiny]
 
@@ -356,8 +360,6 @@ class TrainersRandomizer(BaseRandomizer):
             randomizedTrainer[pokeKey]["rareType"] = rivalInitialShiny
           else:
             shinyValues = ["NO_RARE", "RARE"]
-
-            rateValue = options["trainerShiniesRate"]
 
             shiny = self.isShiny(rateValue=rateValue)
 

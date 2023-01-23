@@ -191,6 +191,32 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
+  EQUALIZED_CATCH_RATE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Equalized Catch Rate", key="equalizedCatchRate", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["equalizedCatchRate"]),
+    ],
+    # Description
+    [
+      sg.Text("Every pokemon type will have the same catch rate percentage.", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+  
+  EQUALIZED_CATCH_RATE_INPUT = [
+    [
+      # Input
+      sg.Input("", key="equalizedCatchRateValue", background_color=WHITE_COLOR, size=(12,1)),
+      sg.Text("Equalized Catch Rate (Value [0-100])", font=INPUT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: If the value is lesser than 0 will be treated as 0, if the value is greater than 100, will be treated as 100,", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ],
+    [
+      sg.Text("or if the value is not a number, will be ignored", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+
   MOVES_TITLE = [
     [sg.Text("# Moves Options", font=SUB_TITLE_FONT, background_color=BG_COLOR, text_color=('Blue'))]
   ]
@@ -394,6 +420,8 @@ def getPokemonLayout(optionsValues: dict):
     LAYOUT_HEADER +\
     INSTANT_HATCH_EGGS_CHECKBOX +\
     ABILITIES_CHECKBOX +\
+    EQUALIZED_CATCH_RATE_CHECKBOX +\
+    EQUALIZED_CATCH_RATE_INPUT +\
     TYPES_CHECKBOX +\
     BASE_STATS_CHECKBOX +\
     MOVES_TITLE +\
