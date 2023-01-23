@@ -254,7 +254,7 @@ class PokemonRandomizer(BaseRandomizer):
         randomizedPokemon["evo_data"] = randomEvolution
 
       if options["equalizedCatchRate"]:
-        pokemon["catch_rate"] = equalizedCatchRate
+        randomizedPokemon["catch_rate"] = equalizedCatchRate
 
       randomizedPokemonList.append(randomizedPokemon)
       self.pokemonProgress = math.floor((len(randomizedPokemonList)/totalItems)*100)
