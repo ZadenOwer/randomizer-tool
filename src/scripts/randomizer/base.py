@@ -34,10 +34,7 @@ class BaseRandomizer:
   addPokemonEvents = []
   fixedPokemonEvents = []
 
-  itemData = {
-    "values": []
-  }
-  itemList = {}
+  itemRandomizer: ItemRandomizer
 
   trainersData = {
     "values": []
@@ -59,11 +56,9 @@ class BaseRandomizer:
     self.addPokemonEvents = data["add_pokemon_events_file"]
     self.fixedPokemonEvents = data["fixed_pokemon_events_file"]
     
-    self.itemData = data["itemdata_array_file"]
-    self.itemList = data["item_list_file"]
-    
     self.trainersData = data["trainersdata_array_file"]
 
+    self.itemRandomizer = ItemRandomizer(data=data)
     self.preparePokemonFilteredList(options=options)
 
   def preparePokemonFilteredList(self, options: dict, blacklist: list = [], oldPkmId: int = None, typesIds: list = None, growthRate: int = None, evoStage: int = None):
@@ -130,9 +125,7 @@ class BaseRandomizer:
     return random.choice(items)
 
   def generateRandomItem(self):
-    itemRandomizer = ItemRandomizer(data={"itemData": self.itemData, "itemList": self.itemList})
-
-    return itemRandomizer.getRandomItem()
+    return self.itemRandomizer.getRandomItem()
 
   def getPokemonPersonalData(self, dexId: int = None, devId: int = None):
     if devId is not None:

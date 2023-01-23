@@ -412,6 +412,25 @@ def getPokemonLayout(optionsValues: dict):
 
   return layout
 
+def getItemsLayout(optionsValues: dict):
+  LAYOUT_HEADER = [[sg.Text("Field Items Options", font=HEADER_FONT, background_color=BG_COLOR)]]
+
+  RANDOMIZE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Randomize Hidden Items", key="hiddenItems", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["hiddenItems"]),
+    ],
+    # Description
+    [
+      sg.Text("Randomize the hidden items on the overworld.", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+  
+  layout = LAYOUT_HEADER +\
+    RANDOMIZE_CHECKBOX
+
+  return layout
+
 def getTrainersLayout(optionsValues: dict):
   LAYOUT_HEADER = [[sg.Text("Trainers Options", font=HEADER_FONT, background_color=BG_COLOR)]]
 
@@ -639,7 +658,6 @@ def changeStep(window: sg.Window, stepId: str):
 
     if not isinstance(item, sg.Column):
       continue
-    
     if item.key == stepId:
       window[item.key].update(visible=True)
     else:
@@ -648,6 +666,7 @@ def changeStep(window: sg.Window, stepId: str):
 def toggleLayoutButtons():
   window["spawnsStepButton"].update(disabled=(not window["spawnsStepButton"].Disabled))
   window["pokemonStepButton"].update(disabled=(not window["pokemonStepButton"].Disabled))
+  window["itemsStepButton"].update(disabled=(not window["itemsStepButton"].Disabled))
   window["trainerStepButton"].update(disabled=(not window["trainerStepButton"].Disabled))
   window["finalStepButton"].update(disabled=(not window["finalStepButton"].Disabled))
   window["randomizeButton"].update(disabled=(not window["randomizeButton"].Disabled))
@@ -662,6 +681,7 @@ def getWindowFrame(optionsValues: dict):
   LAYOUTS_BUTTONS = [
     sg.Button("Spawns", key='spawnsStepButton'),
     sg.Button("Pokemon", key='pokemonStepButton'),
+    sg.Button("Items", key='itemsStepButton'),
     sg.Button("Trainers", key='trainerStepButton'),
     sg.Button("Final Step", key='finalStepButton'),
   ]
@@ -697,6 +717,7 @@ def getWindowFrame(optionsValues: dict):
 
   areasLayout = getAreasLayout(optionsValues)
   pokemonLayout = getPokemonLayout(optionsValues)
+  itemsLayout = getItemsLayout(optionsValues)
   trainersLayout = getTrainersLayout(optionsValues)
 
   finalLayout = [
@@ -705,6 +726,7 @@ def getWindowFrame(optionsValues: dict):
     [
       sg.Column(areasLayout, key="spawns", background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(pokemonLayout, key="pokemon", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
+      sg.Column(itemsLayout, key="fieldItems", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE),
       sg.Column(trainersLayout, key="trainers", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + PROGRESS_BAR + DISCLAIMER, key="finalStep", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
     ],

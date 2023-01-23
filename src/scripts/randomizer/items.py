@@ -1,20 +1,27 @@
 # randomizer/items.py
 
+import math
 import random
+
+from src.scripts.frame import updateProgress
 
 class ItemRandomizer:
 
   itemData = {}
   itemList = {}
+  hiddenItemData = {}
   itemsByType = {}
+
+  fieldItemsProgress = 0
 
   bannedFieldPocket = {
     'FPOCKET_PICNIC', # Skip all the picnic items
   }
 
   def __init__(self, data) -> None:
-    self.itemData = data["itemData"]
-    self.itemList = data["itemList"]
+    self.itemData = data["itemdata_array_file"]
+    self.itemList = data["item_list_file"]
+    self.hiddenItemData = data["hidden_item_list_file"]
 
     for item in self.itemData["values"]:
       if item['SetToPoke'] and item['FieldPocket'] not in self.bannedFieldPocket:
@@ -34,3 +41,28 @@ class ItemRandomizer:
     item: dict = self.itemList.get(itemRaw['Id'], self.itemList.get("0"))
 
     return item
+
+  def getRandomizedHiddenItemData(self):
+    randomizedList = []
+
+    totalItems = len(self.hiddenItemData["values"])
+
+    for hiddenItem in self.hiddenItemData["values"]:
+      for fieldKey in hiddenItem.keys():
+        if "item_" not in fieldKey:
+          continue
+
+        if hiddenItem[fieldKey]["itemId"] == "ITEMID_NONE":
+          continue
+
+        hiddenItem[fieldKey] = {
+          **hiddenItem[fieldKey],
+          "itemId": self.getRandomItem()["devName"]
+        }
+
+      randomizedList.append(hiddenItem)
+      self.fieldItemsProgress = math.floor((len(randomizedList)/totalItems)*100)
+      print(f'Processing: Hidden Items Data {self.fieldItemsProgress}% / 100%', end='\r')
+      updateProgress(value=self.fieldItemsProgress, title="Processing: Hidden Items Data")
+
+    return randomizedList

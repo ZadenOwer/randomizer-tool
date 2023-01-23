@@ -9,6 +9,7 @@ os.environ["VERSION"] = "1.1.5"
 from src.scripts.randomizer.pokemon import PokemonRandomizer
 from src.scripts.randomizer.trainers import TrainersRandomizer
 from src.scripts.randomizer.spawns import SpawnsRandomizer
+from src.scripts.randomizer.items import ItemRandomizer
 
 from src.scripts import flatc as FlatC
 from src.scripts import frame as WindowFrame
@@ -34,6 +35,7 @@ with (
 
   # Item Data Imports
   open('./src/jsons/itemdata_array.json', 'r', encoding='utf-8-sig') as itemdata_array_file,
+  open('./src/jsons/hiddenItemDataTable_array.json', 'r', encoding='utf-8-sig') as hiddenitemdata_table_file,
   open('./src/jsons/item_list.json', 'r', encoding='utf-8-sig') as item_list_file,
 
   # Trainers Data Imports
@@ -55,6 +57,7 @@ with (
   
   staticData["itemdata_array_file"] = json.load(itemdata_array_file)
   staticData["item_list_file"] = json.load(item_list_file)
+  staticData["hidden_item_list_file"] = json.load(hiddenitemdata_table_file)
   
   staticData["trainersdata_array_file"] = json.load(trainersdata_array_file)
 
@@ -89,6 +92,10 @@ optionsValues = {
   "evoGrowthRate": False,
   "evoType": False,
   ### Pokemon Options End ###
+
+  ### Items Options End ###
+  "hiddenItems": True,
+  ### Items Options End ###
 
   ### Trainers Options Start ###
   "trainersRandomized": False,
@@ -125,6 +132,9 @@ while True:
   if event == 'pokemonStepButton':
     WindowFrame.changeStep(window, 'pokemon')
 
+  if event == 'itemsStepButton':
+    WindowFrame.changeStep(window, 'fieldItems')
+
   if event == 'trainerStepButton':
     WindowFrame.changeStep(window, 'trainers')
 
@@ -142,6 +152,7 @@ while True:
       "legendaries": False if ("legendaries" not in values.keys() or values["legendaries"] is None or values["legendaries"] == False) else True,
       "paradox": False if ("paradox" not in values.keys() or values["paradox"] is None or values["paradox"] == False) else True,
       "similarStats": False if ("similarStats" not in values.keys() or values["similarStats"] is None or values["similarStats"] == False) else True,
+      "hiddenItems": False if ("hiddenItems" not in values.keys() or values["hiddenItems"] is None or values["hiddenItems"] == False) else True,
     }
 
     serializedAreaOptions = {
@@ -203,6 +214,7 @@ while True:
     logger.info('Starting randomizer...')
 
     # Files Names
+    hiddenItemDataFileName = 'hiddenItemDataTable_array'
     addPokemonEventsFileName = 'eventAddPokemon_array'
     staticPokemonEventsFileName = 'fixed_symbol_table_array'
     personalFileName = 'personal_array'
@@ -210,6 +222,7 @@ while True:
     trainersFileName = 'trdata_array'
 
     fileNames = {
+      "hiddenItemData": hiddenItemDataFileName,
       "addPokemonEvents": addPokemonEventsFileName,
       "staticPokemonEvents": staticPokemonEventsFileName,
       "pokedata": pokedataFileName,
@@ -220,6 +233,7 @@ while True:
     spawnsRandomizer = SpawnsRandomizer(data=staticData, options=serializedAreaOptions)
     pokemonRandomizer = PokemonRandomizer(data=staticData, options=serializedPokemonOptions)
     trainersRandomizer = TrainersRandomizer(data=staticData, options=serializedTrainersOptions)
+    itemsRandomizer = ItemRandomizer(data=staticData)
 
     spawnsRandomizer.addEventsProgress = 0
     spawnsRandomizer.staticEventsProgress = 0
@@ -229,6 +243,15 @@ while True:
     
     trainersRandomizer.trainerProgress = 0
     
+    if serializedGlobalOptions["hiddenItems"]:
+      logger.info('Randomizing Field Items...')
+      hiddenItemDataRandomized = itemsRandomizer.getRandomizedHiddenItemData() # Randomize the hidden items data
+      jsonArrayFile = open(f'{fileNames["hiddenItemData"]}.json', 'w')
+      jsonArrayFile.write(json.dumps({"values": hiddenItemDataRandomized}))
+      jsonArrayFile.close()
+      logger.info('Field Items randomized!')
+
+
     logger.info('Randomizing Trade Events...')
     addEventsRandomized, starters = spawnsRandomizer.getRandomizedAddPokemonEvents(serializedAreaOptions) # Randomize the add pokemon events (such as initials)
     jsonArrayFile = open(f'{fileNames["addPokemonEvents"]}.json', 'w')
@@ -272,6 +295,13 @@ while True:
     logger.info('Trainers randomized!')
 
     logger.info('Generating binaries...')
+    
+    if serializedGlobalOptions["hiddenItems"]:
+      hiddenItemsDataResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["hiddenItemData"]}.bfbs', jsonPath = f'./{fileNames["hiddenItemData"]}.json')  # Generates the Randomized Hidden Items Data binary
+      if hiddenItemsDataResult.stderr != b'':
+        logger.error(f'Error creating binary for Add Events: {hiddenItemsDataResult.stderr}')
+        continue
+
     addEventsResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["addPokemonEvents"]}.bfbs', jsonPath = f'./{fileNames["addPokemonEvents"]}.json')  # Generates the Randomized Add pokemon events binary
     if addEventsResult.stderr != b'':
       logger.error(f'Error creating binary for Add Events: {addEventsResult.stderr}')
@@ -313,6 +343,10 @@ while True:
       "personal": personalDataPath,
       "trainers": trainerPath
     }
+
+    if serializedGlobalOptions["hiddenItems"]:
+      hiddenItemDataPath = './static/world/data/item/hiddenItemDataTable'
+      paths["hiddenItemData"] = hiddenItemDataPath
 
     for pathName in paths:
       os.makedirs(f'{paths[pathName]}/')

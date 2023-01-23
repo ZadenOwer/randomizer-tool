@@ -43,7 +43,7 @@ class PokemonRandomizer(BaseRandomizer):
     if newMovePower == self.STATUS_MOVE:
       if (atLevel < 20):
         # Avoid learning status moves at lower levels for a better experience and progression
-        return True
+        return False
 
       # All the status move are possible choices for the random move
       return True
