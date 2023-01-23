@@ -1,3 +1,8 @@
+# 1.1.5 - 01/22/2023
+
+- Name of each pokemon added to the pokemon list
+- Fixed relationship between dexID and devID (for personal data)
+
 # 1.1.4 - 01/09/2023
 
 - Randomizer Script refactored to subdivide into classes

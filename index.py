@@ -4,7 +4,7 @@ import shutil
 import json
 
 # Env Vars
-os.environ["VERSION"] = "1.1.4"
+os.environ["VERSION"] = "1.1.5"
 
 from src.scripts.randomizer.pokemon import PokemonRandomizer
 from src.scripts.randomizer.trainers import TrainersRandomizer
