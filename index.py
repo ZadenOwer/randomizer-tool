@@ -163,9 +163,14 @@ while True:
       **serializedGlobalOptions
     }
 
+    try:
+      equalizedCatchRateValue = int(values["equalizedCatchRateValue"])
+    except:
+      equalizedCatchRateValue = "NOT VALID"
+
     serializedPokemonOptions = {
       "equalizedCatchRate": False if ("equalizedCatchRate" not in values.keys() or values["equalizedCatchRate"] is None or values["equalizedCatchRate"] == False) else True,
-      "equalizedCatchRateValue": values["equalizedCatchRateValue"],
+      "equalizedCatchRateValue": equalizedCatchRateValue,
       "tm": False if ("tm" not in values.keys() or values["tm"] is None or values["tm"] == False) else True,
       "learnset": False if ("learnset" not in values.keys() or values["learnset"] is None or values["learnset"] == False) else True,
       "movePower": False if ("movePower" not in values.keys() or values["movePower"] is None or values["movePower"] == False) else True,
