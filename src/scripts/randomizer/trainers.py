@@ -250,60 +250,59 @@ class TrainersRandomizer(BaseRandomizer):
       if options["trainerTeracristalize"]:
         randomizedTrainer["changeGem"] = True
 
-      if options["forceFullTeam"]:
-        minLv, maxLv = self.getMinMaxLv(trainerPokemon=randomizedTrainer)
-        
-        if minLv == maxLv:
-          if (maxLv >= 5):
-            lowLv = maxLv-2
-            medLv = maxLv-1
+      if options["trainersRandomized"]:
+        if options["forceFullTeam"]:
+          minLv, maxLv = self.getMinMaxLv(trainerPokemon=randomizedTrainer)
+          
+          if minLv == maxLv:
+            if (maxLv >= 5):
+              lowLv = maxLv-2
+              medLv = maxLv-1
+            else:
+              lowLv = maxLv
+              medLv = maxLv
           else:
-            lowLv = maxLv
-            medLv = maxLv
-        else:
-          lowLv = minLv
-          medLv = math.floor((maxLv-minLv)/2)+lowLv
+            lowLv = minLv
+            medLv = math.floor((maxLv-minLv)/2)+lowLv
 
-        pokemonLvl = {
-          "poke1": {
-            "level": lowLv
-          },
-          "poke2": {
-            "level": lowLv
-          },
-          "poke3": {
-            "level": lowLv
-          },
-          "poke4": {
-            "level": medLv
-          },
-          "poke5": {
-            "level": medLv
-          },
-          "poke6": {
-            "level": maxLv
+          pokemonLvl = {
+            "poke1": {
+              "level": lowLv
+            },
+            "poke2": {
+              "level": lowLv
+            },
+            "poke3": {
+              "level": lowLv
+            },
+            "poke4": {
+              "level": medLv
+            },
+            "poke5": {
+              "level": medLv
+            },
+            "poke6": {
+              "level": maxLv
+            }
           }
-        }
 
-      trainerOptions = options.copy()
+        trainerOptions = options.copy()
 
-      if options["trainerLegendaries"]:
-        trainerOptions["legendaries"] = True
+        if options["trainerLegendaries"]:
+          trainerOptions["legendaries"] = True
 
-      if options["trainerParadox"]:
-        trainerOptions["paradox"] = True
+        if options["trainerParadox"]:
+          trainerOptions["paradox"] = True
 
-      if options["keepGymType"] and self.isMonotypeTrainer(trainerTypeName=randomizedTrainer["trainerType"]):
-        trainerTypeId = self.getTrainerTypeId(trainerTypeName=randomizedTrainer["trainerType"])
-        self.preparePokemonFilteredList(options=options, typesIds=[trainerTypeId])
-      else:
-        self.preparePokemonFilteredList(options=options)
+        if options["keepGymType"] and self.isMonotypeTrainer(trainerTypeName=randomizedTrainer["trainerType"]):
+          trainerTypeId = self.getTrainerTypeId(trainerTypeName=randomizedTrainer["trainerType"])
+          self.preparePokemonFilteredList(options=options, typesIds=[trainerTypeId])
+        else:
+          self.preparePokemonFilteredList(options=options)
+        for pokeKey in pokemonKeys:
+          if not options["forceFullTeam"] and randomizedTrainer[pokeKey]["devId"] == "DEV_NULL":
+            continue
 
-      for pokeKey in pokemonKeys:
-        if not options["forceFullTeam"] and randomizedTrainer[pokeKey]["devId"] == "DEV_NULL":
-          continue
-
-        if options["trainersRandomized"]:
           if options["keepRivalInitial"] and isRival and randomizedTrainer[pokeKey]["devId"][:-1] in originalStarters:
             # Not randomize and get the starter instead
             rivalPokemon = self.getPokemonDev(devName=rivalStarterName)
@@ -342,37 +341,38 @@ class TrainersRandomizer(BaseRandomizer):
           if options["forceFullTeam"]:
             randomizedTrainer[pokeKey]["level"] = pokemonLvl[pokeKey]["level"]
 
-        if options["abilities"]:
-          randomizedTrainer[pokeKey]["tokusei"] = "RANDOM_123"
+          if options["abilities"]:
+            randomizedTrainer[pokeKey]["tokusei"] = "RANDOM_123"
 
-        if options["trainersItems"]:
-          randomItem = self.generateRandomItem()
-          randomizedTrainer[pokeKey]["item"] = randomItem["devName"]
+          if options["trainersItems"]:
+            randomItem = self.generateRandomItem()
+            randomizedTrainer[pokeKey]["item"] = randomItem["devName"]
 
-        if options["competitivePkm"]:
-          perfectIvs = self.getPerfectIvs()
-          randomizedTrainer[pokeKey]["talentType"] = "VALUE"
-          randomizedTrainer[pokeKey]["talentValue"] = perfectIvs
-          randomizedTrainer["isStrong"] = True
+          if options["competitivePkm"]:
+            perfectIvs = self.getPerfectIvs()
+            randomizedTrainer[pokeKey]["talentType"] = "VALUE"
+            randomizedTrainer[pokeKey]["talentValue"] = perfectIvs
+            randomizedTrainer["isStrong"] = True
 
-        if options["trainerShiniesRate"] >= 0 and options["trainerShiniesRate"] <= 100:
-          if options["keepRivalInitial"] and isRival:
-            randomizedTrainer[pokeKey]["rareType"] = rivalInitialShiny
-          else:
-            shinyValues = ["NO_RARE", "RARE"]
+          if options["trainerShiniesRate"] >= 0 and options["trainerShiniesRate"] <= 100:
+            if options["keepRivalInitial"] and isRival:
+              randomizedTrainer[pokeKey]["rareType"] = rivalInitialShiny
+            else:
+              shinyValues = ["NO_RARE", "RARE"]
 
-            shiny = self.isShiny(rateValue=rateValue)
+              shiny = self.isShiny(rateValue=rateValue)
 
-            randomizedTrainer[pokeKey]["rareType"] = shinyValues[shiny]
+              randomizedTrainer[pokeKey]["rareType"] = shinyValues[shiny]
 
-        if options["forceFinalEvolution"]:
-          if options["finalEvolutionCap"] > 0 and options["finalEvolutionCap"] < 100:
-            if randomizedTrainer[pokeKey]["level"] >= options["finalEvolutionCap"]:
-              pkmDev = self.getPokemonDev(devName=randomizedTrainer[pokeKey]["devId"])
-              finalEvo = self.getFinalEvolution(dexId=pkmDev["dexId"])
+          if options["forceFinalEvolution"]:
+            if options["finalEvolutionCap"] > 0 and options["finalEvolutionCap"] < 100:
+              if randomizedTrainer[pokeKey]["level"] >= options["finalEvolutionCap"]:
+                pkmDev = self.getPokemonDev(devName=randomizedTrainer[pokeKey]["devId"])
+                finalEvo = self.getFinalEvolution(dexId=pkmDev["dexId"])
 
-              if finalEvo is not None:
-                randomizedTrainer[pokeKey]["devId"] = finalEvo["devName"]
+                if finalEvo is not None:
+                  randomizedTrainer[pokeKey]["devId"] = finalEvo["devName"]
+                  randomizedTrainer[pokeKey]["formId"] = self.getRandomForm(dexId=finalEvo["dexId"], forms=finalEvo["forms"])
 
       randomizedTrainersList.append(randomizedTrainer)
       self.trainerProgress = math.floor((len(randomizedTrainersList)/totalItems)*100)

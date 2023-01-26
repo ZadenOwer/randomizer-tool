@@ -105,12 +105,14 @@ class PokemonRandomizer(BaseRandomizer):
 
   def getRandomizedLearnset(self, defaultLearnset: list, options: dict):
     randomizedLearnset = []
+    alreadyUsed = []
 
     for defaultMove in defaultLearnset:
-      randomMove = self.getRandomMove(defaultMove=defaultMove, options=options)
+      randomMove = self.getRandomMove(defaultMove=defaultMove, options=options, blacklist=alreadyUsed)
       self.logger.info(f'Old move: ID {defaultMove["move"]} - AT LEVEL {defaultMove["level"]}')
       self.logger.info(f'New move: ID {randomMove["id"]}')
       randomizedLearnset.append({**defaultMove, "move": randomMove["id"]})
+      alreadyUsed.append(randomMove["id"])
 
     return randomizedLearnset
 

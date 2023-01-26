@@ -4,7 +4,7 @@ import shutil
 import json
 
 # Env Vars
-os.environ["VERSION"] = "1.1.5"
+os.environ["VERSION"] = "1.1.6"
 
 from src.scripts.randomizer.pokemon import PokemonRandomizer
 from src.scripts.randomizer.trainers import TrainersRandomizer
@@ -71,7 +71,7 @@ optionsValues = {
   "similarStats": True,
 
   ### Areas Options Start ###
-  "areasSpawnRandomized": False,
+  "areasSpawnRandomized": True,
   "items": True,
   ### Areas Options End ###
 

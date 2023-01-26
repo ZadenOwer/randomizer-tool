@@ -38,8 +38,7 @@ class ItemRandomizer:
     itemsSubGroup = self.itemsByType.get(itemType, [])
 
     itemRaw = random.choice(itemsSubGroup)
-    item: dict = self.itemList.get(itemRaw['Id'], self.itemList.get("0"))
-
+    item: dict = next((item for item in list(self.itemList.values()) if item["id"] == itemRaw['Id']), self.itemList.get("0"))
     return item
 
   def getRandomizedHiddenItemData(self):
@@ -55,10 +54,19 @@ class ItemRandomizer:
         if hiddenItem[fieldKey]["itemId"] == "ITEMID_NONE":
           continue
 
+        randomItem = self.getRandomItem()
+
         hiddenItem[fieldKey] = {
           **hiddenItem[fieldKey],
-          "itemId": self.getRandomItem()["devName"]
+          "itemId": randomItem["devName"]
         }
+
+        if randomItem["id"] == 1:
+          # If is a master ball, reduce spawn rate to 2%
+          hiddenItem[fieldKey] = {
+            **hiddenItem[fieldKey],
+            "emergePercent": 2
+          }
 
       randomizedList.append(hiddenItem)
       self.fieldItemsProgress = math.floor((len(randomizedList)/totalItems)*100)
