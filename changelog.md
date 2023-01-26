@@ -1,8 +1,15 @@
-# 1.1.5 - 01/22/2023
+# 1.1.6 - 01/22/2023
+
+- Fixed and issue on hidden items randomizer that make all items as ITEM_NONE
+- Fixed and issue when force evolution was active, don't randomize the form of the evolution by a valid one 
+- Fixed and issue were pokemon moves repeats on the learnset
+
+- # 1.1.5 - 01/22/2023
 
 - Name of each pokemon added to the pokemon list
 - Fixed relationship between dexID and devID (for personal data)
 - Equalized Catch Rate implemented
+- Hidden Items Fields randomizer implemented
 
 # 1.1.4 - 01/09/2023
 
