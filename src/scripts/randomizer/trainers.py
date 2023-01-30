@@ -371,8 +371,9 @@ class TrainersRandomizer(BaseRandomizer):
                 finalEvo = self.getFinalEvolution(dexId=pkmDev["dexId"])
 
                 if finalEvo is not None:
+                  form, sex = self.getRandomForm(dexId=finalEvo["dexId"], forms=finalEvo["forms"])
                   randomizedTrainer[pokeKey]["devId"] = finalEvo["devName"]
-                  randomizedTrainer[pokeKey]["formId"] = self.getRandomForm(dexId=finalEvo["dexId"], forms=finalEvo["forms"])
+                  randomizedTrainer[pokeKey]["formId"] = form
 
       randomizedTrainersList.append(randomizedTrainer)
       self.trainerProgress = math.floor((len(randomizedTrainersList)/totalItems)*100)
