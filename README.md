@@ -1,6 +1,6 @@
 # Randomizer Tool
 
-Last version: 1.1.6
+Last version: 1.1.7
 
 ## Index Table
 

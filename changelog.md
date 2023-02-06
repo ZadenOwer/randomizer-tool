@@ -1,10 +1,16 @@
+# 1.1.7 - 02/06/2023
+
+- Fixed an issue when the option hidden items was not marked the randomizer throws an exception
+- Fixed an issue on dex.json file to match the pokemon id with their DEX id instead of the Dev Id
+- Fixed an issue where running locally the repository, throws an exception because the logs file don't exist
+  
 # 1.1.6 - 01/22/2023
 
-- Fixed and issue on hidden items randomizer that make all items as ITEM_NONE
-- Fixed and issue when force evolution was active, don't randomize the form of the evolution by a valid one 
-- Fixed and issue were pokemon moves repeats on the learnset
+- Fixed an issue on hidden items randomizer that make all items as ITEM_NONE
+- Fixed an issue when force evolution was active, don't randomize the form of the evolution by a valid one 
+- Fixed an issue were pokemon moves repeats on the learnset
 
-- # 1.1.5 - 01/22/2023
+# 1.1.5 - 01/22/2023
 
 - Name of each pokemon added to the pokemon list
 - Fixed relationship between dexID and devID (for personal data)
