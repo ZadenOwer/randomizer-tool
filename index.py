@@ -6,6 +6,8 @@ import json
 # Env Vars
 os.environ["VERSION"] = "1.1.6"
 
+os.makedirs('./logs', exist_ok=True) # Logs folder created if not exists yet
+
 from src.scripts.randomizer.pokemon import PokemonRandomizer
 from src.scripts.randomizer.trainers import TrainersRandomizer
 from src.scripts.randomizer.spawns import SpawnsRandomizer
@@ -231,7 +233,6 @@ while True:
     trainersFileName = 'trdata_array'
 
     fileNames = {
-      "hiddenItemData": hiddenItemDataFileName,
       "addPokemonEvents": addPokemonEventsFileName,
       "staticPokemonEvents": staticPokemonEventsFileName,
       "pokedata": pokedataFileName,
@@ -253,6 +254,8 @@ while True:
     trainersRandomizer.trainerProgress = 0
     
     if serializedGlobalOptions["hiddenItems"]:
+      fileNames["hiddenItemData"] = hiddenItemDataFileName,
+
       logger.info('Randomizing Field Items...')
       hiddenItemDataRandomized = itemsRandomizer.getRandomizedHiddenItemData() # Randomize the hidden items data
       jsonArrayFile = open(f'{fileNames["hiddenItemData"]}.json', 'w')
