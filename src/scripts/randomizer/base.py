@@ -40,6 +40,25 @@ class BaseRandomizer:
     "values": []
   }
 
+  raid01Data = {
+    "values": []
+  }
+  raid02Data = {
+    "values": []
+  }
+  raid03Data = {
+    "values": []
+  }
+  raid04Data = {
+    "values": []
+  }
+  raid05Data = {
+    "values": []
+  }
+  raid06Data = {
+    "values": []
+  }
+
   pokemonFilteredList = {}
 
   def __init__(self, data: dict, options: dict) -> None:
@@ -57,6 +76,13 @@ class BaseRandomizer:
     self.fixedPokemonEvents = data["fixed_pokemon_events_file"]
     
     self.trainersData = data["trainersdata_array_file"]
+    
+    self.raid01Data = data["raid01_array_file"]
+    self.raid02Data = data["raid02_array_file"]
+    self.raid03Data = data["raid03_array_file"]
+    self.raid04Data = data["raid04_array_file"]
+    self.raid05Data = data["raid05_array_file"]
+    self.raid06Data = data["raid06_array_file"]
 
     self.itemRandomizer = ItemRandomizer(data=data)
     self.preparePokemonFilteredList(options=options)

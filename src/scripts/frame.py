@@ -680,6 +680,45 @@ def getTrainersLayout(optionsValues: dict):
 
   return layout
 
+def getRaidsLayout(optionsValues: dict):
+  LAYOUT_HEADER = [[sg.Text("Raids Options", font=HEADER_FONT, background_color=BG_COLOR)]]
+
+  RANDOMIZE_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Randomize Raids", key="raidsRandomized", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["raidsRandomized"]),
+    ],
+    # Description
+    [
+      sg.Text("Randomize the pokemon that can spawn as raids on each difficulty level (1-6).", font=TEXT_FONT, background_color=BG_COLOR),
+    ]
+  ]
+
+  SIMILAR_STATS_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Similar Base Stats", key="raidSimilarStats", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["raidSimilarStats"]),
+    ],
+    [
+      # Description
+      sg.Text("The random pokemon will have similar base stats to the original pokemon,", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    [
+      # Sub description
+      sg.Text("Note: The tool will try to get a pokemon with a difference of 10%, 15%, 20%, 25% on their stats", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ],
+    [
+      # Sub description
+      sg.Text("if this fails, the pokemon will be complete random, be aware", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR, auto_size_text=True),
+    ]
+  ]
+  
+  layout = LAYOUT_HEADER +\
+    RANDOMIZE_CHECKBOX +\
+    SIMILAR_STATS_CHECKBOX
+
+  return layout
+
 def changeStep(window: sg.Window, stepId: str):
   for itemKey in window.key_dict:
     item = window[itemKey]
@@ -696,6 +735,7 @@ def toggleLayoutButtons():
   window["pokemonStepButton"].update(disabled=(not window["pokemonStepButton"].Disabled))
   window["itemsStepButton"].update(disabled=(not window["itemsStepButton"].Disabled))
   window["trainerStepButton"].update(disabled=(not window["trainerStepButton"].Disabled))
+  window["raidsStepButton"].update(disabled=(not window["raidsStepButton"].Disabled))
   window["finalStepButton"].update(disabled=(not window["finalStepButton"].Disabled))
   window["randomizeButton"].update(disabled=(not window["randomizeButton"].Disabled))
 
@@ -711,6 +751,7 @@ def getWindowFrame(optionsValues: dict):
     sg.Button("Pokemon", key='pokemonStepButton'),
     sg.Button("Items", key='itemsStepButton'),
     sg.Button("Trainers", key='trainerStepButton'),
+    sg.Button("Raids", key='raidsStepButton'),
     sg.Button("Final Step", key='finalStepButton'),
   ]
 
@@ -747,6 +788,7 @@ def getWindowFrame(optionsValues: dict):
   pokemonLayout = getPokemonLayout(optionsValues)
   itemsLayout = getItemsLayout(optionsValues)
   trainersLayout = getTrainersLayout(optionsValues)
+  raidsLayout = getRaidsLayout(optionsValues)
 
   finalLayout = [
     HEADER_TEXT,
@@ -756,6 +798,7 @@ def getWindowFrame(optionsValues: dict):
       sg.Column(pokemonLayout, key="pokemon", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(itemsLayout, key="fieldItems", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE),
       sg.Column(trainersLayout, key="trainers", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
+      sg.Column(raidsLayout, key="raids", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE, scrollable=True, vertical_scroll_only=True),
       sg.Column(DEVS_HELP + RANDOMIZE_BUTTON + NOTES + PROGRESS_BAR + DISCLAIMER, key="finalStep", visible=False, background_color=BG_COLOR, size=COLUMN_SIZE)
     ],
     

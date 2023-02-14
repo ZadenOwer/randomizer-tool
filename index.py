@@ -12,6 +12,7 @@ from src.scripts.randomizer.pokemon import PokemonRandomizer
 from src.scripts.randomizer.trainers import TrainersRandomizer
 from src.scripts.randomizer.spawns import SpawnsRandomizer
 from src.scripts.randomizer.items import ItemRandomizer
+from src.scripts.randomizer.raids import RaidsRandomizer
 
 from src.scripts import flatc as FlatC
 from src.scripts import frame as WindowFrame
@@ -41,8 +42,17 @@ with (
   open('./src/jsons/item_list.json', 'r', encoding='utf-8-sig') as item_list_file,
 
   # Trainers Data Imports
-  open('./src/jsons/trdata_array.json', 'r', encoding='utf-8-sig') as trainersdata_array_file
+  open('./src/jsons/trdata_array.json', 'r', encoding='utf-8-sig') as trainersdata_array_file,
+
+  # Raids Data Imports
+  open('./src/jsons/raid_enemy_01_array.json', 'r', encoding='utf-8-sig') as raid01_array_file,
+  open('./src/jsons/raid_enemy_02_array.json', 'r', encoding='utf-8-sig') as raid02_array_file,
+  open('./src/jsons/raid_enemy_03_array.json', 'r', encoding='utf-8-sig') as raid03_array_file,
+  open('./src/jsons/raid_enemy_04_array.json', 'r', encoding='utf-8-sig') as raid04_array_file,
+  open('./src/jsons/raid_enemy_05_array.json', 'r', encoding='utf-8-sig') as raid05_array_file,
+  open('./src/jsons/raid_enemy_06_array.json.json', 'r', encoding='utf-8-sig') as raid06_array_file
 ):
+  # Pokemon Data
   staticData["pokedata_array_file"] = json.load(pokedata_array_file)
   staticData["personal_array_file"] = json.load(personal_array_file)
   staticData["pokemon_list_file"] = json.load(pokemon_list_file)
@@ -57,11 +67,21 @@ with (
   staticData["add_pokemon_events_file"] = json.load(add_pokemon_events_file)
   staticData["fixed_pokemon_events_file"] = json.load(fixed_pokemon_events_file)
   
+  # Item Data
   staticData["itemdata_array_file"] = json.load(itemdata_array_file)
   staticData["item_list_file"] = json.load(item_list_file)
   staticData["hidden_item_list_file"] = json.load(hiddenitemdata_table_file)
   
+  # Trainers Data
   staticData["trainersdata_array_file"] = json.load(trainersdata_array_file)
+
+  # Raids Data Imports
+  staticData["raid01_array_file"] = json.load(raid01_array_file)
+  staticData["raid02_array_file"] = json.load(raid02_array_file)
+  staticData["raid03_array_file"] = json.load(raid03_array_file)
+  staticData["raid04_array_file"] = json.load(raid04_array_file)
+  staticData["raid05_array_file"] = json.load(raid05_array_file)
+  staticData["raid06_array_file"] = json.load(raid06_array_file)
 
 # Create the window
 optionsValues = {
@@ -114,8 +134,13 @@ optionsValues = {
   "competitivePkm": False,
   "trainerShiniesRate": 0,
   "forceFinalEvolution": False,
-  "finalEvolutionCap": 35
+  "finalEvolutionCap": 35,
   ### Trainers Options End ###
+
+  ### Raids Options End ###
+  "raidsRandomized": True,
+  "raidSimilarStats": True
+  ### Raids Options End ###
 }
 
 window = WindowFrame.getWindowFrame(optionsValues)
@@ -141,6 +166,9 @@ while True:
 
   if event == 'trainerStepButton':
     WindowFrame.changeStep(window, 'trainers')
+
+  if event == 'raidsStepButton':
+    WindowFrame.changeStep(window, 'raids')
 
   if event == 'finalStepButton':
     WindowFrame.changeStep(window, 'finalStep')
@@ -217,9 +245,16 @@ while True:
       **serializedGlobalOptions
     }
 
+    serializedRaidsOptions = {
+      "raidsRandomized": False if ("raidsRandomized" not in values.keys() or values["raidsRandomized"] is None or values["raidsRandomized"] == False) else True,
+      "raidSimilarStats": False if ("raidSimilarStats" not in values.keys() or values["raidSimilarStats"] is None or values["raidSimilarStats"] == False) else True,
+      **serializedGlobalOptions
+    }
+
     logger.info(f'Areas Options: {serializedAreaOptions}')
     logger.info(f'Pokemon Options: {serializedPokemonOptions}')
     logger.info(f'Trainers Options: {serializedTrainersOptions}')
+    logger.info(f'Raids Options: {serializedRaidsOptions}')
     # Ending serializing options
 
     logger.info('Starting randomizer...')
@@ -232,18 +267,32 @@ while True:
     pokedataFileName = 'pokedata_array'
     trainersFileName = 'trdata_array'
 
+    raid01FileName = 'raid_enemy_01_array'
+    raid02FileName = 'raid_enemy_02_array'
+    raid03FileName = 'raid_enemy_03_array'
+    raid04FileName = 'raid_enemy_04_array'
+    raid05FileName = 'raid_enemy_05_array'
+    raid06FileName = 'raid_enemy_06_array'
+
     fileNames = {
       "addPokemonEvents": addPokemonEventsFileName,
       "staticPokemonEvents": staticPokemonEventsFileName,
       "pokedata": pokedataFileName,
       "personal": personalFileName,
-      "trainers": trainersFileName
+      "trainers": trainersFileName,
+      "raid01": raid01FileName,
+      "raid02": raid02FileName,
+      "raid03": raid03FileName,
+      "raid04": raid04FileName,
+      "raid05": raid05FileName,
+      "raid06": raid06FileName
     }
 
     spawnsRandomizer = SpawnsRandomizer(data=staticData, options=serializedAreaOptions)
     pokemonRandomizer = PokemonRandomizer(data=staticData, options=serializedPokemonOptions)
-    trainersRandomizer = TrainersRandomizer(data=staticData, options=serializedTrainersOptions)
     itemsRandomizer = ItemRandomizer(data=staticData)
+    trainersRandomizer = TrainersRandomizer(data=staticData, options=serializedTrainersOptions)
+    raidsRandomizer = RaidsRandomizer(data=staticData, options=serializedRaidsOptions)
 
     spawnsRandomizer.addEventsProgress = 0
     spawnsRandomizer.staticEventsProgress = 0
@@ -306,6 +355,25 @@ while True:
     jsonArrayFile.close()
     logger.info('Trainers randomized!')
 
+    logger.info('Randomizing Raids...')
+    # Raids Level 1
+    raidLevels = [
+      {"index": 1, "level": "raid01"},
+      {"index": 2, "level": "raid02"},
+      {"index": 3, "level": "raid03"},
+      {"index": 4, "level": "raid04"},
+      {"index": 5, "level": "raid05"},
+      {"index": 6, "level": "raid06"}
+    ]
+
+    for raidLevel in raidLevels:
+      raidRandomize = raidsRandomizer.getRaidsRandomizedList(raidLevelName=f'{raidLevel["level"]}Data', raidLevelLabel=f'Level {raidLevel["index"]} Raids', options=serializedRaidsOptions)
+      jsonArrayFile = open(f'{fileNames[raidLevel]}.json', 'w')
+      jsonArrayFile.write(json.dumps({"values": raidRandomize}))
+      jsonArrayFile.close()
+
+    logger.info('Raids randomized!')
+
     logger.info('Generating binaries...')
     
     if serializedGlobalOptions["hiddenItems"]:
@@ -321,23 +389,29 @@ while True:
 
     staticEventsResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["staticPokemonEvents"]}.bfbs', jsonPath = f'./{fileNames["staticPokemonEvents"]}.json')  # Generates the Randomized Static pokemon events binary
     if staticEventsResult.stderr != b'':
-      logger.error(f'Error creating binary for Static Events: {addEventsResult.stderr}')
+      logger.error(f'Error creating binary for Static Events: {staticEventsResult.stderr}')
       continue
 
     areaRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["pokedata"]}.bfbs', jsonPath = f'./{fileNames["pokedata"]}.json')  # Generates the Randomized Areas binary
     if areaRandomizeResult.stderr != b'':
-      logger.error(f'Error creating binary for Areas: {addEventsResult.stderr}')
+      logger.error(f'Error creating binary for Areas: {areaRandomizeResult.stderr}')
       continue
 
     personalDataRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["personal"]}.bfbs', jsonPath = f'./{fileNames["personal"]}.json')  # Generates the Randomized Areas binary
     if personalDataRandomizeResult.stderr != b'':
-      logger.error(f'Error creating binary for Personal Data: {addEventsResult.stderr}')
+      logger.error(f'Error creating binary for Personal Data: {personalDataRandomizeResult.stderr}')
       continue
 
     trainerRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["trainers"]}.bfbs', jsonPath = f'./{fileNames["trainers"]}.json')  # Generates the Randomized Trainers binary
     if trainerRandomizeResult.stderr != b'':
-      logger.error(f'Error creating binary for Trainers: {addEventsResult.stderr}')
+      logger.error(f'Error creating binary for Trainers: {trainerRandomizeResult.stderr}')
       continue
+
+    for raidLevel in raidLevels:
+      raidRandomizeResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames[raidLevel]}.bfbs', jsonPath = f'./{fileNames[raidLevel]}.json')  # Generates the Randomized Raids binary
+      if raidRandomizeResult.stderr != b'':
+        logger.error(f'Error creating binary for Raids: {raidRandomizeResult.stderr}')
+        continue
 
     logger.info('Binaries created!')
 
@@ -348,12 +422,25 @@ while True:
     personalDataPath = './static/avalon/data'
     trainerPath = './static/world/data/trainer/trdata'
 
+    raid01Path = './static/world/data/raid/raid_enemy_01'
+    raid02Path = './static/world/data/raid/raid_enemy_02'
+    raid03Path = './static/world/data/raid/raid_enemy_03'
+    raid04Path = './static/world/data/raid/raid_enemy_04'
+    raid05Path = './static/world/data/raid/raid_enemy_05'
+    raid06Path = './static/world/data/raid/raid_enemy_06'
+
     paths = {
       "addPokemonEvents": addPokemonEventsPath,
       "staticPokemonEvents": staticPokemonEventsPath,
       "pokedata": pokedataPath,
       "personal": personalDataPath,
-      "trainers": trainerPath
+      "trainers": trainerPath,
+      "raid01": raid01Path,
+      "raid02": raid02Path,
+      "raid03": raid03Path,
+      "raid04": raid04Path,
+      "raid05": raid05Path,
+      "raid06": raid06Path,
     }
 
     if serializedGlobalOptions["hiddenItems"]:
