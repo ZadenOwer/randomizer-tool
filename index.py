@@ -79,14 +79,18 @@ optionsValues = {
 
   ### Pokemon Options Start ###
   "abilities": True,
+  "keepAbilities": True,
   "equalizedCatchRate": False,
   "equalizedCatchRateValue": 0,
   "tm": False,
+  "keepTM": False,
   "learnset": False,
+  "keepLearnset": False,
   "movePower": False,
   "moveType": False,
   "instantHatchEgg": False,
   "types": False,
+  "keepTypes": False,
   "randomBaseStats": False,
   "evolutions": False,
   "keepEvoStage": False,
@@ -171,14 +175,18 @@ while True:
       equalizedCatchRateValue = "NOT VALID"
 
     serializedPokemonOptions = {
+      "keepAbilities": False if ("keepAbilities" not in values.keys() or values["keepAbilities"] is None or values["keepAbilities"] == False) else True,
       "equalizedCatchRate": False if ("equalizedCatchRate" not in values.keys() or values["equalizedCatchRate"] is None or values["equalizedCatchRate"] == False) else True,
       "equalizedCatchRateValue": equalizedCatchRateValue,
       "tm": False if ("tm" not in values.keys() or values["tm"] is None or values["tm"] == False) else True,
+      "keepTM": False if ("keepTM" not in values.keys() or values["keepTM"] is None or values["keepTM"] == False) else True,
       "learnset": False if ("learnset" not in values.keys() or values["learnset"] is None or values["learnset"] == False) else True,
+      "keepLearnset": False if ("keepLearnset" not in values.keys() or values["keepLearnset"] is None or values["keepLearnset"] == False) else True,
       "movePower": False if ("movePower" not in values.keys() or values["movePower"] is None or values["movePower"] == False) else True,
       "moveType": False if ("moveType" not in values.keys() or values["moveType"] is None or values["moveType"] == False) else True,
       "instantHatchEgg": False if ("instantHatchEgg" not in values.keys() or values["instantHatchEgg"] is None or values["instantHatchEgg"] == False) else True,
       "types": False if ("types" not in values.keys() or values["types"] is None or values["types"] == False) else True,
+      "keepTypes": False if ("keepTypes" not in values.keys() or values["keepTypes"] is None or values["keepTypes"] == False) else True,
       "randomBaseStats": False if ("randomBaseStats" not in values.keys() or values["randomBaseStats"] is None or values["randomBaseStats"] == False) else True,
       "evolutions": False if ("evolutions" not in values.keys() or values["evolutions"] is None or values["evolutions"] == False) else True,
       "keepEvoStage": False if ("keepEvoStage" not in values.keys() or values["keepEvoStage"] is None or values["keepEvoStage"] == False) else True,
