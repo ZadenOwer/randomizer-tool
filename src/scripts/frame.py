@@ -191,6 +191,21 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
+  KEEP_ABILITIES_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Keep Abilities", key="keepAbilities", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["keepAbilities"]),
+    ],
+    # Description
+    [
+      sg.Text("Keep the same abilities alongside the evolutions.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: May be a chance to not keep the abilities on some evolutions, be aware", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+
   EQUALIZED_CATCH_RATE_CHECKBOX = [
     [
       # Input
@@ -236,6 +251,21 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
+  KEEP_TM_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Keep TMs", key="keepTM", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["keepTM"]),
+    ],
+    # Description
+    [
+      sg.Text("Keep the same TMs compatibility alongside the evolutions.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: May be a chance to not keep the compatibility on some evolutions, be aware", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+  
   LEARNSET_CHECKBOX = [
     [
       # Input
@@ -251,6 +281,21 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
 
+  KEEP_LEARNSET_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Keep Learnset", key="keepLearnset", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["keepLearnset"]),
+    ],
+    # Description
+    [
+      sg.Text("Keep the same Learnset alongside the evolutions.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: May be a chance to not keep the learnset on some evolutions, be aware", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+  
   MOVE_POWER_CHECKBOX = [
     [
       # Input
@@ -401,6 +446,21 @@ def getPokemonLayout(optionsValues: dict):
     ]
   ]
   
+  KEEP_TYPES_CHECKBOX = [
+    [
+      # Input
+      sg.Check("Keep Types", key="keepTypes", font=INPUT_FONT, background_color=BG_COLOR, default=optionsValues["keepTypes"]),
+    ],
+    # Description
+    [
+      sg.Text("Keep the same Types alongside the evolutions.", font=TEXT_FONT, background_color=BG_COLOR),
+    ],
+    # Sub description
+    [
+      sg.Text("Note: May be a chance to not keep the types on some evolutions, be aware", font=TEXT_FONT, text_color=DANGER_COLOR, background_color=BG_COLOR),
+    ]
+  ]
+  
   BASE_STATS_CHECKBOX = [
     [
       # Input
@@ -420,13 +480,17 @@ def getPokemonLayout(optionsValues: dict):
     LAYOUT_HEADER +\
     INSTANT_HATCH_EGGS_CHECKBOX +\
     ABILITIES_CHECKBOX +\
+    KEEP_ABILITIES_CHECKBOX +\
     EQUALIZED_CATCH_RATE_CHECKBOX +\
     EQUALIZED_CATCH_RATE_INPUT +\
     TYPES_CHECKBOX +\
+    KEEP_TYPES_CHECKBOX +\
     BASE_STATS_CHECKBOX +\
     MOVES_TITLE +\
     TM_CHECKBOX +\
+    KEEP_TM_CHECKBOX +\
     LEARNSET_CHECKBOX +\
+    KEEP_LEARNSET_CHECKBOX +\
     MOVE_POWER_CHECKBOX +\
     MOVE_TYPE_CHECKBOX +\
     EVOLUTIONS_TITLE +\

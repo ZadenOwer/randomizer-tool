@@ -4,7 +4,7 @@ import shutil
 import json
 
 # Env Vars
-os.environ["VERSION"] = "1.1.7"
+os.environ["VERSION"] = "1.1.8"
 
 os.makedirs('./logs', exist_ok=True) # Logs folder created if not exists yet
 
@@ -79,14 +79,18 @@ optionsValues = {
 
   ### Pokemon Options Start ###
   "abilities": True,
+  "keepAbilities": True,
   "equalizedCatchRate": False,
   "equalizedCatchRateValue": 0,
   "tm": False,
+  "keepTM": False,
   "learnset": False,
+  "keepLearnset": False,
   "movePower": False,
   "moveType": False,
   "instantHatchEgg": False,
   "types": False,
+  "keepTypes": False,
   "randomBaseStats": False,
   "evolutions": False,
   "keepEvoStage": False,
@@ -171,14 +175,18 @@ while True:
       equalizedCatchRateValue = "NOT VALID"
 
     serializedPokemonOptions = {
+      "keepAbilities": False if ("keepAbilities" not in values.keys() or values["keepAbilities"] is None or values["keepAbilities"] == False) else True,
       "equalizedCatchRate": False if ("equalizedCatchRate" not in values.keys() or values["equalizedCatchRate"] is None or values["equalizedCatchRate"] == False) else True,
       "equalizedCatchRateValue": equalizedCatchRateValue,
       "tm": False if ("tm" not in values.keys() or values["tm"] is None or values["tm"] == False) else True,
+      "keepTM": False if ("keepTM" not in values.keys() or values["keepTM"] is None or values["keepTM"] == False) else True,
       "learnset": False if ("learnset" not in values.keys() or values["learnset"] is None or values["learnset"] == False) else True,
+      "keepLearnset": False if ("keepLearnset" not in values.keys() or values["keepLearnset"] is None or values["keepLearnset"] == False) else True,
       "movePower": False if ("movePower" not in values.keys() or values["movePower"] is None or values["movePower"] == False) else True,
       "moveType": False if ("moveType" not in values.keys() or values["moveType"] is None or values["moveType"] == False) else True,
       "instantHatchEgg": False if ("instantHatchEgg" not in values.keys() or values["instantHatchEgg"] is None or values["instantHatchEgg"] == False) else True,
       "types": False if ("types" not in values.keys() or values["types"] is None or values["types"] == False) else True,
+      "keepTypes": False if ("keepTypes" not in values.keys() or values["keepTypes"] is None or values["keepTypes"] == False) else True,
       "randomBaseStats": False if ("randomBaseStats" not in values.keys() or values["randomBaseStats"] is None or values["randomBaseStats"] == False) else True,
       "evolutions": False if ("evolutions" not in values.keys() or values["evolutions"] is None or values["evolutions"] == False) else True,
       "keepEvoStage": False if ("keepEvoStage" not in values.keys() or values["keepEvoStage"] is None or values["keepEvoStage"] == False) else True,
@@ -237,7 +245,8 @@ while True:
       "staticPokemonEvents": staticPokemonEventsFileName,
       "pokedata": pokedataFileName,
       "personal": personalFileName,
-      "trainers": trainersFileName
+      "trainers": trainersFileName,
+      "hiddenItemData": hiddenItemDataFileName
     }
 
     spawnsRandomizer = SpawnsRandomizer(data=staticData, options=serializedAreaOptions)
@@ -252,20 +261,18 @@ while True:
     pokemonRandomizer.pokemonProgress = 0
     
     trainersRandomizer.trainerProgress = 0
-    
-    if serializedGlobalOptions["hiddenItems"]:
-      fileNames["hiddenItemData"] = hiddenItemDataFileName,
 
-      logger.info('Randomizing Field Items...')
-      hiddenItemDataRandomized = itemsRandomizer.getRandomizedHiddenItemData() # Randomize the hidden items data
-      jsonArrayFile = open(f'{fileNames["hiddenItemData"]}.json', 'w')
-      jsonArrayFile.write(json.dumps({"values": hiddenItemDataRandomized}))
-      jsonArrayFile.close()
-      logger.info('Field Items randomized!')
+    itemsRandomizer.fieldItemsProgress = 0
 
+    logger.info('Randomizing Field Items...')
+    hiddenItemDataRandomized = itemsRandomizer.getRandomizedHiddenItemData(options=serializedGlobalOptions) # Randomize the hidden items data
+    jsonArrayFile = open(f'{fileNames["hiddenItemData"]}.json', 'w')
+    jsonArrayFile.write(json.dumps({"values": hiddenItemDataRandomized}))
+    jsonArrayFile.close()
+    logger.info('Field Items randomized!')
 
     logger.info('Randomizing Trade Events...')
-    addEventsRandomized, starters = spawnsRandomizer.getRandomizedAddPokemonEvents(serializedAreaOptions) # Randomize the add pokemon events (such as initials)
+    addEventsRandomized, starters = spawnsRandomizer.getRandomizedAddPokemonEvents(options=serializedAreaOptions) # Randomize the add pokemon events (such as initials)
     jsonArrayFile = open(f'{fileNames["addPokemonEvents"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": addEventsRandomized}))
     jsonArrayFile.close()
@@ -279,28 +286,28 @@ while True:
       logger.info('Starters randomized!')
 
     logger.info('Randomizing Static Events...')
-    staticEventsRandomized = spawnsRandomizer.getRandomizedStaticPokemonEvents(serializedAreaOptions) # Randomize the static pokemon events
+    staticEventsRandomized = spawnsRandomizer.getRandomizedStaticPokemonEvents(options=serializedAreaOptions) # Randomize the static pokemon events
     jsonArrayFile = open(f'{fileNames["staticPokemonEvents"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": staticEventsRandomized}))
     jsonArrayFile.close()
     logger.info('Static Events randomized!')
 
     logger.info('Randomizing Spawning Areas...')
-    areaRandomized = spawnsRandomizer.getRandomizedArea(serializedAreaOptions)  # Randomize the pokemon that spawns each areas
+    areaRandomized = spawnsRandomizer.getRandomizedArea(options=serializedAreaOptions)  # Randomize the pokemon that spawns each areas
     jsonArrayFile = open(f'{fileNames["pokedata"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": areaRandomized}))
     jsonArrayFile.close()
     logger.info('Spawning Areas randomized!')
 
     logger.info('Randomizing Pokemon Personal Data...')
-    pokemonRandomize = pokemonRandomizer.getRandomizedPokemonList(serializedPokemonOptions) # Randomize each pokemon individually
+    pokemonRandomize = pokemonRandomizer.getRandomizedPokemonList(options=serializedPokemonOptions) # Randomize each pokemon individually
     jsonArrayFile = open(f'{fileNames["personal"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"entry": pokemonRandomize}))
     jsonArrayFile.close()
     logger.info('Personal Data randomized!')
 
     logger.info('Randomizing Trainers...')
-    trainersRandomize = trainersRandomizer.getRandomizedTrainersList(serializedTrainersOptions) # Randomize each trainer team and values
+    trainersRandomize = trainersRandomizer.getRandomizedTrainersList(options=serializedTrainersOptions) # Randomize each trainer team and values
     jsonArrayFile = open(f'{fileNames["trainers"]}.json', 'w')
     jsonArrayFile.write(json.dumps({"values": trainersRandomize}))
     jsonArrayFile.close()
@@ -308,11 +315,10 @@ while True:
 
     logger.info('Generating binaries...')
     
-    if serializedGlobalOptions["hiddenItems"]:
-      hiddenItemsDataResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["hiddenItemData"]}.bfbs', jsonPath = f'./{fileNames["hiddenItemData"]}.json')  # Generates the Randomized Hidden Items Data binary
-      if hiddenItemsDataResult.stderr != b'':
-        logger.error(f'Error creating binary for Add Events: {hiddenItemsDataResult.stderr}')
-        continue
+    hiddenItemsDataResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["hiddenItemData"]}.bfbs', jsonPath = f'./{fileNames["hiddenItemData"]}.json')  # Generates the Randomized Hidden Items Data binary
+    if hiddenItemsDataResult.stderr != b'':
+      logger.error(f'Error creating binary for Add Events: {hiddenItemsDataResult.stderr}')
+      continue
 
     addEventsResult = FlatC.generateBinary(schemaPath = f'./src/statics/{fileNames["addPokemonEvents"]}.bfbs', jsonPath = f'./{fileNames["addPokemonEvents"]}.json')  # Generates the Randomized Add pokemon events binary
     if addEventsResult.stderr != b'':
@@ -347,18 +353,16 @@ while True:
     pokedataPath = './static/world/data/encount/pokedata/pokedata'
     personalDataPath = './static/avalon/data'
     trainerPath = './static/world/data/trainer/trdata'
+    hiddenItemDataPath = './static/world/data/item/hiddenItemDataTable'
 
     paths = {
       "addPokemonEvents": addPokemonEventsPath,
       "staticPokemonEvents": staticPokemonEventsPath,
       "pokedata": pokedataPath,
       "personal": personalDataPath,
-      "trainers": trainerPath
+      "trainers": trainerPath,
+      "hiddenItemData": hiddenItemDataPath
     }
-
-    if serializedGlobalOptions["hiddenItems"]:
-      hiddenItemDataPath = './static/world/data/item/hiddenItemDataTable'
-      paths["hiddenItemData"] = hiddenItemDataPath
 
     for pathName in paths:
       os.makedirs(f'{paths[pathName]}/')

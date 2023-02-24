@@ -1,3 +1,11 @@
+# 1.1.8 - 02/23/2023
+
+- Fixed an issue when the option hidden items was market, the randomizer didn't create correctly the files
+- Keep the random abilities algonside the evolutions implemented
+- Keep the random types algonside the evolutions implemented
+- Keep the random TMs compatibility algonside the evolutions implemented
+- Keep the random Learnset algonside the evolutions implemented
+
 # 1.1.7 - 02/06/2023
 
 - Fixed an issue when the option hidden items was not marked the randomizer throws an exception
