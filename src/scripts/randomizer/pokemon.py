@@ -212,6 +212,16 @@ class PokemonRandomizer(BaseRandomizer):
 
       withoutEvolutions = randomizedPokemon["egg_hatch"]["species"] == randomizedPokemon["species"]["species"]
 
+      if randomizedPokemon["species"]["model"] == 1000:
+        # Gholdengo (1000) is a rare case, can't put eggs (apparently) so there's no info about his initial evo
+        # so I put the Gimmighoul data hardcoded here
+        randomizedPokemon["egg_hatch"] = {
+          "species": 976,
+          "form": 1,
+          "form_flags": 0,
+          "form_everstone": 0
+        }
+
       if options["abilities"]:
         # Randomizing Abilities
         self.logger.info(f'Randomizing Abilities')
@@ -223,7 +233,7 @@ class PokemonRandomizer(BaseRandomizer):
 
         if options["keepAbilities"] and randomizedPokemon["evo_stage"] > 1 and not byPassEvoStage:
           # If is an evolution, set the same ability as the initial evo
-          initialEvo = self.getPokemonPersonalData(devId=randomizedPokemon["egg_hatch"]["species"], customList=randomizedPokemonList)
+          initialEvo = self.getPokemonPersonalData(devId=randomizedPokemon["egg_hatch"]["species"], form=randomizedPokemon["egg_hatch"]["form"], customList=randomizedPokemonList)
           
           if initialEvo is None:
             # If for whatever reason the initialEvo is not found, put random abilities instead 
@@ -253,7 +263,7 @@ class PokemonRandomizer(BaseRandomizer):
 
         if options["keepTM"] and randomizedPokemon["evo_stage"] > 1 and not byPassEvoStage:
           # If is an evolution, set the same TM compatibility as the initial evo
-          initialEvo = self.getPokemonPersonalData(devId=randomizedPokemon["egg_hatch"]["species"], customList=randomizedPokemonList)
+          initialEvo = self.getPokemonPersonalData(devId=randomizedPokemon["egg_hatch"]["species"], form=randomizedPokemon["egg_hatch"]["form"], customList=randomizedPokemonList)
 
           if initialEvo is None:
             byPassEvoStage = True
@@ -276,7 +286,7 @@ class PokemonRandomizer(BaseRandomizer):
 
         if options["keepLearnset"] and randomizedPokemon["evo_stage"] > 1 and not byPassEvoStage:
           # If is an evolution, set the same TM compatibility as the initial evo
-          initialEvo = self.getPokemonPersonalData(devId=randomizedPokemon["egg_hatch"]["species"], customList=randomizedPokemonList)
+          initialEvo = self.getPokemonPersonalData(devId=randomizedPokemon["egg_hatch"]["species"], form=randomizedPokemon["egg_hatch"]["form"], customList=randomizedPokemonList)
 
           if initialEvo is None:
             byPassEvoStage = True
@@ -303,6 +313,7 @@ class PokemonRandomizer(BaseRandomizer):
       if options["types"]:
         # Randomize the types of the pokemon
         self.logger.info(f'Randomizing Types')
+        self.logger.info(f'Original Types: 1:{randomizedPokemon["type_1"]}, 2:{randomizedPokemon["type_2"]}')
         byPassEvoStage = False
         isMonotype = randomizedPokemon["type_1"] == randomizedPokemon["type_2"]
 
@@ -311,7 +322,7 @@ class PokemonRandomizer(BaseRandomizer):
 
         if options["keepTypes"] and randomizedPokemon["evo_stage"] > 1 and not byPassEvoStage:
           # If is an evolution, set the same TM compatibility as the initial evo
-          initialEvo = self.getPokemonPersonalData(devId=randomizedPokemon["egg_hatch"]["species"], customList=randomizedPokemonList)
+          initialEvo = self.getPokemonPersonalData(devId=randomizedPokemon["egg_hatch"]["species"], form=randomizedPokemon["egg_hatch"]["form"], customList=randomizedPokemonList)
 
           if initialEvo is None:
             byPassEvoStage = True
@@ -331,10 +342,6 @@ class PokemonRandomizer(BaseRandomizer):
                 if initialEvo["species"]["model"] == 550:
                   # Basculin (550) don't have info about basculegion for some reason
                   secondEvo = None
-                elif randomizedPokemon["species"]["model"] == 1000:              
-                  # Gholdengo (1000) is a rare case, can't put eggs (apparently) so there's no info about his initial evo
-                  # so I put the Gimmighoul hardcoded here
-                  secondEvo = self.getPokemonPersonalData(dexId=999, customList=randomizedPokemonList)
                 else:
                   secondEvoDev = self.getNextEvolution(dexId=initialEvo["species"]["model"])
                   secondEvo = self.getPokemonPersonalData(devId=secondEvoDev["devId"], customList=randomizedPokemonList)
@@ -352,7 +359,7 @@ class PokemonRandomizer(BaseRandomizer):
             else:
               # If the evo is monotype, just copy the types of the initial evo
               randomizedPokemon["type_1"] = initialEvo["type_1"]
-              randomizedPokemon["type_2"] = initialEvo["type_1"]
+              randomizedPokemon["type_2"] = initialEvo["type_2"]
 
         if not options["keepTypes"] or randomizedPokemon["evo_stage"] == 1 or byPassEvoStage:
           randomType = self.getRandomType()

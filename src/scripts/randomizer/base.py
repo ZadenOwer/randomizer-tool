@@ -127,16 +127,16 @@ class BaseRandomizer:
   def generateRandomItem(self):
     return self.itemRandomizer.getRandomItem()
 
-  def getPokemonPersonalData(self, dexId: int = None, devId: int = None, customList: list = None):
+  def getPokemonPersonalData(self, dexId: int = None, devId: int = None, form: int = None, customList: list = None):
     fromList = self.personalData["entry"]
 
     if customList is not None:
       fromList = customList
 
     if devId is not None:
-      return next((pokemon for pokemon in fromList if pokemon["species"]["species"] == devId), None)
+      return next((pokemon for pokemon in fromList if pokemon["species"]["species"] == devId and (False if form is not None and pokemon["species"]["form"] != form else True)), None)
 
-    return next((pokemon for pokemon in fromList if pokemon["species"]["model"] == dexId), None)
+    return next((pokemon for pokemon in fromList if pokemon["species"]["model"] == dexId and (False if form is not None and pokemon["species"]["form"] != form else True)), None)
 
   def getPokemonDev(self, dexId: int = None, devName: str = None):
     if dexId is not None:
