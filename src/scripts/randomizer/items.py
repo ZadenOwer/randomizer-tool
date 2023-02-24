@@ -41,12 +41,16 @@ class ItemRandomizer:
     item: dict = next((item for item in list(self.itemList.values()) if item["id"] == itemRaw['Id']), self.itemList.get("0"))
     return item
 
-  def getRandomizedHiddenItemData(self):
+  def getRandomizedHiddenItemData(self, options: dict):
     randomizedList = []
+
+    if not options["hiddenItems"]:
+      return self.hiddenItemData["values"]
 
     totalItems = len(self.hiddenItemData["values"])
 
     for hiddenItem in self.hiddenItemData["values"]:
+
       for fieldKey in hiddenItem.keys():
         if "item_" not in fieldKey:
           continue
