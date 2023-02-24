@@ -4,7 +4,7 @@ import shutil
 import json
 
 # Env Vars
-os.environ["VERSION"] = "1.1.7"
+os.environ["VERSION"] = "1.1.8"
 
 os.makedirs('./logs', exist_ok=True) # Logs folder created if not exists yet
 
